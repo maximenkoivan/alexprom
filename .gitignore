@@ -201,3 +201,6 @@ jspm_packages
 
 sitemap*.xml
 robots.txt
+/svet.alexprom/bitrix/
+/svet.alexprom/local/
+/svet.alexprom/upload/
