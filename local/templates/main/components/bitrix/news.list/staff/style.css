@@ -1,0 +1,16 @@
+.staffContainer
+{
+	padding-top: 24px;
+	clear:both;
+}
+.staffPhone
+{
+	background: url('/local/templates/main/images/phone.svg') no-repeat left;
+	padding-left: 30px;
+	margin-bottom: 9px;
+}
+.staffMail
+{
+	background: url('/local/templates/main/images/mail.svg') no-repeat left;
+	padding-left: 30px;
+}
