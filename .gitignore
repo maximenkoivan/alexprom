@@ -204,3 +204,4 @@ robots.txt
 /svet.alexprom/bitrix/
 /svet.alexprom/local/
 /svet.alexprom/upload/
+/local/composer.lock
