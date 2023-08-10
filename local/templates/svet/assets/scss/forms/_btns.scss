@@ -1,0 +1,115 @@
+.btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+    height: auto;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: normal;
+    padding: 13px 25px;
+    cursor: pointer;
+    transition: all $tr-time $tr-type;
+    box-shadow: none;
+    color: map_get($button, main-color);
+
+    span{
+        border-bottom: none;
+    }
+
+    &:hover{
+        background-color: map_get($button, main-bg-hover);
+        color: map_get($button, main-color);
+    }
+
+    &--b-r-5 {
+        border-radius: 5px;
+    }
+
+    &--primary {
+        border: 2px;
+        border-radius: 5px solid $c-dark-orange;
+        background-image: linear-gradient(45deg, rgba(235,133,0,1) 0%, rgba(255,158,31,1) 100%);
+    }
+
+    &--outline {
+        border: 2px solid white;
+        border-radius: 2px;
+        opacity: 0.8;
+        background-color: $c-dark;
+    }
+
+    &--circle {
+        color: #cccccc;
+        border: 2px solid #cccccc;
+        border-radius: 30px;
+
+        &:hover {
+            color: $c-orange;
+            border-color: $c-orange;
+        }
+    }
+
+    &--lg {
+        padding: 20px 30px;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    &--animated {
+        animation: vibration 0.4s infinite linear;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover{
+            animation-play-state: paused;
+        }
+
+    }
+
+    &[disabled], &.disabled{
+        &, &:focus, &:hover, &:active{
+            background: map_get($button, disabled-bg);
+            color: map_get($button, disabled-color);
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+    &[readonly], &.readonly{
+        &, &:focus, &:hover, &:active{
+            background: map_get($button, disalbed-bg);
+            color: map_get($button, disabled-color);
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+    [type="file"]{
+        display: none;
+    }
+}
+
+@keyframes vibration {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+    25% {
+        transform: rotate(1deg);
+        animation-timing-function: linear;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+    75% {
+        transform: rotate(-1deg);
+        animation-timing-function: linear;
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
