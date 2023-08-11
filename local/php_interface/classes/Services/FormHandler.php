@@ -4,8 +4,8 @@ namespace classes\Services;
 
 
 use Bitrix\Main\Mail\Event;
-use CModule;
 use CIBlockElement;
+use CModule;
 use Bitrix\Main\Context;
 use classes\Exceptions\FeedbackException;
 
@@ -29,11 +29,11 @@ class FormHandler
 
     public function __construct($modelName)
     {
-        $this->element = new CIBlockElement;
+        CModule::IncludeModule("iblock");
+        $this->element = new CIBlockElement();
         $this->request = Context::getCurrent()->getRequest();
 
         if (key_exists($modelName, $this->modelList)) {
-            CModule::IncludeModule("iblock");
             $this->model = new $this->modelList[$modelName];
             $this->fields = $this->model->getFormFields();
         } else {
@@ -53,9 +53,7 @@ class FormHandler
         if (empty($this->model)) {
             throw new FeedbackException('Нет такой модели');
         }
-
         $this->prepare();
-
         if (empty($this->errors)) {
             $this->add();
         }

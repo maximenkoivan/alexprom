@@ -3,10 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.
 
 use classes\Services\FormHandler;
 
-if($model = new FormHandler('callback')) {
+if ($model = new FormHandler('callback')) {
     $response = $model->run();
-}
-else {
+} else {
     $response = ['error' => 'Отсутствуют необходимые параметры'];
 }
 
