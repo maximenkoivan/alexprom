@@ -1,6 +1,6 @@
 <?php
 
-namespace classes\Models\Feedback\Light;
+namespace classes\Models\Light\Feedback;
 
 use classes\Base\Iblock;
 
