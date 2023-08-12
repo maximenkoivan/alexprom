@@ -74,7 +74,7 @@ class Validator
                             }
                             break;
                         case 'required':
-                            if (!$this->is_required()) {
+                            if (!$a = $this->is_required()) {
                                 throw new ValidationException($this->getErrors('required'));
                             }
                             break;
@@ -84,7 +84,7 @@ class Validator
                             }
                             break;
                         case 'phone':
-                            if (!$this->is_phone()) {
+                            if (!$b = $this->is_phone()) {
                                 throw new ValidationException($this->getErrors('format'));
                             }
                             break;
@@ -146,7 +146,11 @@ class Validator
      */
     private function is_phone(): bool
     {
-        return v::phone()->validate($this->field['value']);
+        $regex = '/^\s?(\+\s?7|8)([- ()]*\d){10}$/';
+        if ($this->field['value'] !== '' && preg_match($regex, $this->field['value']) !== 1) {
+            return false;
+        }
+        return true;
     }
 
     /**

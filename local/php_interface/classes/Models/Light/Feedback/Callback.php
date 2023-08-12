@@ -27,7 +27,7 @@ class Callback extends Iblock
             'rules' => 'required|phone',
             'value' => '',
             'property' => true,
-            'store' => 'EMAIL'
+            'store' => 'PHONE'
         ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
@@ -45,6 +45,11 @@ class Callback extends Iblock
     public function getFormFields(): array
     {
         return $this->formFields;
+    }
+
+    public function setFieldValue(string $fieldName = '', $value = '')
+    {
+        $this->formFields[$fieldName]['value'] = $value;
     }
 
     /**
@@ -87,19 +92,41 @@ class Callback extends Iblock
     /**
      * Формирует массив основных полей
      * для записи
-     * @return void
+     * @return array
      */
-    public function getMainFieldsForSave()
+    public function getMainFieldsForSave(): array
     {
+        $formFields = $this->getFormFields();
 
+        $result['IBLOCK_ID'] = $this->getIblockId();
+
+        foreach ($formFields as $field) {
+            if(!$field['property'] && !empty($field['store'])) {
+                $result[$field['store']] = $field['value'];
+            }
+        }
+
+        if(!empty($additionalFields) && is_array($additionalFields)) {
+            $result = $result + $additionalFields;
+        }
+        return $result;
     }
+
 
     /**
      * Формирует массив свойств для записи
-     * @return void
+     * @return array
      */
-    public function getPropertiesForSave()
+    public function getPropertiesForSave(): array
     {
+        $result = [];
+        $formFields = $this->getFormFields();
 
+        foreach ($formFields as $field) {
+            if($field['property'] && !empty($field['store'])) {
+                $result[$field['store']] = $field['value'];
+            }
+        }
+        return $result;
     }
 }
