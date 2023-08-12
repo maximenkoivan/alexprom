@@ -23,7 +23,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <?php endforeach; ?>
             </li>
         <?php else: ?>
-            <li><?= $arItem['NAME'] ?></li>
+            <li><?= $arItem['NAME'] ?> <span><?= $arItem['PROPERTIES']['DESCRIPTION']['~VALUE'] ?></span></li>
         <?php endif; ?>
     <?php endforeach; ?>
 </ul>
