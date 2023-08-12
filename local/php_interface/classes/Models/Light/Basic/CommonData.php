@@ -6,7 +6,7 @@ use classes\Base\Iblock;
 
 final class CommonData extends Iblock
 {
-    protected const TYPE_IBLOCK_CODE = 'light';
+    protected const IBLOCK_TYPE_CODE = 'light';
 
     protected const IBLOCK_CODE = 'common_data';
 

@@ -6,7 +6,7 @@ use classes\Base\Iblock;
 
 class Callback extends Iblock
 {
-    protected const TYPE_IBLOCK_CODE = 'LIGHT';
+    protected const IBLOCK_TYPE_CODE = 'LIGHT';
 
     protected const IBLOCK_CODE = 'FEEDBACK';
 
