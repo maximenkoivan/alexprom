@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="main__buttons">
-                <a href="" class="btn btn--primary btn--animated btn--lg">рассчитать стоимость</a>
+                <a data-custom-open="modal-order" class="btn btn--primary btn--animated btn--lg">рассчитать стоимость</a>
                 <a class="btn btn--outline">Без предоплаты</a>
             </div>
             <div class="main__adv adv">

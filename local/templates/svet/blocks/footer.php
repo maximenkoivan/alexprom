@@ -10,6 +10,7 @@
 </div>
 
 <?php require("modal-callback.php") ?>
+<?php require("modal-order.php") ?>
 <?php require("call.php") ?>
 
 <script src="/local/templates/svet/assets/app.min.js"></script>
