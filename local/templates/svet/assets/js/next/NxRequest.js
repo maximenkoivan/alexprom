@@ -282,7 +282,7 @@ class NxRequest{
                         closeLabel: ""
                     });
                     $modalOk.setContent('<h3>Спасибо за обращение</h3>' +
-                        '<p>Мы свяжемся в вами в ближайшее время</p>');
+                        '<p>Мы свяжемся с вами в ближайшее время</p>');
                     $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
                         $modalOk.close();
                     });

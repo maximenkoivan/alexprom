@@ -27,7 +27,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 </div>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
-    "modal_callback",
+    "modal",
     array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
         "ADD_ELEMENT_CHAIN" => "N",
