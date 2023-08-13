@@ -119,5 +119,19 @@ class Order {
                 break
         }
     }
+
+    clearForm() {
+
+        this.$orderStep.forEach(el => {
+            el.classList.add(this.className.hidden)
+        })
+
+        this.$orderStep[0].classList.remove(this.className.hidden)
+        this.$orderPrev.setAttribute(`data-${this.dataName.nav}`, '1')
+        this.$orderNext.setAttribute(`data-${this.dataName.nav}`, '2')
+        this.$orderNext.classList.remove(this.className.hidden)
+        this.$sendBtn.classList.add(this.className.hidden)
+        this.updateProgress(1)
+    }
 }
 export default Order;

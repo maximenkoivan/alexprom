@@ -4,6 +4,7 @@
  */
 
 import tingle from 'tingle.js'
+import Order from '../modules/Order'
 
 class NxRequest{
     constructor(element, options) {
@@ -231,6 +232,8 @@ class NxRequest{
             $form      = $btn.closest('form'),
             $formGroup = $form.querySelectorAll(`[data-${this.dataName.formGroup}]`),
             $errorBox  = $form.querySelectorAll(this.erorrElement),
+            $okTitle = $btn.getAttribute('data-ok-title'),
+            $okText = $btn.getAttribute('data-ok-text'),
             $modalOk = null,
             $popupCall = null,
             $popupBtn = null,
@@ -281,8 +284,7 @@ class NxRequest{
                         closeMethods: ['overlay', 'button', 'escape'],
                         closeLabel: ""
                     });
-                    $modalOk.setContent('<h3>Спасибо за обращение</h3>' +
-                        '<p>Мы свяжемся с вами в ближайшее время</p>');
+                    $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
                     $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
                         $modalOk.close();
                     });
@@ -291,17 +293,19 @@ class NxRequest{
                 case 'order':
                     $modalCallback = document.querySelector('#modal-order')
 
+
                     $modalOk = new tingle.modal({
                         footer: true,
                         stickyFooter: false,
                         closeMethods: ['overlay', 'button', 'escape'],
                         closeLabel: ""
                     });
-                    $modalOk.setContent('<h3>Спасибо за обращение</h3>' +
-                        '<p>Мы свяжемся в вами в ближайшее время</p>');
+                    $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
                     $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
                         $modalOk.close();
                     });
+                    let order = new Order()
+                    Order.clearForm()
                     break;
 
                 default:
