@@ -13,7 +13,7 @@ use classes\Exceptions\FeedbackException;
 class FormHandler
 {
     private $modelList = [
-        'callback' => 'classes\Models\Feedback\Light\Callback',
+        'callback' => 'classes\Models\Light\Feedback\Callback',
     ];
 
     private mixed $model;
@@ -83,6 +83,8 @@ class FormHandler
         $result = $validator->run();
         if (!empty($result)) {
             $this->errors[$name] = $result;
+        } else {
+            $this->model->setFieldValue($name, $this->fields[$name]['value']);
         }
     }
 
