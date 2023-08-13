@@ -128,31 +128,25 @@ select{
         }
     }
     
-    &_short {
-        max-width: map_get($input, max-w-short);
-    }
-    
-    &_flex {
+    &--flex {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+
         .nx-dynamic-label {
             max-width: map_get($input, max-w-short);
             width: 100%;
             margin-right: 20px;
         }
+
         @include media('xs') {
-            flex-direction: column;
-            align-items: flex-start;
+            flex-wrap: wrap;
+
             .nx-dynamic-label {
                 margin-right: 0;
                 margin-bottom: 15px;
                 max-width: 100%;
             }
         }
-    }
-    
-    &_small-offset {
-        margin-bottom: 10px;
     }
 }
 

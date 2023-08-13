@@ -14,6 +14,7 @@ class FormHandler
 {
     private $modelList = [
         'callback' => 'classes\Models\Light\Feedback\Callback',
+        'order' => 'classes\Models\Light\Feedback\Order',
     ];
 
     private mixed $model;

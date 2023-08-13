@@ -272,14 +272,30 @@ class NxRequest{
                     $modalCallback = document.querySelector('#modal-callback')
 
                     $popupCall = $btn.closest('[data-popup]')
-                    $popupBtn = $btn.closest('.call').querySelector('[data-open-popup]')
+
+                    if ($btn.closest('.call')) $popupBtn = $btn.closest('.call').querySelector('[data-open-popup]')
 
                     $modalOk = new tingle.modal({
                         footer: true,
                         stickyFooter: false,
                         closeMethods: ['overlay', 'button', 'escape'],
-                        closeLabel: "",
-                        cssClass: ['custom-class-1', 'custom-class-2']
+                        closeLabel: ""
+                    });
+                    $modalOk.setContent('<h3>Спасибо за обращение</h3>' +
+                        '<p>Мы свяжемся с вами в ближайшее время</p>');
+                    $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
+                        $modalOk.close();
+                    });
+                    break;
+
+                case 'order':
+                    $modalCallback = document.querySelector('#modal-order')
+
+                    $modalOk = new tingle.modal({
+                        footer: true,
+                        stickyFooter: false,
+                        closeMethods: ['overlay', 'button', 'escape'],
+                        closeLabel: ""
                     });
                     $modalOk.setContent('<h3>Спасибо за обращение</h3>' +
                         '<p>Мы свяжемся в вами в ближайшее время</p>');
@@ -299,9 +315,12 @@ class NxRequest{
 
             if ($modalOk){
                 setTimeout(function() {
-                    if ($modalCallback) MicroModal.close()
-                    if ($popupCall)  $popupCall.classList.remove('popup-open')
-                    if ($popupBtn)  $popupBtn.classList.remove('popup-open')
+                    if ($modalCallback) {
+                        MicroModal.close()
+                        $modalCallback.classList.remove('is-open')
+                    }
+                    if ($popupCall) $popupCall.classList.remove('popup-open')
+                    if ($popupBtn) $popupBtn.classList.remove('popup-open')
                     $modalOk.open();
                 }, this.options.timeoutModalOkShow);
             }

@@ -23,6 +23,7 @@ import Modal from './plugins/Modal';
 import ShowModal from './modules/ShowModal';
 import ListSlider from "./plugins/ListSlider";
 import ShowPopup from "./modules/ShowPopup";
+import Order from "./modules/Order";
 
 objectFitImages();
 elementClosest(window);
@@ -45,3 +46,4 @@ new AutoSizeTextarea()
 new ShowModal();
 new Modal();
 new ShowPopup();
+new Order();

@@ -37,7 +37,7 @@ $videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BO
             </div>
             <div class="main__buttons">
                 <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_1']['~VALUE'])): ?>
-                    <a href=""
+                    <a data-custom-open="modal-order"
                        class="btn btn--primary btn--animated btn--lg"><?= $arResult['PROPERTIES']['TEXT_BTN_1']['~VALUE'] ?></a>
                 <?php endif; ?>
                 <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'])): ?>
