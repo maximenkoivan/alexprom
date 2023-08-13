@@ -315,9 +315,12 @@ class NxRequest{
 
             if ($modalOk){
                 setTimeout(function() {
-                    if ($modalCallback) MicroModal.close()
-                    if ($popupCall)  $popupCall.classList.remove('popup-open')
-                    if ($popupBtn)  $popupBtn.classList.remove('popup-open')
+                    if ($modalCallback) {
+                        MicroModal.close()
+                        $modalCallback.classList.remove('is-open')
+                    }
+                    if ($popupCall) $popupCall.classList.remove('popup-open')
+                    if ($popupBtn) $popupBtn.classList.remove('popup-open')
                     $modalOk.open();
                 }, this.options.timeoutModalOkShow);
             }
