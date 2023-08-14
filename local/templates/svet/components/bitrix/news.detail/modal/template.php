@@ -49,8 +49,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <div class="modal__btn">
                     <button type="submit"
                             class="btn btn--primary btn--lg btn--b-r-5"
-                            data-ok-title="Спасибо за обращение!"
-                            data-ok-text="Мы свяжемся с вами в ближайшее время"
+                            data-ok-title="<?= $arResult['PROPERTIES']['TITLE_FINAL_MSG__MODAL_1']['~VALUE'] ?>"
+                            data-ok-text="<?= $arResult['PROPERTIES']['TEXT_FINAL_MSG__MODAL_1']['~VALUE'] ?>"
                             data-send-request="callback">
                         <?= $arResult['PROPERTIES']['TEXT_BTN_MODAL_1']['~VALUE'] ?>
                     </button>
@@ -97,8 +97,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div class="call__submit">
                 <button type="submit"
                         class="btn btn--primary btn--lg btn--b-r-5"
-                        data-ok-title="Спасибо за обращение!"
-                        data-ok-text="Мы свяжемся с вами в ближайшее время"
+                        data-ok-title="<?= $arResult['PROPERTIES']['TITLE_FINAL_MSG__MODAL_2']['~VALUE'] ?>"
+                        data-ok-text="<?= $arResult['PROPERTIES']['TEXT_FINAL_MSG__MODAL_2']['~VALUE'] ?>"
                         data-send-request="callback"><?= $arResult['PROPERTIES']['TEXT_BTN_MODAL_2']['~VALUE'] ?></button>
             </div>
         </form>
@@ -302,8 +302,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             </svg>
                         </a>
                         <a data-send-request="order"
-                           data-ok-title="Спасибо, чувачёк!"
-                           data-ok-text="Скоро состыкуемся"
+                           data-ok-title="<?= $arResult['PROPERTIES']['TITLE_FINAL_MSG__MODAL_3']['~VALUE'] ?>"
+                           data-ok-text="<?= $arResult['PROPERTIES']['TEXT_FINAL_MSG__MODAL_3']['~VALUE'] ?>"
                            class="btn btn--primary btn--lg btn--right btn--b-r-5 hidden"><?= $arResult['PROPERTIES']['TEXT_BTN_3_MODAL_3']['~VALUE'] ?></a>
                     </div>
                 </form>
