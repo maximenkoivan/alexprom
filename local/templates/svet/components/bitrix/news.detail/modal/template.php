@@ -271,7 +271,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                            data-dynamic-inp>
                                     <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_1_MODAL_3_STEP_7']['~VALUE'] ?></span>
                                 </label>
-                                <br>
+                            </div>
+                            <div data-form-group class="form-group">
                                 <label class="nx-dynamic-label" data-dynamic-label>
                                     <input type="text"
                                            class="nx-dynamic-label__input nx-form-element"
@@ -280,9 +281,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                            data-phone-mask>
                                     <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_2_MODAL_3_STEP_7']['~VALUE'] ?></span>
                                 </label>
-                                <br>
+                            </div>
+                            <div data-form-group class="form-group">
                                 <label class="nx-dynamic-label" data-dynamic-label>
-                                        <textarea data-autosize-textarea class="nx-dynamic-label__input nx-form-element" name="comment" data-dynamic-inp></textarea>
+                                    <textarea data-autosize-textarea class="nx-dynamic-label__input nx-form-element" name="comment" data-dynamic-inp></textarea>
                                     <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_3_MODAL_3_STEP_7']['~VALUE'] ?></span>
                                 </label>
                             </div>
