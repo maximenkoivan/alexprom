@@ -37,6 +37,7 @@ class Order {
         this.$orderPrev = this.$order.querySelector(`[data-${this.dataName.orderNav}="prev"]`)
         this.$orderNext = this.$order.querySelector(`[data-${this.dataName.orderNav}="next"]`)
         this.$sendBtn = this.$order.querySelector(`[data-${this.dataName.sendBtn}`)
+        this.$form = this.$order.querySelector(`[data-${this.dataName.orderForm}`)
 
         this.init();
     }

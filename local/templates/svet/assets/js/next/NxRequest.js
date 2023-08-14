@@ -4,7 +4,6 @@
  */
 
 import tingle from 'tingle.js'
-import Order from '../modules/Order'
 
 class NxRequest{
     constructor(element, options) {
@@ -304,8 +303,7 @@ class NxRequest{
                     $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
                         $modalOk.close();
                     });
-                    let order = new Order()
-                    Order.clearForm()
+                    $.order.clearForm()
                     break;
 
                 default:
