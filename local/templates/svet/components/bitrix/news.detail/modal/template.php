@@ -27,7 +27,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div class="modal__text modal__text--callback"><?= $arResult['PROPERTIES']['SUBTITLE_MODAL_1']['~VALUE'] ?></div>
 
             <form class="modal__form modal__form--callback" action="/request/light/feedback.php">
-                <div class="form-group" data-form-group>
+                <div data-form-group class="form-group">
                     <label class="nx-dynamic-label" data-dynamic-label>
                         <input type="text"
                                class="nx-dynamic-label__input nx-form-element"
@@ -35,7 +35,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                data-dynamic-inp>
                         <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_NAME_MODAL_1']['~VALUE'] ?></span>
                     </label>
-                    <br>
+                </div>
+                <div data-form-group class="form-group">
                     <label class="nx-dynamic-label" data-dynamic-label>
                         <input type="text"
                                class="nx-dynamic-label__input nx-form-element"
@@ -45,7 +46,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_PHONE_MODAL_1']['~VALUE'] ?></span>
                     </label>
                 </div>
-
                 <div class="modal__btn">
                     <button type="submit"
                             class="btn btn--primary btn--lg btn--b-r-5"
@@ -83,7 +83,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                            data-dynamic-inp>
                     <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_NAME_MODAL_2']['~VALUE'] ?></span>
                 </label>
-                <br>
+            </div>
+            <div data-form-group class="form-group">
                 <label class="nx-dynamic-label" data-dynamic-label>
                     <input type="text"
                            class="nx-dynamic-label__input nx-form-element"
