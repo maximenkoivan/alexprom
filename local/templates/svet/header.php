@@ -64,7 +64,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
             <div class="spacer"></div>
 
             <div class="header__text header__text--small">
-                <?= $header['LOCATION_HEADER']['~VALUE'] ?>
+                <?= $header['LOCATION_HEADER']['~VALUE']['TEXT'] ?>
             </div>
 
             <div class="header__contacts contacts">
