@@ -46,4 +46,4 @@ new AutoSizeTextarea()
 new ShowModal();
 new Modal();
 new ShowPopup();
-new Order();
+$.order = new Order();

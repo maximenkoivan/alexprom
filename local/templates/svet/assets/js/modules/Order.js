@@ -37,6 +37,7 @@ class Order {
         this.$orderPrev = this.$order.querySelector(`[data-${this.dataName.orderNav}="prev"]`)
         this.$orderNext = this.$order.querySelector(`[data-${this.dataName.orderNav}="next"]`)
         this.$sendBtn = this.$order.querySelector(`[data-${this.dataName.sendBtn}`)
+        this.$form = this.$order.querySelector(`[data-${this.dataName.orderForm}`)
 
         this.init();
     }
@@ -118,6 +119,20 @@ class Order {
                 this.changeStep(step)
                 break
         }
+    }
+
+    clearForm() {
+
+        this.$orderStep.forEach(el => {
+            el.classList.add(this.className.hidden)
+        })
+
+        this.$orderStep[0].classList.remove(this.className.hidden)
+        this.$orderPrev.setAttribute(`data-${this.dataName.nav}`, '1')
+        this.$orderNext.setAttribute(`data-${this.dataName.nav}`, '2')
+        this.$orderNext.classList.remove(this.className.hidden)
+        this.$sendBtn.classList.add(this.className.hidden)
+        this.updateProgress(1)
     }
 }
 export default Order;
