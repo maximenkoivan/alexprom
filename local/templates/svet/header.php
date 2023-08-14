@@ -15,7 +15,7 @@ use classes\Models\Light\Basic\CommonData;
 $asset = Asset::getInstance();
 
 $asset->addString(
-    '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.ico">',
+    '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.png">',
     AssetLocation::BEFORE_CSS
 );
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
@@ -64,7 +64,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
             <div class="spacer"></div>
 
             <div class="header__text header__text--small">
-                <?= $header['LOCATION_HEADER']['~VALUE'] ?>
+                <?= $header['LOCATION_HEADER']['~VALUE']['TEXT'] ?>
             </div>
 
             <div class="header__contacts contacts">
