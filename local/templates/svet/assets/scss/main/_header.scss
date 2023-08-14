@@ -90,6 +90,11 @@
         @include media('md-max') {
             margin-left: 30px;
         }
+
+        @include media('xs') {
+            margin-left: 0;
+            text-align: center;
+        }
     }
 
     &__btn {
