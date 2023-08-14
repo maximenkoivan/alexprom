@@ -16,6 +16,10 @@
         @include media('sm-max') {
             flex-direction: column;
         }
+
+        @include media('xs') {
+            align-items: center;
+        }
     }
 
     &__container {
@@ -38,7 +42,7 @@
         }
 
         @include media('sm-max') {
-            left: -140px;
+            display: none;
         }
     }
 
@@ -116,7 +120,8 @@
 
         @include media('xs') {
             font-size: 18px;
-            padding-left: 30px;
+            padding-left: 0;
+            text-align: center;
 
             span {
                 font-size: 16px;
