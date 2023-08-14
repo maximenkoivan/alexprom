@@ -161,6 +161,7 @@ select{
 }
 .form-error{
     color: map_get($content, error-color);
+    text-align: left;
 }
 
 label, .form-label{
