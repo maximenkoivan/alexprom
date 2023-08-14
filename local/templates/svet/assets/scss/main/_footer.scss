@@ -9,6 +9,7 @@
 
     &__container {
         display: flex;
+        max-width: 1410px;
 
         @include media('xs') {
             display: block;
