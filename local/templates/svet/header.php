@@ -15,7 +15,7 @@ use classes\Models\Light\Basic\CommonData;
 $asset = Asset::getInstance();
 
 $asset->addString(
-    '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.ico">',
+    '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.png">',
     AssetLocation::BEFORE_CSS
 );
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
