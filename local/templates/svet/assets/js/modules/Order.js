@@ -21,7 +21,8 @@ class Order {
             orderNav: 'order-nav',
             nav: 'nav',
             formGroup: 'form-group ',
-            sendBtn: 'send-request'
+            sendBtn: 'send-request',
+            note: 'order-note',
         };
 
         $.extend(true, this, this, options);
@@ -37,6 +38,7 @@ class Order {
         this.$orderPrev = this.$order.querySelector(`[data-${this.dataName.orderNav}="prev"]`)
         this.$orderNext = this.$order.querySelector(`[data-${this.dataName.orderNav}="next"]`)
         this.$sendBtn = this.$order.querySelector(`[data-${this.dataName.sendBtn}`)
+        this.$note = this.$order.querySelector(`[data-${this.dataName.note}`)
         this.$form = this.$order.querySelector(`[data-${this.dataName.orderForm}`)
 
         this.init();
@@ -82,10 +84,12 @@ class Order {
             this.$order.classList.remove(this.className.send)
             this.$orderNext.classList.remove(this.className.hidden)
             this.$sendBtn.classList.add(this.className.hidden)
+            this.$note.classList.add(this.className.hidden)
         } else {
             this.$order.classList.add(this.className.send)
             this.$orderNext.classList.add(this.className.hidden)
             this.$sendBtn.classList.remove(this.className.hidden)
+            this.$note.classList.remove(this.className.hidden)
         }
     }
 
@@ -132,6 +136,7 @@ class Order {
         this.$orderNext.setAttribute(`data-${this.dataName.nav}`, '2')
         this.$orderNext.classList.remove(this.className.hidden)
         this.$sendBtn.classList.add(this.className.hidden)
+        his.$note.classList.add(this.className.hidden)
         this.updateProgress(1)
     }
 }
