@@ -1,0 +1,26 @@
+.video {
+
+    &__yt {
+        margin-right: 40px;
+
+        @include media('xs') {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__ul {
+        list-style-type: none;
+        font-size: 15px;
+
+        a {
+            color: $c-dark;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @include media('xs') {
+            text-align: center;
+        }
+    }
+}

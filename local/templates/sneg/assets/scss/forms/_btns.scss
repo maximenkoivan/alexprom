@@ -1,0 +1,151 @@
+.btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: auto;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    padding: 13px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all $tr-time $tr-type;
+    box-shadow: none;
+    color: map_get($button, main-color);
+
+
+    span,
+    svg {
+        pointer-events: none;
+    }
+
+    span{
+        border-bottom: none;
+    }
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    span + svg,
+    svg + span {
+        margin-left: 12px;
+    }
+
+    &:hover{
+        color: white;
+        transform: translateY(2px);
+    }
+
+    &--b-r-5 {
+        border-radius: 5px;
+    }
+
+    &--primary {
+        border: 2px;
+        background: linear-gradient(to top, #dd210e 40%, #fb4b29 80%, #ffaf98 100%);
+        will-change: transform;
+    }
+
+    &--outline {
+        border: 2px solid white;
+        border-radius: 2px;
+        opacity: 0.8;
+        background-color: $c-dark;
+    }
+
+    &--grey {
+        border: 2px;
+        background-color: $c-gray;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+
+    &--circle {
+        color: #cccccc;
+        border-radius: 30px;
+    }
+
+    &--lg {
+        padding: 20px 30px;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    &--md {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        height: 50px;
+    }
+
+    &--animated {
+        animation: vibration 0.4s infinite linear;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover{
+            animation-play-state: paused;
+        }
+    }
+
+    &--right {
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &[disabled], &.disabled{
+        &, &:focus, &:hover, &:active{
+            background: map_get($button, disabled-bg);
+            color: map_get($button, disabled-color);
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+    &[readonly], &.readonly{
+        &, &:focus, &:hover, &:active{
+            background: map_get($button, disalbed-bg);
+            color: map_get($button, disabled-color);
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+    [type="file"]{
+        display: none;
+    }
+}
+
+@keyframes vibration {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+    25% {
+        transform: rotate(1deg);
+        animation-timing-function: linear;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+    75% {
+        transform: rotate(-1deg);
+        animation-timing-function: linear;
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

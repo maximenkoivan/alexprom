@@ -1,0 +1,29 @@
+.contacts {
+
+    &__link {
+        display: block;
+        font-size: 16px;
+        color: #003b72;
+        white-space: nowrap;
+        padding-left: 25px;
+
+        &--phone {
+            font-size: 20px;
+            font-weight: 900;
+
+            &:before {
+                content: "";
+                background-image: url("/local/templates/sneg/assets/images/btns/phone.png");
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }
+    }
+}
