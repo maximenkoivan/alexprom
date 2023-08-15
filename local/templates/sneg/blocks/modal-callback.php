@@ -23,14 +23,27 @@
                         <input type="text"
                                class="nx-dynamic-label__input nx-form-element"
                                name="phone"
+                               data-dynamic-inp>
+                        <span class="nx-dynamic-label__text">Ваше имя</span>
+                    </label>
+                </div>
+
+                <div class="form-group" data-form-group>
+                    <label class="nx-dynamic-label" data-dynamic-label>
+                        <input type="text"
+                               class="nx-dynamic-label__input nx-form-element"
+                               name="phone"
                                data-dynamic-inp
                                data-phone-mask>
                         <span class="nx-dynamic-label__text">Ваш телефон</span>
                     </label>
                 </div>
 
+                <div data-order-note class="modal__note">Нажимая на данную кнопку, я даю согласие на обработку персональных данных и ознакомлен с <a href="#" target="_blank">Политикой конфиденциальности</a>
+                </div>
+
                 <div class="modal__btn">
-                    <button type="submit"
+                    <button data-ok-title="Спасибо" data-ok-text="Мы с вами свяжемся"  type="submit"
                             class="btn btn--primary btn--lg btn--b-r-5"
                             data-send-request="callback">Заказать звонок</button>
                 </div>
