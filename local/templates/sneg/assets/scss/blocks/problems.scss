@@ -1,0 +1,69 @@
+.problems {
+    position: relative;
+    padding-top: 180px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 980px;
+
+    &__wrapper {
+        max-width: 65%;
+        margin-left: auto;
+    }
+
+    &__heading {
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        font-size: 38px;
+        padding-left: 112px;
+        position: relative;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            z-index: -1;
+            color: #db1603;
+            font-weight: 500;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc(50% - 20px);
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        span {
+            font-size: 22px;
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: underline;
+        }
+    }
+
+    &__img {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+}
