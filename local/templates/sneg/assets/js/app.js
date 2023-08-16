@@ -19,6 +19,7 @@ import './next/NxTabs';
 import AutoSizeTextarea from './plugins/AutoSizeTextarea';
 import Modal from './plugins/Modal';
 import NumberAnimate from "./plugins/NumberAnimate";
+import SelectCustom from "./plugins/SelectCustom";
 
 //Custom modules
 import ShowModal from './modules/ShowModal';
@@ -48,4 +49,5 @@ new ShowModal();
 new Modal();
 new ShowPopup();
 new NumberAnimate();
+new SelectCustom();
 $.order = new Order();

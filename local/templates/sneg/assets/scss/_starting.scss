@@ -74,6 +74,12 @@ body{
     }
 }
 
+section {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
 .content-narrow{
     max-width: map-get($container, narrow);
 }

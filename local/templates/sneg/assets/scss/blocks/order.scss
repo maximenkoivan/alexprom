@@ -70,8 +70,23 @@
 
     &__counter {
         position: absolute;
-        top: 35px;
-        right: 30px;
+        top: 40px;
+        right: -110px;
+        font-family: "Gotham Pro", sans-serif;
+        color: #9599a1;
+
+        &:before {
+            content: "";
+            background: #f1f4f794;
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            left: 30px;
+            top: -50px;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
 
         @include media(xs) {
             top: 20px;
@@ -79,10 +94,22 @@
         }
     }
 
+    &__counter-top {
+        font-size: 23px;
+        margin-left: -10px;
+
+        span {
+
+            &:first-child {
+                font-size: 75px;
+                font-family: "Bandera Pro", sans-serif;
+                color: #003b72;
+                font-weight: 700;
+            }
+        }
+    }
+
     &__form {
-        padding: 35px 45px 40px;
-        background-color: white;
-        color: $c-dark;
 
         @include media(xs) {
             padding: 20px 20px 30px;
@@ -103,7 +130,7 @@
     }
 
     &__nav {
-        margin-top: 60px;
+        margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -128,6 +155,30 @@
         & .form-group.error {
             border: 1px solid red!important;
             padding: 10px;
+        }
+    }
+
+    &__step-title {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-group {
+            margin-right: 10px;
+            width: calc(50% - 20px);
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 

@@ -4,4 +4,6 @@
 
 <?php require("blocks/problems.php") ?>
 
+<?php require("blocks/order-section.php") ?>
+
 <?php require("blocks/footer.php") ?>
