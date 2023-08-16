@@ -1,0 +1,27 @@
+.factoids {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__item {
+        text-align: center;
+        max-width: 180px;
+    }
+
+    &__number {
+        font-size: 70px;
+        color: $c-orange;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 500;
+
+        span {
+            font-size: 20px;
+            color: $c-orange;
+        }
+    }
+}

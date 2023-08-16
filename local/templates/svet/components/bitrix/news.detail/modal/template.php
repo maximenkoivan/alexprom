@@ -46,6 +46,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_PHONE_MODAL_1']['~VALUE'] ?></span>
                     </label>
                 </div>
+                <div class="modal__note"><?= $arResult['PROPERTIES']['TEXT_COMMON']['~VALUE'] ?>
+                    <a href="<?= $arResult['PROPERTIES']['LINK_COMMON']['~VALUE'] ?>" target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK_COMMON']['~VALUE'] ?></a>
+                </div>
                 <div class="modal__btn">
                     <button type="submit"
                             class="btn btn--primary btn--lg btn--b-r-5"
@@ -93,6 +96,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                            data-phone-mask>
                     <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_PHONE_MODAL_2']['~VALUE'] ?></span>
                 </label>
+            </div>
+
+            <div class="modal__note"><?= $arResult['PROPERTIES']['TEXT_COMMON']['~VALUE'] ?>
+                <a href="<?= $arResult['PROPERTIES']['LINK_COMMON']['~VALUE'] ?>" target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK_COMMON']['~VALUE'] ?></a>
             </div>
 
             <div class="call__submit">
@@ -308,6 +315,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                            data-ok-title="<?= $arResult['PROPERTIES']['TITLE_FINAL_MSG__MODAL_3']['~VALUE'] ?>"
                            data-ok-text="<?= $arResult['PROPERTIES']['TEXT_FINAL_MSG__MODAL_3']['~VALUE'] ?>"
                            class="btn btn--primary btn--lg btn--right btn--b-r-5 hidden"><?= $arResult['PROPERTIES']['TEXT_BTN_3_MODAL_3']['~VALUE'] ?></a>
+                    </div>
+                    <div data-order-note class="modal__note modal__note--order hidden"><?= $arResult['PROPERTIES']['TEXT_COMMON']['~VALUE'] ?>
+                        <a href="<?= $arResult['PROPERTIES']['LINK_COMMON']['~VALUE'] ?>" target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK_COMMON']['~VALUE'] ?></a>
                     </div>
                 </form>
             </div>

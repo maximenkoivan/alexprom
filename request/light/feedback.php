@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.
 use classes\Services\FormHandler;
 
 $request = \Bitrix\Main\Context::getCurrent()->getRequest()->getPost('ajax');
-$a = $_POST;
+
 if ($model = new FormHandler($request)) {
     $response = $model->run();
 } else {
