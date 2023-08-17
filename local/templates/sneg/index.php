@@ -18,4 +18,6 @@
 
 <?php require("blocks/cake.php") ?>
 
+<?php require("blocks/map.php") ?>
+
 <?php require("blocks/footer.php") ?>
