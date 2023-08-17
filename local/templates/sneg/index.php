@@ -8,4 +8,6 @@
 
 <?php require("blocks/team.php") ?>
 
+<?php require("blocks/mistakes.php") ?>
+
 <?php require("blocks/footer.php") ?>
