@@ -6,4 +6,6 @@
 
 <?php require("blocks/order-section.php") ?>
 
+<?php require("blocks/team.php") ?>
+
 <?php require("blocks/footer.php") ?>
