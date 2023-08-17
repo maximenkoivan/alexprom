@@ -10,4 +10,12 @@
 
 <?php require("blocks/mistakes.php") ?>
 
+<?php require("blocks/video.php") ?>
+
+<?php require("blocks/type.php") ?>
+
+<?php require("blocks/permits.php") ?>
+
+<?php require("blocks/cake.php") ?>
+
 <?php require("blocks/footer.php") ?>
