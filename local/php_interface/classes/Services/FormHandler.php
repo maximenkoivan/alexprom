@@ -15,7 +15,8 @@ class FormHandler
     private $modelList = [
         'callback' => 'classes\Models\Light\Feedback\Callback',
         'order' => 'classes\Models\Light\Feedback\Order',
-        'discount' => 'classes\Models\Snow\Feedback\Discount',
+        'callbackSnow' => 'classes\Models\Snow\Feedback\CallbackSnow',
+        'discountSnow' => 'classes\Models\Snow\Feedback\DiscountSnow',
     ];
 
     private mixed $model;

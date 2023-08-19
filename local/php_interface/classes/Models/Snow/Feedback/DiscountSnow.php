@@ -4,7 +4,7 @@ namespace classes\Models\Snow\Feedback;
 
 use classes\Base\Iblock;
 
-class Callback extends Iblock
+class DiscountSnow extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'snow';
 
@@ -28,6 +28,14 @@ class Callback extends Iblock
             'value' => '',
             'property' => true,
             'store' => 'PHONE'
+        ],
+        'form_name' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'FORM_NAME'
         ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',

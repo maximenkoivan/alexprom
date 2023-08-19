@@ -4,7 +4,7 @@ namespace classes\Models\Snow\Feedback;
 
 use classes\Base\Iblock;
 
-class Discount extends Iblock
+class CallbackSnow extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'snow';
 

@@ -55,7 +55,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                 data-ok-text="<?= $arResult['FORM_SETTINGS']['TEXT_FINAL_MSG_DISCOUNT']['~VALUE'] ?>"
                                 type="submit"
                                 class="btn btn--primary btn--md"
-                                data-send-request="discount"><?= $arResult['FORM_SETTINGS']['TEXT_BTN_DISCOUNT']['~VALUE'] ?>
+                                data-send-request="discountSnow"><?= $arResult['FORM_SETTINGS']['TEXT_BTN_DISCOUNT']['~VALUE'] ?>
                         </button>
                     </div>
                 </form>
