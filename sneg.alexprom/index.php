@@ -30,7 +30,7 @@ $APPLICATION->SetTitle("Клининговая компания Москвы и 
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
         "IBLOCK_ID" => "content",
-        "IBLOCK_TYPE" => "sneg",
+        "IBLOCK_TYPE" => "snow",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "MESSAGE_404" => "",
