@@ -1,5 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+/**
+ * @global $APPLICATION
+ */
 $APPLICATION->SetTitle("Проектирование и монтаж новогоднего освещения");
 ?>
 <? $APPLICATION->IncludeComponent(
@@ -29,7 +32,7 @@ $APPLICATION->SetTitle("Проектирование и монтаж новог�
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
-        "IBLOCK_ID" => "common_data",
+        "IBLOCK_ID" => "content",
         "IBLOCK_TYPE" => "light",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
