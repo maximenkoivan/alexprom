@@ -4,17 +4,17 @@ namespace classes\Models\Snow\Feedback;
 
 use classes\Base\Iblock;
 
-class Order extends Iblock
+class PresentationSnow extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'snow';
 
-    protected const IBLOCK_CODE = 'order';
+    protected const IBLOCK_CODE = 'feedback';
 
-    private const EVENT_NAME = 'ORDER_FORM';
+    private const EVENT_NAME = 'CALLBACK_FORM';
 
     private array $formFields = [
         'name' => [
-            'ru' => 'Ваше имя',
+            'ru' => 'Имя',
             'en' => 'Name',
             'rules' => 'required|min:3',
             'value' => '',
@@ -29,63 +29,14 @@ class Order extends Iblock
             'property' => true,
             'store' => 'PHONE'
         ],
-        'place' => [
+        'form_name' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
-            'value' => '',
+            'value' => 'Получить презентацию',
             'property' => true,
-            'store' => 'PLACE'
+            'store' => 'FORM_NAME'
         ],
-        'type' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'TYPE'
-        ],
-        'where' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'WHERE'
-        ],
-        'style' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'STYLE'
-        ],
-        'size' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'SIZE'
-        ],
-        'date' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'DATE'
-        ],
-        'comment' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'COMMENT'
-        ],
-
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
 //            'en' => 'recaptcha',
@@ -143,13 +94,6 @@ class Order extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'PLACE' => $this->formFields['place']['value'],
-            'TYPE' => $this->formFields['type']['value'],
-            'WHERE' => $this->formFields['where']['value'],
-            'STYLE' => $this->formFields['style']['value'],
-            'SIZE' => $this->formFields['size']['value'],
-            'DATE' => $this->formFields['date']['value'],
-            'COMMENT' => $this->formFields['comment']['value'],
         ];
     }
 
