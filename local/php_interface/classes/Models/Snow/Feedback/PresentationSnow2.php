@@ -4,7 +4,7 @@ namespace classes\Models\Snow\Feedback;
 
 use classes\Base\Iblock;
 
-class PresentationSnow extends Iblock
+class PresentationSnow2 extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'snow';
 
@@ -13,10 +13,10 @@ class PresentationSnow extends Iblock
     private const EVENT_NAME = 'CALLBACK_FORM';
 
     private array $formFields = [
-        'email' => [
-            'ru' => 'Email',
-            'en' => 'Email',
-            'rules' => 'required|email',
+        'name' => [
+            'ru' => 'Имя',
+            'en' => 'Name',
+            'rules' => 'required|min:3',
             'value' => '',
             'property' => false,
             'store' => 'NAME'

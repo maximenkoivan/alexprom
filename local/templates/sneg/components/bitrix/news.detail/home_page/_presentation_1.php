@@ -32,9 +32,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <div class="mistakes__form-subtitle"><?= $arResult['FORM_SETTINGS']['SUBTITLE_PRESENT']['~VALUE'] ?></div>
                     <div class="form-group" data-form-group>
                         <label class="nx-dynamic-label" data-dynamic-label>
-                            <input type="text"
+                            <input type="email"
                                    class="nx-dynamic-label__input nx-form-element"
-                                   name="name"
+                                   name="email"
                                    data-dynamic-inp>
                             <span class="nx-dynamic-label__text"><?= $arResult['FORM_SETTINGS']['PLH_1_PRESENT']['~VALUE'] ?></span>
                         </label>
