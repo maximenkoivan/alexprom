@@ -47,11 +47,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         <span class="nx-dynamic-label__text"><?= $arResult['PROPERTIES']['PLH_2_CALLBACK']['~VALUE'] ?></span>
                     </label>
                 </div>
-                <input class="hidden" name="form_name"
-                       value="<?= $arResult['PROPERTIES']['TEXT_BTN_CALLBACK']['~VALUE'] ?>">
-                <div data-order-note class="modal__note"><?= $arResult['PROPERTIES']['TEXT_COMMON']['~VALUE'] ?><a
-                            href="<?= $arResult['PROPERTIES']['LINK_COMMON']['~VALUE'] ?>"
-                            target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK_COMMON']['~VALUE'] ?></a>
+                <div data-order-note class="modal__note"><?= $arResult['PROPERTIES']['TEXT_COMMON']['~VALUE'] ?>
+                    <a href="<?= $arResult['PROPERTIES']['LINK_COMMON']['~VALUE'] ?>"
+                       target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK_COMMON']['~VALUE'] ?></a>
                 </div>
 
                 <div class="modal__btn">

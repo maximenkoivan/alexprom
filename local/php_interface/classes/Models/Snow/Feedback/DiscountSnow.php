@@ -33,7 +33,7 @@ class DiscountSnow extends Iblock
             'ru' => '',
             'en' => '',
             'rules' => '',
-            'value' => '',
+            'value' => 'Получить скидку',
             'property' => true,
             'store' => 'FORM_NAME'
         ],

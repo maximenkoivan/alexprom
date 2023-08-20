@@ -70,7 +70,7 @@ class FormHandler
     private function prepare()
     {
         foreach ($this->fields as $name => $field) {
-            $this->fields[$name]['value'] = $this->request->get($name);
+            $this->fields[$name]['value'] = $this->request->get($name) ?? $this->fields[$name]['value'];
             $this->validate($name);
         }
     }

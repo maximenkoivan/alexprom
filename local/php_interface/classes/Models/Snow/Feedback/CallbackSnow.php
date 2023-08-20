@@ -33,7 +33,7 @@ class CallbackSnow extends Iblock
             'ru' => '',
             'en' => '',
             'rules' => '',
-            'value' => '',
+            'value' => 'Заказать звонок',
             'property' => true,
             'store' => 'FORM_NAME'
         ],

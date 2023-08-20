@@ -48,8 +48,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             <span class="nx-dynamic-label__text"><?= $arResult['FORM_SETTINGS']['PLH_2_DISCOUNT']['~VALUE'] ?></span>
                         </label>
                     </div>
-                    <input class="hidden" name="form_name"
-                           value="<?= $arResult['FORM_SETTINGS']['TEXT_BTN_DISCOUNT']['~VALUE'] ?>">
                     <div class="promo__submit">
                         <button data-ok-title="<?= $arResult['FORM_SETTINGS']['TITLE_FINAL_MSG_DISCOUNT']['~VALUE'] ?>"
                                 data-ok-text="<?= $arResult['FORM_SETTINGS']['TEXT_FINAL_MSG_DISCOUNT']['~VALUE'] ?>"
