@@ -32,6 +32,7 @@
     "core-js": "^3.32.0",
     "countup.js": "^2.7.0",
     "element-closest": "^3.0.2",
+    "handy-collapse": "^1.1.0",
     "imask": "^7.0.1",
     "jquery": "^3.7.0",
     "micromodal": "^0.4.10",

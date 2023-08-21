@@ -16,6 +16,8 @@
 
 <?php require("blocks/permits.php") ?>
 
+<?php require("blocks/feedback.php") ?>
+
 <?php require("blocks/cake.php") ?>
 
 <?php require("blocks/map.php") ?>
