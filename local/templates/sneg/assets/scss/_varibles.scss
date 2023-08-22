@@ -24,7 +24,7 @@ $c-red: #de0c0f;
 // BACKGROUNDS
 //////////////////
 $bg: (
-    body: white,
+    body: #f2f5fc,
     wrapper: transparent,
     container: transparent,
 );
@@ -261,7 +261,7 @@ $container-gutter: 50px;
 $container-gutter-sm: 30px;
 $container-gutter-xs: 20px;
 $container: (
-    max-width: 1280px,
+    max-width: 1400px,
     width-wo-gutter: 1200 - $container-gutter*2,
     min-width: 320px,
     width: 100%,

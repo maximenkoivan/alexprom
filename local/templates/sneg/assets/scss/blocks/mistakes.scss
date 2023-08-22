@@ -1,0 +1,54 @@
+.mistakes {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-top: -20px;
+
+    &__row {
+        display: flex;
+    }
+
+    &__image {
+        max-width: 65%;
+        flex-basis: 65%;
+    }
+
+    &__form {
+        padding: 45px 20px;
+        border-radius: 8px;
+        background: #fff;
+        text-align: center;
+        color:  #323845;
+        max-width: 35%;
+        flex-basis: 35%;
+    }
+
+    &__form-title {
+        font-size: 29px;
+        margin-bottom: 10px;
+    }
+
+    &__form-subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__form-btn {
+        margin-top: 20px;
+    }
+
+    &__heading {
+        text-align: center;
+        max-width: 45%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 38px;
+        margin-bottom: 0;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+    }
+}

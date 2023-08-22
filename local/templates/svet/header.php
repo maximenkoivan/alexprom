@@ -38,26 +38,36 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
     <meta property="og:description" content="<?php $APPLICATION->ShowProperty('description', ''); ?>"/>
     <meta property="og:image" content="<?= 'http:/' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/favicon.png' ?>">
 
-        <?php if ($USER->IsAdmin() && $header['ADMIN_PANEL']['VALUE']): ?>
-            <?php $APPLICATION->ShowPanel(); ?>
-        <?php endif; ?>
+    <?php if ($USER->IsAdmin() && $header['ADMIN_PANEL']['VALUE']): ?>
+        <?php $APPLICATION->ShowPanel(); ?>
+    <?php endif; ?>
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(94625234, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/94625234" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/94625234" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 
 </head>
@@ -86,13 +96,17 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
             </div>
 
             <div class="header__contacts contacts">
-                <a href="tel:<?= Generic::getCleanPhoneNumber($header['PHONE_HEADER']['~VALUE']) ?>"
-                   class="contacts__link contacts__link--phone">
-                    <?= $header['PHONE_HEADER']['~VALUE'] ?>
-                </a>
-                <a href="mailto:<?= $header['EMAIL_HEADER']['~VALUE'] ?>" class="contacts__link">
-                    <?= $header['EMAIL_HEADER']['~VALUE'] ?>
-                </a>
+                <?php if (!empty($header['PHONE_HEADER']['~VALUE'])): ?>
+                    <a href="tel:<?= Generic::getCleanPhoneNumber($header['PHONE_HEADER']['~VALUE']) ?>"
+                       class="contacts__link contacts__link--phone">
+                        <?= $header['PHONE_HEADER']['~VALUE'] ?>
+                    </a>
+                <?php endif; ?>
+                <?php if (!empty($header['EMAIL_HEADER']['~VALUE'])): ?>
+                    <a href="mailto:<?= $header['EMAIL_HEADER']['~VALUE'] ?>" class="contacts__link">
+                        <?= $header['EMAIL_HEADER']['~VALUE'] ?>
+                    </a>
+                <?php endif; ?>
             </div>
             <?php if (!empty($header['TEXT_BTN_HEADER']['~VALUE'])): ?>
                 <div class="header__btn">

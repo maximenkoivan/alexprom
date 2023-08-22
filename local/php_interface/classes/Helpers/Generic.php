@@ -209,4 +209,15 @@ class Generic
     {
         return COption::GetOptionString("fileman", "yandex_map_api_key");
     }
+
+    /**
+     * Возвращает подстроку после цифр
+     * @param string $string
+     * @return mixed
+     */
+    public static function separate(string $string)
+    {
+        preg_match("/([^0-9])+/u", $string, $matches);
+        return $matches[0];
+    }
 }

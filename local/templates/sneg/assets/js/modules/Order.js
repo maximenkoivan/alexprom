@@ -73,11 +73,9 @@ class Order {
             currentStep = step,
             progress = (currentStep * 100) / amt
 
-        this.$orderProgress.style.width = `${progress}%`
-        this.$orderCounter.innerHTML = `${currentStep}/${amt}`
+        this.$orderCounter.innerHTML = `<span>0${currentStep}</span><span> / 0${amt}</span>`
 
         if (currentStep < amt) this.$orderNext.setAttribute(`data-nav`, Number(step) + 1)
-        if (currentStep > 1) this.$orderPrev.setAttribute(`data-nav`, Number(step) - 1)
 
 
         if (currentStep != amt) {
@@ -110,12 +108,7 @@ class Order {
                     if (input.checked) checked++
                 })
 
-                if (checked === 0) {
-                    formGroup.classList.add(this.className.error)
-                } else {
-                    formGroup.classList.remove(this.className.error)
-                    this.changeStep(step)
-                }
+                this.changeStep(step)
                 break
 
             case 'prev':

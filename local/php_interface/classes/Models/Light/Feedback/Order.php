@@ -6,9 +6,9 @@ use classes\Base\Iblock;
 
 class Order extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'LIGHT';
+    protected const IBLOCK_TYPE_CODE = 'light';
 
-    protected const IBLOCK_CODE = 'ORDER';
+    protected const IBLOCK_CODE = 'order';
 
     private const EVENT_NAME = 'ORDER_FORM';
 

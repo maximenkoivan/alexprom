@@ -15,6 +15,11 @@ class FormHandler
     private $modelList = [
         'callback' => 'classes\Models\Light\Feedback\Callback',
         'order' => 'classes\Models\Light\Feedback\Order',
+        'callbackSnow' => 'classes\Models\Snow\Feedback\CallbackSnow',
+        'discountSnow' => 'classes\Models\Snow\Feedback\DiscountSnow',
+        'orderSnow' => 'classes\Models\Snow\Feedback\OrderSnow',
+        'presentationSnow' => 'classes\Models\Snow\Feedback\PresentationSnow',
+        'presentationSnow2' => 'classes\Models\Snow\Feedback\PresentationSnow2',
     ];
 
     private mixed $model;
@@ -68,7 +73,7 @@ class FormHandler
     private function prepare()
     {
         foreach ($this->fields as $name => $field) {
-            $this->fields[$name]['value'] = $this->request->get($name);
+            $this->fields[$name]['value'] = $this->request->get($name) ?? $this->fields[$name]['value'];
             $this->validate($name);
         }
     }

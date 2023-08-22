@@ -303,7 +303,7 @@ class NxRequest{
                     $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
                         $modalOk.close();
                     });
-                    $.order.clearForm()
+                    //$.order.clearForm()
                     break;
 
                 default:

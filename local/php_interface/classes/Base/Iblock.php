@@ -7,7 +7,7 @@ use CModule;
 
 class Iblock
 {
-    protected const TYPE_IBLOCK_CODE = '';
+    protected const IBLOCK_TYPE_CODE = '';
 
     protected const IBLOCK_CODE = '';
 
@@ -22,7 +22,7 @@ class Iblock
      */
     public function getIblockId()
     {
-        $iblock = \CIBlock::GetList(false, ['TYPE' => static::TYPE_IBLOCK_CODE, 'CODE' => static::IBLOCK_CODE])->Fetch();
+        $iblock = \CIBlock::GetList(false, ['TYPE' => static::IBLOCK_TYPE_CODE, 'CODE' => static::IBLOCK_CODE])->Fetch();
         return $iblock['ID'];
     }
 }

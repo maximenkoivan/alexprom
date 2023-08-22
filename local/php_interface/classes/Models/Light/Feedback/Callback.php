@@ -6,9 +6,9 @@ use classes\Base\Iblock;
 
 class Callback extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'LIGHT';
+    protected const IBLOCK_TYPE_CODE = 'light';
 
-    protected const IBLOCK_CODE = 'FEEDBACK';
+    protected const IBLOCK_CODE = 'feedback';
 
     private const EVENT_NAME = 'CALLBACK_FORM';
 

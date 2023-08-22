@@ -22,7 +22,7 @@
                     <label class="nx-dynamic-label" data-dynamic-label>
                         <input type="text"
                                class="nx-dynamic-label__input nx-form-element"
-                               name="phone"
+                               name="name"
                                data-dynamic-inp>
                         <span class="nx-dynamic-label__text">Ваше имя</span>
                     </label>
