@@ -19,21 +19,21 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </h2>
             </div>
             <div class="video__row flex-row">
-                <div class="flex-col md-8 sm-12 xs24">
+                <div class="flex-col md-8 sm-24">
                     <div class="video__item">
                         <div class="video__item-num">1</div>
                         <h4><?= $arResult['PROPERTIES']['TITLE_1_VIDEO']['~VALUE'] ?></h4>
                         <p><?= $arResult['PROPERTIES']['DESC_1_VIDEO']['~VALUE'] ?></p>
                     </div>
                 </div>
-                <div class="flex-col md-8 sm-12 xs24">
+                <div class="flex-col md-8 sm-24">
                     <div class="video__item">
                         <div class="video__item-num">2</div>
                         <h4><?= $arResult['PROPERTIES']['TITLE_2_VIDEO']['~VALUE'] ?></h4>
                         <p><?= $arResult['PROPERTIES']['DESC_2_VIDEO']['~VALUE'] ?></p>
                     </div>
                 </div>
-                <div class="flex-col md-8 sm-12 xs24">
+                <div class="flex-col md-8 sm-24">
                     <div class="video__item">
                         <div class="video__item-num">3</div>
                         <h4><?= $arResult['PROPERTIES']['TITLE_3_VIDEO']['~VALUE'] ?></h4>

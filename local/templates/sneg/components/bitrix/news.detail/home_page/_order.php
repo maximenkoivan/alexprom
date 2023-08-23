@@ -113,10 +113,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </div>
                         <div data-form-group class="form-group">
                             <label class="nx-dynamic-label" data-dynamic-label>
-                                <input type="text"
+                                <textarea type="text"
                                        class="nx-dynamic-label__input nx-form-element"
                                        name="comment"
-                                       data-dynamic-inp>
+                                          data-dynamic-inp></textarea>
                                 <span class="nx-dynamic-label__text"><?= $arResult['FORM_SETTINGS']['PLH_3_STEP_3_ORDER']['VALUE'] ?></span>
                             </label>
                         </div>

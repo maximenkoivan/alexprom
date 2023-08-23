@@ -4,14 +4,32 @@
     background-position: 65% 100%;
     padding-bottom: 120px;
 
+    @include media('sm-max') {
+        background-position: 50% 100%;
+    }
+
+    @include media('xs') {
+        padding-bottom: 300px;
+        background-size: 600px;
+    }
+
     &__heading {
         text-align: center;
         max-width: 50%;
         margin: 0 auto 120px;
+
+        @include media('sm-max') {
+            max-width: 75%;
+            margin: 0 auto 60px;
+        }
     }
 
     &__title {
         font-size: 38px;
+
+        @include media('sm-max') {
+            font-size: 32px;
+        }
     }
 
     &__row {
@@ -19,6 +37,15 @@
         align-items: flex-start;
         justify-content: space-between;
         height: 400px;
+
+        @include media('sm-max') {
+            height: 570px;
+        }
+
+        @include media('xs') {
+            height: auto;
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -56,6 +83,16 @@
                 top: 6px;
                 border-radius: 50%;
                 background: #b8b9b9;
+            }
+        }
+
+        @include media('xs') {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-bottom: 60px;
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
 

@@ -4,11 +4,41 @@
     margin-top: -110px;
     position: relative;
 
+    @include media('sm-max') {
+        min-height: 600px;
+        padding-top: 60px;
+        margin-top: 0;
+    }
+
+    @include media('xs') {
+        min-height: 710px;
+        padding-top: 70px;
+        margin-top: 0;
+    }
 
     &__wrapper {
         width: 40%;
         position: relative;
         margin-bottom: 60px;
+
+        @include media('md-max') {
+            width: 75%;
+        }
+
+        @include media('sm-max') {
+            width: 100%;
+        }
+
+        @include media('xs') {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__heading {
+
+        @include media('sm-max') {
+            max-width: 85%;
+        }
     }
 
     &__text {
@@ -22,8 +52,6 @@
             color: $c-orange;
             border-bottom: 1px dashed $c-orange;
         }
-
-
 
         &:after {
             content: "";
@@ -46,6 +74,15 @@
             background: #db1603;
             top: 10px;
             left: 40px;
+        }
+
+        @include media('xs') {
+            width: 100%;
+            padding-left: 75px;
+
+            &:before {
+                height: 100px;
+            }
         }
     }
 }

@@ -3,6 +3,12 @@
     background-position:  50% 50%;
     padding-top: 70px;
     padding-bottom: 110px;
+    background-size: cover;
+
+    @include media('xs') {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
 
     &__title {
         font-size: 38px;
@@ -12,10 +18,18 @@
             display: block;
             color: #db1603;
         }
+
+        @include media('sm-max') {
+            font-size: 32px;
+        }
     }
 
     &__row {
         display: flex;
+
+        @include media('xs') {
+            flex-wrap: wrap;
+        }
     }
 
     &__image {
@@ -49,5 +63,8 @@
 
         }
 
+        @include media('xs') {
+            margin-bottom: 15px;
+        }
     }
 }
