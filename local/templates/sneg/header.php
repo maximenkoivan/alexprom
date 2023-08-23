@@ -15,7 +15,7 @@ use classes\Models\Snow\Basic\CommonData;
 $asset = Asset::getInstance();
 
 $asset->addString(
-    '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.ico">',
+    '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.png">',
     AssetLocation::BEFORE_CSS
 );
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
@@ -36,7 +36,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
 
     <meta property="og:title" content="<?php $APPLICATION->ShowTitle(); ?>"/>
     <meta property="og:description" content="<?php $APPLICATION->ShowProperty('description', ''); ?>"/>
-    <meta property="og:image" content="<?= 'http:/' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/favicon.ico' ?>">
+    <meta property="og:image" content="<?= 'http:/' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/favicon.png' ?>">
 
     <?php if ($USER->IsAdmin() && $header['ADMIN_PANEL']['VALUE']): ?>
         <?php $APPLICATION->ShowPanel(); ?>
