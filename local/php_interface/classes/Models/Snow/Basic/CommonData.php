@@ -13,8 +13,8 @@ final class CommonData extends Iblock
     private static ?CommonData $instance = null;
 
     /**
-     * Получет элемент по его коду
      * @param string $code
+     * @param bool $onlyProperties
      * @return array
      */
     public function getElementByCode(string $code, bool $onlyProperties = false): array

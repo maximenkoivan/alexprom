@@ -49,7 +49,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             data-ok-text="<?= $arResult['FORM_SETTINGS']['TEXT_FINAL_MSG_PRESENT_2']['~VALUE'] ?>"
                             type="submit"
                             class="btn btn--primary btn--lg"
-                            data-send-request="presentationSnow2"><?= $arResult['FORM_SETTINGS']['TEXT_BTN_PRESENT_2']['~VALUE'] ?></button>
+                            data-send-request="applicationSnow"><?= $arResult['FORM_SETTINGS']['TEXT_BTN_PRESENT_2']['~VALUE'] ?></button>
                 </div>
 
             </form>
