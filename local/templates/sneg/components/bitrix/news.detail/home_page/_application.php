@@ -54,7 +54,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
             </form>
             <div class="cake__image">
-                <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_PRESENT_2']['VALUE']) ?>" alt=" ">
+                <?php if (!empty($arResult['PROPERTIES']['IMAGE_PRESENT_2']['VALUE'])): ?>
+                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_PRESENT_2']['VALUE']) ?>" alt=" ">
+                <?php endif; ?>
             </div>
         </div>
     </div>
