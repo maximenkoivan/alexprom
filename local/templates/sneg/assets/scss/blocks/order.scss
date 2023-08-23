@@ -88,9 +88,21 @@
         }
 
 
-        @include media(xs) {
-            top: 20px;
-            right: 10px;
+        @include media('sm-max') {
+            top: -40px;
+            right: 0;
+        }
+
+        @include media('xs') {
+            top: -50px;
+            right: -10px;
+
+            &:before {
+                left: 3px;
+                top: -15px;
+                width: 120px;
+                height: 120px;
+            }
         }
     }
 
@@ -105,6 +117,20 @@
                 font-family: "Bandera Pro", sans-serif;
                 color: #003b72;
                 font-weight: 700;
+            }
+        }
+
+        @include media('sm-max') {
+            font-size: 16px;
+        }
+
+        @include media('xs') {
+
+            span {
+
+                &:first-child {
+                    font-size: 40px;
+                }
             }
         }
     }
@@ -178,6 +204,15 @@
 
             &:last-child {
                 margin-right: 0;
+            }
+        }
+
+        @include media('xs') {
+            flex-direction: column;
+
+            .form-group {
+                margin-right: 0;
+                width: 100%;
             }
         }
     }

@@ -19,6 +19,31 @@
             height: 100%;
             object-fit: cover;
         }
+
+        @include media('md-max') {
+            right: 15px;
+            top: 74px;
+            width: 430px;
+            height: 430px;
+        }
+
+        @include media('sm-max') {
+            right: 9px;
+            top: 215px;
+            width: 330px;
+            height: 330px;
+        }
+
+        @include media('xs') {
+            right: 0;
+            top: 0;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            border: 10px solid #f2f5fc;
+            margin: 0 auto 40px;
+        }
+
     }
 
     &__heading {
@@ -33,6 +58,22 @@
         span {
             color: #db1603;
             font-size: 90px;
+        }
+
+        @include media('sm-max') {
+            font-size: 32px;
+
+            span {
+                font-size: 60px;
+            }
+        }
+
+        @include media('xs') {
+            font-size: 22px;
+
+            span {
+                font-size: 40px;
+            }
         }
     }
 
@@ -52,6 +93,14 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+
+        @include media('sm-max') {
+            font-size: 20px;
+        }
+
+        @include media('xs') {
+            margin-bottom: 40px;
         }
     }
 
@@ -80,12 +129,33 @@
             bottom: -47px;
             right: -459px;
         }
+
+        @include media('sm-max') {
+            font-size: 28px;
+
+            span {
+                font-size: 35px;
+            }
+
+            &:before {
+                content: none;
+            }
+        }
+
+        @include media('xs') {
+            margin-bottom: 40px;
+        }
     }
 
     &__row {
         display: flex;
         position: relative;
         margin-bottom: 60px;
+
+        @include media('xs') {
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
@@ -99,6 +169,12 @@
         p {
             font-size: 18px;
             font-weight: 400;
+        }
+
+        @include media('xs') {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
         }
     }
 
@@ -114,6 +190,15 @@
             object-fit: cover;
             margin-right: 20px;
             border-radius: 50%;
+        }
+
+        @include media('sm-max') {
+            font-size: 26px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
         }
     }
 

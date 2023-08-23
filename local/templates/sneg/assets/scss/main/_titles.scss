@@ -12,10 +12,16 @@ h1, .h1{
     }
 }
 h2, .h2{
-    font-size: $fz-xbig;
+    font-size: 38px;
     margin-bottom: 15px;
+
+    @include media('sm-max') {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
     @include media('xs') {
-        font-size: $fz-large;
+        font-size: 22px;
         margin-bottom: 10px;
     }
 }

@@ -9,6 +9,10 @@
         padding-top: 80px;
     }
 
+    @include media('xs') {
+        padding-top: 40px;
+    }
+
     &__wrapper {
         display: flex;
 
@@ -72,6 +76,10 @@
 
     &__heading {
         margin-bottom: 50px;
+
+        @include media('xs') {
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
@@ -84,6 +92,10 @@
         @include media('sm-max') {
             font-size: 32px;
         }
+
+        @include media('xs') {
+            font-size: 24px;
+        }
     }
 
     &__subtitle {
@@ -95,7 +107,6 @@
 
         small {
             font-size: 12px;
-
         }
 
         &:before {
@@ -109,18 +120,32 @@
             background: #db1603;
         }
 
-        &:after {
-            width: 36px;
-            height: 42px;
-            background: url("/local/templates/sneg/assets/images/btns/arrow.png") no-repeat 50% 50%;
-            right: -50px;
-            bottom: -30px;
-            content: "";
-            position: absolute;
+        &--arrow {
+            &:after {
+                width: 36px;
+                height: 42px;
+                background: url("/local/templates/sneg/assets/images/btns/arrow.png") no-repeat 50% 50%;
+                right: -50px;
+                bottom: -30px;
+                content: "";
+                position: absolute;
+            }
         }
 
         @include media('sm-max') {
             font-size: 22px;
+        }
+
+        @include media('xs') {
+            font-size: 18px;
+            padding-left: 15px;
+
+            &--arrow {
+
+                &:after {
+                    content: none;
+                }
+            }
         }
     }
 
@@ -132,6 +157,17 @@
             margin-right: 20px;
             max-width: 200px;
         }
+
+        @include media('xs') {
+
+            flex-direction: column;
+
+            .form-group {
+                margin-bottom: 20px;
+                margin-right: 0;
+                max-width: 100%;
+            }
+        }
     }
 
     &__bottom {
@@ -139,6 +175,18 @@
 
         @include media('sm-max') {
             margin-top: 80px;
+        }
+
+        @include media('xs') {
+            margin-top: 40px;
+        }
+    }
+
+    &__submit {
+
+        @include media('xs') {
+            text-align: center;
+
         }
     }
 }

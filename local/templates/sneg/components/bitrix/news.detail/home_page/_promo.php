@@ -21,7 +21,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </h1>
                     <!-- TODO Дима обрати внимание, что стрелка вниз, должна быть только на последнем элементе в массиве -->
                     <?php foreach ($arResult['PROPERTIES']['SUBTITLE_PROMO']['~VALUE'] as $key => $text): ?>
-                        <div class="promo__subtitle <?= $key === array_key_last($arResult['PROPERTIES']['SUBTITLE_PROMO']['~VALUE']) ? 'Вставляем класс со стрелкой вниз' : '' ?>">
+                        <div class="promo__subtitle <?= $key === array_key_last($arResult['PROPERTIES']['SUBTITLE_PROMO']['~VALUE']) ? 'promo__subtitle--arrow' : '' ?>">
                             <?= $text ?>
                         </div>
                         <br>
