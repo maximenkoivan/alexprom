@@ -4,7 +4,7 @@ namespace classes\Models\Snow\Feedback;
 
 use classes\Base\Iblock;
 
-class PresentationSnow2 extends Iblock
+class ApplicationSnow extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'snow';
 
@@ -33,7 +33,7 @@ class PresentationSnow2 extends Iblock
             'ru' => '',
             'en' => '',
             'rules' => '',
-            'value' => 'Получить презентацию',
+            'value' => 'Оставить заявку',
             'property' => true,
             'store' => 'FORM_NAME'
         ],
