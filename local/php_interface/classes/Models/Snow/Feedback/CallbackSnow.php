@@ -37,6 +37,14 @@ class CallbackSnow extends Iblock
             'property' => true,
             'store' => 'FORM_NAME'
         ],
+        'type' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'TYPE'
+        ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
 //            'en' => 'recaptcha',
