@@ -7,7 +7,6 @@
 
     &__heading {
         text-align: center;
-        max-width: 30%;
         margin: 0 auto 110px;
     }
 
@@ -15,6 +14,7 @@
         font-size: 38px;
 
         span {
+            text-transform: uppercase;
             color: #db1603;
         }
 
@@ -35,6 +35,7 @@
 
         h4 {
             font-size: 28px;
+            text-align: center;
         }
 
         p {

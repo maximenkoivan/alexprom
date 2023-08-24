@@ -9,6 +9,14 @@
         padding-bottom: 40px;
     }
 
+    &__heading {
+        margin-bottom: 40px;
+
+        @include media('xs') {
+            margin-bottom: 20px;
+        }
+    }
+
     &__title {
         font-size: 38px;
         text-align: center;

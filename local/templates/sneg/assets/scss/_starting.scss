@@ -49,7 +49,7 @@ body{
     }
     @include media('xs'){
         &__content{
-            padding-top: map_get($header, height-xs);
+            padding-top: 0;
         }
     }
 }
