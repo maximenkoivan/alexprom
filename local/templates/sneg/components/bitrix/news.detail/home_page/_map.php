@@ -15,8 +15,18 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <?= $arResult['PROPERTIES']['TITLE_CONTACTS']['~VALUE'] ?>
             </h2>
         </div>
-        <div class="map__wrapper">
+        <div class="map__wrapper" id="contact-map">
             <?= $arResult['PROPERTIES']['CODE_YANDEX_WIDGET_CONTACTS']['~VALUE'] ?>
+            <script>
+                document.addEventListener('click', function(e) {
+                    let map = document.querySelector('#contact-map iframe')
+                    if(e.target.id === 'contact-map') {
+                        map.style.pointerEvents = 'all'
+                    } else {
+                        map.style.pointerEvents = 'none'
+                    }
+                })
+            </script>
         </div>
     </section>
 <?php endif; ?>

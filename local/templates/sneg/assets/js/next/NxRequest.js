@@ -270,6 +270,7 @@ class NxRequest{
         } else {
             switch (type) {
                 case 'callback':
+                case 'callbackSnow':
 
                     $modalCallback = document.querySelector('#modal-callback')
 
@@ -307,12 +308,13 @@ class NxRequest{
                     break;
 
                 default:
+                    $modalCallback = document.querySelector('#modal-callback')
                     $modalOk = new tingle.modal({
                         closeMethods: ['overlay', 'button', 'escape'],
                         closeLabel: "",
                         cssClass: ['custom-class-1', 'custom-class-2']
                     });
-                    $modalOk.setContent('<h1>Форма отправлена</h1>');
+                    $modalOk.setContent(`<h3>Спасибо</h3><p>Ваша заявка взята в работу</p>`);
             }
 
             if ($modalOk){

@@ -17,6 +17,7 @@
 
     @include media('xs') {
         height: map_get($header, height-xs);
+        position: relative;
     }
 
     &__wrap, &__container{

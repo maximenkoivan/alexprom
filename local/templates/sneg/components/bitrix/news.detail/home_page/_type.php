@@ -28,6 +28,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             <div class="type__item-btn">
                                 <button type="submit"
                                         class="btn btn--primary btn--lg"
+                                        data-type="<?= $arResult['PROPERTIES']['TITLE_LEFT_TYPE']['~VALUE'] ?>"
                                         data-custom-open="modal-callback"><?= $arResult['PROPERTIES']['TEXT_BTN_LEFT_TYPE']['~VALUE'] ?>
                                 </button>
                             </div>
@@ -46,6 +47,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             <div class="type__item-btn">
                                 <button type="submit"
                                         class="btn btn--primary btn--lg"
+                                        data-type="<?= $arResult['PROPERTIES']['TITLE_RIGHT_TYPE']['~VALUE'] ?>"
                                         data-custom-open="modal-callback"><?= $arResult['PROPERTIES']['TEXT_BTN_RIGHT_TYPE']['~VALUE'] ?>
                                 </button>
                             </div>

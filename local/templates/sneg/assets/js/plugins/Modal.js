@@ -26,10 +26,24 @@ class Modal {
             openClass: 'is-open',
             disableScroll: true,
             disableFocus: false,
+            onShow: (modal, btn) => addInputs(modal, btn), // [1]
             awaitOpenAnimation: false,
             awaitCloseAnimation: false,
             debugMode: true
         });
+
+        function addInputs(modal, btn) {
+            let form = modal.querySelector('form'),
+                input = document.createElement('input'),
+                type = btn.getAttribute('data-type')
+
+            if (type) {
+                input.setAttribute('name', 'type')
+                input.setAttribute('hidden', 'true')
+                input.setAttribute('value', `${type}`)
+                form.append(input)
+            }
+        }
     }
 }
 

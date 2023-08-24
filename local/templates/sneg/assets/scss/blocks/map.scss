@@ -9,6 +9,10 @@
 
     &__wrapper {
         height: 100%;
+
+        iframe {
+            pointer-events:none
+        }
     }
 
     &__heading {
