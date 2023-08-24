@@ -19,7 +19,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <h1 class="promo__title">
                         <?= $arResult['PROPERTIES']['TITLE_PROMO']['~VALUE'] ?>
                     </h1>
-                    <!-- TODO Дима обрати внимание, что стрелка вниз, должна быть только на последнем элементе в массиве -->
                     <?php foreach ($arResult['PROPERTIES']['SUBTITLE_PROMO']['~VALUE'] as $key => $text): ?>
                         <div class="promo__subtitle <?= $key === array_key_last($arResult['PROPERTIES']['SUBTITLE_PROMO']['~VALUE']) ? 'promo__subtitle--arrow' : '' ?>">
                             <?= $text ?>
