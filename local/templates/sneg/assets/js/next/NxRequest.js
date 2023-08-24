@@ -307,12 +307,16 @@ class NxRequest{
                     break;
 
                 default:
+                    $modalCallback = document.querySelector('#modal-callback')
                     $modalOk = new tingle.modal({
                         closeMethods: ['overlay', 'button', 'escape'],
                         closeLabel: "",
                         cssClass: ['custom-class-1', 'custom-class-2']
                     });
                     $modalOk.setContent(`<h3>Благодарим за обращение в компанию Алекспром</h3><p>Ваша заявка взята в работу</p>`);
+                    $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
+                        $modalOk.close();
+                    });
             }
 
             if ($modalOk){
