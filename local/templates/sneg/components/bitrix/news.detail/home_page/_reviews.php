@@ -48,8 +48,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                     </a>
                                 <?php endif; ?>
                                 <?php if (!empty($review['FOTO']['VALUE'])): ?>
-                                    <img class="hc__paper-bottom" src="<?= CFile::GetPath($review['FOTO']['VALUE']) ?>"
-                                         alt="">
+                                    <a class="hc__paper-bottom" data-fslightbox="cake"
+                                       href="<?= CFile::GetPath($review['FOTO']['VALUE']) ?>">
+                                        <img class="hc__paper-bottom" src="<?= CFile::GetPath($review['FOTO']['VALUE']) ?>"
+                                             alt="">
+                                    </a>
                                 <?php endif; ?>
                             </div>
                         </div>

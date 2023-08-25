@@ -1,5 +1,5 @@
 .cake {
-    padding: 110px 20px;
+    padding: 90px 20px;
     background-repeat: no-repeat;
     background-position:  50% 50%;
     background-size: cover;
@@ -53,8 +53,8 @@
     &__image {
         position: absolute;
         right: 220px;
-        bottom: -120px;
-        max-width: 400px;
+        bottom: -90px;
+        max-width: 100%;
 
         img {
             width: 100%;

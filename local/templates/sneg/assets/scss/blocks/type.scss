@@ -1,7 +1,7 @@
 .type {
     background-color: #fff;
     background-repeat: no-repeat;
-    background-position: 65% 100%;
+    background-position: 50% 100%;
     padding-bottom: 120px;
 
     @include media('sm-max') {
@@ -21,6 +21,10 @@
         @include media('sm-max') {
             max-width: 75%;
             margin: 0 auto 60px;
+        }
+
+        @include media('xs') {
+            max-width: 400px;
         }
     }
 
@@ -94,6 +98,10 @@
             &:last-child {
                 margin-bottom: 0;
             }
+
+            ul {
+                margin: 40px 0 60px 0;
+            }
         }
 
     }
@@ -103,6 +111,10 @@
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
+
+        @include media('xs') {
+            bottom: -20px;
+        }
     }
 
 }

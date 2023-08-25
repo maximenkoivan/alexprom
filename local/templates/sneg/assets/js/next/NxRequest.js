@@ -271,6 +271,8 @@ class NxRequest{
             switch (type) {
                 case 'callback':
                 case 'callbackSnow':
+                case 'discountSnow':
+                case 'presentationSnow':
 
                     $modalCallback = document.querySelector('#modal-callback')
 
