@@ -10,7 +10,7 @@ class Callback extends Iblock
 
     protected const IBLOCK_CODE = 'feedback';
 
-    private const EVENT_NAME = 'CALLBACK_FORM';
+    private const EVENT_NAME = 'LIGHT_CALLBACK_FORM';
 
     private array $formFields = [
         'name' => [

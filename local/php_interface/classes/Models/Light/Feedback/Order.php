@@ -10,7 +10,7 @@ class Order extends Iblock
 
     protected const IBLOCK_CODE = 'order';
 
-    private const EVENT_NAME = 'ORDER_FORM';
+    private const EVENT_NAME = 'LIGHT_ORDER_FORM';
 
     private array $formFields = [
         'name' => [

@@ -10,7 +10,7 @@ class PresentationSnow extends Iblock
 
     protected const IBLOCK_CODE = 'feedback';
 
-    private const EVENT_NAME = 'CALLBACK_FORM';
+    private const EVENT_NAME = 'SNOW_CALLBACK_FORM';
 
     private array $formFields = [
         'email' => [
@@ -92,8 +92,9 @@ class PresentationSnow extends Iblock
     public function getFieldsForMail(): array
     {
         return [
-            'AUTHOR' => $this->formFields['name']['value'],
+            'AUTHOR_EMAIL' => $this->formFields['email']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
+            'FORM_NAME' => $this->formFields['form_name']['value'],
         ];
     }
 

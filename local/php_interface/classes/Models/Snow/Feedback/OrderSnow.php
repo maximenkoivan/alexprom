@@ -10,7 +10,7 @@ class OrderSnow extends Iblock
 
     protected const IBLOCK_CODE = 'order';
 
-    private const EVENT_NAME = 'ORDER_FORM';
+    private const EVENT_NAME = 'SNOW_ORDER_FORM';
 
     private array $formFields = [
         'name' => [
@@ -134,12 +134,11 @@ class OrderSnow extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'PLACE' => $this->formFields['place']['value'],
             'TYPE' => $this->formFields['type']['value'],
-            'WHERE' => $this->formFields['where']['value'],
-            'STYLE' => $this->formFields['style']['value'],
-            'SIZE' => $this->formFields['size']['value'],
-            'DATE' => $this->formFields['date']['value'],
+            'SCOPE' => $this->formFields['SCOPE']['value'],
+            'FENCE' => $this->formFields['fence']['value'],
+            'TYPE_SERVICE' => $this->formFields['type_service']['value'],
+            'AREA' => $this->formFields['area']['value'],
             'COMMENT' => $this->formFields['comment']['value'],
         ];
     }
