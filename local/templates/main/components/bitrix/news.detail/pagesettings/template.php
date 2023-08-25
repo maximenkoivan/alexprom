@@ -44,7 +44,7 @@ $this->setFrameMode(true);
               <input type="hidden" name="utm_term" >
               <input type="hidden" name="referrer" >
               <input type="hidden" name="requestTime" >
-          </form>
+          </div>
           <div class="hero-info">
               <div class="hero-info__stroke">
                   <div class="hero-info__item">
