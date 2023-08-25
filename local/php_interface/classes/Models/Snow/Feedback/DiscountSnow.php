@@ -10,7 +10,7 @@ class DiscountSnow extends Iblock
 
     protected const IBLOCK_CODE = 'feedback';
 
-    private const EVENT_NAME = 'CALLBACK_FORM';
+    private const EVENT_NAME = 'SNOW_CALLBACK_FORM';
 
     private array $formFields = [
         'name' => [
@@ -94,6 +94,7 @@ class DiscountSnow extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
+            'FORM_NAME' => $this->formFields['form_name']['value'],
         ];
     }
 
