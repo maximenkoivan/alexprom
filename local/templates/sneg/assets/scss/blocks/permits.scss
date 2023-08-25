@@ -21,6 +21,7 @@
 
         @include media('sm-max') {
             font-size: 32px;
+            text-align: center;
         }
     }
 
@@ -29,6 +30,7 @@
 
         @include media('xs') {
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 

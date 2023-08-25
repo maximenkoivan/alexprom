@@ -14,8 +14,8 @@
     border-radius: 30px;
     cursor: pointer;
     transition: all $tr-time $tr-type;
-    box-shadow: none;
     color: map_get($button, main-color);
+    box-shadow: 0px 20px 20px 0px rgba(35, 31, 32, 0.4);
 
 
     span,

@@ -21,6 +21,10 @@
         font-size: 38px;
         text-align: center;
 
+        span {
+            color: #db1603;
+        }
+
         @include media('xs') {
             font-size: 32px;
         }

@@ -118,5 +118,10 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "USE_SHARE" => "N"
     )
 ); ?>
+
+<a href="https://wa.me/79995940242" target="_blank" class="call">
+    <img src="/local/templates/sneg/assets/images/whatsapp.png" height="60" width="60">
+</a>
+
 </body>
 </html>

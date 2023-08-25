@@ -71,7 +71,7 @@
     &__counter {
         position: absolute;
         top: 40px;
-        right: -110px;
+        right: -150px;
         font-family: "Gotham Pro", sans-serif;
         color: #9599a1;
 
@@ -94,7 +94,7 @@
         }
 
         @include media('xs') {
-            top: -50px;
+            top: 0;
             right: -10px;
 
             &:before {
