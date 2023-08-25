@@ -24,7 +24,6 @@ while($ob = $res->GetNextElement()){
 <div class="container requisites__container">
     <div class="section__head requisites__head">
       <h2 class="title-h2 requisites__title">Реквизиты</h2>
-      <a href="<?= CFile::GetPath($arSetting['DOC_REQUISITES']['VALUE']) ?>" download class="btn-primary _desktop">Скачать реквизиты</a>
 	</div>
 	<div class="requisites__content">
 		<div class="requisites-table">
@@ -62,7 +61,7 @@ while($ob = $res->GetNextElement()){
 					Добавьте наши контакты в свой телефон, отсканировав данный QR код, и мы всегда будем на связи
 				</p>
 			</div>
-
+			<a href="<?= CFile::GetPath($arSetting['DOC_REQUISITES']['VALUE']) ?>" download class="requisites__download-button btn-primary">Скачать реквизиты</a>
       </div>
 
 	</div>

@@ -23,14 +23,14 @@ $this->setFrameMode(true);
 		<div class="consultation__box">
 			<div class="form-vertical js_form" data-action="/include/formservices.php">
  				<label class="input input-name form-control">
-					<input class="input__field" name="user_name" type="text" placeholder="Ваше имя" autocomplete="name">
+					<input class="input__field" name="user_name" required type="text" placeholder="Ваше имя" autocomplete="name">
 				</label>
 				<label class="input input-tel form-control">
-					<input class="input__field mask-tel" required="" name="user_tel" type="tel" placeholder="Ваш номер телефона" maxlength="25" minlength="10" autocomplete="tel">
+					<input class="input__field mask-tel" required name="user_tel" type="tel" placeholder="Ваш номер телефона" maxlength="25" minlength="10" autocomplete="tel">
 				</label>
 				<button class="btn-main" type="submit"><?=$arResult['PROPERTIES']['BUTTONTEXT']['VALUE']?></button>
 				<span class="form__agree">
-Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="<?=$arResult['PROPERTIES']['FZLINK']['VALUE']?>">Политикой&nbsp;конфиденциальности</a>
+Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="<?=$arResult['PROPERTIES']['FZLINK']['VALUE']?>" target="_blank">Политикой&nbsp;конфиденциальности</a>
 					<!--<a href="<?=$arResult['PROPERTIES']['FZLINK']['VALUE']?>"><?=$arResult['PROPERTIES']['FZRULES']['VALUE']?></a>-->
 				</span>
 				<input type="hidden" name="utm_source">

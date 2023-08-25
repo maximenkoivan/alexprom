@@ -27,12 +27,11 @@ $this->setFrameMode(true);
 				</div>
 		</div>
 </section>
-
 <div class="project-highlights">
 		<div class="container project-highlights__container">
-				<picture class="project-highlights__pic">
+			<?php /*<picture class="project-highlights__pic">
 						<img class="project-highlights__img" src="<?=$arResult['DETAIL_PICTURE']['SRC']?>" alt="">
-				</picture>
+</picture> */ ?>
 				<div class="project-highlights__gallery">
 						<div class="swiper project-highlights-carousel">
 							<div class="swiper-wrapper">
@@ -54,3 +53,13 @@ $this->setFrameMode(true);
 				</div>
 		</div>
 </div>
+
+<script>
+var app = new Vue({
+  el: '#alp',
+  data: {
+    serviceprice: '<?php echo $arResult["DISPLAY_PROPERTIES"]["S2"]["DISPLAY_VALUE"]?>',
+	serviceimage: '<?php echo $arResult["DETAIL_PICTURE"]["SRC"]?>'
+  }
+})
+</script>

@@ -5,8 +5,8 @@ $APPLICATION->SetTitle("");
 
 <div class="section-flip section-flip--light" id="project">
   <?$APPLICATION->IncludeComponent(
-	"bitrix:news.detail",
-	"servicedetail",
+	"bitrix:news.detail", 
+	"servicedetail", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -28,9 +28,8 @@ $APPLICATION->SetTitle("");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_CODE" => "",
-    "ELEMENT_CODE" => $_REQUEST["CODE"],
-    "ELEMENT_ID" => $_REQUEST["ID"],
+		"ELEMENT_CODE" => $_REQUEST["CODE"],
+		"ELEMENT_ID" => $_REQUEST["ID"],
 		"FIELD_CODE" => array(
 			0 => "PREVIEW_TEXT",
 			1 => "PREVIEW_PICTURE",
@@ -55,19 +54,21 @@ $APPLICATION->SetTitle("");
 			2 => "S1",
 			3 => "S3",
 			4 => "PHOTOS",
+			5 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "Y",
 		"SET_LAST_MODIFIED" => "Y",
 		"SET_META_DESCRIPTION" => "Y",
 		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_PERMISSIONS" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"COMPONENT_TEMPLATE" => "servicedetail",
+		"FILE_404" => "/404.php"
 	),
 	false
 );?>
@@ -89,6 +90,7 @@ $APPLICATION->SetTitle("");
                     type="text"
                     placeholder="Ваше имя"
                     autocomplete="name"
+					required
                   >
                 </label>
 
@@ -133,106 +135,147 @@ $APPLICATION->SetTitle("");
   </div>
 </section>
 <section class="section experience">
-  <div class="experience__main">
-  <div class="container experience__container">
-  <div class="experience__hero">
-    <div class="experience__hero-media">
-      <picture class="experience__hero-pic">
-        <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/experience-hero.webp" type="image/webp">
-        <img  class="experience__hero-img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/experience-hero.png" alt="">
-      </picture>
-      <div class="experience__hero-hint">
-        <p class="experience__hero-hint-title">- Жданов Александр</p>
-        <p class="experience__hero-hint-desc">
-          Генеральный директор <br>
-          ООО «АлексПром»
-        </p>
+    <div class="experience__main">
+      <? $APPLICATION->IncludeComponent(
+        "bitrix:news.detail",
+        "promoDir",
+        array(
+          "ACTIVE_DATE_FORMAT" => "d.m.Y",
+          "ADD_ELEMENT_CHAIN" => "N",
+          "ADD_SECTIONS_CHAIN" => "N",
+          "AJAX_MODE" => "N",
+          "AJAX_OPTION_ADDITIONAL" => "",
+          "AJAX_OPTION_HISTORY" => "N",
+          "AJAX_OPTION_JUMP" => "N",
+          "AJAX_OPTION_STYLE" => "Y",
+          "BROWSER_TITLE" => "-",
+          "CACHE_GROUPS" => "Y",
+          "CACHE_TIME" => "36000000",
+          "CACHE_TYPE" => "A",
+          "CHECK_DATES" => "N",
+          "DETAIL_URL" => "",
+          "DISPLAY_BOTTOM_PAGER" => "N",
+          "DISPLAY_DATE" => "Y",
+          "DISPLAY_NAME" => "Y",
+          "DISPLAY_PICTURE" => "Y",
+          "DISPLAY_PREVIEW_TEXT" => "Y",
+          "DISPLAY_TOP_PAGER" => "N",
+          "ELEMENT_CODE" => "",
+          "ELEMENT_ID" => "111",
+          "FIELD_CODE" => array(
+            0 => "PREVIEW_TEXT",
+            1 => "PREVIEW_PICTURE",
+            2 => "DETAIL_TEXT",
+            3 => "DETAIL_PICTURE",
+            4 => "",
+          ),
+          "IBLOCK_ID" => "13",
+          "IBLOCK_TYPE" => "service",
+          "IBLOCK_URL" => "",
+          "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+          "MESSAGE_404" => "",
+          "META_DESCRIPTION" => "-",
+          "META_KEYWORDS" => "-",
+          "PAGER_BASE_LINK_ENABLE" => "N",
+          "PAGER_SHOW_ALL" => "N",
+          "PAGER_TEMPLATE" => ".default",
+          "PAGER_TITLE" => "Страница",
+          "PROPERTY_CODE" => array(
+            0 => "VIDEO",
+            1 => "TEXT1",
+            2 => "TEXT2",
+            3 => "TEXT3",
+            4 => "TEXT4",
+            5 => "PHOTOS",
+            6 => "",
+          ),
+          "SET_BROWSER_TITLE" => "N",
+          "SET_CANONICAL_URL" => "N",
+          "SET_LAST_MODIFIED" => "N",
+          "SET_META_DESCRIPTION" => "N",
+          "SET_META_KEYWORDS" => "N",
+          "SET_STATUS_404" => "N",
+          "SET_TITLE" => "N",
+          "SHOW_404" => "N",
+          "STRICT_SECTION_CHECK" => "N",
+          "USE_PERMISSIONS" => "N",
+          "USE_SHARE" => "N",
+          "COMPONENT_TEMPLATE" => "promoDir"
+        ),
+        false
+      ); ?>
+    </div>
+    <div class="container">
+      <div class="hero-info experience-info">
+        <? $APPLICATION->IncludeComponent(
+          "bitrix:news.list",
+          "teasersAbout",
+          array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "AJAX_MODE" => "N",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "N",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "N",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "DISPLAY_BOTTOM_PAGER" => "N",
+            "DISPLAY_DATE" => "N",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "N",
+            "DISPLAY_PREVIEW_TEXT" => "N",
+            "DISPLAY_TOP_PAGER" => "N",
+            "FIELD_CODE" => array(
+              0 => "",
+              1 => "",
+            ),
+            "FILTER_NAME" => "",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "IBLOCK_ID" => "12",
+            "IBLOCK_TYPE" => "service",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "INCLUDE_SUBSECTIONS" => "N",
+            "MESSAGE_404" => "",
+            "NEWS_COUNT" => "3",
+            "PAGER_BASE_LINK_ENABLE" => "N",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "N",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => ".default",
+            "PAGER_TITLE" => "Новости",
+            "PARENT_SECTION" => "46",
+            "PARENT_SECTION_CODE" => "",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "PROPERTY_CODE" => array(
+              0 => "",
+              1 => "ICON",
+              2 => "",
+            ),
+            "SET_BROWSER_TITLE" => "N",
+            "SET_LAST_MODIFIED" => "N",
+            "SET_META_DESCRIPTION" => "N",
+            "SET_META_KEYWORDS" => "N",
+            "SET_STATUS_404" => "N",
+            "SET_TITLE" => "N",
+            "SHOW_404" => "N",
+            "SORT_BY1" => "ID",
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER1" => "ASC",
+            "SORT_ORDER2" => "ASC",
+            "STRICT_SECTION_CHECK" => "N",
+            "COMPONENT_TEMPLATE" => "teasersAbout"
+          ),
+          false
+        ); ?>
       </div>
     </div>
-  </div>
-  <div class="experience__content">
-    <h2 class="title-h2 experience__title">
-      Опыт, накопленный <br>
-      за 12 лет работы в&nbsp;сфере
-      промышленного альпинизма
-    </h2>
-    <div class="experience__video">
-      <div class="experience__video-box">
-        <img  class="experience__video-cover lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/experience-video-cover.jpg" alt="">
-        <a href="https://www.youtube.com/watch?v=S1wf1iKU3l4" data-fancybox class="play-cover"></a>
-      </div>
-      <p class="experience__video-desc">
-        Позволяет нам предлагать рынку
-        нестандартные решения в обмен
-        на&nbsp;интересные и амбициозные проекты.
-        Смотрите видео о нашей компании.
-      </p>
-    </div>
-    <div class="experience-slides">
-      <div class="gallery-carousel">
-          <div class="swiper experience-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide experience-gallery__slide">
-                  <picture class="experience-gallery__thumb">
-                      <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.webp" type="image/webp">
-                      <img class="experience-gallery__img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.png" alt="">
-                  </picture>
-                  <a href="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
-                </div>
-                <div class="swiper-slide experience-gallery__slide">
-                  <picture class="experience-gallery__thumb">
-                    <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.webp" type="image/webp">
-                      <img class="experience-gallery__img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.png" alt="">
-                  </picture>
-                  <a href="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
-                </div>
-                <div class="swiper-slide experience-gallery__slide">
-                  <picture class="experience-gallery__thumb">
-                      <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.webp" type="image/webp">
-                      <img class="experience-gallery__img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.png" alt="">
-                  </picture>
-                  <a href="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
-                </div>
-                <div class="swiper-slide experience-gallery__slide">
-                  <picture class="experience-gallery__thumb">
-                      <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.webp" type="image/webp">
-                      <img class="experience-gallery__img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.png" alt="">
-                  </picture>
-                  <a href="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
-                </div>
-                <div class="swiper-slide experience-gallery__slide">
-                  <picture class="experience-gallery__thumb">
-                      <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.webp" type="image/webp">
-                      <img class="experience-gallery__img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.png" alt="">
-                  </picture>
-                  <a href="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
-                </div>
-                <div class="swiper-slide experience-gallery__slide">
-                  <picture class="experience-gallery__thumb">
-                    <source srcset="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.webp" type="image/webp">
-                      <img class="experience-gallery__img lazy" src="<?=SITE_TEMPLATE_PATH?>/images/placeholder.jpg" data-src="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.png" alt="">
-                  </picture>
-                  <a href="<?=SITE_TEMPLATE_PATH?>/images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
-                </div>
-
-              </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  <div class="container">
-  <div class="hero-info experience-info">
-    <div class="hero-info__stroke">
-      <?$APPLICATION->IncludeFile('/include/about/teasers.php', Array(), Array("MODE"=>"text"))?>
-    </div>
-  </div>
-  </div>
-</section>
-
+  </section>
 
 
 <section class="section advantages">

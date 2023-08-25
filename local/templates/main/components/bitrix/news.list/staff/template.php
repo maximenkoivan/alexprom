@@ -36,8 +36,20 @@ $this->setFrameMode(true);
 						<h3 class="staff-card__title"><?=$arItem["NAME"]?></h3>
 						<p class="staff-card__desc"><?=$arItem["PREVIEW_TEXT"];?></p>
 						<div class="staffContainer">
-							<?php if ($arItem["DISPLAY_PROPERTIES"]["PHONE"]["VALUE"]) echo '<div class="staffPhone">'.$arItem["DISPLAY_PROPERTIES"]["PHONE"]["VALUE"].'</div>'; ?>
-							<?php if ($arItem["DISPLAY_PROPERTIES"]["EMAIL"]["VALUE"]) echo '<div class="staffMail"><a href="mailto:'.$arItem["DISPLAY_PROPERTIES"]["EMAIL"]["VALUE"].'" class="footer-bottom__docs-link">'.$arItem["DISPLAY_PROPERTIES"]["EMAIL"]["VALUE"].'</a></div>'; ?>
+							<?php if ($arItem["DISPLAY_PROPERTIES"]["PHONE"]["VALUE"]) : ?>
+								<?php 
+									$phone = $arItem["DISPLAY_PROPERTIES"]["PHONE"]["VALUE"];
+									$raw_phone = substr_replace( preg_replace( "/[^0-9]/" , '' ,  $phone) , "+7" , 0 , 1 );
+								?>
+								<a href="tel:<?=$raw_phone?>" class="link link--phone">
+									<?=$arItem["DISPLAY_PROPERTIES"]["PHONE"]["VALUE"]; ?>
+								</a>
+							<?php endif; ?>
+							<?php if ($arItem["DISPLAY_PROPERTIES"]["EMAIL"]["VALUE"]) : ?>
+								<a href="mailto:<?=$arItem["DISPLAY_PROPERTIES"]["EMAIL"]["VALUE"]?>" class="link link--mail">
+									<?=$arItem["DISPLAY_PROPERTIES"]["EMAIL"]["VALUE"]?>
+								</a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>

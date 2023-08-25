@@ -5,16 +5,16 @@
             <img class="hero__img" src="/local/templates/main/images/page-services/services-hero.jpg" alt="Услуги промышленного альпинизма">
         </picture>
         <div class="container hero__container">
-            <?$APPLICATION->IncludeComponent(
-            "bitrix:breadcrumb",
-            "universal",
-            Array(
-              "PATH" => "",
-              "SITE_ID" => "s1",
-              "START_FROM" => "0"
-            )
-            );?>
-            <h1 class="title-h1 hero__title"><?$APPLICATION->ShowTitle(false);?></h1>
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "universal",
+                array(
+                    "PATH" => "",
+                    "SITE_ID" => "s1",
+                    "START_FROM" => "0"
+                )
+            ); ?>
+            <h1 class="title-h1 hero__title"><? $APPLICATION->ShowTitle(false); ?></h1>
         </div>
 
         <picture class="hero__worker">

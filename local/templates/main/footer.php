@@ -7,6 +7,7 @@ IncludeTemplateLangFile(__FILE__);?>
           <a class="footer-top__logo" href="/">
             <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH.'/include_areas/logotypeBottom.php')?>
           </a>
+<?php /*
           <?$APPLICATION->IncludeComponent("bitrix:menu", "footerMenu", Array(
           	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
           		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
@@ -22,18 +23,61 @@ IncludeTemplateLangFile(__FILE__);?>
           	),
           	false
           );?>
-          <div class="footer-top__info">
-            <a class="link" href="mailto:<?php echo $arSetting['S2']['VALUE'] ?>"><?php echo $arSetting['S2']['VALUE'] ?></a>
-            <a class="link" href="tel:<?php echo $arSetting['S6']['VALUE'] ?>"><?php echo $arSetting['S1']['VALUE'] ?></a>
-			<span><a target="_blank" href="<?php echo $arSetting['S4']['VALUE'] ?>" class="footer-bottom__docs-link"><?php echo $arSetting['S3']['VALUE'] ?></a></span>
+*/?>
+<div class="footer__menu">
+            <h3 class="footer__menu-title">Контакты</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="mailto:zakaz@alexprom.ru" class="footer__menu-link link link--mail">zakaz@alexprom.ru</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="tel:+74951090242" class="footer__menu-link link link--phone">+7&nbsp;(495)&nbsp;109-02-42</a>
+              </li>
+              <li class="footer__menu-item">
+                <span class="link link--geo">Москва, Братиславская 1, корпус&nbsp;3</span>
+              </li>
+            </ul>
           </div>
-      </div>
-      <div class="footer-bottom">
-          <div class="footer-bottom__docs">
-			  <a class="footer-bottom__docs-link" href="/"><?php echo $arSetting['S5']['VALUE'] ?></span>
-              <a class="footer-bottom__docs-link" href="/privacy-notice/">Политика конфиденциальности</a>
+
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Популярные услуги</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+				  <a href="/services/detail/demontazh" class="footer__menu-link">Демонтаж</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/services/detail/kabelnyy-obogrev-krovli-i-vodostokov" class="footer__menu-link">Кабельный обогрев кровли и водостоков</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/services/detail/ustanovka-snegozaderzhateley" class="footer__menu-link">Установка снегозадержателей</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/services/detail/zheloba-voronki-i-otlivy" class="footer__menu-link">Желоба, воронки и отливы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/services/detail/remont-balkonnykh-kozyrkov" class="footer__menu-link">Ремонт балконных козырьков</a>
+              </li>
+            </ul>
           </div>
-		  <div class="footer-bottom__socials socials">
+
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Разделы</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Новости</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Проекты</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Вакансии</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Соц.Сети</h3>
+			<div class="footer-bottom__socials socials">
             <?php if (!empty($arSetting['S7']['VALUE'])) : ?>
 				<a href="<?php echo $arSetting['S7']['VALUE']; ?>" class="socials__link" aria-label="Alexprom в VK">
 				  <svg class="socials__icon">
@@ -76,8 +120,21 @@ IncludeTemplateLangFile(__FILE__);?>
 				  </svg>
 				</a>
 			<?php endif; ?>
+			<?php if (!empty($arSetting['YOUTUBE']['VALUE'])) : ?>
+				<a href="<?php echo $arSetting['YOUTUBE']['VALUE']; ?>" class="socials__link" aria-label="Alexprom на Youtube">
+				  <svg class="socials__icon">
+					<use href="/local/templates/main/images/socials/yt-icon.svg#yt" />
+				  </svg>
+				</a>
+			<?php endif; ?>
           </div>
-
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom__docs">
+			  <a class="footer-bottom__docs-link" href="/"><?php echo $arSetting['S5']['VALUE'] ?></span>
+              <a class="footer-bottom__docs-link" href="/privacy-notice/" target="_blank">Политика конфиденциальности</a>
+          </div>
       </div>
   </div>
 </footer>
@@ -106,6 +163,7 @@ IncludeTemplateLangFile(__FILE__);?>
                 type="text"
                 placeholder="Ваше имя"
                 autocomplete="name"
+				required
               >
             </label>
 
@@ -123,7 +181,7 @@ IncludeTemplateLangFile(__FILE__);?>
             </label>
 
 	      <button class="btn-main" type="submit">Заказать</button>
-			<span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="/privacy-notice/">Политикой&nbsp;конфиденциальности</a></span>
+			<span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="/privacy-notice/" target="_blank">Политикой&nbsp;конфиденциальности</a></span>
         <input type="hidden" name="utm_source" >
         <input type="hidden" name="utm_medium" >
         <input type="hidden" name="utm_campaign" >
@@ -158,6 +216,7 @@ IncludeTemplateLangFile(__FILE__);?>
             type="text"
             placeholder="Ваше имя"
             autocomplete="name"
+			required
           >
         </label>
 
@@ -175,7 +234,7 @@ IncludeTemplateLangFile(__FILE__);?>
         </label>
 
 	      <button class="btn-main" type="submit">Получить консультацию!</button>
-			  <span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="/privacy-notice/">Политикой&nbsp;конфиденциальности</a></span>
+			  <span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="/privacy-notice/" target="_blank">Политикой&nbsp;конфиденциальности</a></span>
         <input type="hidden" name="utm_source" >
         <input type="hidden" name="utm_medium" >
         <input type="hidden" name="utm_campaign" >
@@ -207,6 +266,7 @@ IncludeTemplateLangFile(__FILE__);?>
             type="text"
             placeholder="Ваше имя"
             autocomplete="name"
+			required
           >
         </label>
 	      <label class="input input-tel form-control">
@@ -222,7 +282,7 @@ IncludeTemplateLangFile(__FILE__);?>
           >
         </label>
 	      <button class="btn-main" type="submit">Получить консультацию</button>
-			<span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="/privacy-notice/">Политикой&nbsp;конфиденциальности</a></span>
+			<span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и ознакомлен с&nbsp;<a href="/privacy-notice/" target="_blank">Политикой&nbsp;конфиденциальности</a></span>
         <input type="hidden" name="utm_source" >
         <input type="hidden" name="utm_medium" >
         <input type="hidden" name="utm_campaign" >
@@ -283,6 +343,14 @@ IncludeTemplateLangFile(__FILE__);?>
           myReviewsInit()
         }
         })()
+
+		const reviewsIframe = document.querySelector('#myReviews__block-widget');
+		if (reviewsIframe) {
+		  let iframeStyle = reviewsIframe.contentDocument.querySelector('style'); // получаем объект style внутри iframe
+		  if (iframeStyle) {
+			iframeStyle.innerHTML += '.slick-slide > div > div { width: 100% !important; }';
+		  }
+		}
 		}
 </script>
 

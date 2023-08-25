@@ -3,7 +3,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
 $sectionsJson = json_encode($arResult['SECTIONS']);
 ?>
 
-<div class="container" id="app">
+<div class="container" id="app" :class="{ 'is-loading': isloading }">
   <div class="section__head projects__head">
       <form class="projects__filter">
           <fieldset class="projects__filter-togglers">
@@ -38,7 +38,7 @@ $sectionsJson = json_encode($arResult['SECTIONS']);
           <span class="swiper-gallery__info swiper-gallery__loc">{{item.S2}}</span>
       </div>
   </div>
-  <button class="projects__button-more btn-accent" type="button" @click="showMoreButton" v-show="allCount >= limit">Показать больше</button>
+  <button class="projects__button-more btn-accent" type="button" @click="showMoreButton" v-show="allCount > limit">Показать больше</button>
 </div>
 
 <script>
@@ -50,17 +50,20 @@ var app = new Vue({
     query: {
       iid: ''
     },
+    isloading: false,
     allCount: '',
     limit: '6',
   },
   methods: {
     getItems: function(e) {
+      this.isloading = true;
       this.query.iid = e;
       axios({method: 'post',url: "/include/api.php",data: JSON.stringify(this.query)})
         .then(response => {
           this.items = response.data;
           this.allCount = this.items.length;
           this.limit = '6';
+          this.isloading = false;
         })
         .catch(function(e){
           this.error = e;

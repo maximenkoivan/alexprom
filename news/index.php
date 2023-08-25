@@ -1,9 +1,9 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
 ?>
 
-		<?$APPLICATION->IncludeComponent(
+		<? $APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"blog", 
 	array(
@@ -70,7 +70,7 @@ $APPLICATION->SetTitle("Новости");
 		"SET_LAST_MODIFIED" => "Y",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
+		"SHOW_404" => "Y",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
@@ -85,7 +85,7 @@ $APPLICATION->SetTitle("Новости");
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "blog",
 		"SEF_FOLDER" => "/news/",
-		"FILE_404" => "/404/",
+		"FILE_404" => "/404.php",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "/news/",
 			"section" => "/news/",
@@ -93,6 +93,6 @@ $APPLICATION->SetTitle("Новости");
 		)
 	),
 	false
-);?>
+); ?>
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
