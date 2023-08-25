@@ -94,7 +94,7 @@ class ApplicationSnow extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'FORM_NAME' => $this->formFields['form_nameE']['value'],
+            'FORM_NAME' => $this->formFields['form_name']['value'],
         ];
     }
 
