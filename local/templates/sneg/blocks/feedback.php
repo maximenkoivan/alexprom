@@ -40,7 +40,9 @@
                             <a class="hc__paper-top" data-fslightbox="paper" href="/local/templates/sneg/assets/images/sections/feedback-paper-1.png">
                                 <img src="/local/templates/sneg/assets/images/sections/feedback-paper-1.png" alt="">
                             </a>
-                            <img class="hc__paper-bottom" src="https://placehold.jp/170x170.png" alt="">
+                            <a class="hc__paper-bottom" data-fslightbox="cake" href="/local/templates/sneg/assets/images/sections/feedback-paper-1.png">
+                                <img src="https://placehold.jp/170x170.png" alt=" ">
+                            </a>
                         </div>
                     </div>
 
