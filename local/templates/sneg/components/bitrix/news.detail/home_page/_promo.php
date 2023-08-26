@@ -27,7 +27,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <?php endforeach; ?>
                 </div>
 
-                <form action="/request/test.php" class="promo__form">
+                <form action="/request/snow/feedback.php" class="promo__form">
                     <div class="form-group" data-form-group>
                         <label class="nx-dynamic-label" data-dynamic-label>
                             <input type="text"
