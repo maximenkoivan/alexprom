@@ -270,9 +270,11 @@ class NxRequest{
         } else {
             switch (type) {
                 case 'callback':
-                case 'callbackSnow':
-                case 'discountSnow':
-                case 'presentationSnow':
+                // case 'callbackSnow':
+                // case 'discountSnow':
+                // case 'presentationSnow':
+                // case 'applicationSnow':
+                // case 'orderSnow':
 
                     $modalCallback = document.querySelector('#modal-callback')
 
@@ -292,9 +294,8 @@ class NxRequest{
                     });
                     break;
 
-                case 'order':
-                    $modalCallback = document.querySelector('#modal-order')
-
+                default:
+                    $modalCallback = document.querySelector('#modal-callback')
 
                     $modalOk = new tingle.modal({
                         footer: true,
@@ -302,21 +303,11 @@ class NxRequest{
                         closeMethods: ['overlay', 'button', 'escape'],
                         closeLabel: ""
                     });
-                    $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
+
+                    if($okTitle && $okText) $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
                     $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
                         $modalOk.close();
                     });
-                    //$.order.clearForm()
-                    break;
-
-                default:
-                    $modalCallback = document.querySelector('#modal-callback')
-                    $modalOk = new tingle.modal({
-                        closeMethods: ['overlay', 'button', 'escape'],
-                        closeLabel: "",
-                        cssClass: ['custom-class-1', 'custom-class-2']
-                    });
-                    $modalOk.setContent(`<h3>Спасибо</h3><p>Ваша заявка взята в работу</p>`);
             }
 
             if ($modalOk){
