@@ -30,7 +30,7 @@ class FormHandler
 
     private CIBlockElement $element;
 
-    private \Bitrix\Main\HttpRequest|\Bitrix\Main\Request $request;
+    private $request;
 
 
     public function __construct($modelName)
