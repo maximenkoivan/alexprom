@@ -16,7 +16,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </h2>
         </div>
         <div class="map__wrapper" id="contact-map">
-            <?= $arResult['PROPERTIES']['CODE_YANDEX_WIDGET_CONTACTS']['~VALUE'] ?>
+            <div class="map__popup">
+                г. Москва, ул. Ставропольская, д. 84с1
+            </div>
+            <?php /*= $arResult['PROPERTIES']['CODE_YANDEX_WIDGET_CONTACTS']['~VALUE'] */?>
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.804477%2C55.672027&z=18.05" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
             <script>
                 document.addEventListener('click', function(e) {
                     let map = document.querySelector('#contact-map iframe')

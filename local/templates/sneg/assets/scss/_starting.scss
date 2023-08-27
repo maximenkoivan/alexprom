@@ -91,3 +91,6 @@ section {
 @include media('md-min'){
     @include scrollbar(map_get($scrollbar, size), rgba(map_get($scrollbar, track-bg), .2), map_get($scrollbar, bg));
 }
+.map-widget-content-view__frame {
+    display: none !important;
+}
