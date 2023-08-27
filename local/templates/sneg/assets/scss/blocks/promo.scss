@@ -177,10 +177,6 @@
         @include media('sm-max') {
             margin-top: 80px;
         }
-
-        @include media('xs') {
-            margin-top: 40px;
-        }
     }
 
     &__submit {
