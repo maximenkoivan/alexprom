@@ -118,10 +118,11 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "USE_SHARE" => "N"
     )
 ); ?>
-
-<a href="https://wa.me/79995940242" target="_blank" class="call">
-    <img src="/local/templates/sneg/assets/images/whatsapp.png" height="60" width="60">
-</a>
-
+<?php if (!empty($footer['PHONE_WHATSAPP_FOOTER']['VALUE']) && !empty($footer['ICON_WHATSAPP_FOOTER']['VALUE'])): ?>
+    <a href="https://wa.me/<?= ltrim(Generic::getCleanPhoneNumber($footer['PHONE_WHATSAPP_FOOTER']['VALUE']), '+') ?>"
+       target="_blank" class="call">
+        <img src="<?= CFile::GetPath($footer['ICON_WHATSAPP_FOOTER']['VALUE']) ?>" height="60" width="60" alt="">
+    </a>
+<?php endif; ?>
 </body>
 </html>
