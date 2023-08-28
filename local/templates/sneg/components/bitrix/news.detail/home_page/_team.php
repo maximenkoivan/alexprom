@@ -18,11 +18,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="team__wrapper">
             <div class="team__heading">
                 <h2 class="team__title">
-                    <?= $arResult['PROPERTIES']['TITLE_TEAM']['~VALUE']['TEXT'] ?>
+                    <?= $arResult['PROPERTIES']['TITLE_TEAM']['~VALUE']['TEXT'] ?? '' ?>
                 </h2>
             </div>
             <div class="team__text">
-                <?= $arResult['PROPERTIES']['TEXT_TEAM']['~VALUE']['TEXT'] ?>
+                <?= $arResult['PROPERTIES']['TEXT_TEAM']['~VALUE']['TEXT'] ?? '' ?>
             </div>
             <?php if (!empty($arResult['PROPERTIES']['DESC_IMAGE_TEAM']['~VALUE']['TEXT']) && !empty($arResult['PROPERTIES']['IMAGE_TEAM']['VALUE'])): ?>
                 <div class="team__note">

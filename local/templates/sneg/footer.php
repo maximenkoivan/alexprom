@@ -23,7 +23,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
                     </div>
                 <?php endif; ?>
                 <div class="header__text">
-                    <?= $footer['DESC_HEADER']['~VALUE']['TEXT'] ?>
+                    <?= $footer['DESC_HEADER']['~VALUE']['TEXT'] ?? ''?>
                 </div>
 
                 <div class="spacer"></div>

@@ -86,13 +86,13 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
             <?php endif; ?>
 
             <div class="header__text">
-                <?= $header['DESC_HEADER']['~VALUE']['TEXT'] ?>
+                <?= $header['DESC_HEADER']['~VALUE']['TEXT'] ?? '' ?>
             </div>
 
             <div class="spacer"></div>
 
             <div class="header__text header__text--small">
-                <?= $header['LOCATION_HEADER']['~VALUE']['TEXT'] ?>
+                <?= $header['LOCATION_HEADER']['~VALUE']['TEXT'] ?? '' ?>
             </div>
 
             <div class="header__contacts contacts">

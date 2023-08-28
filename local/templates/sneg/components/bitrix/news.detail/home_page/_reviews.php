@@ -50,7 +50,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                 <?php if (!empty($review['FOTO']['VALUE'])): ?>
                                     <a class="hc__paper-bottom" data-fslightbox="cake"
                                        href="<?= CFile::GetPath($review['FOTO']['VALUE']) ?>">
-                                        <img class="hc__paper-bottom" src="<?= CFile::GetPath($review['FOTO']['VALUE']) ?>"
+                                        <img src="<?= CFile::GetPath($review['FOTO']['VALUE']) ?>"
                                              alt="">
                                     </a>
                                 <?php endif; ?>
