@@ -19,12 +19,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div class="map__popup">
                 г. Москва, ул. Ставропольская, д. 84с1
             </div>
-            <?php /*= $arResult['PROPERTIES']['CODE_YANDEX_WIDGET_CONTACTS']['~VALUE'] */?>
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.804477%2C55.672027&z=18.05" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            <?= $arResult['PROPERTIES']['CODE_YANDEX_WIDGET_CONTACTS']['~VALUE'] ?>
             <script>
-                document.addEventListener('click', function(e) {
+                document.addEventListener('click', function (e) {
                     let map = document.querySelector('#contact-map iframe')
-                    if(e.target.id === 'contact-map') {
+                    if (e.target.id === 'contact-map') {
                         map.style.pointerEvents = 'all'
                     } else {
                         map.style.pointerEvents = 'none'

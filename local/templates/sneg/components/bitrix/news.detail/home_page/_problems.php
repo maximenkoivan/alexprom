@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="problems__wrapper">
             <div class="problems__heading">
                 <h2 class="problems__title">
-                    <?= $arResult['PROPERTIES']['TITLE_PROBLEMS']['~VALUE']['TEXT'] ?>
+                    <?= $arResult['PROPERTIES']['TITLE_PROBLEMS']['~VALUE']['TEXT'] ?? '' ?>
                 </h2>
             </div>
             <div class="problems__list">
