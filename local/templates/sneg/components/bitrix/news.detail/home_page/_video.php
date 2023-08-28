@@ -53,9 +53,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                            style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId ?>/hqdefault.jpg ')"
                            data-video-load="<?= $videoYoutubeId ?>"
                            data-video-content>
-                            <svg class="video__icon">
-                                <use xlink:href="#icon-play"></use>
-                            </svg>
+                            <div class="video__btn">
+                                <svg class="video__icon">
+                                    <use xlink:href="#icon-play"></use>
+                                </svg>
+                            </div>
                         </a>
                     </div>
                 </div>
