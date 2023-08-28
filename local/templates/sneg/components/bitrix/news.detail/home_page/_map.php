@@ -17,7 +17,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div>
         <div class="map__wrapper" id="contact-map">
             <div class="map__popup">
-                г. Москва, ул. Ставропольская, д. 84с1
+                <?= $arResult['PROPERTIES']['ADDRESS_CONTACTS']['~VALUE'] ?>
             </div>
             <?= $arResult['PROPERTIES']['CODE_YANDEX_WIDGET_CONTACTS']['~VALUE'] ?>
             <script>
