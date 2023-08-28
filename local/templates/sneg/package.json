@@ -31,6 +31,7 @@
     "autosize": "^6.0.1",
     "core-js": "^3.32.0",
     "countup.js": "^2.7.0",
+    "easy-scroll": "^0.7.0",
     "element-closest": "^3.0.2",
     "handy-collapse": "^1.1.0",
     "imask": "^7.0.1",
