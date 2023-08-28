@@ -48,11 +48,18 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <?php if ($videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO']['~VALUE'])['VIDEO']): ?>
                 <div class="video__youtube">
-                    <iframe width="755" height="430"
-                            src="https://www.youtube.com/embed/<?= $videoYoutubeId ?>"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                    <div class="video__youtube-wrap">
+                        <a class="video__link"
+                           style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId ?>/hqdefault.jpg ')"
+                           data-video-load="<?= $videoYoutubeId ?>"
+                           data-video-content>
+                            <div class="video__btn">
+                                <svg class="video__icon">
+                                    <use xlink:href="#icon-play"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>

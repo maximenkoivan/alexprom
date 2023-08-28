@@ -98,8 +98,60 @@
 
     }
 
+    &__youtube-wrap {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__btn {
+        top: 50%;
+        right: 50%;
+        position: absolute;
+        transform: translate(50%, -50%);
+        height: 80px;
+        width: 80px;
+        border: 3px solid $c-orange;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media('sm-max') {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    &__icon {
+        height: 60%;
+        width: 60%;
+        fill: $c-orange;
+        transform: translateX(4px);
+    }
+
     &__youtube {
         position: relative;
+        width: 50%;
 
         &:before {
             content: "";
@@ -107,22 +159,12 @@
             width: 177px;
             height: 210px;
             background: url("/local/templates/sneg/assets/images/sections/dotes.png") no-repeat 50% 50%;
-            right: 200px;
+            right: -200px;
             top: 8px;
         }
 
         @include media('sm-max') {
             width: 100%;
-            position: relative;
-            padding-bottom: 56%;
-
-            iframe {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-            }
 
             &:before {
                 content: none;

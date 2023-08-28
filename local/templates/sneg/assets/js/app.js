@@ -21,6 +21,7 @@ import Modal from './plugins/Modal';
 import NumberAnimate from "./plugins/NumberAnimate";
 import SelectCustom from "./plugins/SelectCustom";
 import Tabs from "./plugins/Tabs";
+import Video from "./modules/Video";
 
 //Custom modules
 import ShowModal from './modules/ShowModal';
@@ -52,4 +53,5 @@ new ShowPopup();
 new NumberAnimate();
 new SelectCustom();
 new Tabs();
+new Video();
 $.order = new Order();
