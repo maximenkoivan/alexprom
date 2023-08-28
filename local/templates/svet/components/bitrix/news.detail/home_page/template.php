@@ -72,12 +72,22 @@ $videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BO
             </div>
             <div class="bottom__video video">
                 <?php if (!empty($videoYoutubeId)): ?>
+
                     <div class="video__yt">
-                        <iframe width="260" height="160" src="https://www.youtube.com/embed/<?= $videoYoutubeId ?>"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
+                        <div class="video__youtube-wrap">
+                            <a class="video__link"
+                               style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId ?>/hqdefault.jpg ')"
+                               data-video-load="<?= $videoYoutubeId ?>"
+                               data-video-content>
+                                <div class="video__btn">
+                                    <svg class="video__icon">
+                                        <use xlink:href="#icon-play"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                 <?php endif; ?>
                 <div class="video__text">
                     <? $APPLICATION->IncludeComponent(

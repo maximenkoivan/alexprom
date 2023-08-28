@@ -134,12 +134,14 @@
         display: flex;
         flex-basis: 50%;
         max-width: 50%;
+        margin-bottom: 40px;
 
         @include media('sm-max') {
             padding-top: 50px;
             padding-left: 70px;
             flex-basis: 100%;
-            max-width: 100%;
+            width: 100%;
+            max-width: 460px;
         }
 
         @include media('xs') {

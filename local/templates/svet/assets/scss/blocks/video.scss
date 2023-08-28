@@ -1,9 +1,62 @@
 .video {
+    &__youtube-wrap {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__btn {
+        top: 50%;
+        right: 50%;
+        position: absolute;
+        transform: translate(50%, -50%);
+        height: 50px;
+        width: 50px;
+        border: 3px solid $c-orange;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media('sm-max') {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    &__icon {
+        height: 60%;
+        width: 60%;
+        fill: $c-orange;
+        transform: translateX(4px);
+    }
+
 
     &__yt {
         margin-right: 40px;
+        width: 280px;
 
         @include media('xs') {
+            width: 100%;
             margin-right: 0;
             margin-bottom: 30px;
         }
