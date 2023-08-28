@@ -134,10 +134,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
                 <header class="order__header">
                     <div class="order__text--lg">
-                        <?= $arResult['PROPERTIES']['TITLE_FORM_MODAL_3_STEP_7']['~VALUE']['TEXT'] ?>
+                        <?= $arResult['PROPERTIES']['TITLE_FORM_MODAL_3_STEP_7']['~VALUE']['TEXT'] ?? '' ?>
                     </div>
                     <div class="order__text">
-                        <?= $arResult['PROPERTIES']['TITLE_FORM_MODAL_3_STEP_1']['~VALUE']['TEXT'] ?>
+                        <?= $arResult['PROPERTIES']['TITLE_FORM_MODAL_3_STEP_1']['~VALUE']['TEXT'] ?? '' ?>
                     </div>
                     <div data-order-counter class="order__counter">1/7</div>
                 </header>
