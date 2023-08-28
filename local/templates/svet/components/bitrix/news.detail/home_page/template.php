@@ -67,7 +67,7 @@ $videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BO
                 </div>
                 <div class="bg-fade"></div>
                 <div class="bottom__gift-text">
-                    <?= $arResult['PROPERTIES']['DESC_IMAGE_BOTTOM']['~VALUE']['TEXT'] ?>
+                    <?= $arResult['PROPERTIES']['DESC_IMAGE_BOTTOM']['~VALUE']['TEXT'] ?? '' ?>
                 </div>
             </div>
             <div class="bottom__video video">
