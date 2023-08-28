@@ -9,6 +9,12 @@ use classes\Models\Snow\Basic\CommonData;
  */
 $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
+<a class="scroll-top hidden" data-scrolltop>
+    <svg width="16" height="8">
+        <use xlink:href="#icon-arrow-top"></use>
+    </svg>
+    <span>Наверх</span>
+</a>
 </div>
 <footer class="footer">
     <div class="footer__wrap">

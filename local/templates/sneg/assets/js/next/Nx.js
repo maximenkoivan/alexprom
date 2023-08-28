@@ -2,6 +2,7 @@
 /**
  * В основном тут собраны хелперы
  */
+import easyScroll from 'easy-scroll';
 
 class Nx {
     constructor() {
@@ -72,6 +73,15 @@ class Nx {
      * @param e - event
      * @param speed - scroll speed
      */
+    scrollTop(e, speed) {
+        e.preventDefault();
+        easyScroll({
+            'scrollableDomEle': window,
+            'direction': 'top',
+            'duration': 500,
+            'easingPreset': 'linear'
+        });
+    }
 
     /**
      * Получить текущие координаты элемента относительно документа
@@ -85,6 +95,24 @@ class Nx {
             top: box.top + window.pageYOffset - document.documentElement.clientTop,
             left: box.left + window.pageXOffset - document.documentElement.clientLeft
         };
+    }
+
+    /**
+     * Scroller to the element
+     * @param btn - dom element which was clicked
+     * @param offset - offset top after scroll
+     * @param speed - scroll speed
+     * @param hash - save to window.location.hash
+     */
+    smoothScroll(btn, offset, speed, hash) {
+        let target = btn.hash,
+            $target = document.querySelector(target);
+
+        if (!$target) return false;
+
+        $("html, body").animate({
+            scrollTop: $($target).offset().top - (offset || 0)
+        }, speed);
     }
 
     /**
@@ -136,7 +164,7 @@ class Nx {
 
     // load async svg sprite
     loadSvgSprite() {
-        const svgUrl = `/local/templates/svet/assets/svg.min.html`,
+        const svgUrl = `local/templates/sneg/assets/svg.min.html`,
             xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function (data) {
             if (xhr.readyState !== 4) return;
