@@ -22,6 +22,7 @@ import NumberAnimate from "./plugins/NumberAnimate";
 import SelectCustom from "./plugins/SelectCustom";
 import Tabs from "./plugins/Tabs";
 import Video from "./modules/Video";
+import ScrollTop from "./modules/ScrollTop";
 
 //Custom modules
 import ShowModal from './modules/ShowModal';
@@ -54,4 +55,5 @@ new NumberAnimate();
 new SelectCustom();
 new Tabs();
 new Video();
+new ScrollTop();
 $.order = new Order();

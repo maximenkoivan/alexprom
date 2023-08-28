@@ -326,6 +326,11 @@ class NxRequest{
                el.innerHTML = '';
             });
             $($form).find(this.cleanedFormItems).not(this.excludedFormItems).val('');
+            $formGroup.forEach(el => {
+                let label = el.querySelector('[data-dynamic-label]')
+
+                if (label && label.classList.contains('focused')) label.classList.remove('focused')
+            })
         }
     }
 }
