@@ -46,27 +46,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                 </div>
             </div>
-<!--            --><?php //if ($videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO']['~VALUE'])['VIDEO']): ?>
-<!--                <div class="video__youtube">-->
-<!--                    <iframe width="755" height="430"-->
-<!--                            src="https://www.youtube.com/embed/--><?php //= $videoYoutubeId ?><!--"-->
-<!--                            title="YouTube video player" frameborder="0"-->
-<!--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-<!--                            allowfullscreen></iframe>-->
-<!--                </div>-->
-<!--            --><?php //endif; ?>
-
-
-            <div class="video__youtube">
-                <div class="video__youtube-wrap">
-                    <a class="video__link"
-                       style="background-image: url('https://img.youtube.com/vi/NonaFPv0Uk4/hqdefault.jpg ')"
-                       data-video-load="NonaFPv0Uk4"
-                       data-video-content>
-                        <svg class="video__icon"><use xlink:href="#icon-play"></use></svg>
-                    </a>
+            <?php if ($videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO']['~VALUE'])['VIDEO']): ?>
+                <div class="video__youtube">
+                    <div class="video__youtube-wrap">
+                        <a class="video__link"
+                           style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId ?>/hqdefault.jpg ')"
+                           data-video-load="<?= $videoYoutubeId ?>"
+                           data-video-content>
+                            <svg class="video__icon">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
