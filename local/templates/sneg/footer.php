@@ -20,11 +20,11 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
     <div class="footer__wrap">
         <div class="container">
             <div class="footer__container">
-                <?php if (!empty($footer['LOGO_HEADER']['VALUE'])): ?>
+                <?php if (!empty($footer['LOGO_FOOTER']['VALUE'])): ?>
                     <div class="header__brand">
                         <a href="<?= $footer['LINK_LOGO_HEADER']['VALUE'] ?>" class="brand">
-                            <img alt="<?= CFile::GetFileArray($footer['LOGO_HEADER']['VALUE'])['ORIGINAL_NAME'] ?>"
-                                 src="<?= CFile::GetPath($footer['LOGO_HEADER']['VALUE']) ?>">
+                            <img alt="<?= CFile::GetFileArray($footer['LOGO_FOOTER']['VALUE'])['ORIGINAL_NAME'] ?>"
+                                 src="<?= CFile::GetPath($footer['LOGO_FOOTER']['VALUE']) ?>">
                         </a>
                     </div>
                 <?php endif; ?>
