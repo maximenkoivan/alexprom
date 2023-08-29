@@ -136,7 +136,7 @@ class Order {
         this.$orderNext.setAttribute(`data-${this.dataName.nav}`, '2')
         this.$orderNext.classList.remove(this.className.hidden)
         this.$sendBtn.classList.add(this.className.hidden)
-        his.$note.classList.add(this.className.hidden)
+        this.$note.classList.add(this.className.hidden)
         this.updateProgress(1)
     }
 }
