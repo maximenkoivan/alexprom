@@ -21,12 +21,12 @@ final class CommonData extends Iblock
     {
         $result = [];
         $obElement = \CIBlockElement::GetList(false, [
+            'ACTIVE' => 'Y',
             'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
             'IBLOCK_CODE' => self::IBLOCK_CODE,
             'CODE' => $code
         ]);
-        if ($obElement) {
-            $element = $obElement->GetNextElement();
+        if ($element = $obElement->GetNextElement()) {
                 if ($onlyProperties) {
                     $result = $element->GetProperties();
                 } else {

@@ -3,11 +3,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use classes\Helpers\Generic;
 use classes\Models\Alpinism\Basic\CommonData;
+use classes\Models\Alpinism\Services\Services;
 
 /**
  * @global CMain $APPLICATION
  */
 $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
+$services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER']['VALUE']);
 ?>
 <footer class="footer">
     <div class="container">
@@ -44,9 +46,9 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
             <div class="footer__menu">
                 <h3 class="footer__menu-title"><?= $footer['TITLE_SERVICES_FOOTER']['~VALUE'] ?></h3>
                 <ul class="footer__menu-list">
-                    <?php foreach ($footer['SERVICES_FOOTER']['VALUE'] as $service): ?>
+                    <?php foreach ($services as $service): ?>
                         <li class="footer__menu-item">
-                            <a href="<?= $service ?>" class="footer__menu-link"><?= $service ?></a>
+                            <a href="<?= $service['DETAIL_PAGE_URL'] ?>" class="footer__menu-link" target="_blank"><?= $service['NAME'] ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -54,17 +56,22 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 
             <div class="footer__menu">
                 <h3 class="footer__menu-title"><?= $footer['TITLE_SECTIONS_FOOTER']['~VALUE'] ?></h3>
-                <ul class="footer__menu-list">
-                    <li class="footer__menu-item">
-                        <a href="#" class="footer__menu-link">Новости</a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a href="#" class="footer__menu-link">Проекты</a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a href="#" class="footer__menu-link">Вакансии</a>
-                    </li>
-                </ul>
+                <?php $APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "footer_menu",
+                    array(
+                        "ALLOW_MULTI_SELECT" => "Y",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "2",
+                        "MENU_CACHE_GET_VARS" => array(),
+                        "MENU_CACHE_TIME" => "3600000",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "bottom",
+                        "USE_EXT" => "N",
+                    ),
+                    false
+                ); ?>
             </div>
 
             <div class="footer__menu">
@@ -100,61 +107,131 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 
 <button class="button-scroll-top" aria-label="листать вверх" title="Листать наверх"></button>
 
-<div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
-    <div class="modal-form__head">
-        <h3 class="modal-form__title">
-            Оставьте свои контакты <br> и мы вам перезвоним
-        </h3>
-        <p class="modal-form__desc">
-            Оставьте заявку, и наш менеджер перезвонит вам <br>
-            в течение 30 минут и проконсультирует по всем вопросам.
-        </p>
+<? $APPLICATION->IncludeComponent(
+    "bitrix:news.detail",
+    "modal",
+    array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_ELEMENT_CHAIN" => "N",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "N",
+        "BROWSER_TITLE" => "-",
+        "CACHE_GROUPS" => "N",
+        "CACHE_TIME" => "360000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "N",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "N",
+        "DISPLAY_PICTURE" => "N",
+        "DISPLAY_PREVIEW_TEXT" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
+        "ELEMENT_CODE" => "form-contact",
+        "ELEMENT_ID" => "",
+        "FIELD_CODE" => array("ID"),
+        "GROUP_PERMISSIONS" => array("1"),
+        "IBLOCK_ID" => "feedback_settings",
+        "IBLOCK_TYPE" => "common_data",
+        "IBLOCK_URL" => "",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "MESSAGE_404" => "",
+        "META_DESCRIPTION" => "-",
+        "META_KEYWORDS" => "-",
+        "PAGER_BASE_LINK" => "",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_PARAMS_NAME" => "arrPager",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_TEMPLATE" => "",
+        "PAGER_TITLE" => "",
+        "PROPERTY_CODE" => array("*"),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_CANONICAL_URL" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHARE_HANDLERS" => array("delicious"),
+        "SHARE_HIDE" => "N",
+        "SHARE_SHORTEN_URL_KEY" => "",
+        "SHARE_SHORTEN_URL_LOGIN" => "",
+        "SHARE_TEMPLATE" => "",
+        "SHOW_404" => "N",
+        "STRICT_SECTION_CHECK" => "N",
+        "USE_PERMISSIONS" => "N",
+        "USE_SHARE" => "N"
+    )
+); ?>
+<? $APPLICATION->IncludeComponent(
+    "bitrix:news.detail",
+    "modal",
+    array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_ELEMENT_CHAIN" => "N",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "N",
+        "BROWSER_TITLE" => "-",
+        "CACHE_GROUPS" => "N",
+        "CACHE_TIME" => "360000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "N",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "N",
+        "DISPLAY_PICTURE" => "N",
+        "DISPLAY_PREVIEW_TEXT" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
+        "ELEMENT_CODE" => "form-price",
+        "ELEMENT_ID" => "",
+        "FIELD_CODE" => array("ID"),
+        "GROUP_PERMISSIONS" => array("1"),
+        "IBLOCK_ID" => "feedback_settings",
+        "IBLOCK_TYPE" => "common_data",
+        "IBLOCK_URL" => "",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "MESSAGE_404" => "",
+        "META_DESCRIPTION" => "-",
+        "META_KEYWORDS" => "-",
+        "PAGER_BASE_LINK" => "",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_PARAMS_NAME" => "arrPager",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_TEMPLATE" => "",
+        "PAGER_TITLE" => "",
+        "PROPERTY_CODE" => array("*"),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_CANONICAL_URL" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHARE_HANDLERS" => array("delicious"),
+        "SHARE_HIDE" => "N",
+        "SHARE_SHORTEN_URL_KEY" => "",
+        "SHARE_SHORTEN_URL_LOGIN" => "",
+        "SHARE_TEMPLATE" => "",
+        "SHOW_404" => "N",
+        "STRICT_SECTION_CHECK" => "N",
+        "USE_PERMISSIONS" => "N",
+        "USE_SHARE" => "N"
+    )
+); ?>
+
+<?php if (!empty($footer['IMAGE_LOADER_FOOTER']['VALUE'])): ?>
+    <div class="preloader">
+        <img src="<?= CFile::GetPath($footer['IMAGE_LOADER_FOOTER']['VALUE']) ?>" alt="" class="preloader__loader">
     </div>
-    <div class="modal-form__body">
-        <div data-action="/" class="form-vertical js_form">
-            <input type="hidden" name="utm_source">
-            <input type="hidden" name="form_message" value>
-            <label class="input input-name form-control">
-                <input
-                        class="input__field"
-                        name="user_name"
-                        type="text"
-                        placeholder="Ваше имя"
-                        autocomplete="name"
-                >
-            </label>
-            <label class="input input-tel form-control">
-                <input
-                        class="input__field mask-tel"
-                        required
-                        name="user_tel"
-                        type="tel"
-                        placeholder="Ваш номер телефона"
-                        maxlength="25"
-                        minlength="10"
-                        autocomplete="tel"
-                >
-            </label>
-            <button class="btn-main" type="submit">Получить консультацию</button>
-            <span class="form__agree">Нажимая на кнопку, я соглашаюсь на обработку <a
-                        href="#">персональных данных</a></span>
-            <input type="hidden" name="utm_source">
-            <input type="hidden" name="utm_medium">
-            <input type="hidden" name="utm_campaign">
-            <input type="hidden" name="utm_content">
-            <input type="hidden" name="utm_term">
-            <input type="hidden" name="referrer">
-            <input type="hidden" name="requestTime">
-        </div>
-    </div>
+<?php endif; ?>
 </div>
-
-<div class="preloader">
-    <img src="./images/common/loader.svg" alt="" class="preloader__loader">
-</div>
-
-</div>
-
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<?= Generic::getYandexAPIKey() ?>&_v=20230217195447"  type="text/javascript"></script>
 </body>
 </html>

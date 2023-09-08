@@ -1,33 +1,13 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-
-use classes\Models\Light\Basic\CommonData;
-
 /**
+ * @var $arResult
  * @global CMain $APPLICATION
  */
-$footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
-</div>
-<footer class="footer">
-    <div class="footer__wrap">
-        <div class="footer__container container">
-            <div class="footer__copy"><?= $footer['COPYRIGHT_FOOTER']['~VALUE'] ?></div>
-            <?php if (!empty($footer['TEXT_LINK_FOOTER']['~VALUE']) || !empty($footer['LINK_FOOTER']['~VALUE'])): ?>
-                <div class="footer__politics">
-                    <a class="link link--hover-color link--white link--small"
-                       href="<?= $footer['LINK_FOOTER']['~VALUE'] ?>"
-                       target="_blank"><?= $footer['TEXT_LINK_FOOTER']['~VALUE'] ?>
-                    </a>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-</footer>
-</div>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
-    "modal",
+    "consulting_form",
     array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
         "ADD_ELEMENT_CHAIN" => "N",
@@ -38,7 +18,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "AJAX_OPTION_STYLE" => "N",
         "BROWSER_TITLE" => "-",
         "CACHE_GROUPS" => "N",
-        "CACHE_TIME" => "360000",
+        "CACHE_TIME" => "36000000",
         "CACHE_TYPE" => "A",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",
@@ -48,12 +28,12 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "DISPLAY_PICTURE" => "N",
         "DISPLAY_PREVIEW_TEXT" => "N",
         "DISPLAY_TOP_PAGER" => "N",
-        "ELEMENT_CODE" => "settings",
+        "ELEMENT_CODE" => "consulting",
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
         "IBLOCK_ID" => "feedback_settings",
-        "IBLOCK_TYPE" => "light",
+        "IBLOCK_TYPE" => "common_data",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "MESSAGE_404" => "",
@@ -64,7 +44,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "PAGER_PARAMS_NAME" => "arrPager",
         "PAGER_SHOW_ALL" => "N",
         "PAGER_TEMPLATE" => "",
-        "PAGER_TITLE" => "Страница",
+        "PAGER_TITLE" => "",
         "PROPERTY_CODE" => array("*"),
         "SET_BROWSER_TITLE" => "N",
         "SET_CANONICAL_URL" => "N",
@@ -84,6 +64,3 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "USE_SHARE" => "N"
     )
 ); ?>
-</body>
-</html>
-

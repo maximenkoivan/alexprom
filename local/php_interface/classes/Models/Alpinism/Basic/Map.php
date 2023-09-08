@@ -4,13 +4,13 @@ namespace classes\Models\Alpinism\Basic;
 
 use classes\Base\Iblock;
 
-final class CommonData extends Iblock
+final class Map extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'common_data';
 
-    protected const IBLOCK_CODE = 'common_data';
+    protected const IBLOCK_CODE = 'map';
 
-    private static ?CommonData $instance = null;
+    private static ?Map $instance = null;
 
     /**
      * @param string $code
