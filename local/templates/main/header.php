@@ -84,7 +84,6 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
                 <?php endif; ?>
                 <div class="header__menu">
                     <div class="header__menu-inner">
-
                         <?php $APPLICATION->IncludeComponent(
                             "bitrix:menu",
                             "header_menu",
@@ -103,7 +102,6 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
                             ),
                             false
                         ); ?>
-
                         <?php if (!empty($header['TEXT_BTN_MOB_HEADER']['~VALUE'])): ?>
                             <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">
                                 <?= $header['TEXT_BTN_MOB_HEADER']['~VALUE'] ?>
