@@ -5,8 +5,8 @@
   align-items: center;
   opacity: 0;
   padding: 15px;
-  right: 80px;
-  bottom: 40px;
+  right: 85px;
+  bottom: 20px;
   background-color: #F8F9F9;
   color: rgba(45, 45, 45, 0.5) !important;
   border-radius: 20px;
@@ -24,8 +24,8 @@
   }
 
   @include media("sm-max") {
-    right: 30px;
-    bottom: 100px;
+    bottom: 30px;
+    right: 25px;
   }
 
   span {
