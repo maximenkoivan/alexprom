@@ -7,8 +7,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
+$advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
+|| !empty($arResult['PAGE_SETTINGS']['DESC_2']['~VALUE'])
+|| !empty($arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'])
+|| !empty($arResult['PAGE_SETTINGS']['DESC_4']['~VALUE']) ? '' : 'hero--no-bullets';
 ?>
-<main class="hero hero--has-breadcrumbs hero--thumb-half">
+<main class="hero hero--has-breadcrumbs hero--thumb-half <?= $advantagesBlockStyle ?>">
     <div class="hero__thumb">
         <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
             <picture class="hero__pic">
@@ -37,15 +41,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <h1 class="title-h1 hero__title">
                 <?= $arResult['PROPERTIES']['TITLE_PAGE']['~VALUE'] ?? $arResult['META_TAGS']['TITLE'] ?>
             </h1>
-            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'])): ?>
+            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN_DETAIL']['~VALUE'])): ?>
                 <div class="hero__buttons">
-                    <a href="#project" class="hero__btn"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'] ?></a>
+                    <a href="#project" class="hero__btn"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_DETAIL']['~VALUE'] ?></a>
                 </div>
             <?php endif; ?>
-            <?php if (!empty($arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'])
-                || !empty($arResult['PAGE_SETTINGS']['DESC_2_DETAIL']['~VALUE'])
-                || !empty($arResult['PAGE_SETTINGS']['DESC_3_DETAIL']['~VALUE'])
-                || !empty($arResult['PAGE_SETTINGS']['DESC_4_DETAIL']['~VALUE'])): ?>
+            <?php if (!$advantagesBlockStyle): ?>
                 <div class="hero-info">
                     <div class="hero-info__stroke">
                         <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_1_DETAIL']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'])): ?>

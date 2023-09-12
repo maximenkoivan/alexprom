@@ -35,10 +35,10 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                 <?= $arResult['PAGE_SETTINGS']['TITLE']['~VALUE'] ?>
             </h1>
             <p class="hero__desc"><?= $arResult['PAGE_SETTINGS']['SUBTITLE']['~VALUE'] ?></p>
-            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'])): ?>
+            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'])): ?>
                 <div class="hero__buttons">
                     <button class="hero__btn" type="button"
-                            data-b_modal-open="form-price"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'] ?></button>
+                            data-b_modal-open="form-price"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'] ?></button>
                 </div>
             <?php endif; ?>
             <?php if (!$advantagesBlockStyle): ?>

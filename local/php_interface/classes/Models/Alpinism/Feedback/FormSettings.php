@@ -1,33 +1,44 @@
 <?php
 
-namespace classes\Models\Snow\Feedback;
+namespace classes\Models\Alpinism\Feedback;
 
 use classes\Base\Iblock;
 
 class FormSettings extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'snow';
+    protected const IBLOCK_TYPE_CODE = 'common_data';
 
     protected const IBLOCK_CODE = 'feedback_settings';
 
     private static ?FormSettings $instance = null;
 
     /**
-     * Получает свойства элементов по его коду
+     * Получет элемент по его коду
      * @param string $code
+     * @param bool $onlyProperties
      * @return array
      */
-    public function getElementPropertiesByCode(string $code): array
+    public function getElementByCode(string $code, bool $onlyProperties = false): array
     {
-        $properties = [];
-        $obElement = \CIBlockElement::GetList(
-            false,
-            ['IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE, 'IBLOCK_CODE' => self::IBLOCK_CODE, 'CODE' => $code]
-        );
+        $result = [];
+        $obElement = \CIBlockElement::GetList(false, [
+            'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
+            'IBLOCK_CODE' => self::IBLOCK_CODE,
+            'CODE' => $code,
+        ]);
         if ($element = $obElement->GetNextElement()) {
-            $properties = $element->GetProperties();
+            if ($onlyProperties) {
+                $result = $element->GetProperties();
+            } else {
+                $fields = $element->GetFields();
+                $ipropValues = new \Bitrix\Iblock\InheritedProperty\ElementValues(
+                    $this->getIblockId(),
+                    $fields['ID']
+                );
+                $result = $fields + $ipropValues->getValues() + $element->GetProperties();
+            }
         }
-        return $properties;
+        return $result;
     }
 
 

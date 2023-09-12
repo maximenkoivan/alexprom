@@ -7,8 +7,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
+$advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
+|| !empty($arResult['PAGE_SETTINGS']['DESC_2']['~VALUE'])
+|| !empty($arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'])
+|| !empty($arResult['PAGE_SETTINGS']['DESC_4']['~VALUE']) ? '' : 'hero--no-bullets';
 ?>
-<main class="hero hero--has-breadcrumbs">
+<main class="hero hero--has-breadcrumbs <?= $advantagesBlockStyle ?>">
     <div class="hero__thumb">
         <?php if (!empty($arResult['PAGE_SETTINGS']['BG_IMAGE']['VALUE'])): ?>
             <picture class="hero__pic">
@@ -31,16 +35,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <?= $arResult['PAGE_SETTINGS']['TITLE']['~VALUE'] ?>
             </h1>
             <p class="hero__desc"><?= $arResult['PAGE_SETTINGS']['SUBTITLE']['~VALUE'] ?></p>
-            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'])): ?>
+            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN_LIST']['~VALUE'])): ?>
                 <div class="hero__buttons">
                     <button class="hero__btn" type="button"
-                            data-b_modal-open="form-price"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'] ?></button>
+                            data-b_modal-open="form-contact"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_LIST']['~VALUE'] ?></button>
                 </div>
             <?php endif; ?>
-            <?php if (!empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
-                || !empty($arResult['PAGE_SETTINGS']['DESC_2']['~VALUE'])
-                || !empty($arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'])
-                || !empty($arResult['PAGE_SETTINGS']['DESC_4']['~VALUE'])): ?>
+            <?php if (!$advantagesBlockStyle): ?>
                 <div class="hero-info">
                     <div class="hero-info__stroke">
                         <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_1']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])): ?>
