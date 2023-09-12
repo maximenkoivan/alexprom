@@ -13,8 +13,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
 
 // Получаем настройки страницы списка
-$arResult['PAGE_SETTINGS'] = Settings::getInstance()->getElementByCode('settings', true);
+$arResult['PAGE_SETTINGS'] = Settings::getInstance()->getElementByCode('settings');
 
 // Получаем разделы
 $arResult['SECTIONS'] = Projects::getInstance()->getSections();
-array_unshift($arResult['SECTIONS'], ['NAME' => 'Все проекты']);
+
+$cp = $this->__component; // объект компонента
+
+if (is_object($cp))
+{
+    $cp->arResult['PAGE_SETTINGS'] = $arResult['PAGE_SETTINGS'];
+    $cp->SetResultCacheKeys(['PAGE_SETTINGS']);
+}

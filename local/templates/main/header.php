@@ -18,6 +18,8 @@ $asset->addString(
 );
 $asset->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/js/bundle.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/vue.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/axios.min.js');
 $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
 <!DOCTYPE html>

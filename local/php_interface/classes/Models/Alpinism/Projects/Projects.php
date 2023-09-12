@@ -2,6 +2,7 @@
 
 namespace classes\Models\Alpinism\Projects;
 
+use CFile;
 use CIBlockElement;
 use classes\Base\Iblock;
 
@@ -46,7 +47,6 @@ final class Projects extends Iblock
     {
         $result = [];
         $obElement = \CIBlockElement::GetList(false, [
-            'ACTIVE' => 'Y',
             'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
             'IBLOCK_CODE' => self::IBLOCK_CODE,
             'CODE' => $code,
@@ -55,7 +55,12 @@ final class Projects extends Iblock
             if ($onlyProperties) {
                 $result = $element->GetProperties();
             } else {
-                $result = $element->GetFields() + $element->GetProperties();
+                $fields = $element->GetFields();
+                $ipropValues = new \Bitrix\Iblock\InheritedProperty\ElementValues(
+                    $this->getIblockId(),
+                    $fields['ID']
+                );
+                $result = $fields + $ipropValues->getValues() + $element->GetProperties();
             }
         }
         return $result;
@@ -100,12 +105,51 @@ final class Projects extends Iblock
             'ACTIVE' => 'Y',
             'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
             'IBLOCK_CODE' => self::IBLOCK_CODE,
+            'CNT_ACTIVE' => 'Y'
         ],
-            ['CNT_ACTIVE' => 'Y'],
+            ['CNT_ACTIVE' => 'Y', 'CNT_ALL' => 'N'],
             ['ID', 'CODE', 'NAME']);
         if ($obSections) {
             while ($section = $obSections->GetNext()) {
-                $result[$section['ID']] = $section;
+                if ($section['ELEMENT_CNT'] > 0) {
+                    $result[$section['ID']] = $section;
+                }
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * Получает все активные элементы по коду раздела
+     * @param string $sectionCode
+     * @return array
+     */
+    public function getElementsBySectionCode(string $sectionCode = ''): array
+    {
+        $result = [];
+        $sectionFilter = $sectionCode ? ['SECTION_CODE' => $sectionCode] : [];
+        $obElement = \CIBlockElement::GetList(
+            ['CREATE_DATE' => 'DESC', 'SORT' => 'ASC'],
+            [
+                'ACTIVE' => 'Y',
+                'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
+                'IBLOCK_CODE' => self::IBLOCK_CODE,
+                '!DETAIL_TEXT' => false,
+                'SECTION_GLOBAL_ACTIVE' => 'Y',
+                $sectionFilter
+            ]);
+        if ($obElement) {
+            while ($element = $obElement->GetNextElement()) {
+                $element = $element->GetFields() + $element->GetProperties();
+                $result[] = [
+        'NAME' => $element['NAME'],
+        'URL' => $element['DETAIL_PAGE_URL'],
+        'SID' => $element['IBLOCK_SECTION_ID'],
+        'PICTURE' => CFile::GetPath($element['PREVIEW_PICTURE']),
+        'TEXT' => $element['PREVIEW_TEXT'],
+        'SQUARE' => $element['SQUARE']['~VALUE'],
+        'ADDRESS' => $element['ADDRESS']['~VALUE'],
+    ];
             }
         }
         return $result;

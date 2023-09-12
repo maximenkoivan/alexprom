@@ -37,13 +37,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <h1 class="title-h1 hero__title">
                 <?= $arResult['PROPERTIES']['TITLE_PAGE']['~VALUE'] ?? $arResult['META_TAGS']['TITLE'] ?>
             </h1>
-            <p>
-                <?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?>
-            </p>
             <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'])): ?>
                 <div class="hero__buttons">
-                    <button class="hero__btn" type="button"
-                            data-b_modal-open="form-price"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'] ?></button>
+                    <a href="#project" class="hero__btn"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'] ?></a>
                 </div>
             <?php endif; ?>
             <?php if (!empty($arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'])

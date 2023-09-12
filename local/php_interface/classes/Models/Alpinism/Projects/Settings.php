@@ -53,7 +53,12 @@ final class Settings extends Iblock
             if ($onlyProperties) {
                 $result = $element->GetProperties();
             } else {
-                $result = $element->GetFields() + $element->GetProperties();
+                $fields = $element->GetFields();
+                $ipropValues = new \Bitrix\Iblock\InheritedProperty\ElementValues(
+                    $this->getIblockId(),
+                    $fields['ID']
+                );
+                $result = $fields + $ipropValues->getValues() + $element->GetProperties();
             }
         }
         return $result;

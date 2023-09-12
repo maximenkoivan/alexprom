@@ -46,7 +46,6 @@ final class Services extends Iblock
     {
         $result = [];
         $obElement = \CIBlockElement::GetList(false, [
-            'ACTIVE' => 'Y',
             'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
             'IBLOCK_CODE' => self::IBLOCK_CODE,
             'CODE' => $code,
@@ -55,7 +54,12 @@ final class Services extends Iblock
             if ($onlyProperties) {
                 $result = $element->GetProperties();
             } else {
-                $result = $element->GetFields() + $element->GetProperties();
+                $fields = $element->GetFields();
+                $ipropValues = new \Bitrix\Iblock\InheritedProperty\ElementValues(
+                    $this->getIblockId(),
+                    $fields['ID']
+                );
+                $result = $fields + $ipropValues->getValues() + $element->GetProperties();
             }
         }
         return $result;

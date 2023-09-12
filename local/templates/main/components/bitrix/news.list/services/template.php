@@ -27,7 +27,8 @@ include '_promo.php';
                                 <div class="services-box__item" id="<?= $this->GetEditAreaId($arItem['ID']) ?>">
                                     <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="services-box__thumb">
                                         <img class="services-box__img lazy"
-                                             src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" alt="">
+                                             src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                                             alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['ALT'] ?>">
                                     </a>
                                     <h3 class="title-h3 services-box__title"><?= $arItem['NAME'] ?></h3>
                                     <p><?= TruncateText($arItem['~PREVIEW_TEXT'], 105) ?></p>
