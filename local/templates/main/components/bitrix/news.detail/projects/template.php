@@ -13,7 +13,7 @@ include '_promo.php';
             <div class="storytell__section">
                 <div class="storytell__head">
                     <h2 class="title-h2 storytell__title">
-                        <?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?>
+                        <?= $arResult['PROPERTIES']['TITLE_DETAIL_DESC']['~VALUE'] ?>
                     </h2>
                 </div>
                 <div class="storytell__body">
@@ -25,12 +25,6 @@ include '_promo.php';
 
     <div class="project-highlights">
         <div class="container project-highlights__container">
-            <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
-                <picture class="project-highlights__pic">
-                    <img class="project-highlights__img" src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
-                         alt="<?= $arResult['DETAIL_PICTURE']['DESCRIPTION'] ?? $arResult['DETAIL_PICTURE']['ALT'] ?>">
-                </picture>
-            <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['GALLERY']['VALUE'])): ?>
                 <div class="project-highlights__gallery">
                     <div class="swiper project-highlights-carousel">

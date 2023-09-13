@@ -1,17 +1,15 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-
-use classes\Models\Alpinism\Prices\Settings;
-use classes\Models\Alpinism\Services\Services;
-
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 /**
+ * @var $arResult
  * @global CMain $APPLICATION
  */
-$APPLICATION->SetTitle("Прайс-лист на услуги промышленных альпинистов");
 ?>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "prices",
+    "employees_gallery",
     array(
         "ACTIVE_DATE_FORMAT" => "j F Y",
         "ADD_SECTIONS_CHAIN" => "N",
@@ -35,10 +33,10 @@ $APPLICATION->SetTitle("Прайс-лист на услуги промышлен
         "FIELD_CODE" => array(0 => "*", 1 => "",),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-        "IBLOCK_ID" => Services::getInstance()->getIblockId(),
-        "IBLOCK_TYPE" => "services",
+        "IBLOCK_ID" => 'employees',
+        "IBLOCK_TYPE" => "common_data",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "INCLUDE_SUBSECTIONS" => "Y",
+        "INCLUDE_SUBSECTIONS" => "N",
         "MESSAGE_404" => "",
         "NEWS_COUNT" => 50,
         "PAGER_BASE_LINK" => "",
@@ -61,17 +59,10 @@ $APPLICATION->SetTitle("Прайс-лист на услуги промышлен
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
         "SHOW_404" => "N",
-        "SORT_BY1" => "CREATE_DATE",
+        "SORT_BY1" => "ACTIVE_FROM",
         "SORT_BY2" => "SORT",
         "SORT_ORDER1" => "DESC",
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
 );?>
-<?php
-$settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_PAGE');
-foreach ($settings as $code) {
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
-}
-?>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -5100,9 +5100,6 @@ header {
   position: relative;
 }
 
-p, .services-box__item {
-margin: revert;
-}
 
 @media (max-width: 1440px) {
   .services-box__item:nth-child(10),

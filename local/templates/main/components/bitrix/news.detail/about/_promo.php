@@ -14,10 +14,10 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
 ?>
 <main class="hero hero--has-breadcrumbs hero--thumb-half <?= $advantagesBlockStyle ?>">
     <div class="hero__thumb">
-        <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
+        <?php if (!empty($arResult['PAGE_SETTINGS']['BG_IMAGE']['VALUE'])): ?>
             <picture class="hero__pic">
-                <img class="hero__img" src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
-                     alt="<?= $arResult['DETAIL_PICTURE']['DESCRIPTION'] ?? $arResult['DETAIL_PICTURE']['ALT'] ?>">
+                <img class="hero__img" src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['BG_IMAGE']['VALUE']) ?>"
+                     alt="<?= $arResult['PAGE_SETTINGS']['BG_IMAGE']['DESCRIPTION'] ?>">
             </picture>
         <?php endif; ?>
         <div class="container hero__container">
@@ -26,11 +26,6 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                     <li class="breadcrumbs__item">
                         <a href="/" class="breadcrumbs__link">
                             Главная
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="<?= $arResult['LIST_PAGE_URL'] ?>" class="breadcrumbs__link">
-                            <?= $arResult['IBLOCK']['NAME'] ?>
                         </a>
                     </li>
                     <li class="breadcrumbs__item">
@@ -44,55 +39,56 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
             <p>
                 <?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?>
             </p>
-            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN_DETAIL']['~VALUE'])): ?>
+            <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'])): ?>
                 <div class="hero__buttons">
-                    <a href="#project" class="hero__btn"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_DETAIL']['~VALUE'] ?></a>
+                    <button class="hero__btn" type="button"
+                            data-b_modal-open="form-price"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN']['~VALUE'] ?></button>
                 </div>
             <?php endif; ?>
             <?php if (!$advantagesBlockStyle): ?>
                 <div class="hero-info">
                     <div class="hero-info__stroke">
-                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_1_DETAIL']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_1']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])): ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
-                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'] ?></span>
+                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_1_DETAIL']['VALUE']) ?>"
-                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'] ?>">
+                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_1']['VALUE']) ?>"
+                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
-                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_2_DETAIL']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_2_DETAIL']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_2']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_2']['~VALUE'])): ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
-                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_2_DETAIL']['~VALUE'] ?></span>
+                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_2']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_2_DETAIL']['VALUE']) ?>"
-                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_2_DETAIL']['~VALUE'] ?>">
+                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_2']['VALUE']) ?>"
+                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_2']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
-                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_3_DETAIL']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_3_DETAIL']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_3']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'])): ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
-                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_3_DETAIL']['~VALUE'] ?></span>
+                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_3_DETAIL']['VALUE']) ?>"
-                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_3_DETAIL']['~VALUE'] ?>">
+                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_3']['VALUE']) ?>"
+                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
-                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_4_DETAIL']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_4_DETAIL']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PAGE_SETTINGS']['IMAGE_4']['VALUE']) && !empty($arResult['PAGE_SETTINGS']['DESC_4']['~VALUE'])): ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
-                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_4_DETAIL']['~VALUE'] ?></span>
+                                    <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_4']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_4_DETAIL']['VALUE']) ?>"
-                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_4_DETAIL']['~VALUE'] ?>">
+                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_4']['VALUE']) ?>"
+                                         alt="<?= $arResult['PAGE_SETTINGS']['DESC_4']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
@@ -100,10 +96,11 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                 </div>
             <?php endif; ?>
         </div>
-        <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
+        <?php if (!empty($arResult['PAGE_SETTINGS']['BG_IMAGE_MOB']['VALUE'])): ?>
             <picture class="hero__worker">
-                <img class="hero__worker-img" src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
-                     alt="<?= $arResult['DETAIL_PICTURE']['DESCRIPTION'] ?? $arResult['DETAIL_PICTURE']['ALT'] ?>">
+                <img class="hero__worker-img"
+                     src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['BG_IMAGE_MOB']['VALUE']) ?>"
+                     alt="<?= $arResult['PAGE_SETTINGS']['BG_IMAGE_MOB']['DESCRIPTION'] ?>">
             </picture>
         <?php endif; ?>
     </div>
