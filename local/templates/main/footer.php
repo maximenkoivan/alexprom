@@ -225,11 +225,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
         "USE_SHARE" => "N"
     )
 ); ?>
-<?php
-if ($APPLICATION->GetCurPage() == '/prices/') {
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/modal_service.php');
-}
-?>
+<?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/modal_service.php') ?>
 
 <?php if (!empty($footer['IMAGE_LOADER_FOOTER']['VALUE'])): ?>
     <div class="preloader">

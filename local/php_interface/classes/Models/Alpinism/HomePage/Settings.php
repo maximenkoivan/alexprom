@@ -1,36 +1,31 @@
 <?php
 
-namespace classes\Models\Alpinism\Services;
+namespace classes\Models\Alpinism\HomePage;
 
-use CIBlockElement;
 use classes\Base\Iblock;
 
-final class Services extends Iblock
+final class Settings extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'services';
+    protected const IBLOCK_TYPE_CODE = 'home_page';
 
-    protected const IBLOCK_CODE = 'services';
+    protected const IBLOCK_CODE = 'settings';
 
-    private static ?Services $instance = null;
+    private static $instance = null;
 
     /**
      * Получает все активные элементы
-     * @param array $ids
-     * @param array $sort
      * @return array
      */
-    public function getAllElements(array $ids = [], array $sort = ['SORT' => 'ASC']): array
+    public function getAllElements(): array
     {
         $result = [];
         $obElement = \CIBlockElement::GetList(
-            $sort,
+            ['SORT' => 'ASC'],
             [
-                'ID' => $ids,
                 'ACTIVE' => 'Y',
-                'IBLOCK_ACTIVE' => 'Y',
-                'SECTION_GLOBAL_ACTIVE' => 'Y',
                 'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
-                'IBLOCK_ID' => $this->getIblockId(),
+                'IBLOCK_CODE' => self::IBLOCK_CODE,
+                '!DETAIL_TEXT' => false
             ]);
         if ($obElement) {
             while ($element = $obElement->GetNextElement()) {
@@ -70,62 +65,60 @@ final class Services extends Iblock
     }
 
     /**
-     * Получает элементы по ID
-     * @param string|array $ids
+     * Получает свойство по первой части символьного кода
+     * @param string $prefix
      * @return array
      */
-    public function getElementByIds(string|array $ids): array
+    public function getPropertiesByPrefix(string $prefix): array
     {
         $result = [];
-        $obElement = CIBlockElement::GetList(false, [
-            'ID' => $ids,
-            'ACTIVE' => 'Y',
-            'IBLOCK_ACTIVE' => 'Y',
-            'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
-            'IBLOCK_CODE' => self::IBLOCK_CODE,
-            'SECTION_GLOBAL_ACTIVE' => 'Y',
-        ],
-            false,
-            false,
-            ['NAME', 'DETAIL_PAGE_URL']
+        $obElement = \CIBlockElement::GetList(
+            ['SORT' => 'ASC'],
+            [
+                'ACTIVE' => 'Y',
+                'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
+                'IBLOCK_ID' => $this->getIblockId(),
+            ],
         );
         if ($obElement) {
-            while ($element = $obElement->GetNext()) {
-                $result[] = $element;
+            while ($element = $obElement->GetNextElement()) {
+                $result = $element->GetProperties(
+                    false,
+                    ['CODE' => $prefix . '_%']
+                );
             }
         }
         return $result;
     }
 
     /**
-     * Получает разделы инфоблока
-     * @param array $propertyFilter
+     * Получает свойство по его коду
+     * @param string $code
      * @return array
      */
-    public function getSections(array $propertyFilter = [], array $sort = ['CREATED' => 'ASC'], array $ids = []): array
+    public function getPropertiesByCode(string $code): array
     {
         $result = [];
-        $obSections = \CIBlockSection::GetList(
-            $sort + ['SORT' => 'ASC'],
+        $obElement = \CIBlockElement::GetList(
+            ['SORT' => 'ASC'],
             [
-                'ID' => $ids,
                 'ACTIVE' => 'Y',
                 'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
                 'IBLOCK_ID' => $this->getIblockId(),
-                'SECTION_GLOBAL_ACTIVE' => 'Y',
-                'PROPERTY' => $propertyFilter
             ],
-            ['CNT_ACTIVE' => 'Y'],
-            ['ID', 'CODE', 'NAME']);
-        if ($obSections) {
-            while ($section = $obSections->GetNext()) {
-                $result[$section['ID']] = $section;
+            false,
+            false,
+            ['PROPERTY_' . $code]
+        );
+        if ($obElement) {
+            while ($property = $obElement->GetNext()) {
+                $result[] = $property['PROPERTY_' . $code . '_VALUE'];
             }
         }
         return $result;
     }
 
-    public static function getInstance(): ?Services
+    public static function getInstance()
     {
         if (is_null(self::$instance)) {
             self::$instance = new self();
