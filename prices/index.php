@@ -59,7 +59,7 @@ $APPLICATION->SetTitle("Прайс-лист на услуги промышлен
         "SET_META_KEYWORDS" => "N",
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
-        "SHOW_404" => "N",
+        "SHOW_404" => "Y",
         "SORT_BY1" => "CREATE_DATE",
         "SORT_BY2" => "SORT",
         "SORT_ORDER1" => "DESC",

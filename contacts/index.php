@@ -61,7 +61,7 @@ $APPLICATION->SetTitle("Контакты");
         "SHARE_SHORTEN_URL_KEY" => "",
         "SHARE_SHORTEN_URL_LOGIN" => "",
         "SHARE_TEMPLATE" => "",
-        "SHOW_404" => "N",
+        "SHOW_404" => "Y",
         "STRICT_SECTION_CHECK" => "N",
         "USE_PERMISSIONS" => "N",
         "USE_SHARE" => "N"
