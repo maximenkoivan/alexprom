@@ -82,12 +82,12 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "CACHE_TYPE" => "A",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",
-        "DISPLAY_BOTTOM_PAGER" => "Y",
-        "DISPLAY_DATE" => "Y",
-        "DISPLAY_NAME" => "Y",
-        "DISPLAY_PICTURE" => "Y",
-        "DISPLAY_PREVIEW_TEXT" => "Y",
-        "DISPLAY_TOP_PAGER" => "Y",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "N",
+        "DISPLAY_PICTURE" => "N",
+        "DISPLAY_PREVIEW_TEXT" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
         "ELEMENT_CODE" => "settings",
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
@@ -100,17 +100,17 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "META_DESCRIPTION" => "-",
         "META_KEYWORDS" => "-",
         "PAGER_BASE_LINK" => "",
-        "PAGER_BASE_LINK_ENABLE" => "Y",
-        "PAGER_PARAMS_NAME" => "arrPager",
-        "PAGER_SHOW_ALL" => "Y",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_PARAMS_NAME" => "r",
+        "PAGER_SHOW_ALL" => "N",
         "PAGER_TEMPLATE" => "",
         "PAGER_TITLE" => "Страница",
         "PROPERTY_CODE" => array("*"),
-        "SET_BROWSER_TITLE" => "Y",
-        "SET_CANONICAL_URL" => "Y",
-        "SET_LAST_MODIFIED" => "Y",
-        "SET_META_DESCRIPTION" => "Y",
-        "SET_META_KEYWORDS" => "Y",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_CANONICAL_URL" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "Y",
         "SHARE_HANDLERS" => array("delicious"),
@@ -129,6 +129,9 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
        target="_blank" class="call">
         <img src="<?= CFile::GetPath($footer['ICON_WHATSAPP_FOOTER']['VALUE']) ?>" height="60" width="60" alt="">
     </a>
+<?php endif; ?>
+<?php if ($APPLICATION->GetCurPage() == '/'): ?>
+    <script>(function(a,m,o,c,r,m){a[m]={id:"393457",hash:"313e563912d9d72dc2997a7b3b75a75c80cd602fb1cee3a655c45980c21756ab",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1694165626';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
 <?php endif; ?>
 </body>
 </html>

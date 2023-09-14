@@ -1,30 +1,22 @@
 <?php
 $arUrlRewrite=array (
-  2 => 
+  0 => 
   array (
-    'CONDITION' => '#^/projects/([\\w\\d\\-_]+)(?:\\?.*)?#',
-    'RULE' => 'CODE=$1',
-    'ID' => 'bitrix:news.detail',
-    'PATH' => '/projects/view/index.php',
+    'CONDITION' => '#^/services/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/services/index.php',
     'SORT' => 100,
   ),
   3 => 
   array (
-    'CONDITION' => '#^/services/([\\w\\d\\-_]+)(?:\\?.*)?#',
-    'RULE' => 'CODE=$1',
-    'ID' => 'bitrix:news.detail',
-    'PATH' => '/services/view/index.php',
-    'SORT' => 100,
-  ),
-  0 => 
-  array (
-    'CONDITION' => '#^/rest/#',
+    'CONDITION' => '#^/projects/#',
     'RULE' => '',
-    'ID' => NULL,
-    'PATH' => '/bitrix/services/rest/index.php',
+    'ID' => 'bitrix:news',
+    'PATH' => '/projects/index.php',
     'SORT' => 100,
   ),
-  4 => 
+  2 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',

@@ -69,9 +69,6 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
         <div><img src="https://mc.yandex.ru/watch/94759803" style="position:absolute; left:-9999px;" alt=""/></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
-    <?php if ($APPLICATION->GetCurPage() == '/'): ?>
-        <script src="//code.jivo.ru/widget/FmEs0fRdxd" async></script>
-    <?php endif; ?>
 </head>
 <body>
 
