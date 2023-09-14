@@ -1,7 +1,4 @@
 <?
-
-use classes\Models\Alpinism\About\Settings;
-
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 /**
  * @global CMain $APPLICATION
@@ -67,10 +64,4 @@ $APPLICATION->SetTitle("О компании");
         "USE_SHARE" => "N"
     )
 ); ?>
-<?php
-$settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_PAGE');
-foreach ($settings as $code) {
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
-}
-?>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

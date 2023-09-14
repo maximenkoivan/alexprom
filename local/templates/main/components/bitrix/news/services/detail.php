@@ -1,7 +1,4 @@
 <?php
-
-use classes\Models\Alpinism\Services\Settings;
-
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -74,8 +71,4 @@ $APPLICATION->IncludeComponent(
     $component,
     ['HIDE_ICONS' => 'Y']
 ); ?>
-<?php
-$settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_DETAIL_PAGE');
-foreach ($settings as $code) {
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
-}
+

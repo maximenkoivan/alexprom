@@ -36,6 +36,29 @@ final class CommonData extends Iblock
         return $result;
     }
 
+    /**
+     * Получает поля элемента по его коду
+     * @param array $code
+     * @return array
+     */
+    public function getFieldsByCode(array $code = []): array
+    {
+        $result = [];
+        $obElement = \CIBlockElement::GetList(false, [
+            'ACTIVE' => 'Y',
+            'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
+            'IBLOCK_CODE' => self::IBLOCK_CODE,
+        ],
+            false,
+            false,
+            $code
+        );
+        if ($element = $obElement->GetNextElement()) {
+            $result = $element->GetFields();
+        }
+        return $result;
+    }
+
 
     public function getElementByIds(string|array $ids): array
     {

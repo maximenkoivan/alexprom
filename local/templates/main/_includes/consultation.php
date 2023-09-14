@@ -1,4 +1,7 @@
 <?php
+
+use classes\Models\Alpinism\Feedback\FormSettings;
+
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
  * @var $arResult
@@ -19,7 +22,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         "BROWSER_TITLE" => "-",
         "CACHE_GROUPS" => "N",
         "CACHE_TIME" => "36000000",
-        "CACHE_TYPE" => "A",
+        "CACHE_TYPE" => "N",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",
         "DISPLAY_BOTTOM_PAGER" => "N",
@@ -32,7 +35,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
-        "IBLOCK_ID" => "feedback_settings",
+        "IBLOCK_ID" => FormSettings::getInstance()->getIblockId(),
         "IBLOCK_TYPE" => "common_data",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",

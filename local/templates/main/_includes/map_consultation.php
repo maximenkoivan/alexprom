@@ -1,14 +1,16 @@
 <?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
+use classes\Models\Alpinism\Feedback\FormSettings;
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
+ * @var $arResult
  * @global CMain $APPLICATION
  */
-$APPLICATION->SetTitle("Главная страница");
 ?>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
-    "home_page",
+    "map_consulting_form",
     array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
         "ADD_ELEMENT_CHAIN" => "N",
@@ -20,7 +22,7 @@ $APPLICATION->SetTitle("Главная страница");
         "BROWSER_TITLE" => "-",
         "CACHE_GROUPS" => "N",
         "CACHE_TIME" => "36000000",
-        "CACHE_TYPE" => "A",
+        "CACHE_TYPE" => "N",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",
         "DISPLAY_BOTTOM_PAGER" => "N",
@@ -29,12 +31,12 @@ $APPLICATION->SetTitle("Главная страница");
         "DISPLAY_PICTURE" => "N",
         "DISPLAY_PREVIEW_TEXT" => "N",
         "DISPLAY_TOP_PAGER" => "N",
-        "ELEMENT_CODE" => "settings",
+        "ELEMENT_CODE" => "consulting",
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
-        "IBLOCK_ID" => "settings",
-        "IBLOCK_TYPE" => "home_page",
+        "IBLOCK_ID" => FormSettings::getInstance()->getIblockId(),
+        "IBLOCK_TYPE" => "common_data",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "MESSAGE_404" => "",
@@ -47,12 +49,12 @@ $APPLICATION->SetTitle("Главная страница");
         "PAGER_TEMPLATE" => "",
         "PAGER_TITLE" => "",
         "PROPERTY_CODE" => array("*"),
-        "SET_BROWSER_TITLE" => "Y",
+        "SET_BROWSER_TITLE" => "N",
         "SET_CANONICAL_URL" => "N",
         "SET_LAST_MODIFIED" => "N",
-        "SET_META_DESCRIPTION" => "Y",
-        "SET_META_KEYWORDS" => "Y",
-        "SET_STATUS_404" => "Y",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
         "SHARE_HANDLERS" => array("delicious"),
         "SHARE_HIDE" => "N",
@@ -65,4 +67,3 @@ $APPLICATION->SetTitle("Главная страница");
         "USE_SHARE" => "N"
     )
 ); ?>
-<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

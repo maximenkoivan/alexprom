@@ -1,4 +1,7 @@
 <?php
+
+use classes\Models\Alpinism\News\Settings;
+
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -26,7 +29,8 @@ include '_promo.php';
                                 </picture>
                             </a>
                             <h3 class="title-h3 services-box__title">
-                                <a class="services-box__title-link" href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= $arItem['NAME'] ?></a>
+                                <a class="services-box__title-link"
+                                   href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= $arItem['NAME'] ?></a>
                             </h3>
                             <p class="services-box__desc">
                                 <?= TruncateText($arItem['~PREVIEW_TEXT'], 135) ?>
@@ -37,4 +41,10 @@ include '_promo.php';
             </div>
         </div>
     </section>
+    <?php
+    $settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_LIST_PAGE');
+    foreach ($settings as $code) {
+        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
+    }
+    ?>
 </div>

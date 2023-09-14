@@ -1,4 +1,7 @@
 <?php
+
+use classes\Models\Alpinism\News\Settings;
+
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
  * @var $arResult
@@ -14,4 +17,10 @@ include '_promo.php';
             <?= $arResult['~DETAIL_TEXT'] ?>
         </div>
     </div>
+    <?php
+    $settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_DETAIL_PAGE');
+    foreach ($settings as $code) {
+        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
+    }
+    ?>
 </div>

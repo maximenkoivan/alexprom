@@ -1,7 +1,4 @@
 <?php
-
-use classes\Models\Alpinism\News\Settings;
-
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -71,8 +68,3 @@ $this->setFrameMode(true);
     $component,
     ['HIDE_ICONS' => 'Y']
 ); ?>
-<?php
-$settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_LIST_PAGE');
-foreach ($settings as $code) {
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
-}

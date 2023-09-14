@@ -28,7 +28,7 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                             Главная
                         </a>
                     </li>
-                    <li class="breadcrumbs__item"><?= $arResult['NAME'] ?></li>
+                    <li class="breadcrumbs__item">Цены</li>
                 </ul>
             </div>
             <h1 class="title-h1 hero__title">
@@ -36,9 +36,14 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
             </h1>
             <p class="hero__desc"><?= $arResult['PAGE_SETTINGS']['SUBTITLE']['~VALUE'] ?></p>
             <?php if (!empty($arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'])): ?>
-                <div class="hero__buttons">
-                    <button class="hero__btn" type="button"
-                            data-b_modal-open="form-price"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'] ?></button>
+                <div class="hero__form js_form" data-action="/request/main/feedback.php">
+                    <label class="input input-tel form-control">
+                        <input class="input__field mask-tel" required name="user_tel" type="tel"
+                               placeholder="<?= $arResult['PAGE_SETTINGS']['PLACEHOLDER']['~VALUE'] ?>" maxlength="25"
+                               minlength="10" autocomplete="tel">
+                    </label>
+                    <button class="hero__btn"
+                            type="submit"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'] ?></button>
                 </div>
             <?php endif; ?>
             <?php if (!$advantagesBlockStyle): ?>

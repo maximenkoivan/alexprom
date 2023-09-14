@@ -1,4 +1,7 @@
 <?php
+
+use classes\Models\Alpinism\Projects\Settings;
+
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -9,8 +12,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 include '_promo.php';
 $sectionsJson = json_encode($arResult['SECTIONS']);
 ?>
-<?php if (!empty($arResult['SECTIONS'])): ?>
-    <div class="section-flip section-flip--light">
+<div class="section-flip section-flip--light">
+    <?php if (!empty($arResult['SECTIONS'])): ?>
         <div class="section projects">
             <div class="container" id="app" :class="{ 'is-loading': isloading }">
                 <div class="section__head projects__head">
@@ -54,54 +57,60 @@ $sectionsJson = json_encode($arResult['SECTIONS']);
                 </button>
             </div>
         </div>
-    </div>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                categories: <?= $sectionsJson ?>,
-                items: '',
-                query: {
-                    iid: ''
-                },
-                isloading: false,
-                allCount: '',
-                limit: '6',
+    <?php endif; ?>
+    <?php
+    $settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_LIST_PAGE');
+    foreach ($settings as $code) {
+        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
+    }
+    ?>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            categories: <?= $sectionsJson ?>,
+            items: '',
+            query: {
+                iid: ''
             },
-            methods: {
-                getItems: function (e) {
-                    this.isloading = true;
-                    this.query.iid = e ?? '';
-                    axios({
-                        method: 'POST',
-                        url: "/request/main/project_sections_filter.php",
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
-                        data: 'section_code=' + this.query.iid
+            isloading: false,
+            allCount: '',
+            limit: '6',
+        },
+        methods: {
+            getItems: function (e) {
+                this.isloading = true;
+                this.query.iid = e ?? '';
+                axios({
+                    method: 'POST',
+                    url: "/request/main/project_sections_filter.php",
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    data: 'section_code=' + this.query.iid
+                })
+                    .then(response => {
+                        this.items = response.data;
+                        this.allCount = this.items.length;
+                        this.limit = '6';
+                        this.isloading = false;
                     })
-                        .then(response => {
-                            this.items = response.data;
-                            this.allCount = this.items.length;
-                            this.limit = '6';
-                            this.isloading = false;
-                        })
-                        .catch(function (e) {
-                            this.error = e;
-                        });
-                },
-                showMoreButton: function () {
-                    this.limit = parseFloat(this.limit) + parseFloat('6');
-                },
+                    .catch(function (e) {
+                        this.error = e;
+                    });
             },
-            computed: {
-                computedObj() {
-                    return this.limit ? this.items.slice(0, this.limit) : this.items;
-                }
+            showMoreButton: function () {
+                this.limit = parseFloat(this.limit) + parseFloat('6');
             },
-            mounted() {
-                this.getItems();
-            },
-        })
-    </script>
-<?php endif; ?>
+        },
+        computed: {
+            computedObj() {
+                return this.limit ? this.items.slice(0, this.limit) : this.items;
+            }
+        },
+        mounted() {
+            this.getItems();
+        },
+    })
+</script>

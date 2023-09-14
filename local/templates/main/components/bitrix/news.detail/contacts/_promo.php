@@ -12,7 +12,7 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
 || !empty($arResult['PROPERTIES']['DESC_3']['~VALUE'])
 || !empty($arResult['PROPERTIES']['DESC_4']['~VALUE']) ? '' : 'hero--no-bullets';
 ?>
-<main class="hero hero--has-breadcrumbs hero--thumb-half <?= $advantagesBlockStyle ?>">
+<main class="hero hero--has-breadcrumbs hero--contacts <?= $advantagesBlockStyle ?>">
     <div class="hero__thumb">
         <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE']['VALUE'])): ?>
             <picture class="hero__pic">
@@ -28,17 +28,13 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
                             Главная
                         </a>
                     </li>
-                    <li class="breadcrumbs__item">
-                        О компании
-                    </li>
+                    <li class="breadcrumbs__item">Контакты</li>
                 </ul>
             </div>
             <h1 class="title-h1 hero__title">
-                <?= $arResult['PROPERTIES']['TITLE_PAGE']['~VALUE'] ?? $arResult['META_TAGS']['TITLE'] ?>
+                <?= $arResult['PROPERTIES']['TITLE_PAGE']['~VALUE'] ?>
             </h1>
-            <p>
-                <?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?>
-            </p>
+            <p class="hero__desc"><?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?></p>
             <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN']['~VALUE'])): ?>
                 <div class="hero__buttons">
                     <button class="hero__btn" type="button"

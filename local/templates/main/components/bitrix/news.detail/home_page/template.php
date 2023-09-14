@@ -1,4 +1,7 @@
 <?php
+
+use classes\Models\Alpinism\HomePage\Settings;
+
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
  * @var $arResult
@@ -10,7 +13,7 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
 || !empty($arResult['PROPERTIES']['DESC_3']['~VALUE'])
 || !empty($arResult['PROPERTIES']['DESC_4']['~VALUE']) ? '' : 'hero--no-bullets';
 ?>
-<main class="hero hero--has-breadcrumbs hero--thumb-half <?= $advantagesBlockStyle ?>">
+<main class="hero parallax">
     <div class="hero__thumb">
         <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE']['VALUE'])): ?>
             <picture class="hero__pic">
@@ -20,11 +23,9 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
         <?php endif; ?>
         <div class="container hero__container">
             <h1 class="title-h1 hero__title">
-                <?= $arResult['PROPERTIES']['TITLE_PAGE']['~VALUE'] ?? $arResult['META_TAGS']['TITLE'] ?>
+                <?= $arResult['PROPERTIES']['TITLE_PAGE']['~VALUE'] ?>
             </h1>
-            <p>
-                <?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?>
-            </p>
+            <p class="hero__desc"><?= $arResult['PROPERTIES']['SUBTITLE']['~VALUE'] ?></p>
             <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN']['~VALUE'])): ?>
                 <div class="hero__form js_form" data-action="/request/main/feedback.php">
                     <label class="input input-tel form-control">
@@ -96,3 +97,11 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
         <?php endif; ?>
     </div>
 </main>
+<div class="section-flip section-flip--light">
+    <?php
+    $settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_PAGE');
+    foreach ($settings as $code) {
+        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
+    }
+    ?>
+</div>

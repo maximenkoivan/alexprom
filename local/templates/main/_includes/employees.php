@@ -21,7 +21,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "Y",
         "CACHE_TIME" => "36000000",
-        "CACHE_TYPE" => "A",
+        "CACHE_TYPE" => "N",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",
         "DISPLAY_BOTTOM_PAGER" => "N",

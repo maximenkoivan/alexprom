@@ -96,7 +96,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
             <div class="footer-bottom__docs">
                 <span><?= $footer['COPYRIGHT_FOOTER']['~VALUE'] ?></span>
                 <?php if (!empty($footer['TEXT_LINK_POLICY_FOOTER']['~VALUE']) && !empty($footer['LINK_POLICY_FOOTER']['~VALUE'])): ?>
-                    <a class="footer-bottom__docs-link" href="<?= $footer['LINK_POLICY_FOOTER']['~VALUE'] ?>">
+                    <a class="footer-bottom__docs-link" href="<?= $footer['LINK_POLICY_FOOTER']['~VALUE'] ?>" target="_blank">
                         <?= $footer['TEXT_LINK_POLICY_FOOTER']['~VALUE'] ?>
                     </a>
                 <?php endif; ?>

@@ -1,7 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
-use classes\Models\Alpinism\Prices\Settings;
 use classes\Models\Alpinism\Services\Services;
 
 /**
@@ -68,10 +67,4 @@ $APPLICATION->SetTitle("Прайс-лист на услуги промышлен
         "STRICT_SECTION_CHECK" => "N"
     )
 );?>
-<?php
-$settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_PAGE');
-foreach ($settings as $code) {
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
-}
-?>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
