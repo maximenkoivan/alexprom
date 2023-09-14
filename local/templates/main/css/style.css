@@ -5100,6 +5100,7 @@ header {
   position: relative;
 }
 
+
 @media (max-width: 1440px) {
   .services-box__item:nth-child(10),
   .services-box__item:nth-child(11),
@@ -6513,7 +6514,7 @@ header {
 }
 
 .experience__main {
-  background-image: url("/images/experience/experience-bg.png");
+  background-image: url("/local/templates/main/images/experience/experience-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
