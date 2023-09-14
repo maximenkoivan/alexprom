@@ -18,7 +18,7 @@ $APPLICATION->SetTitle("О компании");
         "AJAX_OPTION_STYLE" => "N",
         "BROWSER_TITLE" => "-",
         "CACHE_GROUPS" => "N",
-        "CACHE_TIME" => "360000",
+        "CACHE_TIME" => "36000000",
         "CACHE_TYPE" => "A",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",

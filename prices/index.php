@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("Прайс-лист на услуги промышлен
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "Y",
         "MESSAGE_404" => "",
-        "NEWS_COUNT" => 50,
+        "NEWS_COUNT" => 100,
         "PAGER_BASE_LINK" => "",
         "PAGER_BASE_LINK_ENABLE" => "N",
         "PAGER_DESC_NUMBERING" => "N",
