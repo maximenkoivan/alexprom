@@ -3,9 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.
 
 use classes\Services\FormHandler;
 
-$request = \Bitrix\Main\Context::getCurrent()->getRequest()->getPost('ajax');
-
-if ($model = new FormHandler($request)) {
+if ($model = new FormHandler('feedback')) {
     $response = $model->run();
 } else {
     $response = ['error' => 'Отсутствуют необходимые параметры'];

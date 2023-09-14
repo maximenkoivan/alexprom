@@ -33,6 +33,7 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
                                placeholder="<?= $arResult['PROPERTIES']['PLACEHOLDER']['~VALUE'] ?>" maxlength="25"
                                minlength="10" autocomplete="tel">
                     </label>
+                    <?= $arResult['PROPERTIES']['TEXT_BTN']['~VALUE'] ?>
                     <button class="hero__btn"
                             type="submit"><?= $arResult['PROPERTIES']['TEXT_BTN']['~VALUE'] ?></button>
                 </div>

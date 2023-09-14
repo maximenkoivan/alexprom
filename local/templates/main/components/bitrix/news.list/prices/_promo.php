@@ -42,6 +42,7 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                                placeholder="<?= $arResult['PAGE_SETTINGS']['PLACEHOLDER']['~VALUE'] ?>" maxlength="25"
                                minlength="10" autocomplete="tel">
                     </label>
+                    <input type="hidden" name="form_name" value="<?= $arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'] ?>">
                     <button class="hero__btn"
                             type="submit"><?= $arResult['PAGE_SETTINGS']['TEXT_BTN_1']['~VALUE'] ?></button>
                 </div>

@@ -21,7 +21,7 @@ $settings = FormSettings::getInstance()->getElementByCode('modal-service');
         </p>
     </div>
     <div class="modal-form__body">
-        <div class="form-vertical js_form" data-action="/include/sendpriceform.php" method="post">
+        <div class="form-vertical js_form" data-action="/request/main/feedback.php" method="post">
             <input type="hidden" name="service_name">
             <label class="input input-name form-control">
                 <input
@@ -46,7 +46,7 @@ $settings = FormSettings::getInstance()->getElementByCode('modal-service');
                         autocomplete="tel"
                 >
             </label>
-
+            <input type="hidden" name="form_name" value="<?= $settings ['TEXT_BTN']['~VALUE'] ?>">
             <button class="btn-main" type="submit"><?= $settings ['TEXT_BTN']['~VALUE'] ?></button>
             <span class="form__agree"><?= $settings ['TEXT']['~VALUE'] ?> <a href="<?= $settings ['LINK']['~VALUE'] ?>" target="_blank"><?= $settings ['TEXT_LINK']['~VALUE'] ?></a></span>
         </div>

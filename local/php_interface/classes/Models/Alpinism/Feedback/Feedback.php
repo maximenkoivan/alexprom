@@ -1,49 +1,49 @@
 <?php
 
-namespace classes\Models\Snow\Feedback;
+namespace classes\Models\Alpinism\Feedback;
 
 use classes\Base\Iblock;
 
-class Callback extends Iblock
+class Feedback extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'feedback';
+    protected const IBLOCK_TYPE_CODE = 'common_data';
 
     protected const IBLOCK_CODE = 'feedback';
 
-    private const EVENT_NAME = 'CALLBACK_FORM';
+    private const EVENT_NAME = 'FEEDBACK_FORM';
 
     private array $formFields = [
-        'name' => [
-            'ru' => 'Имя',
+        'user_name' => [
+            'ru' => '""Имя"',
             'en' => 'Name',
-            'rules' => 'required|min:3',
-            'value' => '',
+            'rules' => '',
+            'value' => 'Не указано',
             'property' => false,
             'store' => 'NAME'
         ],
-        'phone' => [
-            'ru' => 'Номер телефона',
+        'user_tel' => [
+            'ru' => '"Номер телефона"',
             'en' => 'Phone Number',
             'rules' => 'required|phone',
             'value' => '',
             'property' => true,
             'store' => 'PHONE'
         ],
-        'form_name' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => 'Заказать звонок',
-            'property' => true,
-            'store' => 'FORM_NAME'
-        ],
-        'type' => [
+        'service_name' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
             'value' => '',
             'property' => true,
-            'store' => 'TYPE'
+            'store' => 'SERVICE_NAME'
+        ],
+        'form_name' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'FORM_NAME'
         ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
@@ -100,10 +100,10 @@ class Callback extends Iblock
     public function getFieldsForMail(): array
     {
         return [
-            'AUTHOR' => $this->formFields['name']['value'],
-            'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
+            'AUTHOR' => $this->formFields['user_name']['value'] ?: 'Не указано',
+            'AUTHOR_PHONE' => $this->formFields['user_tel']['value'] ?: 'Не указан',
             'FORM_NAME' => $this->formFields['form_name']['value'],
-            'TYPE' => $this->formFields['type']['value'],
+            'SERVICE_NAME' => $this->formFields['service_name']['value'],
         ];
     }
 
@@ -142,7 +142,7 @@ class Callback extends Iblock
 
         foreach ($formFields as $field) {
             if($field['property'] && !empty($field['store'])) {
-                $result[$field['store']] = $field['value'];
+                $result[$field['store']] = strip_tags($field['value']);
             }
         }
         return $result;
