@@ -16,11 +16,6 @@ $youtubeVideoId = \classes\Helpers\Generic::getYoutubeData($arResult['PROPERTIES
         <section class="section storytell">
             <div class="container storytell__container">
                 <div class="storytell__section">
-                    <div class="storytell__head">
-                        <h2 class="title-h2 storytell__title">
-                            <?= $arResult['PROPERTIES']['TITLE_DETAIL_DESC']['~VALUE'] ?>
-                        </h2>
-                    </div>
                     <div class="storytell__body">
                         <?= $arResult['~DETAIL_TEXT'] ?>
                     </div>

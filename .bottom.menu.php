@@ -1,25 +1,25 @@
 <?
-$aMenuLinks = Array(
-	Array(
-		"Новости", 
-		SITE_DIR."/news/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Проекты", 
-		SITE_DIR."/projects/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Вакансии", 
-		SITE_DIR."/about/vacancy/", 
-		Array(), 
-		Array(), 
-		"" 
-	)
+$aMenuLinks = array(
+    array(
+        "Проекты",
+        SITE_DIR . "/projects/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Портфолио",
+        SITE_DIR . "/projects/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Новости",
+        SITE_DIR . "/news/",
+        array(),
+        array(),
+        ""
+    ),
 );
 ?>
