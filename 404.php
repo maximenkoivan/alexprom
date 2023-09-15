@@ -20,7 +20,7 @@ $APPLICATION->SetPageProperty("description", "Страница не найден
         "BROWSER_TITLE" => "-",
         "CACHE_GROUPS" => "N",
         "CACHE_TIME" => "36000000",
-        "CACHE_TYPE" => "N",
+        "CACHE_TYPE" => "A",
         "CHECK_DATES" => "N",
         "DETAIL_URL" => "",
         "DISPLAY_BOTTOM_PAGER" => "N",
