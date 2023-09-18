@@ -62,11 +62,11 @@ include '_promo.php';
                         </h3>
                         <div class="contacts-card__socials socials">
                             <?php foreach ($arResult['PROPERTIES']['DESC_5_CONTENT']['VALUE'] as $key => $imageId): ?>
-                                <a href="<?= $arResult['PROPERTIES']['DESC_5_CONTENT']['DESCRIPTION'][$key] ?>"
+                                <a href="<?= $arResult['PROPERTIES']['DESC_5_CONTENT']['DESCRIPTION'][$key] ?>" target="_blank"
                                    class="socials__link">
-                                    <svg class="socials__icon">
-                                        <use href="<?= CFile::GetPath($imageId) ?>#<?= substr(CFile::GetFileArray($imageId)['ORIGINAL_NAME'], 0, 2) ?>"/>
-                                    </svg>
+                                    <div class="socials__icon">
+                                        <img src="<?= CFile::GetPath($imageId) ?>" alt=""/>
+                                    </div>
                                 </a>
                             <?php endforeach; ?>
                         </div>

@@ -1,22 +1,22 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Новости", 
-		SITE_DIR."/news/", 
+		"Услуги", 
+		SITE_DIR."/services/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Проекты", 
+		"Портфолио", 
 		SITE_DIR."/projects/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Вакансии", 
-		SITE_DIR."/about/vacancy/", 
+		"Новости", 
+		SITE_DIR."/news/", 
 		Array(), 
 		Array(), 
 		"" 

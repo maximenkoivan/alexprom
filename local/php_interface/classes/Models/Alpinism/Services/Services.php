@@ -74,7 +74,7 @@ final class Services extends Iblock
      * @param string|array $ids
      * @return array
      */
-    public function getElementByIds(string|array $ids): array
+    public function getElementByIds($ids): array
     {
         $result = [];
         $obElement = CIBlockElement::GetList(false, [

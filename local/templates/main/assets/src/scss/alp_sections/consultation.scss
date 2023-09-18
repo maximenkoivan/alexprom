@@ -1,0 +1,164 @@
+.consultation__container {
+    background-image: url("../images/city.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+    padding: 120px 30px;
+
+    @media(max-width: $desktop-m) {
+        padding: 50px;
+        max-width: 1280px;
+    }
+    
+    @media(max-width: $laptop) {
+        background: none;
+        padding: 0;
+    }
+}
+
+.consultation__bg {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--accent);
+    border-radius: 30px;
+    color: #FFF;
+    padding: 80px 60px;
+    box-sizing: border-box;
+    
+    @media(max-width: $desktop-m) {
+        align-items: center;
+        max-width: 1060px;
+        padding: 3vw 5vw;
+        gap: 4vw;
+    }
+
+
+    @media(max-width: $tablet) {
+        display: grid;
+        justify-content: initial;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    @media(max-width: $tablet-m) {
+        padding: 40px;
+        padding-bottom: 60px;
+    }
+
+    @media(max-width: $mobile-xl) {
+        padding: 40px 20px;
+        gap: 34px;
+    }
+}
+
+.contacts__map-container .consultation__bg {
+    gap: 0;
+    @media (min-width: $mobile-xl + 1) {
+        flex-direction: column;
+
+        @media (max-width: $desktop-m) {
+            // padding: 4rem;
+        }
+    }
+    padding: 0;
+}
+
+.consultation__content {
+    flex-basis: 416px;
+
+    @media(max-width: $desktop-m) {
+        flex-basis: 340px;
+    }
+    @media(max-width: $laptop) {
+        flex-basis: auto;
+    }
+}
+.contacts__map-container .consultation__content {
+    flex-basis: initial;
+    margin-bottom: 5rem;
+}
+
+
+.consultation__title {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 24px;
+
+    @media(max-width: $desktop-m) {
+        font-size: 4rem;
+    }
+
+    @media(max-width: $laptop) {
+        max-width: 4.8rem;
+        max-width: 360px;
+    }
+
+    @media (max-width: $tablet-m) {
+        font-size: 4.8rem;
+    }
+
+    @media(max-width: $mobile-xl) {
+        font-size: 3.2rem;
+        margin-bottom: 14px;
+    }
+
+    @media(max-width: $mobile-l) {
+        font-size: clamp(2.8rem, 9vw, 3.2rem);
+    }
+}
+.contacts__map-container .consultation__title {
+    margin-right: -1rem;
+    @media (max-width: $desktop-l) {
+        font-size: 3.8rem;
+    }
+}
+
+.consultation__text {
+    max-width: 360px;
+
+    @media(max-width: $desktop-m) {
+        font-size: 1.8rem;
+    }
+
+    @media(max-width: $laptop) {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+        max-width: 450px;
+    }
+
+    @media(max-width: $mobile-xl) {
+        font-size: 1.4rem;
+    }
+}
+.contacts__map-container .consultation__text {
+    max-width: 100%;
+}
+
+.consultation__box {
+    background-color: #FFF;
+    border-radius: 30px;
+    padding: 40px 40px 29px 40px;
+    box-sizing: border-box;
+    flex-basis: 580px;
+
+    @media(max-width: $desktop-l) {
+        flex-basis: 28.8vw;
+        padding: 2.8vw 2.8vw 2vw 2.8vw;
+    }
+
+    @media(max-width: $laptop) {
+        flex-basis: auto;
+        width: 100%;
+        padding: 40px 20px;
+    }
+    @media(max-width: $mobile-xl) {
+        padding: 20px 10px;
+    }
+}
+.contacts__map-container .consultation__box {
+    flex-basis: initial;
+}

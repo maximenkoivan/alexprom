@@ -48,7 +48,8 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
                 <ul class="footer__menu-list">
                     <?php foreach ($services as $service): ?>
                         <li class="footer__menu-item">
-                            <a href="<?= $service['DETAIL_PAGE_URL'] ?>" class="footer__menu-link" target="_blank"><?= $service['NAME'] ?></a>
+                            <a href="<?= $service['DETAIL_PAGE_URL'] ?>" class="footer__menu-link"
+                               target="_blank"><?= $service['NAME'] ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -73,30 +74,31 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
                     false
                 ); ?>
             </div>
-
-            <div class="footer__menu">
-                <h3 class="footer__menu-title"><?= $footer['TITLE_SOCNET_FOOTER']['~VALUE'] ?></h3>
-                <div class="footer-bottom__socials socials">
-                    <?php foreach ($footer['SOCNET_FOOTER']['VALUE'] as $key => $icon): ?>
-                        <?php if (!empty($footer['SOCNET_FOOTER']['DESCRIPTION'][$key])): ?>
-                            <a href="<?= $footer['SOCNET_FOOTER']['DESCRIPTION'][$key] ?>" target="_blank"
-                               class="socials__link">
-                                <svg class="socials__icon">
-                                    <use href="<?= CFile::GetPath($icon) ?>#<?= substr(CFile::GetFileArray($icon)['ORIGINAL_NAME'], 0, 2) ?>"/>
-                                </svg>
-                            </a>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
+            <?php if (!empty($footer['SOCNET_FOOTER']['VALUE'])): ?>
+                <div class="footer__menu">
+                    <h3 class="footer__menu-title"><?= $footer['TITLE_SOCNET_FOOTER']['~VALUE'] ?></h3>
+                    <div class="footer-bottom__socials socials">
+                        <?php foreach ($footer['SOCNET_FOOTER']['VALUE'] as $key => $icon): ?>
+                            <?php if (!empty($footer['SOCNET_FOOTER']['DESCRIPTION'][$key])): ?>
+                                <a href="<?= $footer['SOCNET_FOOTER']['DESCRIPTION'][$key] ?>" target="_blank"
+                                   class="socials__link">
+                                    <div class="socials__icon">
+                                        <img src="<?= CFile::GetPath($icon) ?>" alt=""/>
+                                    </div>
+                                </a>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-            </div>
-
+            <?php endif; ?>
 
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom__docs">
                 <span><?= $footer['COPYRIGHT_FOOTER']['~VALUE'] ?></span>
                 <?php if (!empty($footer['TEXT_LINK_POLICY_FOOTER']['~VALUE']) && !empty($footer['LINK_POLICY_FOOTER']['~VALUE'])): ?>
-                    <a class="footer-bottom__docs-link" href="<?= $footer['LINK_POLICY_FOOTER']['~VALUE'] ?>" target="_blank">
+                    <a class="footer-bottom__docs-link" href="<?= $footer['LINK_POLICY_FOOTER']['~VALUE'] ?>"
+                       target="_blank">
                         <?= $footer['TEXT_LINK_POLICY_FOOTER']['~VALUE'] ?>
                     </a>
                 <?php endif; ?>
@@ -233,6 +235,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
     </div>
 <?php endif; ?>
 </div>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<?= Generic::getYandexAPIKey() ?>&_v=20230217195447"  type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<?= Generic::getYandexAPIKey() ?>&_v=20230217195447"
+        type="text/javascript"></script>
 </body>
 </html>

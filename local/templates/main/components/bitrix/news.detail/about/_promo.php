@@ -12,7 +12,7 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
 || !empty($arResult['PROPERTIES']['DESC_3']['~VALUE'])
 || !empty($arResult['PROPERTIES']['DESC_4']['~VALUE']) ? '' : 'hero--no-bullets';
 ?>
-<main class="hero hero--has-breadcrumbs hero--thumb-half <?= $advantagesBlockStyle ?>">
+<main class="hero hero--has-breadcrumbs <?= $advantagesBlockStyle ?>">
     <div class="hero__thumb">
         <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE']['VALUE'])): ?>
             <picture class="hero__pic">

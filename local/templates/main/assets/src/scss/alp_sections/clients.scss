@@ -1,0 +1,110 @@
+.clients {
+    overflow: hidden;
+}
+
+.clients-carousel {
+    position: relative;
+    margin-top: 70px;        
+    // overflow: visible;
+
+    @media (max-width: $tablet-m) {
+        max-width: initial;
+        margin-right: auto;
+    }
+
+    @media(max-width: 690px) {
+        margin-top: 38px;
+    }
+}
+.clients-carousel__swiper {
+    @media (max-width: $tablet-m) {
+        overflow: visible;
+    }
+}
+.clients-carousel .swiper-button-next,
+.clients-carousel .swiper-button-prev {
+    top: #{'calc(50% - 3rem)'};
+
+    @media (max-width: $tablet-m) {
+    //     display: none;
+        top: 100%;
+    }
+}
+.clients-carousel .swiper-button-next {
+    right: -3rem;
+    @media (max-width: $mobile-xl) {
+        right: -1rem;
+    }
+}
+.clients-carousel .swiper-button-prev {
+    left: -3rem;
+    @media (max-width: $mobile-xl) {
+        left: -1rem;
+    }
+}
+
+.clients__box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 150px 150px;
+    gap: 40px;
+    margin-top: 70px;
+    @media(max-width: 1670px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media(max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 150px);
+        gap: 20px;
+    }
+    @media(max-width: 690px) {
+        grid-auto-rows: 21vw;
+        margin-top: 38px;
+    }
+}
+
+.clients__thumb {
+    background-color: var(--light);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 17rem;
+
+    @media(max-width: 690px) {
+        padding: 0 10px;
+        min-height: 12rem;
+    }
+}
+
+.clients__thumb:nth-child(9),
+.clients__thumb:nth-child(10),
+.clients__thumb:nth-child(11),
+.clients__thumb:nth-child(12) {
+    @media(max-width: 1670px) {
+        display: none;
+    }
+}
+
+.clients__thumb:nth-child(7),
+.clients__thumb:nth-child(8) {
+    @media(max-width: 1200px) {
+        display: none;
+    }
+}
+
+.clients__img {
+    width: auto;
+    height: auto;
+    max-width: 182px;
+    max-height: 110px;
+
+    @media (max-width: $tablet-m) {
+        max-width: 222px;
+        max-height: 130px;
+    }
+    @media(max-width: 690px) {
+        max-width: 100%;
+    }
+}
