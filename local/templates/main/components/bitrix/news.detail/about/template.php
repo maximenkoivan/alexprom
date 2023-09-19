@@ -15,10 +15,8 @@ $youtubeVideoId = \classes\Helpers\Generic::getYoutubeData($arResult['PROPERTIES
     <?php if (!empty($arResult['~DETAIL_TEXT'])): ?>
         <section class="section storytell">
             <div class="container storytell__container">
-                <div class="storytell__section">
-                    <div class="storytell__body">
-                        <?= $arResult['~DETAIL_TEXT'] ?>
-                    </div>
+                <div class="storytell__body">
+                    <?= $arResult['~DETAIL_TEXT'] ?>
                 </div>
             </div>
         </section>
