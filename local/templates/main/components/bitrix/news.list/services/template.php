@@ -32,8 +32,10 @@ include '_promo.php';
                                              src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
                                              alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['ALT'] ?>">
                                     </a>
-                                    <h3 class="title-h3 services-box__title"><a href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= $arItem['NAME'] ?></a></h3>
-                                    <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><p><?= TruncateText($arItem['~PREVIEW_TEXT'], 105) ?></p></a>
+                                    <a class="title-h3 services-box__title"
+                                       href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= $arItem['NAME'] ?></a>
+                                    <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>">
+                                        <p><?= TruncateText($arItem['~PREVIEW_TEXT'], 105) ?></p></a>
                                 </div>
                             <?php endif; ?>
                         <?php endforeach; ?>
