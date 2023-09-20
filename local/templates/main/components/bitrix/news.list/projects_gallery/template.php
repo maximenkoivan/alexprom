@@ -32,7 +32,7 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('PROJECTS');
                                          src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
                                          alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['SRC'] ?>">
                                 </picture>
-                                <a href="#" class="swiper-gallery__link"><?= $arItem['NAME'] ?></a>
+                                <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="swiper-gallery__link"><?= $arItem['NAME'] ?></a>
                                 <span class="swiper-gallery__title"><?= $arItem['~PREVIEW_TEXT'] ?></span>
                                 <span class="swiper-gallery__info swiper-gallery__arg"><?= $arItem['PROPERTIES']['SQUARE']['~VALUE'] ?></span>
                                 <span class="swiper-gallery__info swiper-gallery__loc"><?= $arItem['PROPERTIES']['ADDRESS']['~VALUE'] ?></span>

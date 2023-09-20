@@ -15,16 +15,22 @@ include '_promo.php';
         <section class="section storytell">
             <div class="container storytell__container">
                 <?php foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text): ?>
-                    <div class="storytell__section">
-                        <div class="storytell__head">
-                            <h2 class="title-h2 storytell__title">
-                                <?= $text['SUB_VALUES']['TITLE']['~VALUE'] ?>
-                            </h2>
+                    <?php if (!empty($arResult['TITLES'])): ?>
+                        <div class="storytell__section">
+                            <div class="storytell__head">
+                                <h2 class="title-h2 storytell__title">
+                                    <?= $text['SUB_VALUES']['TITLE']['~VALUE'] ?>
+                                </h2>
+                            </div>
+                            <div class="storytell__body">
+                                <?= $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'] ?? '' ?>
+                            </div>
                         </div>
+                    <?php else: ?>
                         <div class="storytell__body">
                             <?= $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'] ?? '' ?>
                         </div>
-                    </div>
+                    <?php endif ?>
                 <?php endforeach; ?>
             </div>
         </section>

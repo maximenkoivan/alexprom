@@ -24,7 +24,7 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('FORM');
             </p>
         </div>
         <div class="consultation__box">
-            <form class="form-vertical js_form" data-action="/request/main/feedback.php" method="post">
+            <div class="form-vertical js_form" data-action="/request/main/feedback.php" method="post">
                 <label class="input input-name form-control">
                     <input
                             class="input__field"
@@ -50,7 +50,7 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('FORM');
                 <button class="btn-main" type="submit"><?= $arResult['PROPERTIES']['TEXT_BTN']['~VALUE'] ?></button>
                 <span class="form__agree"><?= $arResult['PROPERTIES']['TEXT']['~VALUE'] ?> <a
                             href="<?= $arResult['PROPERTIES']['LINK']['~VALUE'] ?>" target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK']['~VALUE'] ?></a></span>
-            </form>
+            </div>
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
 || !empty($arResult['PAGE_SETTINGS']['DESC_3']['~VALUE'])
 || !empty($arResult['PAGE_SETTINGS']['DESC_4']['~VALUE']) ? '' : 'hero--no-bullets';
 ?>
-<main class="hero hero--has-breadcrumbs  <?= $advantagesBlockStyle ?>">
+<main class="hero hero--has-overlay hero--has-breadcrumbs  <?= $advantagesBlockStyle ?>">
     <div class="hero__thumb">
         <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
             <picture class="hero__pic">

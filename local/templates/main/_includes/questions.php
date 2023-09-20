@@ -12,7 +12,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('QUESTIONS');
 ?>
 <?php if (!empty($settings['TEXT_QUESTIONS']['~VALUE'])): ?>
-    <section class="section faq">
+    <section class="section faq" data-show-cards="5">
         <div class="container">
             <h2 class="title-h2"><?= $settings['TITLE_BLOCK_QUESTIONS']['~VALUE'] ?></h2>
             <div class="faq__box">
@@ -31,6 +31,9 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('QUESTIONS');
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
+            <button type="button" class="faq__button-more btn-accent">
+                Показать больше
+            </button>
         </div>
     </section>
 <?php endif; ?>
