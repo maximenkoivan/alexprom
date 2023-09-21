@@ -55,3 +55,21 @@ include '_promo.php';
     }
     ?>
 </div>
+
+<?php
+$data = [
+    '@context' => 'http://schema.org',
+    '@type' => 'Product',
+    'name' => $arResult['NAME'],
+    'image' => 'https://alexprom.ru'.$arResult['DETAIL_PICTURE']['SRC'],
+    'offers' => [
+        '@type' => 'AggregateOffer',
+        'lowPrice' => intval(preg_replace('/[^0-9]+/', '', $arResult['PROPERTIES']['PRICE']['VALUE']), 10),
+        'priceCurrency' => 'RUB',
+    ]
+];
+
+$data = json_encode($data);
+
+echo '<script type="application/ld+json">' . $data . '</script>';
+?>

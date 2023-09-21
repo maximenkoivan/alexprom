@@ -31,6 +31,31 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                     <li class="breadcrumbs__item">Цены</li>
                 </ul>
             </div>
+            <?php //микроразметка хлебных крошек
+            $data = [
+                '@context' => 'http://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => [
+                    ['@type' => 'ListItem',
+                    'position' => '1',
+                        'item' => [
+                            '@id' => 'https://alexprom.ru/',
+                            'name' => 'Главная',
+                        ],
+                    ],
+                    ['@type' => 'ListItem',
+                    'position' => '2',
+                        'item' => [
+                            '@id' => 'https://alexprom.ru'.$APPLICATION->GetCurDir(),
+                            'name' => 'Цены',
+                        ],
+                    ],
+                ]
+            ];
+            $data = json_encode($data);
+            echo '<script type="application/ld+json">' . $data . '</script>';
+            ?>
+
             <h1 class="title-h1 hero__title">
                 <?= $arResult['PAGE_SETTINGS']['TITLE']['~VALUE'] ?>
             </h1>

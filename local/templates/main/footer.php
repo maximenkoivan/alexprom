@@ -237,5 +237,31 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
 </div>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<?= Generic::getYandexAPIKey() ?>&_v=20230217195447"
         type="text/javascript"></script>
+
+
+    <?php $data = [
+        '@context' => 'http://schema.org',
+        '@type' => 'Organization',
+        'name' => 'ALEXPROM',
+        'email' => 'zakaz@alexprom.ru',
+        'url' => 'https://alexprom.ru/',
+        'logo' => 'https://alexprom.ru/local/templates/main/images/logo-minimal.png',
+        'telephone' => '+7 (495) 109-02-42',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'addressLocality' => 'Москва, Россия',
+            'postalCode' => '109469',
+            'streetAddress' => 'ул.Братиславская д.31 корпус 3',
+        ],
+        'sameAs' => [
+            'https://vk.com/alexpromru',
+            'https://t.me/+79252220242',
+        ],
+    ];
+
+    $data = json_encode($data);
+
+    echo '<script type="application/ld+json">' . $data . '</script>';?>
+
 </body>
 </html>
