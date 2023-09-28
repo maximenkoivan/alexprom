@@ -39,7 +39,17 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('MAP');
                                              alt="Адрес">
                                     <?php endif; ?>
                                     <span class="locations-card__contact-text">
-                                <span class="locations-card__contact-address"><?= $arItem['NAME'] ?></span> <br>
+                                <span class="locations-card__contact-address">
+                                    <?
+                                    $arItem['NAME'] = trim($arItem['NAME']);
+                                    $f = mb_stripos($arItem['NAME'], 'москва');
+                                    if ($f !== false && $f >= 0 && $f < 5) {
+                                        $arItem['NAME'] = str_replace(['г. Москва', 'Москва', 'москва'], '', $arItem['NAME']);
+                                        echo '<span class="str-msk"></span>';
+                                    }
+                                    echo trim($arItem['NAME']);
+                                    ?>
+                                </span> <br>
                                 <span class="locations-card__contact-worktime"><?= $arItem['PROPERTIES']['MODE']['~VALUE'] ?></span>
                             </span>
                                 </p>

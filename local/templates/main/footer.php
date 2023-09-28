@@ -263,5 +263,6 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
 
     echo '<script type="application/ld+json">' . $data . '</script>';?>
 
+<link rel="stylesheet" href="/local/templates/main/css/noindex.css">
 </body>
 </html>
