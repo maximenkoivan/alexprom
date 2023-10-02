@@ -108,6 +108,36 @@ class NxRequest{
 
         formData.append("ajax", type);
 
+		let send = ($url) => {
+    if (!this.options.allowSend) return false;
+    this.preventingResend($btn, 'disallow');
+
+    // Добавление GET-параметров к объекту FormData
+    let queryParams = new URLSearchParams(altUrl);
+    for (const [key, value] of queryParams) {
+        formData.append(key, value);
+    }
+
+    // Добавление ajax-параметра (или других необходимых параметров)
+    formData.append("ajax", type);
+
+    fetch($url, {
+        method: 'POST',
+        body: formData
+    })
+        .then(res => res.json())
+        .then(res => {
+            this.validateForm($btn, res);
+            this.preventingResend($btn, 'allow');
+        })
+        .catch(err => {
+            this.preventingResend($btn, 'allow');
+            console.log(err);
+        });
+}
+
+/*
+//start old send
         let send = ($url) => {
             if (!this.options.allowSend) return false;
             this.preventingResend($btn, 'disallow');
@@ -126,7 +156,8 @@ class NxRequest{
                     console.log(err);
                 });
         }
-
+//end old send
+*/
         switch (type) {
 
             case 'password':
