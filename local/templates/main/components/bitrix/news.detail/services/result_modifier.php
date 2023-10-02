@@ -16,8 +16,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 $arResult['PAGE_SETTINGS'] = Settings::getInstance()->getElementByCode('settings', true);
 
 foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text) {
-    if(isset($text['SUB_VALUES']['TITLE']['~VALUE']) && !empty($text['SUB_VALUES']['TITLE']['~VALUE'])){
+    if (is_array($text)) {
         $arResult['TITLES'] = $text['SUB_VALUES']['TITLE']['~VALUE'];
-        if (!empty($arResult['TITLES'])) break;
     }
+    if (!empty($arResult['TITLES'])) break;
 }
