@@ -39,7 +39,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                 autocomplete="tel"
                         >
                     </label>
-                    <input type="hidden" name="form_name" value="<?= $arResult['PROPERTIES']['TEXT']['~VALUE'] ?>">
+                    <input type="hidden" name="form_name" value="<?= $arResult['PROPERTIES']['TEXT_BTN']['~VALUE'] ?>">
                     <button class="btn-main" type="submit"><?= $arResult['PROPERTIES']['TEXT_BTN']['~VALUE'] ?></button>
                     <span class="form__agree"><?= $arResult['PROPERTIES']['TEXT']['~VALUE'] ?> <a
                                 href="<?= $arResult['PROPERTIES']['LINK']['~VALUE'] ?>" target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK']['~VALUE'] ?></a></span>

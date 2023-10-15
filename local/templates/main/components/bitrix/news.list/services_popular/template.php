@@ -31,8 +31,8 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('SERVICES');
                                 <img class="services-box__img lazy" src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
                                      alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['ALT'] ?>">
                             </a>
-                            <h3 class="title-h3 services-box__title"><?= $arItem['NAME'] ?></h3>
-                            <p><?= TruncateText($arItem['~PREVIEW_TEXT'], 105) ?></p>
+                            <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="title-h3 services-box__title-link"><?= $arItem['NAME'] ?></a>
+                            <p><a href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= TruncateText($arItem['~PREVIEW_TEXT'], 105) ?></a></p>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
