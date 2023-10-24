@@ -29,6 +29,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Оплата", 
+		SITE_DIR."/oplata/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Новости", 
 		SITE_DIR."/news/", 
 		Array(), 
