@@ -8527,4 +8527,8 @@ header {
 .container.hero__container * {
   z-index: 2;
 } 
+
+.container.hero__container > p {
+  max-width: 768px;
+} 
 /* services bg end */
