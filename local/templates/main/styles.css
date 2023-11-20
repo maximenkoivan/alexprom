@@ -15,3 +15,31 @@
     transition: all 0.4s ease;
     transform-origin: center;
 }
+
+.storytell__container {
+	max-width: 1260px;
+}
+.responsive-video {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.responsive-video__inner {
+    position: relative;
+    padding-bottom: 56.25%; /* Пропорция 16:9 */
+    height: 0;
+    width: 100%;
+}
+.responsive-video iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media (max-width: 575px) {
+    .responsive-video {
+        max-width: 100%;
+    }
+}
