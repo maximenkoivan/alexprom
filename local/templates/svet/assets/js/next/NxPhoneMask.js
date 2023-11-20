@@ -17,7 +17,13 @@ class NxPhoneMask {
             match: /[0-9]/,
             replace: '#',
             mask: '+[0 (000) 000-00-00]',
-            listKey: "mask"
+            listKey: "mask",
+            prepare: (appended, masked) => {
+                if (appended === '8' && masked.value === '') {
+                    return '7';
+                }
+                return appended;
+            }
         };
 
         this.init();
