@@ -16,7 +16,7 @@ class NxPhoneMask {
         this.maskOpts = {
             match: /[0-9]/,
             replace: '#',
-            mask: '+{7}(000)000-00-00',
+            mask: '+[0 (000) 000-00-00]',
             listKey: "mask"
         };
 
