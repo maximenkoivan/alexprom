@@ -21,3 +21,15 @@ foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text) {
     }
     if (!empty($arResult['TITLES'])) break;
 }
+
+
+$arResult['~DETAIL_TEXT'] = str_replace(
+    '<iframe',
+    '<div class="responsive-video responsive-video__inner"><iframe',
+    $arResult['~DETAIL_TEXT'],
+);
+$arResult['~DETAIL_TEXT'] = str_replace(
+    '</iframe>',
+    '</iframe></div>',
+    $arResult['~DETAIL_TEXT'],
+);

@@ -1,0 +1,21 @@
+.serviceAllBtn
+{
+    text-align: center;
+    margin-top: 80px;
+}
+@media (any-hover: hover) {
+    .swiper-gallery__slide:hover .swiper-gallery__img {
+      transform: scale(1.2) translate(-50%, -50%);
+    }
+}
+
+.swiper-gallery__img {
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.storytell__container {
+	max-width: 1260px;
+}

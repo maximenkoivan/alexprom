@@ -21,6 +21,11 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/js/bundle.min.js');
 $asset->addJs(SITE_TEMPLATE_PATH . '/js/vue.min.js');
 $asset->addJs(SITE_TEMPLATE_PATH . '/js/axios.min.js');
 $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
+
+if (substr($_SERVER['REQUEST_URI'], -1) !== '/') {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: " . $_SERVER['REQUEST_URI'] . '/');
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">

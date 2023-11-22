@@ -11,30 +11,34 @@ $this->setFrameMode(true);
 include '_promo.php';
 ?>
 <div class="section-flip section-flip--light">
-    <?php if (!empty($arResult['PROPERTIES']['TEXT']['~VALUE'])): ?>
         <section class="section storytell">
             <div class="container storytell__container">
-                <?php foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text): ?>
-                    <?php if (!empty($arResult['TITLES'])): ?>
-                        <div class="storytell__section">
-                            <div class="storytell__head">
-                                <h2 class="title-h2 storytell__title">
-                                    <?= $text['SUB_VALUES']['TITLE']['~VALUE'] ?>
-                                </h2>
+                <?php if (!empty($arResult['~DETAIL_TEXT'])): ?>
+                    <div class="storytell__body">
+                        <?= $arResult['~DETAIL_TEXT'] ?>
+                    </div>
+                <?php else: ?>
+                    <?php foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text): ?>
+                        <?php if (!empty($arResult['TITLES'])): ?>
+                            <div class="storytell__section">
+                                <div class="storytell__head">
+                                    <h2 class="title-h2 storytell__title">
+                                        <?= $text['SUB_VALUES']['TITLE']['~VALUE'] ?>
+                                    </h2>
+                                </div>
+                                <div class="storytell__body">
+                                    <?= $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'] ?? '' ?>
+                                </div>
                             </div>
+                        <?php else: ?>
                             <div class="storytell__body">
                                 <?= $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'] ?? '' ?>
                             </div>
-                        </div>
-                    <?php else: ?>
-                        <div class="storytell__body">
-                            <?= $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'] ?? '' ?>
-                        </div>
-                    <?php endif ?>
-                <?php endforeach; ?>
+                        <?php endif ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </section>
-    <?php endif; ?>
     <?php if (!empty($arResult["PROPERTIES"]["GALLERY"]["VALUE"])): ?>
         <div class="section services-highlights">
             <div class="container">
@@ -61,7 +65,7 @@ $data = [
     '@context' => 'http://schema.org',
     '@type' => 'Product',
     'name' => $arResult['NAME'],
-    'image' => 'https://alexprom.ru'.$arResult['DETAIL_PICTURE']['SRC'],
+    'image' => 'https://alexprom.ru' . $arResult['DETAIL_PICTURE']['SRC'],
     'offers' => [
         '@type' => 'AggregateOffer',
         'lowPrice' => intval(preg_replace('/[^0-9]+/', '', $arResult['PROPERTIES']['PRICE']['VALUE']), 10),
