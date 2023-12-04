@@ -54,6 +54,21 @@ $videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BO
                 <?php endforeach; ?>
             </div>
         </div>
+        <div class="main__hand hand">
+            <div class="hand__out">
+                <img src="/local/templates/svet/assets/images/hand.png" alt=" ">
+            </div>
+            <div class="hand__video" data-video-content>
+                <a href="#"
+                   class="hand__video-link"
+                   data-video-load="Zl451zm8PjU"
+                   style="background-image: url('/local/templates/svet/assets/images/video-bg.png')">
+                    <div class="hand__video-icon">
+                        <svg width="30" height="30" class=""><use xlink:href="#icon-play"></use></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 <section class="bottom">
