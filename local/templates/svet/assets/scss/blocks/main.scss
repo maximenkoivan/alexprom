@@ -4,7 +4,7 @@
 
     &__wrapper {
         position: relative;
-        padding: 80px 0;
+        padding: 80px 0 270px;
 
         @include media('xs') {
             padding: 50px 0;
@@ -36,6 +36,12 @@
                 width: 100%;
             }
         }
+    }
+
+    &__hand {
+        position: absolute;
+        bottom: -42px;
+        left: 40%;
     }
 
     &__bg-slider {

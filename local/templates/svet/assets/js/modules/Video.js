@@ -38,7 +38,7 @@ class VideoLoader {
         let $self = e.currentTarget,
             $parent = $self.closest(`[data-${this.dataName.videoContent}]`),
             videoID = $self.getAttribute(`data-${this.dataName.videoLoad}`),
-            iframeHtml = `<iframe src="https://www.youtube.com/embed/${videoID}?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            iframeHtml = `<iframe src="https://www.youtube.com/embed/${videoID}?autoplay=1" height="100%" width="100%" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         $parent.innerHTML = '';
 
         $parent.insertAdjacentHTML('beforeend',iframeHtml);
