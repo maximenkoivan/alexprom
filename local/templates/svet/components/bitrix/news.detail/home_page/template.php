@@ -42,12 +42,12 @@ $videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_B
                        class="btn btn--primary btn--animated btn--lg"><?= $arResult['PROPERTIES']['TEXT_BTN_1']['~VALUE'] ?></a>
                 <?php endif; ?>
             </div>
-            <div class="main__adv adv">
+            <div class="main__adv advantages">
                 <?php foreach ($arResult['PROPERTIES']['ADVANTAGES']['VALUE'] as $key => $advantage): ?>
-                    <div class="adv__item">
-                        <img class="adv__img" width="38" height="38" src="<?= CFile::GetPath($advantage) ?>"
+                    <div class="advantages__item">
+                        <img class="advantages__img" width="38" height="38" src="<?= CFile::GetPath($advantage) ?>"
                              alt=" ">
-                        <span class="adv__text"><?= $arResult['PROPERTIES']['ADVANTAGES']['DESCRIPTION'][$key] ?></span>
+                        <span class="advantages__text"><?= $arResult['PROPERTIES']['ADVANTAGES']['DESCRIPTION'][$key] ?></span>
                     </div>
                 <?php endforeach; ?>
             </div>
