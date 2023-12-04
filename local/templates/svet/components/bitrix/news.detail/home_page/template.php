@@ -9,7 +9,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
-$videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BOTTOM']['~VALUE'])['VIDEO'];
+$videoYoutubeId1 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO']['~VALUE'])['VIDEO'];
+$videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BOTTOM']['~VALUE'])['VIDEO'];
 ?>
 <section class="main">
     <div class="container">
@@ -54,21 +55,25 @@ $videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BO
                 <?php endforeach; ?>
             </div>
         </div>
-        <div class="main__hand hand">
-            <div class="hand__out">
-                <img src="/local/templates/svet/assets/images/hand.png" alt=" ">
+        <?php if (!empty($videoYoutubeId1) && !empty($arResult['PROPERTIES']['BG_IMAGE_VIDEO']['VALUE'])): ?>
+            <div class="main__hand hand">
+                <div class="hand__out">
+                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE_VIDEO']['VALUE']) ?>" alt=" ">
+                </div>
+                <div class="hand__video" data-video-content>
+                    <a href="#"
+                       class="hand__video-link"
+                       data-video-load="<?= $videoYoutubeId1 ?>"
+                       style="background-image: url('<?= CFile::GetPath($arResult['PROPERTIES']['PREVIEW_VIDEO']['VALUE']) ?>')">
+                        <div class="hand__video-icon">
+                            <svg width="30" height="30" class="">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="hand__video" data-video-content>
-                <a href="#"
-                   class="hand__video-link"
-                   data-video-load="Zl451zm8PjU"
-                   style="background-image: url('/local/templates/svet/assets/images/video-bg.png')">
-                    <div class="hand__video-icon">
-                        <svg width="30" height="30" class=""><use xlink:href="#icon-play"></use></svg>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </section>
 <section class="bottom">
@@ -86,13 +91,13 @@ $videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BO
                 </div>
             </div>
             <div class="bottom__video video">
-                <?php if (!empty($videoYoutubeId)): ?>
+                <?php if (!empty($videoYoutubeId2)): ?>
 
                     <div class="video__yt">
                         <div class="video__youtube-wrap">
                             <a class="video__link"
-                               style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId ?>/hqdefault.jpg ')"
-                               data-video-load="<?= $videoYoutubeId ?>"
+                               style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId2 ?>/hqdefault.jpg ')"
+                               data-video-load="<?= $videoYoutubeId2 ?>"
                                data-video-content>
                                 <div class="video__btn">
                                     <svg class="video__icon">
