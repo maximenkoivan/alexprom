@@ -30,7 +30,7 @@
         object-position: 40%;
 
         @include media('xs') {
-
+            object-position: center;
         }
     }
 }
