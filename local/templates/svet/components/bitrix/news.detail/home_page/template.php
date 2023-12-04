@@ -41,9 +41,6 @@ $videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_B
                     <a data-custom-open="modal-order"
                        class="btn btn--primary btn--animated btn--lg"><?= $arResult['PROPERTIES']['TEXT_BTN_1']['~VALUE'] ?></a>
                 <?php endif; ?>
-                <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'])): ?>
-                    <a class="btn btn--outline"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
-                <?php endif; ?>
             </div>
             <div class="main__adv adv">
                 <?php foreach ($arResult['PROPERTIES']['ADVANTAGES']['VALUE'] as $key => $advantage): ?>
@@ -72,6 +69,9 @@ $videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_B
                         </div>
                     </a>
                 </div>
+                <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'])): ?>
+                    <a class="btn btn--outline hand__btn"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
     </div>
