@@ -9,8 +9,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
-$videoYoutubeId1 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO']['~VALUE'])['VIDEO'];
-$videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BOTTOM']['~VALUE'])['VIDEO'];
+$videoYoutubeId = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_BOTTOM']['~VALUE'])['VIDEO'];
 ?>
 <section class="main">
     <div class="container">
@@ -41,43 +40,20 @@ $videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_B
                     <a data-custom-open="modal-order"
                        class="btn btn--primary btn--animated btn--lg"><?= $arResult['PROPERTIES']['TEXT_BTN_1']['~VALUE'] ?></a>
                 <?php endif; ?>
-                <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE']) && !empty($arResult['PROPERTIES']['LINK_BTN_2']['~VALUE'])): ?>
-                    <a href="<?= $arResult['PROPERTIES']['LINK_BTN_2']['~VALUE'] ?>" class="btn btn--outline main__btn-mob" target="_blank"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
+                <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'])): ?>
+                    <a class="btn btn--outline"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
                 <?php endif; ?>
             </div>
-            <div class="main__adv advantages">
+            <div class="main__adv adv">
                 <?php foreach ($arResult['PROPERTIES']['ADVANTAGES']['VALUE'] as $key => $advantage): ?>
-                    <div class="advantages__item">
-                        <img class="advantages__img" width="38" height="38" src="<?= CFile::GetPath($advantage) ?>"
+                    <div class="adv__item">
+                        <img class="adv__img" width="38" height="38" src="<?= CFile::GetPath($advantage) ?>"
                              alt=" ">
-                        <span class="advantages__text"><?= $arResult['PROPERTIES']['ADVANTAGES']['DESCRIPTION'][$key] ?></span>
+                        <span class="adv__text"><?= $arResult['PROPERTIES']['ADVANTAGES']['DESCRIPTION'][$key] ?></span>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if (!empty($videoYoutubeId1) && !empty($arResult['PROPERTIES']['BG_IMAGE_VIDEO']['VALUE'])): ?>
-            <div class="main__hand hand">
-                <div class="hand__out">
-                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE_VIDEO']['VALUE']) ?>" alt=" ">
-                </div>
-                <div class="hand__video" data-video-content>
-                    <a href="#"
-                       class="hand__video-link"
-                       data-video-load="<?= $videoYoutubeId1 ?>"
-                       style="background-image: url('<?= CFile::GetPath($arResult['PROPERTIES']['PREVIEW_VIDEO']['VALUE']) ?>')">
-                        <div class="hand__video-icon">
-                            <svg width="30" height="30" class="">
-                                <use xlink:href="#icon-play"></use>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-                <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE']) && !empty($arResult['PROPERTIES']['LINK_BTN_2']['~VALUE'])): ?>
-                    <a href="<?= $arResult['PROPERTIES']['LINK_BTN_2']['~VALUE'] ?>"
-                       class="btn btn--outline hand__btn" target="_blank"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
     </div>
 </section>
 <section class="bottom">
@@ -95,13 +71,13 @@ $videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_B
                 </div>
             </div>
             <div class="bottom__video video">
-                <?php if (!empty($videoYoutubeId2)): ?>
+                <?php if (!empty($videoYoutubeId)): ?>
 
                     <div class="video__yt">
                         <div class="video__youtube-wrap">
                             <a class="video__link"
-                               style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId2 ?>/hqdefault.jpg ')"
-                               data-video-load="<?= $videoYoutubeId2 ?>"
+                               style="background-image: url('https://img.youtube.com/vi/<?= $videoYoutubeId ?>/hqdefault.jpg ')"
+                               data-video-load="<?= $videoYoutubeId ?>"
                                data-video-content>
                                 <div class="video__btn">
                                     <svg class="video__icon">
