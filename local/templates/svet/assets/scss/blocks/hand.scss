@@ -1,7 +1,7 @@
 .hand {
     z-index: 1;
-    width: 490px;
-    height: 490px;
+    width: 610px;
+    height: 610px;
 
     @include media('xs') {
         display: none;
@@ -21,11 +21,11 @@
 
     &__video {
         position: absolute;
-        width: 150px;
-        height: 320px;
-        top: 48px;
-        left: 102px;
-        border-radius: 16px;
+        width: 187px;
+        height: 394px;
+        top: 61px;
+        left: 124px;
+        border-radius: 18px;
         overflow: hidden;
     }
 
@@ -55,8 +55,8 @@
     &__btn {
         position: absolute;
         top: 30px;
-        left: 87px;
-        padding: 14px 25px;
+        left: 115px;
+        padding: 14px 50px;
         font-size: 16px;
     }
 }
