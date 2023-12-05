@@ -71,7 +71,7 @@ $videoYoutubeId2 = Generic::getYoutubeData($arResult['PROPERTIES']['LINK_VIDEO_B
                 </div>
                 <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE']) && !empty($arResult['PROPERTIES']['LINK_BTN_2']['~VALUE'])): ?>
                     <a href="<?= $arResult['PROPERTIES']['LINK_BTN_2']['~VALUE'] ?>"
-                       class="btn btn--outline hand__btn"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
+                       class="btn btn--outline hand__btn" target="_blank"><?= $arResult['PROPERTIES']['TEXT_BTN_2']['~VALUE'] ?></a>
                 <?php endif; ?>
             </div>
         <?php endif; ?>
