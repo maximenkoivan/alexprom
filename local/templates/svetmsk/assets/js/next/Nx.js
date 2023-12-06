@@ -136,7 +136,7 @@ class Nx {
 
     // load async svg sprite
     loadSvgSprite() {
-        const svgUrl = `/local/templates/svet/assets/svg.min.html`,
+        const svgUrl = `/local/templates/svetmsk/assets/svg.min.html`,
             xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function (data) {
             if (xhr.readyState !== 4) return;
