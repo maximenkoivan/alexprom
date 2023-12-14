@@ -1,0 +1,36 @@
+.advantages {
+
+    @include media('sm-min') {
+        position: relative;
+        left: -20px;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        display: block;
+        color: white;
+        font-size: 18px;
+        opacity: 0.4;
+    }
+
+    &__img {
+        flex-shrink: 0;
+        width: 90px;
+        margin-right: 10px;
+        object-fit: contain;
+        object-position: 40%;
+
+        @include media('xs') {
+            object-position: center;
+        }
+    }
+}
