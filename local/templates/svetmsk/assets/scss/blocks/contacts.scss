@@ -1,0 +1,14 @@
+.contacts {
+
+    &__link {
+        display: block;
+        font-size: 16px;
+        color: white;
+        white-space: nowrap;
+
+        &--phone {
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+}
