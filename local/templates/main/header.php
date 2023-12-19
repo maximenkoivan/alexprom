@@ -94,7 +94,7 @@ if (substr($_SERVER['REQUEST_URI'], -1) !== '/') {
                     <div class="header__menu-inner">
                         <?php $APPLICATION->IncludeComponent(
                             "bitrix:menu",
-                            "header_menu",
+                            "header_menu_new",
                             array(
                                 "ALLOW_MULTI_SELECT" => "Y",
                                 "CHILD_MENU_TYPE" => "left",
