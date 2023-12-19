@@ -31,6 +31,14 @@ if (substr($_SERVER['REQUEST_URI'], -1) !== '/') {
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5FKJ2284');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="<?= LANG_CHARSET ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -80,6 +88,11 @@ if (substr($_SERVER['REQUEST_URI'], -1) !== '/') {
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FKJ2284"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="wrapper">
     <header>
         <div class="container">
@@ -122,7 +135,7 @@ if (substr($_SERVER['REQUEST_URI'], -1) !== '/') {
                                 <a class="link" href="mailto:<?= $header['EMAIL_HEADER']['~VALUE'] ?>">
                                     <?= $header['EMAIL_HEADER']['~VALUE'] ?>
                                 </a>
-                            <?php endif; ?>    
+                            <?php endif; ?>
 
                             <?php if (!empty($header["HEADER_CITY"]['VALUE'])): ?>
                                 <div class="rows_info">
@@ -196,7 +209,7 @@ if (substr($_SERVER['REQUEST_URI'], -1) !== '/') {
                                 <a class="link" href="mailto:<?= $header['EMAIL_HEADER']['~VALUE'] ?>">
                                     <?= $header['EMAIL_HEADER']['~VALUE'] ?>
                                 </a>
-                            <?php endif; ?>    
+                            <?php endif; ?>
                             <?php if (!empty($header["HEADER_WORK_SCHEDULE"]["VALUE"])): ?>
                                 <div class="rows_info">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
