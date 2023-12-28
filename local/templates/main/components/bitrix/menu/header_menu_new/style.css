@@ -156,10 +156,6 @@
         background-color: inherit;
     }
 
-    .menu-child-wrapper.hide {
-        display: block;
-    }
-
     .menu-child {
         display: flex;
         justify-content: space-between;
