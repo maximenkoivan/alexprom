@@ -48,8 +48,30 @@ if ($arResult) {
 
         $previousLevel = $depth;
     }
+    unset($depthOne, $depthTwo, $depthThree, $previousLevel);
+
+    //-- Проставляем активность детям второго порядка
+    foreach ($sortMenu as &$item) {
+        if ($item['child']) {
+            foreach ($item['child'] as &$child) {
+                if ($child['child']) {
+                    $active = false;
+                    foreach ($child['child'] as $childTwo) {
+                        if ($childTwo['SELECTED']) {
+                            $active = true;
+                            break;
+                        }
+                    }
+                    if ($active) {
+                        $child['SELECTED'] = true;
+                    }
+                }
+            }
+            unset($child);
+        }
+    }
+    unset($item);
 
     $arResult['sortMenu'] = $sortMenu;
     unset($sortMenu);
-
 }
