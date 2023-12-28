@@ -1,12 +1,97 @@
 .menu-nav {
-    color: #202A34;
+    color: #202a34;
     font-family: Gotham Pro;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
 }
+
+.menu-link.active,
+.menu-link:hover {
+    color: #5486e5;
+}
+
+.menu-with-child {
+    position: relative;
+}
+
+.menu-link-section {
+    font-weight: 700;
+    text-transform: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+}
+
+.menu-link-section:after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("image/arrow.png");
+}
+
+.menu-link-section.active,
+.menu-with-child.js-second:hover .menu-link-section {
+    color: #eA5d2a;
+}
+
+.menu-link-section.active:after,
+.menu-with-child.js-second:hover .menu-link-section:after {
+    transform: rotateY(180deg);
+}
+
 .menu-dropdown-wrapper {
+    position: absolute;
+    top: 15px;
+    left: -24px;
+    padding: 24px;
+    width: fit-content;
+    min-width: 259px;
+    background-color: #fff;
+}
+
+.menu-hr {
+    margin: 4px 0;
+    height: 1px;
+    background: #f2f2f2;
+}
+
+.menu-hr:last-child {
     display: none;
+}
+
+.menu-child .menu-hr {
+    margin: 16px 0;
+}
+
+.menu-dropdown-wrapper.hide,
+.menu-child-wrapper.hide {
+    display: none;
+}
+
+.menu-child-wrapper {
+    position: absolute;
+    top: -24px;
+    left: 100%;
+    padding: 24px 24px 24px 48px;
+    min-width: 288px;
+    background-color: #fff;
+}
+
+.menu-link-child {
+    font-size: 14px;
+    text-transform: none;
+}
+
+.menu-link-child.active,
+.menu-link-child:hover {
+    color: #5486e5;
+    text-decoration: underline;
 }
