@@ -29,7 +29,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: baseline;
-    padding: 12px 0;
+    padding: 12px 24px 12px 0;
 }
 
 .menu-link-section:after {
@@ -54,14 +54,14 @@
     position: absolute;
     top: 15px;
     left: -24px;
-    padding: 24px;
+    padding: 24px 0 24px 24px;
     width: fit-content;
     min-width: 259px;
     background-color: #fff;
 }
 
 .menu-hr {
-    margin: 4px 0;
+    margin: 4px 24px 4px 0;
     height: 1px;
     background: #f2f2f2;
 }
@@ -81,9 +81,9 @@
 
 .menu-child-wrapper {
     position: absolute;
-    top: -24px;
+    top: -12px;
     left: 100%;
-    padding: 24px 24px 24px 48px;
+    padding: 24px 24px 24px 24px;
     min-width: 288px;
     background-color: #fff;
 }
@@ -166,5 +166,11 @@
     .menu-link-child {
         font-size: 16px;
         font-weight: 400;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header__logo {
+        z-index: 0;
     }
 }
