@@ -50,6 +50,22 @@
     transform: rotateY(180deg);
 }
 
+.menu-with-child.js-second {
+    padding: 4px 0;
+}
+
+.menu-with-child.js-second:after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background: #f2f2f2;
+}
+
+.menu-with-child.js-second:last-child:after {
+    content: none;
+}
+
 .menu-dropdown-wrapper {
     position: absolute;
     top: 15px;
@@ -86,6 +102,18 @@
     padding: 24px 24px 24px 24px;
     min-width: 288px;
     background-color: #fff;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.menu-child-wrapper::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+}
+
+.menu-child-wrapper::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: #bababb;
 }
 
 .menu-link-child {

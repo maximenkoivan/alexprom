@@ -69,7 +69,6 @@ if ($arResult['sortMenu']) { ?>
                                                href="<?= $child['LINK'] ?>"><?= $child['TEXT'] ?></a>
                                         <?php }
                                     } ?>
-                                    <hr class="menu-hr">
                                 <?php } ?>
                             </div>
                         </div>
