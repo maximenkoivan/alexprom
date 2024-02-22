@@ -58,6 +58,14 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
                            href="<?= $footer['LINK_FOOTER']['~VALUE'] ?>"
                            target="_blank"><?= $footer['TEXT_LINK_FOOTER']['~VALUE'] ?>
                         </a>
+                          <div class="footer__d-opt">
+                            Разработка сайта —
+                            <a class="link link--hover-color link--white link--small"
+                               href="https://d-option.ru/"
+                               target="_blank">
+                                Digital Option
+                            </a>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>

@@ -5,7 +5,7 @@
 //-- Для запуска необходимой карты укажите в адресе ее ID, пример:
 //-- seo_sitemap_run.php?action=sitemap_run&ID=2&lang=ru
 
-$_SERVER['DOCUMENT_ROOT'] = realpath(dirname(__FILE__) . '/..');
+$_SERVER['DOCUMENT_ROOT'] = realpath(dirname(__FILE__) . '/../../..');
 
 if ($argv) {
     unset($argv[0]);

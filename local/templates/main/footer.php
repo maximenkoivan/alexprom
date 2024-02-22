@@ -101,6 +101,14 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
                        target="_blank">
                         <?= $footer['TEXT_LINK_POLICY_FOOTER']['~VALUE'] ?>
                     </a>
+                    <div class="footer__d-opt">
+                        Разработка сайта —
+                        <a class="link link--hover-color link--white link--small"
+                           href="https://d-option.ru/"
+                           target="_blank">
+                            Digital Option
+                        </a>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

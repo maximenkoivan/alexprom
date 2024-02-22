@@ -19,7 +19,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
                        href="<?= $footer['LINK_FOOTER']['~VALUE'] ?>"
                        target="_blank"><?= $footer['TEXT_LINK_FOOTER']['~VALUE'] ?>
                     </a>
-                    <span class="footer__copy footer__d-opt">Разработка сайта — Digital Option</span>
+                    <span class="footer__copy footer__d-opt">Разработка сайта — <a href="https://d-option.ru/" target="_blank">Digital Option</a></span>
                 </div>
             <?php endif; ?>
         </div>
