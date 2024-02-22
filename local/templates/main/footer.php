@@ -16,7 +16,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
         <div class="footer-top">
             <?php if (!empty($footer['LOGO_FOOTER']['VALUE'])): ?>
                 <a class="footer-top__logo" <?= $APPLICATION->GetCurPage() == '/' ? '' : 'href="/"' ?>>
-                    <img class="footer-top__img" src="<?= CFile::GetPath($footer['LOGO_FOOTER']['VALUE']) ?>"
+                    <img class="footer-top__img" loading="lazy" src="<?= CFile::GetPath($footer['LOGO_FOOTER']['VALUE']) ?>"
                          alt="AlexProm">
                 </a>
             <?php endif; ?>

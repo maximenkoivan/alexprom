@@ -15,9 +15,14 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
 ?>
 <main class="hero parallax">
     <div class="hero__thumb">
-        <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE']['VALUE'])): ?>
+        <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE']['VALUE'])):
+            $fileSrc = CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE']['VALUE']);
+            ?>
             <picture class="hero__pic">
-                <img class="hero__img" src="<?= CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE']['VALUE']) ?>"
+                <?if ($webp = makeWebp($fileSrc)) { ?>
+                    <source type="image/webp" srcset="<?=$webp?>">
+                <?php } ?>
+                <img class="hero__img" src="<?=$fileSrc?>"
                      alt="<?= $arResult['PROPERTIES']['BG_IMAGE']['DESCRIPTION'] ?>">
             </picture>
         <?php endif; ?>
@@ -41,46 +46,70 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
             <?php if (!$advantagesBlockStyle): ?>
                 <div class="hero-info">
                     <div class="hero-info__stroke">
-                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_1']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_1']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])):
+                            $fileSrc = CFile::GetPath($arResult['PROPERTIES']['IMAGE_1']['VALUE']);
+                            ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
                                     <span class="hero-info__text"><?= $arResult['PROPERTIES']['DESC_1']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_1']['VALUE']) ?>"
+                                    <?if ($webp = makeWebp($fileSrc)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?=  $fileSrc?>"
+                                         loading="lazy"
                                          alt="<?= $arResult['PROPERTIES']['DESC_1']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
-                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_2']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_2']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_2']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_2']['~VALUE'])):
+                            $fileSrc = CFile::GetPath($arResult['PROPERTIES']['IMAGE_2']['VALUE']);
+                            ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
                                     <span class="hero-info__text"><?= $arResult['PROPERTIES']['DESC_2']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_2']['VALUE']) ?>"
+                                    <?if ($webp = makeWebp($fileSrc)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?= $fileSrc ?>"
+                                         loading="lazy"
                                          alt="<?= $arResult['PROPERTIES']['DESC_2']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
-                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_3']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_3']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_3']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_3']['~VALUE'])):
+                            $fileSrc = CFile::GetPath($arResult['PROPERTIES']['IMAGE_3']['VALUE']);
+                        ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
                                     <span class="hero-info__text"><?= $arResult['PROPERTIES']['DESC_3']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_3']['VALUE']) ?>"
+                                    <?if ($webp = makeWebp($fileSrc)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?= $fileSrc?>"
+                                         loading="lazy"
                                          alt="<?= $arResult['PROPERTIES']['DESC_3']['~VALUE'] ?>">
                                 </picture>
                             </div>
                         <?php endif; ?>
-                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_4']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_4']['~VALUE'])): ?>
+                        <?php if (!empty($arResult['PROPERTIES']['IMAGE_4']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_4']['~VALUE'])):
+                            $fileSrc = CFile::GetPath($arResult['PROPERTIES']['IMAGE_4']['VALUE']);
+                            ?>
                             <div class="hero-info__item">
                                 <div class="hero-info__desc">
                                     <span class="hero-info__text"><?= $arResult['PROPERTIES']['DESC_4']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_4']['VALUE']) ?>"
+                                    <?if ($webp = makeWebp($fileSrc)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?= $fileSrc ?>"
+                                         loading="lazy"
                                          alt="<?= $arResult['PROPERTIES']['DESC_4']['~VALUE'] ?>">
                                 </picture>
                             </div>
@@ -89,10 +118,16 @@ $advantagesBlockStyle = !empty($arResult['PROPERTIES']['DESC_1']['~VALUE'])
                 </div>
             <?php endif; ?>
         </div>
-        <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE_MOB']['VALUE'])): ?>
+        <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE_MOB']['VALUE'])):
+            $fileSrc = CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE_MOB']['VALUE']);
+            ?>
             <picture class="hero__worker">
+                <?if ($webp = makeWebp($fileSrc)) { ?>
+                    <source type="image/webp" srcset="<?=$webp?>">
+                <?php } ?>
                 <img class="hero__worker-img"
-                     src="<?= CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE_MOB']['VALUE']) ?>"
+                     loading="lazy"
+                     src="<?= $fileSrc ?>"
                      alt="<?= $arResult['PROPERTIES']['BG_IMAGE_MOB']['DESCRIPTION'] ?>">
             </picture>
         <?php endif; ?>

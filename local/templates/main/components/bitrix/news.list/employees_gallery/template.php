@@ -36,7 +36,14 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('EMPLOYEES');
                                 <div class="swiper-slide">
                                     <div class="staff-card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                                         <picture class="staff-card__pic">
-                                            <img src="<?= CFile::GetPath($arItem["PROPERTIES"]["FOTO"]['VALUE']) ?>"
+                                            <?
+                                            $src = CFile::GetPath($arItem["PROPERTIES"]["FOTO"]['VALUE']);
+                                            if ($webp = makeWebp($src)) { ?>
+                                                <source type="image/webp" srcset="<?=$webp?>">
+                                            <?php } ?>
+                                            <img
+                                                 loading="lazy"
+                                                 src="<?= $src ?>"
                                                  alt="<?= $arItem["PROPERTIES"]["FOTO"]['DESCRIPTION'] ?>"
                                                  class="staff-card__img">
                                         </picture>

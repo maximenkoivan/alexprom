@@ -6,6 +6,7 @@ use classes\Models\Alpinism\Basic\CommonBlocks;
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
+
 /**
  * @var $arResult
  * @global CMain $APPLICATION
@@ -16,11 +17,20 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('EXPERIENCE');
     <div class="experience__main">
         <div class="container experience__container">
             <div class="experience__hero">
-                <?php if (!empty($settings['IMAGE_EXPERIENCE']['VALUE'])): ?>
+                <?php if (!empty($settings['IMAGE_EXPERIENCE']['VALUE'])):
+                    $arImg = array_change_key_case(
+                        CFile::ResizeImageGet($settings['IMAGE_EXPERIENCE']['VALUE'], ['width' => 1900, 'height' => 861]),
+                        CASE_UPPER
+                    );
+                ?>
                     <div class="experience__hero-media">
                         <picture class="experience__hero-pic">
+                            <?if ($webp = makeWebp($arImg['SRC'])) { ?>
+                                <source type="image/webp" srcset="<?=$webp?>">
+                            <?php } ?>
                             <img class="experience__hero-img lazy"
-                                 src="<?= CFile::GetPath($settings['IMAGE_EXPERIENCE']['VALUE']) ?>" alt="<?= $settings['IMAGE_EXPERIENCE']['DESCRIPTION'] ?>">
+                                 loading="lazy"
+                                 src="<?= $arImg['SRC'] ?>" alt="<?= $settings['IMAGE_EXPERIENCE']['DESCRIPTION'] ?>">
                         </picture>
                         <div class="experience__hero-hint">
                             <p class="experience__hero-hint-title"><?= $settings['TITLE_IMAGE_EXPERIENCE']['~VALUE'] ?></p>
@@ -55,11 +65,20 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('EXPERIENCE');
                     <div class="gallery-carousel">
                         <div class="swiper experience-gallery">
                             <div class="swiper-wrapper">
-                                <?php foreach ($settings['GALLERY_EXPERIENCE']['VALUE'] as $imageId): ?>
+                                <?php foreach ($settings['GALLERY_EXPERIENCE']['VALUE'] as $imageId):
+                                    $arImg = array_change_key_case(
+                                        CFile::ResizeImageGet($imageId, ['width' => 600, 'height' => 204]),
+                                        CASE_UPPER
+                                    );
+                                    ?>
                                     <div class="swiper-slide experience-gallery__slide">
                                         <picture class="experience-gallery__thumb">
-                                            <img class="experience-gallery__img lazy"
-                                                 src="<?= CFile::GetPath($imageId) ?>" alt="">
+                                            <?if ($webp = makeWebp($arImg['SRC'])) { ?>
+                                                <source type="image/webp" srcset="<?=$webp?>">
+                                            <?php } ?>
+                                            <img class="experience-gallery__img"
+                                                 loading="lazy"
+                                                 src="<?= $arImg['SRC'] ?>" alt="">
                                         </picture>
                                         <a href="<?= CFile::GetPath($imageId) ?>" data-fancybox
                                            class="experience-gallery__link"></a>

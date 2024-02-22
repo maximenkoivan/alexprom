@@ -28,7 +28,11 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('PROJECTS');
                         <?php foreach ($arResult['ITEMS'] as $arItem): ?>
                             <div class="swiper-slide swiper-gallery__slide">
                                 <picture class="swiper-gallery__thumb">
-                                    <img class="swiper-gallery__img lazy"
+                                    <?if ($webp = makeWebp($arItem['PREVIEW_PICTURE']['SRC'])) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img class="swiper-gallery__img"
+                                         loading="lazy"
                                          src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
                                          alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['SRC'] ?>">
                                 </picture>

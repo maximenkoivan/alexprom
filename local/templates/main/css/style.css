@@ -4248,9 +4248,10 @@ header {
 @media (max-width: 1100px) {
   .hero__thumb {
     min-height: initial;
-    background-image: url(../images/bg-thumb.png);
+    background-image: url(../images/bg-thumb.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #d6e6f2;
     padding-bottom: 12vw;
   }
 }

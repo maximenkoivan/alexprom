@@ -11,6 +11,18 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 
+// Resize image
+if ($arResult['ITEMS']) {
+    foreach ($arResult["ITEMS"] as &$arItem) {
+        if (is_array($arItem['PREVIEW_PICTURE']) && ($arImg = $arItem['PREVIEW_PICTURE'])) {
+            $arItem['PREVIEW_PICTURE']['SRC'] = array_change_key_case(
+                CFile::ResizeImageGet($arImg, ['width' => 600, 'height' => 300], BX_RESIZE_IMAGE_PROPORTIONAL),
+                CASE_UPPER
+            )['SRC'];
+        }
+    }
+}
+
 
 // Получаем настройки страницы списка
 $arResult['PAGE_SETTINGS'] = Settings::getInstance()->getElementByCode('settings');
