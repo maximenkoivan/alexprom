@@ -28,8 +28,13 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('SERVICES');
                         ?>
                         <div class="services-box__item" id="<?= $this->GetEditAreaId($arItem['ID']) ?>">
                             <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="services-box__thumb">
-                                <img class="services-box__img lazy" src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
-                                     alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['ALT'] ?>">
+                                <picture>
+                                    <?if ($webp = makeWebp($arItem['PREVIEW_PICTURE']['SRC'])) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img class="services-box__img" loading="lazy" src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                                         alt="<?= $arItem['PREVIEW_PICTURE']['DESCRIPTION'] ?? $arItem['PREVIEW_PICTURE']['ALT'] ?>">
+                                </picture>
                             </a>
                             <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="title-h3 services-box__title-link"><?= $arItem['NAME'] ?></a>
                             <p><a href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= TruncateText($arItem['~PREVIEW_TEXT'], 105) ?></a></p>
