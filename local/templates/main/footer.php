@@ -14,9 +14,14 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
 <footer class="footer">
     <div class="container">
         <div class="footer-top">
-            <?php if (!empty($footer['LOGO_FOOTER']['VALUE'])): ?>
+            <?php if (!empty($footer['LOGO_FOOTER']['VALUE'])):
+                    $logoSrc = array_change_key_case(
+                        CFile::ResizeImageGet($footer['LOGO_FOOTER']['VALUE'], ['width' => 400, 'height' => 145], BX_RESIZE_IMAGE_PROPORTIONAL),
+                        CASE_UPPER
+                    )['SRC'];
+                ?>
                 <a class="footer-top__logo" <?= $APPLICATION->GetCurPage() == '/' ? '' : 'href="/"' ?>>
-                    <img class="footer-top__img" loading="lazy" src="<?= CFile::GetPath($footer['LOGO_FOOTER']['VALUE']) ?>"
+                    <img class="footer-top__img" loading="lazy" src="<?= $logoSrc ?>"
                          alt="AlexProm">
                 </a>
             <?php endif; ?>

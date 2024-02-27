@@ -16,7 +16,12 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
     <div class="hero__thumb">
         <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
             <picture class="hero__pic">
-                <img class="hero__img" src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
+                <?php
+                $src = $arResult['DETAIL_PICTURE']['SRC'];
+                if ($webp = makeWebp($src)) { ?>
+                    <source type="image/webp" srcset="<?=$webp?>">
+                <?php } ?>
+                <img class="hero__img" src="<?=$src?>"
                      alt="<?= $arResult['DETAIL_PICTURE']['DESCRIPTION'] ?? $arResult['DETAIL_PICTURE']['ALT'] ?>">
             </picture>
         <?php endif; ?>
@@ -90,7 +95,12 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                                     <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_1_DETAIL']['VALUE']) ?>"
+                                    <?php
+                                    $src = CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_1_DETAIL']['VALUE']);
+                                    if ($webp = makeWebp($src)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?=$src?>" loading="lazy"
                                          alt="<?= $arResult['PAGE_SETTINGS']['DESC_1_DETAIL']['~VALUE'] ?>">
                                 </picture>
                             </div>
@@ -101,7 +111,12 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                                     <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_2_DETAIL']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_2_DETAIL']['VALUE']) ?>"
+                                    <?php
+                                    $src = CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_2_DETAIL']['VALUE']);
+                                    if ($webp = makeWebp($src)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?=$src?>" loading="lazy"
                                          alt="<?= $arResult['PAGE_SETTINGS']['DESC_2_DETAIL']['~VALUE'] ?>">
                                 </picture>
                             </div>
@@ -112,7 +127,12 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                                     <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_3_DETAIL']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_3_DETAIL']['VALUE']) ?>"
+                                    <?php
+                                    $src = CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_3_DETAIL']['VALUE']);
+                                    if ($webp = makeWebp($src)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?=$src?>" loading="lazy"
                                          alt="<?= $arResult['PAGE_SETTINGS']['DESC_3_DETAIL']['~VALUE'] ?>">
                                 </picture>
                             </div>
@@ -123,7 +143,12 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
                                     <span class="hero-info__text"><?= $arResult['PAGE_SETTINGS']['DESC_4_DETAIL']['~VALUE'] ?></span>
                                 </div>
                                 <picture class="hero-info__icon">
-                                    <img src="<?= CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_4_DETAIL']['VALUE']) ?>"
+                                    <?php
+                                    $src = CFile::GetPath($arResult['PAGE_SETTINGS']['IMAGE_4_DETAIL']['VALUE']);
+                                    if ($webp = makeWebp($src)) { ?>
+                                        <source type="image/webp" srcset="<?=$webp?>">
+                                    <?php } ?>
+                                    <img src="<?=$src?>" loading="lazy"
                                          alt="<?= $arResult['PAGE_SETTINGS']['DESC_4_DETAIL']['~VALUE'] ?>">
                                 </picture>
                             </div>
@@ -134,7 +159,13 @@ $advantagesBlockStyle = !empty($arResult['PAGE_SETTINGS']['DESC_1']['~VALUE'])
         </div>
         <?php if (!empty($arResult['DETAIL_PICTURE']['SRC'])): ?>
             <picture class="hero__worker">
-                <img class="hero__worker-img" src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
+                <?php
+                $src = $arResult['DETAIL_PICTURE']['SRC'];
+                if ($webp = makeWebp($src)) { ?>
+                    <source type="image/webp" srcset="<?=$webp?>">
+                <?php } ?>
+                <img src="<?=$src?>" loading="lazy"
+                     class="hero__worker-img" src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
                      alt="<?= $arResult['DETAIL_PICTURE']['DESCRIPTION'] ?? $arResult['DETAIL_PICTURE']['ALT'] ?>">
             </picture>
         <?php endif; ?>

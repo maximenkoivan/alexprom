@@ -43,7 +43,8 @@ $sectionsJson = json_encode($arResult['SECTIONS']);
                 <div class="projects__gallery">
                     <div class="swiper-gallery__slide" v-for="item in computedObj">
                         <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img " :src="item.PICTURE" :data-src="item.PICTURE" alt="">
+                            <source type="image/webp" :srcset="item.PICTURE_MIN_WEBP">
+                            <img class="swiper-gallery__img" loading="lazy" :src="item.PICTURE_MIN" alt="">
                         </picture>
                         <a :href="item.URL" class="swiper-gallery__link">{{item.NAME}}</a>
                         <span class="swiper-gallery__title">{{item.TEXT}}</span>

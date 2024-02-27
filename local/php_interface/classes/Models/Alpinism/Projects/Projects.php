@@ -141,11 +141,25 @@ final class Projects extends Iblock
         if ($obElement) {
             while ($element = $obElement->GetNextElement()) {
                 $element = $element->GetFields() + $element->GetProperties();
+
+                // Resize image
+                $arMinImg = [];
+                if ($element['PREVIEW_PICTURE']) {
+                    $arMinImg = array_change_key_case(
+                        CFile::ResizeImageGet($element['PREVIEW_PICTURE'], ['width' => 600, 'height' => 300], BX_RESIZE_IMAGE_PROPORTIONAL),
+                        CASE_UPPER
+                    );
+                }
+                $arMinImg['WEBP'] = makeWebp($arMinImg['SRC']);
+
+
                 $result[] = [
         'NAME' => $element['NAME'],
         'URL' => $element['DETAIL_PAGE_URL'],
         'SID' => $element['IBLOCK_SECTION_ID'],
         'PICTURE' => CFile::GetPath($element['PREVIEW_PICTURE']),
+        'PICTURE_MIN' => $arMinImg['SRC'],
+        'PICTURE_MIN_WEBP' => $arMinImg['WEBP'],
         'TEXT' => $element['PREVIEW_TEXT'],
         'SQUARE' => $element['SQUARE']['~VALUE'],
         'ADDRESS' => $element['ADDRESS']['~VALUE'],

@@ -30,15 +30,23 @@ include '_promo.php';
                 <div class="project-highlights__gallery">
                     <div class="swiper project-highlights-carousel">
                         <div class="swiper-wrapper">
-                            <?php foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $key => $imageId): ?>
+                            <?php foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $key => $imageId):
+                                $filePath = array_change_key_case(
+                                    CFile::ResizeImageGet($imageId, ['width' => 600, 'height' => 600], BX_RESIZE_IMAGE_PROPORTIONAL),
+                                    CASE_UPPER
+                                )['SRC'];
+                                ?>
                                 <div class="swiper-slide project-highlights-carousel__slide">
                                     <picture class="project-highlights-carousel__pic">
-                                        <img class="project-highlights-carousel__img lazy"
-                                             src="<?= $filePath = CFile::GetPath($imageId) ?>"
+                                        <?php if ($webp = makeWebp($filePath)) { ?>
+                                            <source type="image/webp" srcset="<?=$webp?>">
+                                        <?php } ?>
+                                        <img class="project-highlights-carousel__img" loading="lazy"
+                                             src="<?= $filePath ?>"
                                              alt="<?= $arResult['PROPERTIES']['GALLERY']['DESCRIPTON'][$key] ?>">
                                     </picture>
                                     <a class="project-highlights-carousel__link" data-fancybox
-                                       href="<?= $filePath ?>"></a>
+                                       href="<?= CFile::GetPath($imageId) ?>"></a>
                                 </div>
                             <?php endforeach; ?>
                         </div>

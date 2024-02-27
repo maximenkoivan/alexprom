@@ -11,6 +11,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 
 
+if (is_array($arResult['DETAIL_PICTURE']) && ($arImg = $arResult['DETAIL_PICTURE'])) {
+    $arResult['DETAIL_PICTURE']['SRC'] = array_change_key_case(
+        CFile::ResizeImageGet($arImg, ['width' => 1920, 'height' => 1080], BX_RESIZE_IMAGE_PROPORTIONAL),
+        CASE_UPPER
+    )['SRC'];
+}
+
 // Получаем настройки страницы списка
 $arResult['PAGE_SETTINGS'] = Settings::getInstance()->getElementByCode('settings', true);
 
