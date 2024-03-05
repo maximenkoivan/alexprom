@@ -283,16 +283,26 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
 <?//модалки и скрипты?>
 <script>
     $(document).ready(function() {
-        $.post('/local/ajax/modal-form-contact.php', function(data) {
-            $('body').append(data);            
+        
+        $.post('/local/ajax/modal-form.php', function(data) {
+            $('body').append(data);
+
             $.getScript('/local/templates/main/assets/src/js/b_components/spawners/b_modal.js');
             $.getScript('/local/templates/main/js/formich_ajax.js');
-            // $.getScript('/local/templates/main/assets/src/js/b_components/controls/input-validator.js');
-            
-            // window.b_modal.initPopups();
+            const telInputs = document.querySelectorAll('input[type="tel"]');
+            telInputs.forEach(tel => {
+                const maskOptions = {
+                    mask: '+7(999) 999-99-99',
+                    inputmode: 'tel',
+                };
+                new Inputmask(maskOptions).mask(tel);
+            });
+            window.b_modal.initPopups();
         });
     })
 </script>
 
 </body>
 </html>
+
+
