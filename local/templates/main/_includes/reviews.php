@@ -37,26 +37,45 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('REVIEWS');
 <script defer>
     if (document.querySelector('#myReviews__block-widget')) {
 
-        (function () {
-            var ru = "ru";
-            var myReviewsInit = function () {
-                new window.myReviews.BlockWidget({
-                    uuid: "0c1e0f0d-d9ee-42f5-b967-06ba22289cb9",
-                    name: "g7413939",
-                    additionalFrame: "none",
-                    lang: "ru",
-                    widgetId: "0"
-                }).init();
+        (() => {
+            let scriptLoaded = false;
 
+            let loadAndInitMyReviews = function () {
+                if (scriptLoaded) return; // Если скрипт уже загружен, не делаем ничего
+
+                scriptLoaded = true;
+
+                // Создаём новый тег скрипта
+                var script = document.createElement('script');
+                script.src = "https://myreviews.dev/widget/dist/index.js";
+                script.defer = true;
+                document.head.appendChild(script);
+
+                // Функция инициализации, которую вызываем после загрузки скрипта
+                script.onload = function () {
+                    let myReviewsInit = function () {
+                        new window.myReviews.BlockWidget({
+                            uuid: "69f23622-f471-4d7a-906e-380d7113fe48",
+                            name: "g77642668",
+                            additionalFrame: "none",
+                            lang: "ru",
+                            widgetId: "0"
+                        }).init();
+                    };
+
+                    if (document.readyState === "loading") {
+                        document.addEventListener('DOMContentLoaded', function () {
+                            myReviewsInit();
+                        });
+                    } else {
+                        myReviewsInit();
+                    }
+                };
             };
-            if (document.readyState === "loading") {
-                document.addEventListener('DOMContentLoaded', function () {
-                    myReviewsInit()
-                })
-            } else {
-                myReviewsInit()
-            }
-        })()
+
+            // Добавляем обработчик события скролла к окну
+            window.addEventListener('scroll', loadAndInitMyReviews, { once: true });
+        })();
 
         const reviewsIframe = document.querySelector('#myReviews__block-widget');
         if (reviewsIframe) {
