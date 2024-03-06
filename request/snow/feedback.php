@@ -30,7 +30,7 @@ if ($model = new FormHandler($request)) {
 
 echo json_encode($response);
 
-$ch = curl_init('https://ingeni.app/2/sites/sneg.alexprom.ru/');
+$ch = curl_init('https://ingeni.app/2/sites/svetmsk.alexprom.ru/');
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
