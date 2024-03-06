@@ -122,7 +122,8 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
 
 <button class="button-scroll-top" aria-label="листать вверх" title="Листать наверх"></button>
 
-<? $APPLICATION->IncludeComponent(
+<?/*
+<?$APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "modal",
     array(
@@ -180,7 +181,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
         "USE_PERMISSIONS" => "N",
         "USE_SHARE" => "N"
     )
-); ?>
+);?>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "modal",
@@ -241,6 +242,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
     )
 ); ?>
 <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/modal_service.php') ?>
+*/?>
 
 <?php if (!empty($footer['IMAGE_LOADER_FOOTER']['VALUE'])): ?>
     <div class="preloader">
@@ -277,5 +279,30 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
     echo '<script type="application/ld+json">' . $data . '</script>';?>
 
 <link rel="stylesheet" href="/local/templates/main/css/noindex.css">
+
+<?//модалки и скрипты?>
+<script>
+    $(document).ready(function() {
+        
+        $.post('/local/ajax/modal-form.php', function(data) {
+            $('body').append(data);
+
+            $.getScript('/local/templates/main/assets/src/js/b_components/spawners/b_modal.js');
+            $.getScript('/local/templates/main/js/formich_ajax.js');
+            const telInputs = document.querySelectorAll('input[type="tel"]');
+            telInputs.forEach(tel => {
+                const maskOptions = {
+                    mask: '+7(999) 999-99-99',
+                    inputmode: 'tel',
+                };
+                new Inputmask(maskOptions).mask(tel);
+            });
+            window.b_modal.initPopups();
+        });
+    })
+</script>
+
 </body>
 </html>
+
+
