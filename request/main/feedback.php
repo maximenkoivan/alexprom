@@ -5,7 +5,7 @@ use classes\Services\FormHandler;
 
 $needle_request = \Bitrix\Main\Context::getCurrent()->getRequest()->getPostList()->toArray();
 
-$ch = curl_init('https://ingeni.app/2/sites/alexprom.ru/');
+$ch = curl_init('https://ingeni.app/2/sites/svetmsk.alexprom.ru/');
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
