@@ -25,7 +25,7 @@ foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text) {
 
 $arResult['~DETAIL_TEXT'] = str_replace(
     '<iframe',
-    '<div class="responsive-video responsive-video__inner"><iframe',
+    '<div class="responsive-video responsive-video__inner"><iframe loading="lazy"', 
     $arResult['~DETAIL_TEXT'],
 );
 $arResult['~DETAIL_TEXT'] = str_replace(

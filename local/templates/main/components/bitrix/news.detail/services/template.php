@@ -46,7 +46,16 @@ include '_promo.php';
                     <?= $arResult['~DETAIL_TEXT'] ?>
                 </div>
             <?php else: ?>
-                <?php foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text): ?>
+                <?php foreach ($arResult['PROPERTIES']['TEXT']['~VALUE'] as $text):
+                    if ($text['SUB_VALUES']['DESC']['~VALUE']) {
+                        $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'] = str_replace(
+                            '<iframe',
+                            '<iframe loading="lazy"',
+                            $text['SUB_VALUES']['DESC']['~VALUE']['TEXT'],
+                        );
+                    }
+
+                    ?>
                     <?php if (!empty($arResult['TITLES'])): ?>
                         <div class="storytell__section">
                             <div class="storytell__head">
@@ -71,9 +80,17 @@ include '_promo.php';
         <div class="section services-highlights">
             <div class="container">
                 <div class="services-highlights__gallery">
-                    <?php foreach ($arResult["PROPERTIES"]["GALLERY"]["VALUE"] as $image): ?>
+                    <?php foreach ($arResult["PROPERTIES"]["GALLERY"]["VALUE"] as $image):
+                        $arImg = array_change_key_case(
+                            CFile::ResizeImageGet($image, ['width' => 600, 'height' => 600], BX_RESIZE_IMAGE_EXACT, true),
+                            CASE_UPPER
+                        );
+                        ?>
                         <picture class="services-highlights__pic">
-                            <img class="services-highlights__img lazy" src="<?= CFile::GetPath($image) ?>" alt="">
+                            <?php if ($webp = makeWebp($arImg['SRC'])) { ?>
+                                <source type="image/webp" srcset="<?=$webp?>">
+                            <? } ?>
+                            <img class="services-highlights__img" loading="lazy" src="<?= $arImg['SRC'] ?>" alt="">
                         </picture>
                     <?php endforeach; ?>
                 </div>
