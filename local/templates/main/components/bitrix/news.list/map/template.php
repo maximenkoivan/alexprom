@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('MAP');
 ?>
 <?php if (!empty($arResult['ITEMS'])): ?>
-    <section class="section locations locations--dropdowns">
+    <section class="section locations locations--dropdowns" id="locations-map-wrap">
         <div class="container">
             <h2 class="title-h2 locations__title"><?= $settings['TITLE_MAP']['~VALUE'] ?></h2>
             <div class="locations__content">
@@ -89,5 +89,20 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('MAP');
             </div>
         </div>
     </section>
+    <script>
+        // Ленивая загрузка карт
+        var iObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting === true) {
+                let jq = document.createElement('script');
+                jq.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<?= Generic::getYandexAPIKey() ?>&_v=20230217195447";
+                document.getElementsByTagName('head')[0].appendChild(jq);
+                $(jq).on('load', function () {
+                    ymaps.ready(ymapInit);
+                });
+                iObserver.unobserve(entries[0].target); // перестаём отслеживать видимость
+            }
+        }, {threshold: [0]}); // от 0 до 1, % видимой части элемента на экране
+        iObserver.observe(document.getElementById('locations-map-wrap'));
+    </script>
 <?php endif; ?>
 

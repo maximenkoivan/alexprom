@@ -250,8 +250,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
     </div>
 <?php endif; ?>
 </div>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<?= Generic::getYandexAPIKey() ?>&_v=20230217195447"
-        type="text/javascript"></script>
+
 
 
     <?php $data = [

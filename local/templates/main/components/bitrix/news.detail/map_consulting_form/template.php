@@ -12,7 +12,7 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('FORM');
 <div class="container contacts__map-container">
     <div class="map">
         <div class="map__content">
-            <?= $settings['MAP_FORM']['~VALUE']['TEXT'] ?? '' ?>
+            <?= $settings['MAP_FORM']['~VALUE']['TEXT'] ? str_replace('<iframe', '<iframe loading="lazy"', $settings['MAP_FORM']['~VALUE']['TEXT']): '' ?>
         </div>
     </div>
 

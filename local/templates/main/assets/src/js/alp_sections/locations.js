@@ -188,7 +188,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		return window.location.origin + locationsMap.dataset.mapIcon
 	}
 
-	ymaps.ready(() => {
+	window.ymapInit = function () {
 		let myMap = new ymaps.Map("locations__map", {
 	    center: [55.76, 37.64], // Координаты центра карты, Москва
 	    zoom: 10 // Масштаб карты
@@ -255,6 +255,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 		window.myMap = myMap;
 
-	})
+	}
 
 });
