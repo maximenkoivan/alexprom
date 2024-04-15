@@ -1,5 +1,13 @@
 <?php
 $arUrlRewrite=array (
+  7 => 
+  array (
+    'CONDITION' => '#^/p-services/#',
+    'RULE' => '',
+    'ID' => 'pixelplus:services',
+    'PATH' => '/p-services/index.php',
+    'SORT' => 100,
+  ),
   4 => 
   array (
     'CONDITION' => '#^/services/#',
