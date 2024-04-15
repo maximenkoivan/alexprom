@@ -1,6 +1,5 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-
 use classes\Models\Alpinism\News\News;
 /**
  * @global CMain $APPLICATION
