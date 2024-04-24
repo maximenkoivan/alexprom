@@ -1,9 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Узнайте, как «АлексПром» рассчитывает цены с учетом конфигурации кровли, высоты здания, удаленности объекта и срочности работы. Получите индивидуальное предложение!");
 /**
  * @global CMain $APPLICATION
  */
-$APPLICATION->SetTitle("Оплата");
+$APPLICATION->SetTitle("Условия оплаты «АлексПром»: расчет стоимости кровли и выезда бригады");
 ?><main class="hero hero--has-breadcrumbs hero--no-bullets topBlockOplata">
 <div class="hero__thumb">
  <span class="hero__pic hero__pic-desc"> <source srcset="/local/templates/main/images/oplata/oplata_BG_02.jpg" media="(max-width: 768px)"> <img src="/local/templates/main/images/oplata/oplata_BG_01.jpg" class="hero__img"> </span>

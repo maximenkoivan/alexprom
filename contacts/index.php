@@ -3,10 +3,11 @@
 use classes\Models\Alpinism\Contacts\Settings;
 
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Официальные контакты компании «АлексПром» для сотрудничества, оформления заказов и запроса дополнительной информации. Полные реквизиты и команда на сайте.");
 /**
  * @global CMain $APPLICATION
  */
-$APPLICATION->SetTitle("Контакты");
+$APPLICATION->SetTitle("Контакты компании «АлексПром» – сотрудничество, заказы и команда");
 ?>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
