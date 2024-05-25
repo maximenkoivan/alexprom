@@ -1,0 +1,48 @@
+.call {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    z-index: 999;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s linear;
+    overflow: hidden;
+    animation: call-animation 2s infinite ease-out;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @include media('xs') {
+        bottom: 20px;
+        left: 20px;
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@keyframes call-animation {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(10deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(0deg) scale(1);
+    }
+    70% {
+        transform: rotate(-10deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+

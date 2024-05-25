@@ -1,0 +1,59 @@
+.nx-dynamic-label {
+    position: relative;
+    margin-bottom: 0;
+    &__text{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        font-size: $fz-min;
+        color: map_get($input, placeholder-color);
+        line-height: 1;
+        transition: all .15s $tr-type;
+        pointer-events: none;
+        transform-origin: left;
+        z-index: 20;
+        @include truncate(91%);
+    }
+
+    .nx-dynamic-label__input{
+        color: black;
+        border: 1px solid #c9c9c9;
+        border-radius: 5px;
+        height: 50px;
+        padding: 18px 20px;
+        font-size: 16px;
+        line-height: 1.33;
+
+    }
+
+    &.focused{
+        .nx-dynamic-label__text{
+            transform: translateY(-13px);
+            font-size: $fz-little;
+        }
+    }
+    .error &{
+        .nx-dynamic-label__text{
+            color: map_get($content, error-color);
+        }
+    }
+    &_tr {
+        .nx-dynamic-label__input{
+            background-color: transparent;
+        }
+    }
+    &_lt {
+        .nx-dynamic-label__text{
+            color:white;
+        }
+        .nx-dynamic-label__input{
+            border-color: white;
+            color: white;
+        }
+    }
+    @include media('xs'){
+        &__text{
+            left: 20px;
+        }
+    }
+}
