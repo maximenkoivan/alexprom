@@ -21,16 +21,6 @@
         color: white;
     }
 
-    &__d-opt {
-        margin-left: 12px;
-
-        @include media('xs') {
-            margin-left: 0;
-            margin-top: 10px;
-            display: block;
-        }
-    }
-
     &__politics {
         margin-left: auto;
 

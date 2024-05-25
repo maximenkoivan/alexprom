@@ -16,6 +16,8 @@ class FormHandler
         'feedback' => 'classes\Models\Alpinism\Feedback\Feedback',
         'callback' => 'classes\Models\Light\Feedback\Callback',
         'order' => 'classes\Models\Light\Feedback\Order',
+        'callbackMsk' => 'classes\Models\LightMsk\Feedback\Callback',
+        'orderMsk' => 'classes\Models\LightMsk\Feedback\Order',
         'callbackSnow' => 'classes\Models\Snow\Feedback\CallbackSnow',
         'discountSnow' => 'classes\Models\Snow\Feedback\DiscountSnow',
         'orderSnow' => 'classes\Models\Snow\Feedback\OrderSnow',

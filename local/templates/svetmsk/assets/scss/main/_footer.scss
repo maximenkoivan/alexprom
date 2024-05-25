@@ -1,0 +1,48 @@
+.footer{
+    position: relative;
+    background-color: $footer-bg;
+    z-index: 1;
+
+    &__wrap {
+        padding: 20px 0;
+    }
+
+    &__container {
+        display: flex;
+        max-width: 1410px;
+
+        @include media('xs') {
+            display: block;
+        }
+    }
+
+    &__politics, &__copy {
+        font-size: 13px;
+        color: white;
+    }
+
+    &__d-opt {
+        margin-left: 12px;
+
+        @include media('xs') {
+            margin-left: 0;
+            margin-top: 10px;
+            display: block;
+        }
+    }
+
+    &__politics {
+        margin-left: auto;
+
+        a {
+            color: white;
+        }
+
+        @include media('xs') {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+}
+
+

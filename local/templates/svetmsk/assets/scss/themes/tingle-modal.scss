@@ -1,0 +1,22 @@
+.tingle-modal {
+
+    &__closeIcon {
+        color: $c-orange;
+    }
+}
+
+.tingle-modal-box {
+    width: auto;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__footer {
+        text-align: center;
+    }
+}
+
+.tingle-btn {
+    background-color: $c-orange;
+}
