@@ -1,0 +1,174 @@
+.video {
+    padding-top: 80px;
+
+    &__row {
+        margin-bottom: 60px;
+    }
+
+    &__heading {
+        text-align: center;
+        margin: 0 auto 110px;
+
+        @include media('xs') {
+            margin: 0 auto 70px;
+        }
+    }
+
+    &__title {
+        font-size: 38px;
+
+        span {
+            text-transform: uppercase;
+            color: #db1603;
+        }
+
+        @include media('sm-max') {
+            font-size: 32px;
+        }
+
+        @include media('xs') {
+            font-size: 22px;
+        }
+    }
+
+    &__item {
+        background: #fff;
+        position: relative;
+        padding: 80px 30px 50px 30px;
+        height: 100%;
+
+        h4 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        @include media('sm-max') {
+            margin-bottom: 60px;
+            height: auto;
+        }
+
+        @include media('xs') {
+            padding: 40px 20px 30px 20px;
+
+            h4 {
+                font-size: 21px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__item-num {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        font-weight: 800;
+        font-size: 59px;
+        background: #db1603;
+        left: 50%;
+        top: -45px;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media('xs') {
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
+        }
+    }
+
+    &__item-btn {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    &__youtube-wrap {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__btn {
+        top: 50%;
+        right: 50%;
+        position: absolute;
+        transform: translate(50%, -50%);
+        height: 80px;
+        width: 80px;
+        border: 3px solid $c-orange;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media('sm-max') {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    &__icon {
+        height: 60%;
+        width: 60%;
+        fill: $c-orange;
+        transform: translateX(4px);
+    }
+
+    &__youtube {
+        position: relative;
+        width: 50%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 177px;
+            height: 210px;
+            background: url("/local/templates/sneg/assets/images/sections/dotes.png") no-repeat 50% 50%;
+            right: -200px;
+            top: 8px;
+        }
+
+        @include media('sm-max') {
+            width: 100%;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+}

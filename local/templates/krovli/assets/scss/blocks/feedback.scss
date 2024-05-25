@@ -1,0 +1,32 @@
+.feedback {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 770px;
+    background: #fff;
+
+    @include media('xs') {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__heading {
+        margin-bottom: 40px;
+
+        @include media('xs') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 38px;
+        text-align: center;
+
+        span {
+            color: #db1603;
+        }
+
+        @include media('xs') {
+            font-size: 32px;
+        }
+    }
+}

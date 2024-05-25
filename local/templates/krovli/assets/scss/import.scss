@@ -1,0 +1,63 @@
+//fist
+@import "varibles";
+@import "mixins";
+
+// vendors
+@import "_vendor/fonts/BanderaPro.css";
+@import "_vendor/fonts/GothamPro.css";
+
+@import "_vendor/flex-grid";
+
+// default
+@import "starting";
+@import "layouts";
+
+// forms & buttons
+@import "forms/btns";
+@import "forms/forms";
+@import "forms/checkbox";
+@import "forms/nx-dynamic-label";
+@import "forms/range-slider-box";
+
+// main
+@import "main/titles";
+@import "main/links";
+@import "main/content";
+@import "main/header";
+@import "main/menu";
+@import "main/footer";
+
+// blocks
+@import "nx-blocks/modals";
+@import "nx-blocks/nx-preloader";
+@import "nx-blocks/nx-popup";
+
+//blocks
+@import "blocks/contacts";
+@import "blocks/main";
+@import "blocks/adv";
+@import "blocks/bottom";
+@import "blocks/video";
+@import "blocks/call";
+@import "blocks/order";
+@import "blocks/promo";
+@import "blocks/factoids";
+@import "blocks/problems";
+@import "blocks/order-section";
+@import "blocks/team";
+@import "blocks/mistakes";
+@import "blocks/type";
+@import "blocks/permits";
+@import "blocks/cake";
+@import "blocks/map";
+@import "blocks/feedback";
+@import "blocks/hc";
+@import "blocks/scroll-top";
+
+//sliders
+@import "sliders/nx-promo-slider";
+
+// themes
+//@import "themes/bootstrap-main-styles";
+@import "themes/select2-theme";
+@import "themes/tingle-modal";
