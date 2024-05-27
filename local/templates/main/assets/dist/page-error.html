@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница ошибки</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230818233225">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+  <div class="container">
+      <div class="header">
+          <a class="header__logo" href="#">
+              <img class="header__img" src="./images/logo-minimal.png" alt="AlexProm">
+          </a>
+          <div class="header__menu">
+            <div class="header__menu-inner">
+              <nav class="header__nav">
+                  <a class="header__nav-link" href="#">Услуги</a>
+                  <a class="header__nav-link" href="#">Цены</a>
+                  <a class="header__nav-link" href="#">Проекты</a>
+                  <div class="header__nav-dropdown">
+                    <a class="header__nav-link" href="#">О компании</a>
+                    <div class="header__nav-dropdown-menu">
+                      <div class="header__nav-dropdown-menu-inner">
+                        <a class="header__nav-link" href="#">Контакты</a>
+                        <a class="header__nav-link" href="#">Вакансии</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="header__nav-link" href="#">Новости</a>
+              </nav>
+              <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">Заказать обратный звонок</button>
+            </div>
+          </div>
+          <div class="header__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7 (495) 109-02-42</a>
+              <button class="btn-primary header__btn" type="button" data-b_modal-open="form-contact">Заказать звонок</button>
+          </div>
+          <div class="header-mobile">
+              <a class="header-mobile__btn" href="tel:+74951090242">
+                  <img src="./images/icons/phone-menu.svg" alt="+74951090242">
+              </a>
+              <button class="header-mobile__btn burger" type="button">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+          </div>
+      </div>
+  </div>
+</header>
+
+      <main id="primary" class="site-main main">
+
+        <div class="container">
+          <section class="section-error error-404 not-found">
+            <p class="section-error__number">404</p>
+            <div class="section-error__content">
+              <h1 class="section-error__title">Страница не найдена</h1>
+              <p class="section-error__desc">
+                Страница, на которую вы пытаетесь перейти не найдена.  <br>
+                Возможно, вы ввели неправильный адрес или страница была удалена
+              </p>
+              <p class="section-error__desc">
+                Перейти на <a href="/" class="link"><span class="link__text">главную страницу</span></a>
+              </p>
+            </div>
+          </section>
+        </div>
+
+      </main>
+
+
+
+      <footer class="footer">
+  <div class="container">
+      <div class="footer-top">
+          <a class="footer-top__logo" href="#">
+              <img class="footer-top__img" src="./images/common/logo.png" alt="AlexProm">
+          </a>
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Контакты</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="mailto:zakaz@alexprom.ru" class="footer__menu-link link link--mail">zakaz@alexprom.ru</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="tel:+74951090242" class="footer__menu-link link link--phone">+7&nbsp;(495)&nbsp;109-02-42</a>
+              </li>
+              <li class="footer__menu-item">
+                <span class="link link--geo">Москва, Братиславская 1, корпус&nbsp;3</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Популярные услуги</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Демонтаж</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Кабельный обогрев кровли и водостоков</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Установка снегозадержателей</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Желоба, воронки и отливы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Ремонт балконных козырьков</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Разделы</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Новости</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Проекты</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Вакансии</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu">
+            <h3 class="footer__menu-title">Соц.Сети</h3>
+            <div class="footer-bottom__socials socials">
+              <a href="#" class="socials__link" aria-label="Alexprom в оVK">
+                <svg class="socials__icon">
+                  <use href="./images/socials/vk-icon.svg#vk" />
+                </svg>
+              </a>
+
+              <a href="#" class="socials__link" aria-label="Alexprom в Telegram">
+                <svg class="socials__icon">
+                  <use href="./images/socials/tg-icon.svg#tg" />
+                </svg>
+              </a>
+              <a href="#" class="socials__link" aria-label="Alexprom в одноклассниках">
+                <svg class="socials__icon">
+                  <use href="./images/socials/ok-icon.svg#ok" />
+                </svg>
+              </a>
+              <a href="#" class="socials__link" aria-label="Alexprom в одноклассниках">
+                <svg class="socials__icon">
+                  <use href="./images/socials/ok-icon.svg#ok" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom__docs">
+              <a class="footer-bottom__docs-link" href="/">Copyright © 2023 ООО «АЛЕКСПРОМ»</span>
+              <a class="footer-bottom__docs-link" href="privacy-notice">Политика конфиденциальности</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<button class="button-scroll-top" aria-label="листать вверх" title="Листать наверх"></button>
+
+<div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <div data-action="/" class="form-vertical js_form">
+	  		<input type="hidden" name="utm_source" >
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </div>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <div data-action="/" class="form-vertical js_form">
+	  		<input type="hidden" name="utm_source" >
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </div>
+	</div>
+</div>
+<div class="modal-form modal-service b_modal" id="modal-service" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Заказать <span class="modal-service__name"></span>
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical js_form">
+	      <input type="hidden" name="service_name">
+	  		<input type="hidden" name="utm_source">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Заказать</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </form>
+	</div>
+</div>
+
+
+<div class="preloader">
+  <img src="./images/common/loader.svg" alt="" class="preloader__loader">
+</div>
+
+    </div>
+
+    <div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <div data-action="/" class="form-vertical js_form">
+	  		<input type="hidden" name="utm_source" >
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </div>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <div data-action="/" class="form-vertical js_form">
+	  		<input type="hidden" name="utm_source" >
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </div>
+	</div>
+</div>
+<div class="modal-form modal-service b_modal" id="modal-service" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Заказать <span class="modal-service__name"></span>
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical js_form">
+	      <input type="hidden" name="service_name">
+	  		<input type="hidden" name="utm_source">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Заказать</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </form>
+	</div>
+</div>
+
+    <script src="./js/bundle.min.js?_v=20230818233225"></script>
+  </body>
+</html>

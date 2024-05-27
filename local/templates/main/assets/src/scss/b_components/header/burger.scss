@@ -1,0 +1,53 @@
+.burger {
+  --line-width: 47.5%;
+  --line-height: 3px;
+  position: relative;
+  width: var(--burger-width, 40px);
+  height: var(--burger-height, 40px);
+  transition: var(--tr);
+  margin-left: 32px;
+
+  @media (min-width: $desktop-s + 1) {
+    display: none;
+  }
+
+  @media (max-width: $mobile-l) {
+    margin-left: 24px;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--line-width, 47.5%);
+  height: var(--line-height, 0.2rem);
+  background: var(--c-burger-line, #000);
+  transition: var(--tr);
+  border-radius: 2rem;
+}
+
+.burger__line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 10px));
+}
+
+.burger__line:nth-child(2) {
+  transform: translate(-50%, calc(-50% + 0px));
+}
+
+.burger__line:nth-child(3) {
+  transform: translate(-50%, calc(-50% + 10px));
+  transform-origin: left;
+}
+
+.burger.is-active .burger__line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 0px)) rotate(45deg);
+}
+.burger.is-active .burger__line:nth-child(2) {
+  width: 0;
+}
+.burger.is-active .burger__line:nth-child(3) {
+  transform: translate(-50%, calc(-50% - 0px)) rotate(-45deg);
+  transform-origin: unset;
+}

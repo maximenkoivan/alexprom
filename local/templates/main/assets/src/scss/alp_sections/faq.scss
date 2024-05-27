@@ -1,0 +1,120 @@
+.faq__box {
+    margin-top: 80px;
+
+    @media (max-width: $mobile-xl) {
+        margin-top: 55px;
+    }
+} 
+
+.faq-card {
+    border-radius: 30px;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    background-color: var(--light);
+
+	@media(max-width: $tablet-m) {
+		font-size: 1.4rem;
+	}
+}
+
+.faq-card + .faq-card {
+    margin-top: 4rem;
+
+    @media (max-width: $tablet-m) {
+        margin-top: 2.2rem;
+    }
+    
+    @media (max-width: $mobile-xl) {
+        margin-top: 2rem;
+    }
+}
+
+.faq-card__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+    font-size: 2.4rem;
+    line-height: 1.35;
+    font-weight: 600;
+    text-align: left;
+    border-radius: 30px;
+    padding: 40px;
+    border: none;
+    outline: none;
+    background-color: var(--light);
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: .2s;
+
+	@media(max-width: $tablet-m) {
+		font-size: 1.6rem;
+        padding: 30px 20px;
+        gap: 3rem;
+	}
+}
+
+.faq-card__question > span {
+    transition: .2s;
+}
+
+.faq-card__question > span:first-child {
+    flex-basis: calc(100% - 32px);
+	@media(max-width: 768px) {
+		flex-basis: calc(100% - 24px);
+	}
+}
+
+.faq-card .bayan__toggler {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+    transition: .3s;
+    -webkit-mask-image: url(../images/arrow.svg);
+    background-color: var(--dark);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    transition: .2s;
+
+	@media(max-width: 768px) {
+		flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+	}
+}
+
+.faq-card.bayan--opened .bayan__toggler {
+    transform: rotate(-90deg);
+}
+
+.faq-card__question:hover > span {
+    @media (any-hover:hover) {
+        color: var(--accent);
+    }
+}
+
+.faq-card:hover .bayan__toggler {
+    @media (any-hover:hover) {
+        background-color: var(--accent);
+    }
+}
+
+.faq-card__answer {
+    padding: 0 40px 20px 40px;
+    transition: .3s;
+
+    @media(max-width: $tablet-m) {
+        padding: 0 20px 30px 20px;
+    }
+}
+
+.faq-card__answer p:first-child {
+    margin-top: 0;
+}
+.faq-card .bayan__toggler:before,
+.faq-card  .bayan__toggler:after,
+.faq-card .bayan--opened .bayan__toggler:before,
+.faq-card .bayan--opened .bayan__toggler:after {
+    opacity: 0;
+}

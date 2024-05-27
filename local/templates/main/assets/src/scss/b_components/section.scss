@@ -1,0 +1,96 @@
+.section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+
+  @media (max-width: $desktop-m) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-xl) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.section-shifter {
+  margin-top: 65px;
+  margin-bottom: 65px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media (max-width: $desktop-m) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $laptop) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: $mobile-xl) {
+    padding: 0 16px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+
+.section-flip {
+  background-color: var(--light);
+  position: relative;
+  z-index: 2;
+  border-radius: 10rem 10rem 0 0;
+  padding-bottom: 60px;
+  margin-top: -60px;
+
+  @media (max-width: $desktop-m) {
+    margin-top: -50px;
+  }
+
+  @media (max-width: $tablet-m) {
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile-l) {
+    border-radius: 4rem 4rem 0 0;
+  }
+}
+
+.section-flip .section:not(.storytell):first-child {
+  padding-top: 80px;
+
+  @media (max-width: $tablet-m) {
+    padding-top: 60px;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding-top: 36px;
+  }
+}
+
+.section-flip .section:last-child {
+  padding-bottom: 80px;
+
+  @media (max-width: $tablet-m) {
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding-bottom: 36px;
+  }
+}
+
+.section-flip--light {
+  background-color: var(--c-surface);
+}
+
+.section__buttons {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-text--underline {
+  border-bottom: 1px solid;
+}
