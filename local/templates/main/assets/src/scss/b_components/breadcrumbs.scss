@@ -1,0 +1,33 @@
+.breadcrumbs {
+	color: #646464;
+	font-size: 1.4rem;
+	line-height: 1.25;
+	overflow: hidden;
+	width: 100%;
+}
+
+.breadcrumbs__list {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+	color: var(--accent);
+}
+
+.breadcrumbs__link {
+	color: var(--dark);
+	transition: all 0.3s ease;
+}
+.breadcrumbs__link:hover {
+	@media (any-hover:hover) {
+		color: var(--accent);
+	}
+}
+.breadcrumbs__link:after {
+	content: "/";
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+}

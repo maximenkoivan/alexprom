@@ -1,0 +1,359 @@
+.locations__title {
+	margin-bottom: 80px;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 60px;
+	}
+}
+
+.locations__title br {
+	@media (min-width: $tablet-m + 1) {
+		display: none;
+	}
+}
+
+.locations__content {
+	display: grid;
+	grid-template-columns: repeat(2, #{'calc(50% - 20px)'});
+	gap: 40px;
+	width: 100%;
+
+	@media (max-width: $laptop) {
+		grid-template-columns: 100%;
+	}
+}
+
+.locations--dropdowns .locations__content {
+	@media (min-width: $laptop + 1) {
+		grid-template-columns: 2fr 1fr;
+	}
+}
+
+.locations__map {
+	max-width: 890px;
+	max-width: 	100%;
+	height: 701px;
+	width: 100%;
+	border-radius: 30px;
+	overflow: hidden;
+
+	@media (max-width: $desktop-m) {
+		// max-width: 620px;
+		height: 680px;
+	}
+
+	@media (max-width: $laptop) {
+		max-width: 100%;
+		height: 400px;
+	}
+	@media (max-width: $mobile-l) {
+		height: 300px;
+	}
+}
+
+.locations--dropdowns .locations__map {
+	@media (min-width: $mobile-xl + 1) {
+		position: sticky;
+		top: 10rem;
+		z-index: 3;
+	}
+}
+
+.locations__map > * {
+	width: 100%;
+	height: 100%;	
+}
+
+.locations-addresses {
+	width: 100%;
+}
+
+.locations-addresses__address {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+
+	@media (max-width: $desktop-m) {
+		column-gap: 30px;
+	}
+}
+
+.locations-addresses__link {
+	background: #F8F8F8;
+	border-radius: 100px;
+	max-width: 100%;
+	width: 100%;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3rem;
+  transition: .2s;
+  font-size: 1.8rem;
+  padding: 28px;	
+  padding-left: 40px;	
+
+  @media (max-width: $desktop-m) {
+  	padding: 28px;	
+  }
+
+  @media (max-width: $laptop) {
+  	padding: 28px 20px;	
+  }
+
+  @media (max-width: $mobile-l) {
+  	padding: 28px 16px;	
+  }
+
+  @media (max-width: $mobile-s) {
+  	font-size: 	1.6rem;
+  }
+}
+
+.locations-card__top .locations-addresses__link {
+	padding: 0;
+	background: transparent;
+	font-family: var(--ff-regular);
+}
+
+
+.locations-card {
+	margin-bottom: 2.4rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: .6rem;
+	}
+}
+.locations-card.bayan--opened {
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.6rem;
+	}
+}
+
+.locations-addresses__link:hover {
+  @media (any-hover:hover) {
+    color: var(--accent);
+	}
+}
+
+.locations-addresses__link::after {
+  content: '';
+  -webkit-mask-image: url(../images/arrow.svg);
+  background-color: var(--dark);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  display: block;
+  --size: 24px;
+  max-width: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+  transition: .2s;
+  margin-left: 15px;	
+
+  @media (max-width: $tablet-m) {
+	  margin-left: 10px;	
+  }
+
+  @media (max-width: $mobile-l) {
+  	margin-left: 6px;	
+  }
+  @media (max-width: $mobile-s) {
+  	--size: 16px;
+  }
+}
+
+.locations-card__top .locations-addresses__link::after {
+	display: none;
+}
+.locations-card__top .locations-addresses__link:hover {
+	@media (any-hover:hover) {
+		color: inherit;
+	}
+}
+
+.locations-addresses__link:hover::after {
+	@media (any-hover:hover) {
+	  transform: rotate(-90deg);
+	  background-color: var(--accent);
+	}
+}
+
+.locations-addresses__slider {
+	z-index: 1;	
+	position: relative;	
+}
+
+.locations-addresses__slider .swiper-wrapper {
+	@media (max-width: $laptop) {
+		display: grid;	
+		gap: 20px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media (max-width: $tablet-m - 1) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media (max-width: $mobile-xl) {
+		grid-template-columns: repeat(2, 47%);
+	}
+
+	@media (max-width: $mobile-s) {
+		gap: 15px;
+	}
+}
+
+.locations-addresses__buttons {
+	display: flex;	
+	justify-content: flex-end;	
+	align-items: center;	
+	--arrow-button-size: 72px;
+	margin-top: #{'calc(0px - var(--arrow-button-size))'};
+
+	@media (max-width: $laptop) {
+		margin-top: 40px;	
+	}
+}
+
+.locations--dropdowns .locations-addresses__buttons {
+	margin-top: 20px;
+}
+
+.locations-addresses__button-next,
+.locations-addresses__button-prev {
+	--size: var(--arrow-button-size);
+	position: relative;	
+	z-index: 2;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	border-radius: 	var(--size);
+	background-color: #f8f8f8;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 28px;
+	transition: all 0.3s ease-out;
+
+	@media (max-width: $laptop) {
+		display: none;	
+	}
+}
+
+.locations-addresses__button-next:hover,
+.locations-addresses__button-prev:hover {
+	@media (any-hover:hover) {
+		transform: scale(1.15);
+	}
+}
+
+.locations-addresses__button-next.swiper-button-disabled,
+.locations-addresses__button-prev.swiper-button-disabled {
+	opacity: 	0.3;
+	pointer-events: none;
+}
+
+.locations-addresses__button-prev {
+	background-image: url("../images/arrow-prev.svg");
+	margin-right: 34px;	
+}
+
+.locations-addresses__button-next {
+	background-image: url("../images/arrow-next.svg");
+}
+
+.locations-addresses__button-more {
+	@media (min-width: $laptop + 1) {
+		display: none;	
+	}
+}
+.locations--dropdowns .locations-addresses__button-more {
+	display: block;
+}
+
+.locations-card__top {
+	border-radius: 2rem;
+	border: 0.1rem solid #BABABA;
+	padding: 3.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 125%; /* 25px */
+	transition: all 0.4s ease-in-out;
+
+	@media (max-width: $mobile-xl) {
+			padding: 3rem 2.4rem;
+	}
+}
+.bayan--opened .locations-card__top {
+	background-color: var(--accent);
+}
+
+.locations-card__titie {
+	color: #202A34;
+	font-family: var(--ff-regular);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%; /* 25px */
+	transition: all 0.4s ease-in-out;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.8rem;
+	}
+}
+.bayan--opened .locations-card__titie {
+	color: #fff;
+}
+
+.locations-card__contacts {
+	border-radius: 2rem;
+	padding: 2.4rem 3.2rem;
+	background: #F0F2F5;
+	margin-top: 1.6rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 2.4rem;
+		padding-bottom: 2.4rem;
+	}
+}
+
+.locations-card__contact {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 2rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.6rem;
+	}
+}
+.locations-card__contact:last-child {
+	margin-bottom: 0;
+}
+
+.locations-card__contact-icon {
+	display: block;
+	--size: 2rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	margin-right: 0.6rem;
+	margin-top: 0.3rem;
+
+	@media (max-width: $mobile-xl) {
+		--size: 1.6rem;
+	}
+}
+
+.locations-card__contact a {
+	transition: all 0.3s ease;
+}
+
+.locations-card__contact a:hover {
+	@media (any-hover:hover) {
+		color: var(--accent);
+	}
+}

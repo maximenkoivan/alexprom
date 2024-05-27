@@ -1,0 +1,66 @@
+.section-error {
+	margin-bottom: auto;
+}
+.section-error__number {
+	text-align: center;
+	color: #5486E5;
+	font-size: 42rem;
+	font-style: normal;
+	font-weight: 700;
+	margin-bottom: -0.25em;
+
+	@media (max-width: $tablet) {
+		font-size: 30rem;
+		margin-bottom: -0.2em;
+	}
+	@media (max-width: $mobile-xl) {
+		font-size: 16rem;
+	}
+	@media (max-width: $mobile-s) {
+		font-size: 12rem;
+	}
+}
+
+.section-error__content {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 5rem;
+	font-family: 'Manrope';
+}
+
+.section-error__title	{
+	color: #202A34;
+	text-align: center;
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 135%; /* 54px */
+	margin-bottom: 2rem;
+	font-family: 'Manrope';
+
+	@media (max-width: $tablet) {
+		font-size: 3.2rem;
+		margin-bottom: 1.6rem
+	}
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.2rem;
+		font-size: 2.2rem;
+	}
+}
+
+.section-error__desc {
+	margin-bottom: 2rem;
+
+	@media (max-width: $tablet) {
+		font-size: 1.8rem;
+	}
+	@media (max-width: $mobile-xl) {
+		font-size: 1.6rem;
+		margin-bottom: 1.2rem;
+	}
+}
