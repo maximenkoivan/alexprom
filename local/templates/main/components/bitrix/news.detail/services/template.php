@@ -1,5 +1,6 @@
 <?php
 
+use Bitrix\Main\Diag\Debug;
 use classes\Models\Alpinism\Services\Settings;
 
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
@@ -98,6 +99,11 @@ include '_promo.php';
         </div>
     <?php endif; ?>
     <?php
+    // Подтягиваем детальные Вопросы-ответы
+    if($arResult['PROPERTIES']['TEXT_QUESTIONS']['~VALUE']){
+        $GLOBALS['SERVICES_QUESTIONS'] = $arResult['PROPERTIES']['TEXT_QUESTIONS'];
+    }
+    // Подтягиваем детальные Вопросы-ответы end
     $settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_DETAIL_PAGE');
     foreach ($settings as $code) {
         $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');

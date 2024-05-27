@@ -1,5 +1,6 @@
 <?php
 
+use Bitrix\Main\Diag\Debug;
 use classes\Models\Alpinism\Basic\CommonBlocks;
 
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
@@ -10,8 +11,36 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('QUESTIONS');
+if(!empty($GLOBALS['SERVICES_QUESTIONS'])){
+    $settings = $GLOBALS['SERVICES_QUESTIONS'];
+}
 ?>
-<?php if (!empty($settings['TEXT_QUESTIONS']['~VALUE'])): ?>
+<?php if (!empty($GLOBALS['SERVICES_QUESTIONS']['~VALUE'])): ?>
+    <section class="section faq" data-show-cards="5">
+        <div class="container">
+            <h2 class="title-h2">Вопрос ответ</h2>
+            <div class="faq__box">
+                <?php foreach ($GLOBALS['SERVICES_QUESTIONS']['~VALUE'] as $question): ?>
+                    <?php if (!empty($question['SUB_VALUES']['TITLE_QUESTIONS']['~VALUE']) && !empty($question['SUB_VALUES']['DESC_QUESTIONS']['~VALUE'])): ?>
+                        <div class="faq-card bayan">
+                            <div class="faq-card__question">
+                                <span><?= $question['SUB_VALUES']['TITLE_QUESTIONS']['~VALUE'] ?></span>
+                            </div>
+                            <div class="faq-card__answer">
+                                <p>
+                                    <?= $question['SUB_VALUES']['DESC_QUESTIONS']['~VALUE']['TEXT'] ?>
+                                </p>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+            <button type="button" class="faq__button-more btn-accent">
+                Показать больше
+            </button>
+        </div>
+    </section>
+<?php elseif(!empty($settings['TEXT_QUESTIONS']['~VALUE'])): ?>
     <section class="section faq" data-show-cards="5">
         <div class="container">
             <h2 class="title-h2"><?= $settings['TITLE_BLOCK_QUESTIONS']['~VALUE'] ?></h2>
@@ -37,4 +66,5 @@ $settings = CommonBlocks::getInstance()->getPropertiesByPostfix('QUESTIONS');
         </div>
     </section>
 <?php endif; ?>
+
 
