@@ -14,7 +14,7 @@ jobs:
           username: maximenko
           key: ${{secrets.SSH_PRIVATE_KEY_DEV}}
           script: |
-            cd ~/projects/d-option/www
+            cd ~/projects/alexprom/www
             git pull https://maximenkoivan:${{ secrets.AUTO_MERGE_TOKEN }}@github.com/${{ github.repository }}.git stage
             cd bitrix
             rm -R cache
