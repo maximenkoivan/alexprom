@@ -1,0 +1,23 @@
+name: "Merge to Stage"
+on:
+  pull_request:
+    branches: [ "stage" ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI with dev-server
+        uses: appleboy/ssh-action@master
+        with:
+          host: web-devserver.ru
+          port: 22
+          username: maximenko
+          key: ${{secrets.SSH_PRIVATE_KEY_DEV}}
+          script: |
+            cd ~/projects/d-option/www
+            git pull https://maximenkoivan:${{ secrets.AUTO_MERGE_TOKEN }}@github.com/${{ github.repository }}.git stage
+            cd bitrix
+            rm -R cache
+            rm -R managed_cache
+            cd ../..
+            docker compose up -d
