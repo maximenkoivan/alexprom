@@ -6,6 +6,14 @@
 
 import {setInputValid, setInputInvalid, validateInput} from "./input-validator.js"
 
+const modalsToClose = ['form-contact', 'form-price'];
+
+function closeAllModals(modalsToClose) {
+  modalsToClose.forEach(item => {
+    window.b_modal.closePop(item);
+  })
+}
+
 // const buttonClasses = {
 //   disabled: "button--disabled",
 // };
@@ -125,6 +133,9 @@ formsList.forEach((form) => {
         form.querySelectorAll('.form-error').forEach(error => {
           error.remove();
         })
+
+        closeAllModals(modalsToClose);
+
         const formButton = form.getElementsByTagName('button')[0];
         formButton.setAttribute('data-b_modal-open', 'form-ok');
         window.b_modal.handleOpen(formButton);
