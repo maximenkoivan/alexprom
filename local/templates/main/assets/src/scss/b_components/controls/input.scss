@@ -5,7 +5,7 @@
   --input-border: 1px solid #BABABA;
   --input-padding: 28px 24px;
   --c-invalid: #ff3b30;
-  --input-error-fz: 1rem;
+  --input-error-fz: 1.2rem;
 
   @media (max-width: $desktop-m) {
     --input-padding: 28px 30px;
@@ -33,5 +33,6 @@
   width: 100%;
   color: var(--c-invalid);
   font-size: var(--input-error-fz);
-  text-align: center;
+  padding-left: 30px;
+  text-align: left;
 }
