@@ -157,7 +157,6 @@ export class b_modal {
   }
 
   handleOpen(button) {
-    console.log(1111)
     const id = button.dataset.b_modalOpen;
     const b_modal = document.querySelector(`#${id}`);
     if (b_modal) {
