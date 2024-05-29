@@ -228,6 +228,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
     )
 ); ?>
 <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/modal_service.php') ?>
+<?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/modal_ok.php') ?>
 
 <?php if (!empty($footer['IMAGE_LOADER_FOOTER']['VALUE'])): ?>
     <div class="preloader">
