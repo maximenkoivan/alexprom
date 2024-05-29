@@ -1,8 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Чистка кровли", 
-		"/services/", 
+		"Монтаж мягкой кровли", 
+		"/services/montazh-myagkoj-krovli/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -15,15 +15,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Установка снегозадержателей", 
-		"/services/ustanovka-snegozaderzhateley/", 
+		"Покраска кровли", 
+		"/services/pokraska-krovli/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Очистка от снега, наледи, сосулек", 
-		"/services/ochistka-snega-s-kryshi/", 
+		"Монтаж фальцевой кровли", 
+		"/services/montazh-falcevoj-krovli/", 
 		Array(), 
 		Array(), 
 		"" 

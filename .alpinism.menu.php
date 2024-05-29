@@ -8,8 +8,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Установка кондиционеров", 
-		"/services/montazh-kondicionera-alpinistami/", 
+		"Покраска металлоконструкций", 
+		"/services/pokraska-metallokonstrukcij/", 
 		Array(), 
 		Array(), 
 		"" 
