@@ -1,15 +1,15 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Герметизация швов", 
-		"/services/germetizaciya-shvov/", 
+		"Покраска фасада", 
+		"/services/pokraska-fasada/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Утепление фасада дома", 
-		"/services/fasadnoe-uteplenie-sten/", 
+		"Монтаж сайдинга", 
+		"/services/montazh-sajdinga/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -22,8 +22,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Удаление высолов", 
-		"/services/ochistka-fasada-ot-vysolov/", 
+		"Мокрый фасад", 
+		"/services/mokryj-fasad/", 
 		Array(), 
 		Array(), 
 		"" 
