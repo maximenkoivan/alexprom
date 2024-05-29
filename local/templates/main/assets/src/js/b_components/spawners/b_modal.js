@@ -45,7 +45,7 @@ function closeWhenClickingOnBg(itemArray, itemParent, classShow = "_show") {
   });
 }
 
-class b_modal {
+export class b_modal {
   constructor() {
     this.initPopups();
     this.initButtons();
@@ -157,6 +157,7 @@ class b_modal {
   }
 
   handleOpen(button) {
+    console.log(1111)
     const id = button.dataset.b_modalOpen;
     const b_modal = document.querySelector(`#${id}`);
     if (b_modal) {
@@ -177,8 +178,8 @@ class b_modal {
     const b_modal = pop.querySelector(".b_modal")
     b_modal.dispatchEvent(event);
 
-    console.log(pop)
-    console.log(b_modal)
+    // console.log(pop)
+    // console.log(b_modal)
 
     if (b_modal.getBoundingClientRect().height > window.innerHeight) {
       pop.classList.add('b_modal--scrollable')
@@ -253,7 +254,7 @@ class b_modal {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
       if (ignoreHash.includes(hash)) return;
-      
+
       const b_modal = document.querySelector(`.b_modal#${hash}`);
       if (b_modal) {
         this.openPop(hash);

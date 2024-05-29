@@ -254,7 +254,7 @@
 
 .hero--privacy .hero__title {
 	font-size: 3.6rem;
-	
+
 	@media (max-width: $mobile-xl) {
 		font-size: 2.8rem;
 	}
@@ -351,11 +351,13 @@
     border-radius: 10rem;
     transition: .2s;
     text-align: center;
+  max-height: 82px;
 
 	@media(max-width: $laptop) {
 		display: block;
 		flex-basis: auto;
         width: 100%;
+    max-height: none;
 	}
 }
 
@@ -572,7 +574,7 @@
 .hero-info__icon > img {
 	width: 50px;
 	height: 50px;
-	
+
 	@media(max-width: 1670px) {
 		width: 24px;
         height: 24px;
@@ -591,7 +593,7 @@
 
 .hero--contacts .hero__thumb {
 	padding-bottom: 383px;
-	
+
 	@media (max-width: $laptop) {
 		padding-bottom: 0;
 	}

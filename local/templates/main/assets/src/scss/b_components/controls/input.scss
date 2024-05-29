@@ -5,6 +5,7 @@
   --input-border: 1px solid #BABABA;
   --input-padding: 28px 24px;
   --c-invalid: #ff3b30;
+  --input-error-fz: 1rem;
 
   @media (max-width: $desktop-m) {
     --input-padding: 28px 30px;
@@ -25,4 +26,12 @@
   border: var(--input-border);
   border-radius: 2rem;
   box-sizing: border-box;
+}
+
+.form-error {
+  margin-top: 10px;
+  width: 100%;
+  color: var(--c-invalid);
+  font-size: var(--input-error-fz);
+  text-align: center;
 }

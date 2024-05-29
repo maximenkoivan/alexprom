@@ -44,7 +44,7 @@ function serealizeForm(formNode) {
     formData[textarea.name] = textarea.value;
   }
 
-  return formData; 
+  return formData;
 
 }
 
@@ -55,7 +55,6 @@ function getFormData(serealizedForm) {
         formData.append(key, serealizedForm[key]);
       }
     }
-
   return formData;
 }
 
@@ -71,16 +70,22 @@ formsList.forEach((form) => {
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-
-    const inputsToValidate = [
-      ...form.querySelectorAll('.form-control')
-    ];
-
-    inputsToValidate.forEach((input) => {
-      validateInput(input);
+    form.querySelectorAll('.input')?.forEach(input => {
+      input.classList.remove('is-invalid');
+    });
+    form.querySelectorAll('.form-error')?.forEach(error => {
+      error.remove();
     });
 
-    if (form.querySelector('.is-invalid')) return;
+    // const inputsToValidate = [
+    //   ...form.querySelectorAll('.form-control')
+    // ];
+    //
+    // inputsToValidate.forEach((input) => {
+    //   validateInput(input);
+    // });
+    //
+    // if (form.querySelector('.is-invalid')) return;
 
 
     extractUTM(form);
@@ -97,34 +102,56 @@ formsList.forEach((form) => {
     submitButton.classList.add('button--wait');
 
     try {
-      // let result = await response.json();
-      
-      // if (result.status) {
-      //   console.error(result.status);
-      // }
+      let result = await response.json();
 
-      let buttonText;
-      let buttonTextElement
-      const submitButtonText = submitButton.querySelector('.button__text')
+      if (result.length !== 0) {
+        for (let inpName in result) {
+          if (serealizedForm.hasOwnProperty(inpName)) {
+            let target = form.querySelectorAll('input[name="' + inpName + '"], textarea[name="' + inpName + '"], select[name="' + inpName + '"]');
+            if (!target.length) return false;
 
-      if (submitButtonText) {
-        buttonTextElement = submitButtonText;
+            target.forEach(el => {
+              const formField = el.parentNode;
+              formField.classList.add('is-invalid');
+              let error = document.createElement('div');
+              error.classList.add('form-error');
+              error.innerHTML = result[inpName];
+              formField.appendChild(error);
+            });
+
+          }
+        }
       } else {
-        buttonTextElement = submitButton;
+        form.querySelectorAll('.form-error').forEach(error => {
+          error.remove();
+        })
+        const formButton = form.getElementsByTagName('button')[0];
+        formButton.setAttribute('data-b_modal-open', 'form-ok');
+        window.b_modal.handleOpen(formButton);
       }
-      buttonText = buttonTextElement.innerText;
-      buttonTextElement.innerText = '✓ Ваша заявка принята';
+
+      // let buttonText;
+      // let buttonTextElement
+      // const submitButtonText = submitButton.querySelector('.button__text')
+      //
+      // if (submitButtonText) {
+      //   buttonTextElement = submitButtonText;
+      // } else {
+      //   buttonTextElement = submitButton;
+      // }
+      // buttonText = buttonTextElement.innerText;
+      // buttonTextElement.innerText = '✓ Ваша заявка принята';
 
       resetForm(form);
 
       setTimeout(() => {
         submitButton.classList.remove('button--wait');
-        buttonTextElement.innerText = buttonText;
-      }, 5000)
+        // buttonTextElement.innerText = buttonText;
+      }, 2000)
     } catch (error) {
       console.log(error)
     }
-    
+
   });
 });
 
