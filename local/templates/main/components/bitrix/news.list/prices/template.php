@@ -14,9 +14,19 @@ include '_promo.php';
 <div class="section-flip section-flip--light">
     <div class="section price">
         <div class="container">
+            <div class="section__anchor_links">
+                <?php foreach ($arResult['SECTIONS'] as $section): ?>
+                    <div class="section__anchor_item">
+                        <a href="#anchor-<?= $section['CODE'] ?>">
+                            <span><?= $section['NAME'] ?></span>    
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
             <div class="price-card">
                 <?php foreach ($arResult['SECTIONS'] as $section): ?>
                     <div class="price-card__section"
+                        id="anchor-<?= $section['CODE'] ?>"
                          style="color:#222222; text-decoration: none; border: none; background:none;">
                         <div class="price-card__title"
                              style="color:#222222; text-decoration: none; border: none; background:none;"><?= $section['NAME'] ?></div>

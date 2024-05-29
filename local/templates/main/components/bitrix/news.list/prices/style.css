@@ -1,0 +1,32 @@
+.section__anchor_links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.section__anchor_item {
+    margin-bottom: 10px;
+}
+
+.section__anchor_item a {
+    border-radius: 3em;
+    padding: 8px 20px;
+}
+
+.section__anchor_item span {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #5486E5;
+    border-bottom: 1px dashed;
+}
+
+.section__anchor_item a:hover {
+    background: #5486E5;
+}
+
+.section__anchor_item a:hover > span {
+    color: #fff;
+}
