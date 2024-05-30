@@ -22,7 +22,7 @@ $settings = FormSettings::getInstance()->getElementByCode('modal-ok');
             </p>
         </div>
         <div class="modal-form__body">
-            <button class="btn-main" type="submit"><?= $settings ['TEXT_BTN']['~VALUE'] ?></button>
+            <button class="btn-main" type="submit" data-b_modal-close="form-ok"><?= $settings ['TEXT_BTN']['~VALUE'] ?></button>
         </div>
     </div>
 <?php endif; ?>
