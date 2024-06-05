@@ -1,0 +1,12 @@
+.popup-button {
+  display: flex;
+  font-size: 20px;
+  gap: 10px;
+  align-items: center;
+  line-height: 25px;
+
+  svg {
+    width: 20px;
+    height: 10px;
+  }
+}

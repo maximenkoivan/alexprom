@@ -1,0 +1,131 @@
+.calculate-sections {
+  background-image: url("../../img/calculate-bg.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  background-color: #f9fafa;
+
+  @media (max-width: 744px) {
+    background-image: url("../../img/calculate-bg-tablet.png");
+    padding: 30px 30px;
+  }
+
+  @media (max-width: 360px) {
+    background-image: url("../../img/calculate-bg-mobile.png");
+    padding: 30px 10px;
+  }
+}
+
+.calculate {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-left: 425px;
+
+  @media (max-width: 744px) {
+    padding-left: 0;
+  }
+
+  &__pic {
+
+    .desktop {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -120px;
+      z-index: 1;
+    }
+
+    .tablet,
+    .mobile {
+      display: none;
+    }
+
+    img {
+
+      @media (max-width: 744px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 744px) {
+      .tablet {
+        display: block;
+        width: 453px;
+        left: -30px;
+        top: 335px;
+      }
+
+      .desktop,
+      .mobile {
+        display: none;
+      }
+    }
+
+    @media (max-width: 360px) {
+
+      .desktop,
+      .tablet {
+        display: none;
+      }
+
+      .mobile {
+        position: absolute;
+        z-index: 0;
+        display: block;
+        width: 243px;
+        left: -10px;
+        bottom: 210px;
+      }
+    }
+  }
+
+  &__info {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-family: 'HelveticaNeueCyr';
+    color: #283032;
+
+    @media (max-width: 744px) {
+      font-size: 21px;
+    }
+
+    @media (max-width: 360px) {
+      width: 50%;
+      font-size: 15px;
+      padding-bottom: 275px;
+    }
+
+
+    span {
+      font-weight: bold;
+      color: #70C0FF;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 40px;
+    z-index: 5;
+    position: relative;
+
+    @media (max-width: 744px) {
+      flex-direction: row;
+      padding-bottom: 300px;
+    }
+
+    @media (max-width: 360px) {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+
+      .btn {
+        width: 275px;
+        height: 75px;
+      }
+    }
+  }
+}

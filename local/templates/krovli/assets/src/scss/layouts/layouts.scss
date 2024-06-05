@@ -1,0 +1,108 @@
+html,
+body {
+  position: relative;
+  padding-right: 0 !important;
+  overflow-x: clip;
+  font-size: 10px;
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--base-color-font);
+
+    @media (min-width: 992px) {
+      font-size: 20px;
+    }
+  }
+
+  li {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--base-color-font);
+
+    @media (min-width: 992px) {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--base-color-font);
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+
+    @media (min-width: 992px) {
+      font-size: 50px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+  }
+
+  h3 {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--base-color-font);
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+
+    @media (min-width: 992px) {
+      font-size: 30px;
+      margin-top: 80px;
+      margin-bottom: 35px;
+    }
+  }
+
+  .pb-70 {
+    padding-bottom: 70px;
+  }
+
+  .title-m-40 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @media (min-width: 992px) {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .text-block {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    @media (min-width:768px) {
+      padding-bottom: 120px;
+    }
+  }
+}
+
+body {
+  min-width: 320px;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (max-width: 1400px) {
+    max-width: 1200px;
+  }
+}
+

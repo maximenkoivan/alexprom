@@ -1,0 +1,36 @@
+<section class="questions-sections">
+  <div class="container questions">
+    <div class="title">
+      остались <span>вопросы?</span>
+    </div>
+    <p>Оставьте заявку и мы свяжемся с вами <span>в ближайшее время</span></p>
+    <div class="questions__form">
+        <div class="form-index-block">
+            <form class="form-index col gx-5">
+                <div class="form-field">
+                    @@include('../bem-blocks/_input.html',{
+                    "type":"text",
+                    "modify":"",
+                    "id":"inputName",
+                    "placeholder":"Имя",
+                    })
+                </div>
+                <div class="form-field">
+                    @@include('../bem-blocks/_input.html',{
+                    "type":"tel",
+                    "modify":"",
+                    "id":"inputPhone",
+                    "placeholder":"Телефон",
+                    })
+                </div>
+                <button class="btn btn-blue form-field" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
+                    заказать услугу
+                </button>
+                <div class="form-field">
+                    <p>Нажимая на данную кнопку, вы даете согласие на обработку персональных данных подтверждаете ознакомление с политикой конфиденциальности</p>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+</section>

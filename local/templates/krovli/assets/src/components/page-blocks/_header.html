@@ -1,0 +1,317 @@
+<header class="header">
+    <div class="container header-block">
+        <div class="header-block__wrap">
+            <div class="header-block__left">
+                @@include('../../components/bem-blocks/_logo.html')
+                <div class="work">
+                    Работаем в Москве и МО<br><span>с 2009 года</span>
+                </div>
+            </div>
+            <div class="header-block__center">
+                <div class="email">
+                    <div class="ellipse-icon">
+                        <div class="ellipse-icon__pic">
+                            <img src="../../img/icons/email.svg" alt="email-icon">
+                        </div>
+                    </div>
+                    zakaz@alexprom.ru
+                </div>
+                <div class="phone">
+                    <div class="ellipse-icon">
+                        <div class="ellipse-icon__pic">
+                            <img src="../../img/icons/phone.svg" alt="phone-icon">
+                        </div>
+                    </div>
+                    <a class="" href="tel:+7 (495) 109-02-42">+7 (495) 109-02-42</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-block__right">
+            <button class="btn btn-orange d-xl-block" data-bs-toggle="modal" data-bs-target="#callback" type="submit">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+</header>
+<!-- Modal -->
+<div class="modal fade" id="mobileNavModal" tabindex="-1" aria-labelledby="mobileNavModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @@include('../../components/bem-blocks/_logo.html')
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mobile-menu-block">
+                    <div class="mobile-menu__list">
+                        <a class="link" href="/case.html">Кейсы</a>
+                        <a class="link" href="/services.html">О нас</a>
+                        <div class="dropdown-nav">
+                            <div class="dropdown-nav-item">
+                                <a class="link" href="/about.html">Услуги и цены</a>
+                                <button class="icons collapsed" data-bs-toggle="collapse" data-bs-target="#navCollapse"
+                                        aria-expanded="false" aria-controls="navCollapse">
+                                    <svg class="img">
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="dropdown-nav-collapse collapse" id="navCollapse">
+                                <a class="link-dropdown" href="/services_inner.html">Интернет-магазины</a>
+                                <a class="link-dropdown" href="/projects.html">Лендинги</a>
+                                <div class="dropdown-nav">
+                                    <div class="dropdown-nav-item">
+                                        <a class="link-dropdown" href="/about.html">Тех. поддержка</a>
+                                        <button class="icons collapsed" data-bs-toggle="collapse" data-bs-target="#navCollapseTwo"
+                                                aria-expanded="false" aria-controls="navCollapse">
+                                            <svg class="img">
+                                                <use xlink:href="img/sprite.svg#arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-nav-collapse collapse" id="navCollapseTwo">
+                                        <a class="link-dropdown" href="#">Интернет</a>
+                                        <a class="link-dropdown" href="#">Корпоративные</a>
+                                        <a class="link-dropdown" href="#">Сайты</a>
+                                        <a class="link-dropdown" href="#">Лендинги</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="link" href="/blog.html">Блог</a>
+                        <a class="link" href="/product.html">Продукты</a>
+                        <a class="link" href="/contacts.html">Контакты</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer__item">
+                    <a class="link" href="tel:+7 (495) 664 38 15">+7 (495) 664 38 15</a>
+                    <a class="link" href="mailto:info@esdi.ru">info@esdi.ru</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade feedback" id="feedback" tabindex="-1" aria-labelledby="feedback" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="contact-block container">
+
+                    <div class="contact-block__title">
+                        @@include('../page-blocks/_header-title.html',{
+                        "text":"Расскажите о своем проекте",
+                        "modifyTitle":"",
+                        "textLink":"",
+                        "link":"#",
+                        "modifyLinkBlock":"none",
+                        })
+                    </div>
+                    <div class="contact-block__form">
+
+                        <form class="form-base row gx-5">
+                            <div class="col-md-12">
+                                @@include('../bem-blocks/_input.html',{
+                                "type":"text",
+                                "modify":"white",
+                                "id":"inputName",
+                                "placeholder":"Ваше имя",
+                                })
+                            </div>
+                            <div class="col-md-12">
+                                @@include('../bem-blocks/_input.html',{
+                                "type":"email",
+                                "modify":"white",
+                                "id":"inputEmail",
+                                "placeholder":"Ваш e-mail",
+                                })
+                            </div>
+                            <div class="col-md-12">
+                                @@include('../bem-blocks/_input.html',{
+                                "type":"tel",
+                                "modify":"white",
+                                "id":"inputPhone",
+                                "placeholder":"Ваш телефон",
+                                })
+                            </div>
+                            <div class="col-md-12">
+                                @@include('../bem-blocks/_input.html',{
+                                "type":"text",
+                                "modify":"white",
+                                "id":"inputText",
+                                "placeholder":"Комментарий",
+                                })
+                            </div>
+                            <div class="col-md-12 disandfile-block">
+                                <div class="form-file-input">
+                                    <input type="file" class="actual-btn" id="actual-btn-header" hidden/>
+
+                                    <label for="actual-btn-header">
+                                        <svg class="img">
+                                            <use xlink:href="img/sprite.svg#file"></use>
+                                        </svg>
+                                        <span class="file-chose">Прикрепить ТЗ</span>
+                                        <span class="file-chosen">No file chosen</span>
+                                    </label>
+                                </div>
+                                <div class="disclaimer">
+                                    Нажимая кнопку, вы соглашаетесь с нашей политикой
+                                    в отношении обработки <a href="#">персональных данных</a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex justify-content-center mt-5">
+                                @@include('../bem-blocks/_button.html',{
+                                "buttonModify":"mx-4 white",
+                                "buttonText":"Отправить заявку"
+                                })
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade callback" id="callback" tabindex="-1" aria-labelledby="callback" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="contact-block container">
+
+                    <div class="contact-block__title">
+                        Узнайте стоимость ремонта ответив на несколько вопросов
+                    </div>
+                    <div class="modal-form-wrap">
+                        <div class="callback__form">
+                            <form class="form-base">
+                                <div class="complete">
+                                    <div class="text">Выполнено</div>
+                                    <div class="percent">10%</div>
+                                </div>
+                                <div class="progressbar">
+                                    <span style="width: 30%"></span>
+                                </div>
+
+<!--                                <div class="tab tab-1">-->
+<!--                                    <div class="tab__title">-->
+<!--                                        Конструктив кровли*-->
+<!--                                    </div>-->
+<!--                                    <div class="tab__info roof">-->
+<!--                                        <div class="roof__item">-->
+<!--                                            <div class="pic">-->
+<!--                                                <img src="../../img/roof-1.png" alt="">-->
+<!--                                            </div>-->
+<!--                                            <div class="desc">Односкатная</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="roof__item">-->
+<!--                                            <div class="pic">-->
+<!--                                                <img src="../../img/roof-1.png" alt="">-->
+<!--                                            </div>-->
+<!--                                            <div class="desc">Односкатная</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="roof__item">-->
+<!--                                            <div class="pic">-->
+<!--                                                <img src="../../img/roof-1.png" alt="">-->
+<!--                                            </div>-->
+<!--                                            <div class="desc">Односкатная</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="roof__item">-->
+<!--                                            <div class="pic">-->
+<!--                                                <img src="../../img/roof-1.png" alt="">-->
+<!--                                            </div>-->
+<!--                                            <div class="desc">Односкатная</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="roof__item">-->
+<!--                                            <div class="pic">-->
+<!--                                                <img src="../../img/roof-1.png" alt="">-->
+<!--                                            </div>-->
+<!--                                            <div class="desc">Односкатная</div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="tab__buttons">-->
+<!--                                        <button class="btn btn-orange">-->
+<!--                                            Далее-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <div class="tab tab-2">
+                                    <div class="tab__title">
+                                        Тип кровли*
+                                    </div>
+                                    <div class="tab__info roof">
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Металлочерепица</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Металлочерепица</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Металлочерепица</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Металлочерепица</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Металлочерепица</div>
+                                        </div>
+                                    </div>
+                                    <div class="tab__buttons">
+                                        <button class="btn btn-gray">
+                                            Назад
+                                        </button>
+                                        <button class="btn btn-orange">
+                                            Далее
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="prize">
+                            <div class="text">
+                                <p>Пройдите тест и получите расчет стоимости ремонта кровли на электронную почту.</p>
+                                <p>После заполнения с вами свяжется наш специалист для консультации.</p>
+                            </div>
+                            <div class="box">
+                                <img src="../../img/prize.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
