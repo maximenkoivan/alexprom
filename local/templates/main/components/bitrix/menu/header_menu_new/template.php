@@ -1,6 +1,6 @@
 <?php
 
-if ( ! defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 
@@ -20,6 +20,7 @@ if ( ! defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 CUtil::InitJSCore('jquery');
 
+
 if ($arResult['sortMenu']) { ?>
     <nav class="menu-nav">
         <?php foreach ($arResult['sortMenu'] as $item) {
@@ -38,6 +39,7 @@ if ($arResult['sortMenu']) { ?>
                                 <?php foreach ($item['child'] as $child) {
                                     if ($child['child']) { ?>
                                         <div class="menu-with-child js-second">
+                                            <? if (strlen($child['PARAMS']['UF_MENU_URL']) > 0) $child['TEXT'] = '<a href="' . $child['PARAMS']['UF_MENU_URL'] . '">' . $child['TEXT'] . '</a>'; ?>
                                             <?php if ($child['SELECTED']) { ?>
                                                 <span class="menu-link-section active"><?= $child['TEXT'] ?></span>
                                             <?php } else { ?>

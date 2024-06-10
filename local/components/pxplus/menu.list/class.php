@@ -56,6 +56,7 @@ class Rating extends CBitrixComponent
                         'DEPTH_LEVEL',
                         'NAME',
                         'SECTION_PAGE_URL',
+                        'UF_*',
                     ]
                 );
                 if ($this->arParams['IS_SEF'] !== 'Y') {
@@ -74,6 +75,7 @@ class Rating extends CBitrixComponent
                         'DEPTH_LEVEL' => $arSection['DEPTH_LEVEL'],
                         '~NAME' => $arSection['~NAME'],
                         '~SECTION_PAGE_URL' => $arSection['~SECTION_PAGE_URL'],
+                        'UF_MENU_URL'=>$arSection['UF_MENU_URL'],
                     ];
                     $arResult['ELEMENT_LINKS'][$arSection['ID']] = [];
                 }
@@ -96,6 +98,7 @@ class Rating extends CBitrixComponent
                             'NAME',
                             'DETAIL_PAGE_URL',
                             'SECTION_ID',
+                            'UF_*',
                         ]
                     );
                     while ($row = $rsElements->GetNext(true, false)) {
@@ -155,6 +158,7 @@ class Rating extends CBitrixComponent
                 'IBLOCK_ID',
                 'DETAIL_PAGE_URL',
                 'IBLOCK_SECTION_ID',
+                'UF_*',
             ];
             $arFilter = [
                 'ID' => $this->arParams['ID'],
@@ -188,6 +192,7 @@ class Rating extends CBitrixComponent
                     'FROM_IBLOCK' => true,
                     'IS_PARENT' => false,
                     'DEPTH_LEVEL' => $arSection['DEPTH_LEVEL'],
+                    'UF_MENU_URL'=>$arSection['UF_MENU_URL']
                 ],
             ];
 
@@ -201,6 +206,7 @@ class Rating extends CBitrixComponent
                             'FROM_IBLOCK' => true,
                             'IS_PARENT' => false,
                             'DEPTH_LEVEL' => $arSection['DEPTH_LEVEL'] + 1,
+                            'UF_MENU_URL'=>$arSection['UF_MENU_URL']
                         ],
                     ];
                 }
