@@ -1,4 +1,27 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="js/libs.min.js"></script>
+<script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+<script defer>
+    (function() {
+        var ru = "ru";
+        var myReviewsInit = function() {
+            new window.myReviews.BlockWidget({
+                uuid: "0c1e0f0d-d9ee-42f5-b967-06ba22289cb9",
+                name: "g6281212",
+                additionalFrame: "none",
+                lang: "ru",
+                widgetId: "0"
+            }).init();
+
+        };
+        if (document.readyState === "loading") {
+            document.addEventListener('DOMContentLoaded', function() {
+                myReviewsInit()
+            })
+        } else {
+            myReviewsInit()
+        }
+    })()
+</script>
 <script src="js/main.min.js"></script>

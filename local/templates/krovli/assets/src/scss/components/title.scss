@@ -6,7 +6,7 @@
   text-transform: uppercase;
   line-height: normal;
 
-  @media (max-width: 744px) {
+  @media (max-width: 743px) {
     font-size: 40px;
     letter-spacing: 2px;
   }
@@ -23,12 +23,13 @@
   &.big {
     font-size: 84px;
 
-    @media (max-width: 744px) {
-      font-size: 40px;
+    @media (max-width: 1600px) {
+      font-size: 60px;
     }
 
-    @media (max-width: 1440px) {
-      font-size: 60px;
+    @media (max-width: 743px) {
+      font-size: 40px;
+      letter-spacing: 2px;
     }
   }
 
@@ -41,7 +42,7 @@
     color: var(--base-color-white);
     margin-right: 10px;
 
-    @media (max-width: 744px) {
+    @media (max-width: 743px) {
       font-size: 20px;
       margin-right: 0;
       margin-bottom: 15px;

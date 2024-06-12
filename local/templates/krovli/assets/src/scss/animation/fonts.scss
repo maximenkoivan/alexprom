@@ -32,6 +32,17 @@
 }
 
 @font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot');
+  src: local('HelveticaNeueCyr-Light'),
+  url('../../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff') format('woff'),
+  url('../../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Kenyan Coffee Rg';
   src: url('../../fonts/kenyan-coffee/KenyanCoffeeRg-Regular.eot');
   src: local('KenyanCoffeeRg-Regular'),

@@ -33,6 +33,83 @@ function startOnSpecificBrowserInit() {
     }
 }
 
+const videoPlayButtons = document.querySelectorAll( '.video-play');
+
+for (let button of videoPlayButtons) {
+    button.addEventListener( 'click', () => {
+        pauseVideo(button);
+    })
+}
+
+function pauseVideo(element) {
+    const iframe = element.getElementsByTagName('iframe')[0];
+    let temp = iframe.src;
+    iframe.src = temp;
+}
+
+const quizButtons = document.querySelectorAll( '.btn-quiz');
+
+for (let button of quizButtons) {
+    button.addEventListener( 'click', () => {
+        quizButtonClick(button);
+    })
+}
+
+function quizButtonClick(element) {
+    const tabs = document.querySelectorAll('.quiz-tab');
+    for (let tab of tabs) {
+        if (element.classList.contains('btn-next')) {
+            if (Number(tab.dataset.tab) === Number(element.dataset.tab) - 1 ) {
+                tab.classList.remove('active');
+            }
+            if (Number(tab.dataset.tab) === Number(element.dataset.tab) ) {
+                tab.classList.add('active');
+            }
+        }
+
+        if (element.classList.contains('btn-prev')) {
+            if (Number(tab.dataset.tab) === Number(element.dataset.tab) ) {
+                tab.classList.remove('active');
+            }
+            if (Number(tab.dataset.tab) === Number(element.dataset.tab) - 1 ) {
+                tab.classList.add('active');
+            }
+        }
+    }
+}
+
+const spoilers = document.querySelectorAll( '.spoiler');
+
+for (let spoiler of spoilers) {
+    spoiler.addEventListener( 'click', () => {
+        spoilerButtonClick(spoiler);
+    })
+}
+
+function spoilerButtonClick(element) {
+    if (element.parentElement.classList.contains('active')) {
+        element.parentElement.classList.remove('active');
+    } else {
+        element.parentElement.classList.add('active')
+    }
+}
+
+window.addEventListener('scroll', () => {
+    let defaultHeight = document.documentElement.clientHeight * 2;
+    let button = document.getElementById('scrollTopButton');
+    if (window.scrollY >= defaultHeight) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+})
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
 //Scroll mouse
 const blocks = document.querySelectorAll('.scroll');
 
@@ -136,4 +213,6 @@ const swiper2 = new Swiper(".swiperPortfolio", {
 
     }
 });
+
+
 

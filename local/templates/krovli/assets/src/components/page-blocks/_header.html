@@ -34,64 +34,181 @@
     </div>
 </header>
 <!-- Modal -->
-<div class="modal fade" id="mobileNavModal" tabindex="-1" aria-labelledby="mobileNavModal" aria-hidden="true">
+<div class="modal fade calculator" id="calculator" tabindex="-1" aria-labelledby="calculator" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                @@include('../../components/bem-blocks/_logo.html')
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mobile-menu-block">
-                    <div class="mobile-menu__list">
-                        <a class="link" href="/case.html">Кейсы</a>
-                        <a class="link" href="/services.html">О нас</a>
-                        <div class="dropdown-nav">
-                            <div class="dropdown-nav-item">
-                                <a class="link" href="/about.html">Услуги и цены</a>
-                                <button class="icons collapsed" data-bs-toggle="collapse" data-bs-target="#navCollapse"
-                                        aria-expanded="false" aria-controls="navCollapse">
-                                    <svg class="img">
-                                        <use xlink:href="img/sprite.svg#arrow"></use>
-                                    </svg>
+                <div class="contact-block container">
+                    <div class="contact-block__title">
+                        Калькулятор по ремонту кровли
+                    </div>
+                    <div class="modal-form-wrap">
+                        <div class="callback__form">
+                            <form class="form-base">
+                                <div class="tab tab-1">
+                                    <div class="tab__title">
+                                        Площадь кровли (м2)*
+                                    </div>
+                                    <div class="form-field">
+                                        @@include('../bem-blocks/_input.html',{
+                                        "type":"text",
+                                        "modify":"",
+                                        "id":"inputName",
+                                        "placeholder":"Укажите площадь в м2",
+                                        })
+                                    </div>
+                                    <div class="calculate-block">
+                                        <div class="tab__title">
+                                            Операции монтажа*
+                                        </div>
+                                        <div class="tab__info check-list">
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_checkbox.html',{
+                                                "text":"Протекает дымоход",
+                                                "id":"smoke",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_checkbox.html',{
+                                                "text":"Протекает дымоход",
+                                                "id":"smoke",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_checkbox.html',{
+                                                "text":"Протекает дымоход",
+                                                "id":"smoke",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_checkbox.html',{
+                                                "text":"Протекает дымоход",
+                                                "id":"smoke",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_checkbox.html',{
+                                                "text":"Протекает дымоход",
+                                                "id":"smoke",
+                                                })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculate-block">
+                                        <div class="tab__title">
+                                            Материал кровли*
+                                        </div>
+                                        <div class="tab__info radio-list">
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"холодная кровля",
+                                                "id":"smoke11",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"теплая кровля",
+                                                "id":"smoke21",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"теплая кровля",
+                                                "id":"smoke21",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"теплая кровля",
+                                                "id":"smoke21",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"теплая кровля",
+                                                "id":"smoke21",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"теплая кровля",
+                                                "id":"smoke21",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_radio-button.html',{
+                                                "text":"теплая кровля",
+                                                "id":"smoke21",
+                                                "name":"1",
+                                                })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculate-block">
+                                        <div class="calculate-block__item">
+                                            <div class="tab__title">
+                                                Стоимость за работы:
+                                            </div>
+                                            <div class="price">
+                                                <div class="price__num">0</div>
+                                                <div class="price__cur">₽</div>
+                                            </div>
+                                        </div>
+                                        <div class="calculate-block__item">
+                                            <div class="tab__title">
+                                                Телефон*
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_input.html',{
+                                                "type":"text",
+                                                "modify":"",
+                                                "id":"inputName",
+                                                "placeholder":"Телефон",
+                                                })
+                                            </div>
+                                        </div>
+                                        <div class="calculate-block__item">
+                                            <div class="tab__title">
+                                                E-mail (необязательно)
+                                            </div>
+                                            <div class="form-field">
+                                                @@include('../bem-blocks/_input.html',{
+                                                "type":"text",
+                                                "modify":"",
+                                                "id":"inputName",
+                                                "placeholder":"Mail",
+                                                })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="tab__buttons">
+                                <button class="btn btn-orange">
+                                    Отправить
                                 </button>
                             </div>
-
-                            <div class="dropdown-nav-collapse collapse" id="navCollapse">
-                                <a class="link-dropdown" href="/services_inner.html">Интернет-магазины</a>
-                                <a class="link-dropdown" href="/projects.html">Лендинги</a>
-                                <div class="dropdown-nav">
-                                    <div class="dropdown-nav-item">
-                                        <a class="link-dropdown" href="/about.html">Тех. поддержка</a>
-                                        <button class="icons collapsed" data-bs-toggle="collapse" data-bs-target="#navCollapseTwo"
-                                                aria-expanded="false" aria-controls="navCollapse">
-                                            <svg class="img">
-                                                <use xlink:href="img/sprite.svg#arrow"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="dropdown-nav-collapse collapse" id="navCollapseTwo">
-                                        <a class="link-dropdown" href="#">Интернет</a>
-                                        <a class="link-dropdown" href="#">Корпоративные</a>
-                                        <a class="link-dropdown" href="#">Сайты</a>
-                                        <a class="link-dropdown" href="#">Лендинги</a>
-                                    </div>
-
-                                </div>
+                        </div>
+                        <div class="prize ">
+                            <div class="box">
+                                <img src="../../img/calculator.png" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="text__title">Ремонт кровли</div>
+                                <div class="text__title">Расчитайте стоимость работ самостоятельно или позвоните нашему специалисту<br> +7 (495) 109-02-42</div>
+                                <p>* цены в калькуляторе ориентировочные, точная стоимость будет известна после консультации с нашим специалистом</p>
                             </div>
                         </div>
-
-                        <a class="link" href="/blog.html">Блог</a>
-                        <a class="link" href="/product.html">Продукты</a>
-                        <a class="link" href="/contacts.html">Контакты</a>
                     </div>
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="modal-footer__item">
-                    <a class="link" href="tel:+7 (495) 664 38 15">+7 (495) 664 38 15</a>
-                    <a class="link" href="mailto:info@esdi.ru">info@esdi.ru</a>
                 </div>
             </div>
         </div>
@@ -109,75 +226,43 @@
 
                 <div class="contact-block container">
 
-                    <div class="contact-block__title">
-                        @@include('../page-blocks/_header-title.html',{
-                        "text":"Расскажите о своем проекте",
-                        "modifyTitle":"",
-                        "textLink":"",
-                        "link":"#",
-                        "modifyLinkBlock":"none",
-                        })
-                    </div>
-                    <div class="contact-block__form">
-
-                        <form class="form-base row gx-5">
-                            <div class="col-md-12">
-                                @@include('../bem-blocks/_input.html',{
-                                "type":"text",
-                                "modify":"white",
-                                "id":"inputName",
-                                "placeholder":"Ваше имя",
-                                })
+                    <div class="questions">
+                        <div class="title big">
+                            остались <span>вопросы?</span>
+                        </div>
+                        <p>Оставьте заявку и мы свяжемся с вами <span>в ближайшее время</span></p>
+                        <div class="questions__form">
+                            <div class="form-index-block">
+                                <form class="form-index col gx-5">
+                                    <div class="form-field">
+                                        @@include('../bem-blocks/_input.html',{
+                                        "type":"text",
+                                        "modify":"",
+                                        "id":"inputName",
+                                        "placeholder":"Имя",
+                                        })
+                                    </div>
+                                    <div class="form-field">
+                                        @@include('../bem-blocks/_input.html',{
+                                        "type":"tel",
+                                        "modify":"",
+                                        "id":"inputPhone",
+                                        "placeholder":"Телефон",
+                                        })
+                                    </div>
+                                    <button class="btn btn-blue form-field" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
+                                        заказать услугу
+                                    </button>
+                                    <div class="form-field__text">
+                                        <p>
+                                            Нажимая на данную кнопку, вы даете согласие на обработку<br>
+                                            персональных данных подтверждаете ознакомление с<br>
+                                            политикой конфиденциальности
+                                        </p>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="col-md-12">
-                                @@include('../bem-blocks/_input.html',{
-                                "type":"email",
-                                "modify":"white",
-                                "id":"inputEmail",
-                                "placeholder":"Ваш e-mail",
-                                })
-                            </div>
-                            <div class="col-md-12">
-                                @@include('../bem-blocks/_input.html',{
-                                "type":"tel",
-                                "modify":"white",
-                                "id":"inputPhone",
-                                "placeholder":"Ваш телефон",
-                                })
-                            </div>
-                            <div class="col-md-12">
-                                @@include('../bem-blocks/_input.html',{
-                                "type":"text",
-                                "modify":"white",
-                                "id":"inputText",
-                                "placeholder":"Комментарий",
-                                })
-                            </div>
-                            <div class="col-md-12 disandfile-block">
-                                <div class="form-file-input">
-                                    <input type="file" class="actual-btn" id="actual-btn-header" hidden/>
-
-                                    <label for="actual-btn-header">
-                                        <svg class="img">
-                                            <use xlink:href="img/sprite.svg#file"></use>
-                                        </svg>
-                                        <span class="file-chose">Прикрепить ТЗ</span>
-                                        <span class="file-chosen">No file chosen</span>
-                                    </label>
-                                </div>
-                                <div class="disclaimer">
-                                    Нажимая кнопку, вы соглашаетесь с нашей политикой
-                                    в отношении обработки <a href="#">персональных данных</a>
-                                </div>
-                            </div>
-                            <div class="col-md-12 d-flex justify-content-center mt-5">
-                                @@include('../bem-blocks/_button.html',{
-                                "buttonModify":"mx-4 white",
-                                "buttonText":"Отправить заявку"
-                                })
-                            </div>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,49 +295,50 @@
                                     <span style="width: 30%"></span>
                                 </div>
 
-<!--                                <div class="tab tab-1">-->
-<!--                                    <div class="tab__title">-->
-<!--                                        Конструктив кровли*-->
-<!--                                    </div>-->
-<!--                                    <div class="tab__info roof">-->
-<!--                                        <div class="roof__item">-->
-<!--                                            <div class="pic">-->
-<!--                                                <img src="../../img/roof-1.png" alt="">-->
-<!--                                            </div>-->
-<!--                                            <div class="desc">Односкатная</div>-->
-<!--                                        </div>-->
-<!--                                        <div class="roof__item">-->
-<!--                                            <div class="pic">-->
-<!--                                                <img src="../../img/roof-1.png" alt="">-->
-<!--                                            </div>-->
-<!--                                            <div class="desc">Односкатная</div>-->
-<!--                                        </div>-->
-<!--                                        <div class="roof__item">-->
-<!--                                            <div class="pic">-->
-<!--                                                <img src="../../img/roof-1.png" alt="">-->
-<!--                                            </div>-->
-<!--                                            <div class="desc">Односкатная</div>-->
-<!--                                        </div>-->
-<!--                                        <div class="roof__item">-->
-<!--                                            <div class="pic">-->
-<!--                                                <img src="../../img/roof-1.png" alt="">-->
-<!--                                            </div>-->
-<!--                                            <div class="desc">Односкатная</div>-->
-<!--                                        </div>-->
-<!--                                        <div class="roof__item">-->
-<!--                                            <div class="pic">-->
-<!--                                                <img src="../../img/roof-1.png" alt="">-->
-<!--                                            </div>-->
-<!--                                            <div class="desc">Односкатная</div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="tab__buttons">-->
-<!--                                        <button class="btn btn-orange">-->
-<!--                                            Далее-->
-<!--                                        </button>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-                                <div class="tab tab-2">
+                                <div class="tab tab-1 quiz-tab active" data-tab="1">
+                                    <div class="tab__title">
+                                        Конструктив кровли*
+                                    </div>
+                                    <div class="tab__info roof">
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Односкатная</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Односкатная</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Односкатная</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Односкатная</div>
+                                        </div>
+                                        <div class="roof__item">
+                                            <div class="pic">
+                                                <img src="../../img/roof-1.png" alt="">
+                                            </div>
+                                            <div class="desc">Односкатная</div>
+                                        </div>
+                                    </div>
+                                    <div class="tab__buttons">
+                                        <button class="btn btn-orange btn-quiz btn-next" data-tab="2">
+                                            Далее
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="tab tab-2 quiz-tab" data-tab="2">
                                     <div class="tab__title">
                                         Тип кровли*
                                     </div>
@@ -289,14 +375,205 @@
                                         </div>
                                     </div>
                                     <div class="tab__buttons">
-                                        <button class="btn btn-gray">
+                                        <button class="btn btn-gray btn-quiz btn-prev" data-tab="2">
                                             Назад
                                         </button>
-                                        <button class="btn btn-orange">
+                                        <button class="btn btn-orange btn-quiz btn-next" data-tab="3">
                                             Далее
                                         </button>
                                     </div>
                                 </div>
+
+                                <div class="tab tab-3 quiz-tab" data-tab="3">
+                                    <div class="get-info">
+                                        <div class="get-info__left">
+                                            <div class="tab__title">
+                                                Что произошло?*
+                                            </div>
+                                            <div class="tab__info check-list">
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_checkbox.html',{
+                                                    "text":"Протекает дымоход",
+                                                    "id":"smoke",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_checkbox.html',{
+                                                    "text":"Протекает дымоход",
+                                                    "id":"smoke",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_checkbox.html',{
+                                                    "text":"Протекает дымоход",
+                                                    "id":"smoke",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_checkbox.html',{
+                                                    "text":"Протекает дымоход",
+                                                    "id":"smoke",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_checkbox.html',{
+                                                    "text":"Протекает дымоход",
+                                                    "id":"smoke",
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="get-info__right">
+                                            <div class="tab__title">
+                                                Кровельный пирог*
+                                            </div>
+                                            <div class="tab__info radio-list">
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_radio-button.html',{
+                                                    "text":"холодная кровля (без утеплителя)",
+                                                    "id":"smoke11",
+                                                    "name":"1",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_radio-button.html',{
+                                                    "text":"теплая кровля (кровля утеплена)",
+                                                    "id":"smoke21",
+                                                    "name":"1",
+                                                    })
+                                                </div>
+                                            </div>
+                                            <div class="tab__title">
+                                                Выход на кровлю*
+                                            </div>
+                                            <div class="tab__info radio-list">
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_radio-button.html',{
+                                                    "text":"есть лестница",
+                                                    "id":"smoke23",
+                                                    "name":"2",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_radio-button.html',{
+                                                    "text":"привезти свою лестницу",
+                                                    "id":"smoke24",
+                                                    "name":"2"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="get-info__bottom">
+                                            <div class="tab__title">
+                                                Расстояние до объекта (от МКАД)
+                                            </div>
+                                            <div class="tab__info radio-list">
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_radio-button.html',{
+                                                    "text":"до 10 км",
+                                                    "id":"smoke1",
+                                                    })
+                                                </div>
+                                                <div class="form-field">
+                                                    @@include('../bem-blocks/_radio-button.html',{
+                                                    "text":"до 20 км",
+                                                    "id":"smoke2",
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab__buttons">
+                                        <button class="btn btn-gray btn-quiz btn-prev" data-tab="3">
+                                            Назад
+                                        </button>
+                                        <button class="btn btn-orange btn-quiz btn-next" data-tab="4">
+                                            Далее
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="tab tab-4 quiz-tab" data-tab="4">
+                                    <div class="tab__title">
+                                        Можете загрузить фото крыши дома
+                                    </div>
+                                    <div class="tab__info">
+                                        <div id="uploadFile_Loader" class="upload-zone">
+                                            <form class="form-upload" id="uploadForm" method="post" enctype="multipart/form-data">
+                                                <div class="upload-zone_dragover">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" class="upload-loader__image">
+                                                        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M12 12v9"/>
+                                                        <path d="m16 16-4-4-4 4"/>
+                                                    </svg>
+                                                    <p>Перетащите файл сюда</p>
+                                                    <label class="form-upload__label" for="uploadForm_file">
+                                                        <input class="form-upload__input" id="uploadForm_File" type="file" multiple="multiple" name="files[]" accept="image/*" aria-describedby="hint">
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="tab__buttons">
+                                        <button class="btn btn-gray btn-quiz btn-prev" data-tab="4">
+                                            Назад
+                                        </button>
+                                        <button class="btn btn-orange btn-quiz btn-next" data-tab="5">
+                                            Далее
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="tab tab-5 quiz-tab" data-tab="5">
+                                    <div class="tab__title">
+                                        <b>Спасибо за ответы!</b><br>
+                                        Оставьте свои контактные данные и мы вышлем Вам результат.
+                                    </div>
+                                    <div class="tab__info">
+                                        <div class="tab__info-final">
+                                            <div class="form-field form-field__name">
+                                                @@include('../bem-blocks/_input.html',{
+                                                "type":"text",
+                                                "modify":"",
+                                                "id":"inputName",
+                                                "placeholder":"Имя",
+                                                })
+                                            </div>
+                                            <div class="form-field form-field__phone">
+                                                @@include('../bem-blocks/_input.html',{
+                                                "type":"phone",
+                                                "modify":"",
+                                                "id":"inputName",
+                                                "placeholder":"Телефон",
+                                                })
+                                            </div>
+                                            <div class="form-field form-field__email">
+                                                @@include('../bem-blocks/_input.html',{
+                                                "type":"email",
+                                                "modify":"",
+                                                "id":"inputName",
+                                                "placeholder":"E-mail",
+                                                })
+                                            </div>
+                                            <div class="form-field form-field__textarea">
+                                                @@include('../bem-blocks/_input.html',{
+                                                "type":"textarea",
+                                                "modify":"",
+                                                "id":"inputName",
+                                                "placeholder":"Можете написать нам сообщение",
+                                                })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab__buttons">
+                                        <button class="btn btn-gray btn-quiz btn-prev" data-tab="5">
+                                            Назад
+                                        </button>
+                                        <button class="btn btn-orange">
+                                            Отправить
+                                        </button>
+                                    </div>
+                                </div>
+
                             </form>
 
                         </div>
@@ -315,3 +592,42 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade confirm" id="confirm" tabindex="-1" aria-labelledby="confirm" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="contact-block container">
+                    <div class="title">
+                        Спасибо за обращение в компанию ООО "Алекспром". <span>Мы свяжемся с вами в ближайшее время</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade video-play" id="video-play" tabindex="-1" aria-labelledby="video-play" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-block container">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tAGnKpE4NCI?si=qhXJ7a8KG5gEhqUC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/79255322311" target="_blank" class="wa-call"></a>
+
+<div class="scroll-top" id="scrollTopButton" onclick="topFunction()"></div>

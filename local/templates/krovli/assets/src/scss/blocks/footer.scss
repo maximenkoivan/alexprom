@@ -1,11 +1,11 @@
 .footer {
-  padding: 30px 0 30px 0;
+  padding: 30px 30px;
   gap: 30px;
   background: var(--base-black-color);
   color: var(--base-color-white);
   font-family: 'HelveticaNeueCyr';
 
-  @media (max-width: 360px) {
+  @media (max-width: 743px) {
     padding: 20px 10px;
   }
 
@@ -16,15 +16,15 @@
     "rights rights policy dev";
     grid-template-columns: minmax(380px, 1fr) minmax(0, 300px) minmax(0, 1fr) minmax(0, 1fr);
 
-    @media (max-width: 744px) {
+    @media (max-width: 1399px) {
       grid-template-areas:
       "logo contacts contacts"
       "logo social social"
-      "policy rights rights";
+      "policy policy rights";
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 743px) {
       grid-template-areas:
       "logo logo"
       "contacts social"
@@ -38,7 +38,7 @@
   .logo {
     grid-area: logo;
 
-    @media (max-width: 744px) {
+    @media (max-width: 743px) {
       text-align: center;
       min-width: auto;
     }
@@ -49,16 +49,18 @@
     grid-area: contacts;
     display: flex;
     font-size: 17px;
+    gap: 20px;
 
-    @media (max-width: 360px) {
+    @media (max-width: 743px) {
       font-size: 12px;
+      gap: 0;
       flex-direction: column;
     }
 
     &__info {
       width: 300px;
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
         width: auto;
         margin-bottom: 30px;
       }
@@ -79,7 +81,7 @@
       background: url("../../img/icons/phone-footer.svg") no-repeat center left;
       margin-bottom: 30px;
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
         margin-bottom: 10px;
       }
     }
@@ -87,7 +89,7 @@
     .email, .phone {
       font-size: 20px;
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
         font-size: 15px;
       }
     }
@@ -97,7 +99,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
         justify-content: flex-start;
       }
     }
@@ -116,14 +118,20 @@
 
       .title.foot {
 
-        @media (max-width: 744px) {
+        @media (max-width: 743px) {
           margin-bottom: 0;
           margin-right: 20px;
         }
+
+        @media (max-width: 743px) {
+          margin-bottom: 10px;
+        }
       }
 
-      @media (max-width: 360px) {
+      @media (max-width: 743px) {
         flex-direction: column;
+        align-items: flex-start;
+        margin-left: 50px;
       }
     }
 
@@ -131,15 +139,15 @@
       display: flex;
       gap: 20px;
 
-      @media (max-width: 360px) {
+      @media (max-width: 743px) {
         flex-wrap: wrap;
-        width: 50%;
+        width: 62%;
       }
 
       .item {
         display: flex;
 
-        @media (max-width: 360px) {
+        @media (max-width: 743px) {
           width: calc((100% - 20px) / 2);
           justify-content: center;
         }
@@ -148,7 +156,7 @@
           width: 40px;
           height: 40px;
 
-          @media (max-width: 360px) {
+          @media (max-width: 743px) {
             width: 30px;
             height: 30px;
           }
@@ -159,7 +167,7 @@
     .corp {
       font-size: 17px;
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
         display: none;
       }
     }
@@ -171,7 +179,7 @@
     margin-top: 40px;
     min-width: 365px;
 
-    @media (max-width: 744px) {
+    @media (max-width: 743px) {
       font-size: 12px;
       text-align: center;
       margin-top: 20px;
@@ -183,7 +191,7 @@
     font-size: 16px;
     margin-top: 40px;
 
-    @media (max-width: 744px) {
+    @media (max-width: 743px) {
       font-size: 12px;
       text-align: center;
       margin-top: 20px;
@@ -195,11 +203,11 @@
     font-size: 16px;
     margin-top: 40px;
 
-    @media (max-width: 744px) {
+    @media (max-width: 743px) {
       display: none;
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 743px) {
       font-size: 12px;
       text-align: center;
       margin-top: 20px;

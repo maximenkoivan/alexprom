@@ -4,14 +4,21 @@
   background: url("../../img/about-image.png") no-repeat right #fcfcfc;
   z-index: 1;
 
-  @media (max-width: 1440px) {
+  @media (min-width: 1921px) {
+    background: url("../../img/about-image.png") no-repeat 56% 0 #fcfcfc;
   }
 
-  @media (max-width: 744px) {
-    background: url("../../img/about-image-tablet.png") 100% 100% no-repeat #fbfbfb;
+  @media (max-width: 1919px) {
+    background: url("../../img/about-image-notebook.png") 100% 0 no-repeat #fbfbfb;
+    padding-bottom: 50px;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 1399px) {
+    background: url("../../img/about-image-tablet.png") 100% 82% no-repeat #fbfbfb;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 743px) {
     background: url("../../img/about-image-mobile.png") center bottom no-repeat #fbfbfb;
     padding: 30px 10px 300px;
   }
@@ -19,15 +26,24 @@
   .about-block {
 
     &__info {
-      width: 50%;
+      width: 60%;
       font-size: 23px;
       font-family: 'HelveticaNeueCyr';
       color: #283032;
       margin-bottom: 60px;
+      padding-right: 72px;
 
-      @media (max-width: 744px) {
+      @media (max-width: 1399px) {
+        width: 100%;
+        font-size: 17px;
+        margin-bottom: 30px;
+        padding-right: 0;
+      }
+
+      @media (max-width: 743px) {
         width: 100%;
         font-size: 15px;
+        margin-bottom: 30px;
       }
 
       p {
@@ -42,11 +58,11 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
 
       }
 
-      @media (max-width: 360px) {
+      @media (max-width: 743px) {
         width: 100%;
       }
     }
@@ -66,13 +82,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        //@media (max-width: 743px) {
+        //  width: 90px;
+        //  height: 90px;
+        //}
       }
 
       .text {
         font-family: 'HelveticaNeueCyr';
         font-size: 21px;
 
-        @media (max-width: 744px) {
+        @media (max-width: 1399px) {
           font-size: 15px;
         }
 

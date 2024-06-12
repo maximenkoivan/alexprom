@@ -1,15 +1,17 @@
 .faq-sections {
+  background: url("../../img/faq-sky.png") 0 0%/cover no-repeat;
+  box-shadow: inset 0em 4em 46px 8px #fff, inset 0em -18em 20px 12px #fff;
+  padding: 0 30px 1px;
 
-  @media (max-width: 1440px) {
-    margin: 0 50px;
-  }
-
-  @media (max-width: 744px) {
-    margin: 0 10px;
+  @media (max-width: 743px) {
+    padding: 0 10px;
+    background: url("../../img/how-work-sky-mobile.png") 0 0%/cover no-repeat;
   }
 }
 
 .faq {
+  position: relative;
+  z-index: 5;
 
   &__list {
     display: flex;
@@ -19,23 +21,79 @@
     margin-top: 50px;
     margin-bottom: 100px;
 
-    @media (max-width: 744px) {
-      margin-top: 15px;
-      margin-bottom: 30px;
+    @media (max-width: 1399px) {
+      margin: 15px 80px 30px;
+    }
+
+    @media (max-width: 743px) {
+      margin-left: 0;
+      margin-right: 0;
     }
 
     &--item {
       width: calc((100% - 30px) / 2);
-      border-radius: 75px;
-      border: 1px solid #9B9B9B;
-      padding: 30px 40px;
-      display: flex;
-      justify-content: space-between;
+      //display: flex;
+      //justify-content: space-between;
+      //flex-direction: column;
 
-      @media (max-width: 1440px) {
+      &.active {
+
+        .spoiler {
+          background: #ffffff;
+
+          .icon:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+        }
+
+        .info {
+          display: block;
+        }
+      }
+
+      @media (max-width: 1399px) {
         width: 100%;
         column-gap: 0;
-        padding: 20px 30px;
+        padding: 10px 20px;
+      }
+
+      @media (max-width: 743px) {
+        width: 100%;
+        column-gap: 0;
+        padding: 0;
+      }
+
+      .spoiler {
+        border-radius: 75px;
+        border: 1px solid #9B9B9B;
+        padding: 25px 38px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+
+        @media (max-width: 743px) {
+          padding: 10px 25px;
+        }
+      }
+
+      .info {
+        border: 1px solid #9B9B9B;
+        padding: 25px 38px;
+        color: #283032;
+        font-family: 'HelveticaNeueCyr';
+        font-size: 20px;
+        border-radius: 20px;
+        background: #ffffff;
+        display: none;
+        margin-top: 17px;
+
+        @media (max-width: 743px) {
+          font-size: 14px;
+          padding: 10px 25px;
+        }
       }
 
       .text {
@@ -43,7 +101,7 @@
         font-family: 'HelveticaNeueCyr';
         font-size: 20px;
 
-        @media (max-width: 744px) {
+        @media (max-width: 743px) {
           font-size: 14px;
         }
       }
@@ -67,13 +125,13 @@
           background: url("../../img/icons/plus.svg") no-repeat;
           background-size: cover;
 
-          @media (max-width: 744px) {
+          @media (max-width: 743px) {
             width: 10px;
             height: 10px;
           }
         }
 
-        @media (max-width: 744px) {
+        @media (max-width: 743px) {
           min-width: 32px;
           width: 32px;
           height: 32px;

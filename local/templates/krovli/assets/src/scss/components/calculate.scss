@@ -2,18 +2,37 @@
   background-image: url("../../img/calculate-bg.png");
   background-repeat: no-repeat;
   background-position: center right;
-  padding-top: 100px;
-  padding-bottom: 150px;
   background-color: #f9fafa;
+  position: relative;
+  padding: 100px 30px 150px;
 
-  @media (max-width: 744px) {
-    background-image: url("../../img/calculate-bg-tablet.png");
-    padding: 30px 30px;
+  @media (min-width: 1921px) {
+    background-position: center center;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 1440px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 743px) {
     background-image: url("../../img/calculate-bg-mobile.png");
     padding: 30px 10px;
+  }
+
+  .block-ellipse {
+    position: absolute;
+    top: -330px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 743px) {
+      top: -65px;
+    }
   }
 }
 
@@ -23,7 +42,11 @@
   flex-direction: column;
   padding-left: 425px;
 
-  @media (max-width: 744px) {
+  @media (max-width: 1399px) {
+    padding-left: 0;
+  }
+
+  @media (max-width: 743px) {
     padding-left: 0;
   }
 
@@ -35,6 +58,10 @@
       top: 0;
       left: -120px;
       z-index: 1;
+
+      @media (max-width: 1600px) {
+        left: -70px;
+      }
     }
 
     .tablet,
@@ -44,26 +71,33 @@
 
     img {
 
-      @media (max-width: 744px) {
+      @media (max-width: 743px) {
         width: 100%;
       }
     }
 
-    @media (max-width: 744px) {
+    @media (max-width: 1399px) {
+      .desktop {
+        display: none;
+      }
+
       .tablet {
+        position: absolute;
         display: block;
         width: 453px;
         left: -30px;
-        top: 335px;
+        top: 420px;
       }
+    }
 
+    @media (max-width: 743px) {
       .desktop,
       .mobile {
         display: none;
       }
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 743px) {
 
       .desktop,
       .tablet {
@@ -76,7 +110,7 @@
         display: block;
         width: 243px;
         left: -10px;
-        bottom: 210px;
+        top: 220px;
       }
     }
   }
@@ -88,12 +122,16 @@
     font-family: 'HelveticaNeueCyr';
     color: #283032;
 
-    @media (max-width: 744px) {
+    @media (max-width: 1600px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 743px) {
       font-size: 21px;
     }
 
-    @media (max-width: 360px) {
-      width: 50%;
+    @media (max-width: 743px) {
+      width: 60%;
       font-size: 15px;
       padding-bottom: 275px;
     }
@@ -111,16 +149,21 @@
     z-index: 5;
     position: relative;
 
-    @media (max-width: 744px) {
+    @media (max-width: 1399px) {
       flex-direction: row;
       padding-bottom: 300px;
+
+      .btn {
+        font-size: 12px;
+      }
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 743px) {
       flex-direction: column;
       gap: 15px;
       align-items: center;
       justify-content: center;
+      padding-bottom: 0;
 
       .btn {
         width: 275px;
