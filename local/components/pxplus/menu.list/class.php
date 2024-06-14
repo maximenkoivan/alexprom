@@ -85,6 +85,7 @@ class Rating extends CBitrixComponent
                         'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
                         'ACTIVE' => 'Y',
                         'SECTION_ID' => $sectionId,
+                        '!PROPERTY_MENUHIDE'=>28
                     ];
 
                     $rsElements = CIBlockElement::GetList(
@@ -159,6 +160,7 @@ class Rating extends CBitrixComponent
                 'DETAIL_PAGE_URL',
                 'IBLOCK_SECTION_ID',
                 'UF_*',
+                '!PROPERTY_MENUHIDE'=>28
             ];
             $arFilter = [
                 'ID' => $this->arParams['ID'],
