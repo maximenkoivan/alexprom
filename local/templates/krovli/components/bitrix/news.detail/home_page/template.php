@@ -8,13 +8,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 
 include '_promo.php';
-include '_problems.php';
-include '_order.php';
-include '_team.php';
-include '_presentation.php';
-include '_video.php';
-include '_type.php';
-include '_permissions.php';
+include '_about.php';
+include '_how-work.php';
+include '_calculate.php';
+include '_services.php';
+include '_faq.php';
+include '_portfolio.php';
 include '_reviews.php';
-include '_application.php';
-include '_map.php';
+include '_questions.php';
+include '_contact.php';

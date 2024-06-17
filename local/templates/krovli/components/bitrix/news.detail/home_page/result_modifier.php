@@ -11,5 +11,5 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 
-$arResult['FORM_SETTINGS'] = FormSettings::getInstance()->getElementPropertiesByCode('settings');
-$arResult['REVIEWS'] = Reviews::getInstance()->getAllElements();
+//$arResult['FORM_SETTINGS'] = FormSettings::getInstance()->getElementPropertiesByCode('settings');
+//$arResult['REVIEWS'] = Reviews::getInstance()->getAllElements();
