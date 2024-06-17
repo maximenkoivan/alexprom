@@ -12,7 +12,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 ?>
 <section class="how-work-sections">
     <div class="block-ellipse">
-        <img src="img/block-ellipse.png" alt="">
+        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/block-ellipse.png" alt="">
     </div>
     <div class="how-work">
         <div class="title big ta-c">
@@ -21,7 +21,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="pic"></div>
         <div class="permissions-wrap">
             <div class="big-arrows">
-                <img src="img/icons/arrows-big.svg" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/arrows-big.svg" alt="">
             </div>
             <div class="container permissions">
                 <div class="permissions__left">
@@ -34,7 +34,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </div>
                 <div class="permissions__center">
                     <div class="permissions__center-pic">
-                        <img src="img/permission-pic.png" alt="">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/permission-pic.png" alt="">
                     </div>
                     <ul class="permissions-list">
                         <li class="item">С физическими лицами</li>
@@ -47,28 +47,28 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <div class="swiper swiperCertificates">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/cert.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/cert.png" alt="">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>

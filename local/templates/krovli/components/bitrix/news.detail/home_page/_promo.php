@@ -33,7 +33,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
     <div class="top-index-sections__inform">
         <div class="block-ellipse">
-            <img src="img/block-ellipse.png" alt="">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/block-ellipse.png" alt="">
         </div>
         <div class="container">
             <div class="index-inform">
@@ -44,7 +44,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <div class="item">
                         <div class="advantage">
                             <div class="advantage__pic">
-                                <img src="img/advantage-1.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/advantage-1.png" alt="">
                             </div>
                             <div class="advantage__info">
                                 Монтаж и ремонт<br><span>в любую погоду</span>
@@ -54,7 +54,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <div class="item">
                         <div class="advantage">
                             <div class="advantage__pic">
-                                <img src="img/advantage-2.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/advantage-2.png" alt="">
                             </div>
                             <div class="advantage__info">
                                 <span>Экономия до 25%</span><br>на материале и работах
@@ -64,7 +64,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <div class="item">
                         <div class="advantage">
                             <div class="advantage__pic">
-                                <img src="img/advantage-3.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/advantage-3.png" alt="">
                             </div>
                             <div class="advantage__info">
                                 <span>Бесплатный выезд</span><br> замерщика в Москве и МО
@@ -74,7 +74,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <div class="item">
                         <div class="advantage">
                             <div class="advantage__pic">
-                                <img src="img/advantage-4.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/advantage-4.png" alt="">
                             </div>
                             <div class="advantage__info">
                                 Штатные кровельщики<br><span> со стажем от 5 лет</span>

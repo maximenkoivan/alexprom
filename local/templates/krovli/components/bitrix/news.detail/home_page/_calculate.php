@@ -12,7 +12,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 ?>
 <section class="calculate-sections">
     <div class="block-ellipse">
-        <img src="img/block-ellipse.png" alt="">
+        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/block-ellipse.png" alt="">
     </div>
     <div class="container">
         <div class="calculate">
@@ -23,9 +23,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 в наших калькуляторах — <span>это интересно и бесплатно</span>
             </div>
             <div class="calculate__pic">
-                <img class="desktop" src="img/tablet.png" alt="">
-                <img class="tablet" src="img/tablet-tablet.png" alt="">
-                <img class="mobile" src="img/tablet-mobile.png" alt="">
+                <img class="desktop" src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/tablet.png" alt="">
+                <img class="tablet" src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/tablet-tablet.png" alt="">
+                <img class="mobile" src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/tablet-mobile.png" alt="">
             </div>
             <div class="calculate__buttons">
                 <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#" type="submit">

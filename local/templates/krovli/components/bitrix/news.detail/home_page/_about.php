@@ -21,20 +21,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div>
         <div class="about-block__pics">
             <div class="about-block__item about-block__item-blue">
-                <div class="icon"><img src="../../img/icons/about-1.svg" alt=""></div>
+                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/about-1.svg" alt=""></div>
                 <div class="text"><span>500+ выполненных</span><br> работ</div>
             </div>
             <div class="about-block__item about-block__item-orange">
-                <div class="icon"><img src="../../img/icons/about-2.svg" alt=""></div>
+                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/about-2.svg" alt=""></div>
                 <div class="text"><span>Работа по договору</span><br>
                     с гарантией качества</div>
             </div>
             <div class="about-block__item about-block__item-orange">
-                <div class="icon"><img src="../../img/icons/about-3.svg" alt=""></div>
+                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/about-3.svg" alt=""></div>
                 <div class="text"><span>Выгодная цена</span> на<br> монтаж и материалы</div>
             </div>
             <div class="about-block__item about-block__item-blue">
-                <div class="icon"><img src="../../img/icons/about-4.svg" alt=""></div>
+                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/about-4.svg" alt=""></div>
                 <div class="text"><span>4,83 рейтинг</span> по всем<br> карточкам и отзывам</div>
             </div>
         </div>
