@@ -7,7 +7,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<!-- Modal -->
+
 <div class="modal fade calculator" id="calculator" tabindex="-1" aria-labelledby="calculator" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -176,7 +176,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </div>
                         <div class="prize ">
                             <div class="box">
-                                <img src="../../img/calculator.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/calculator.png" alt="">
                             </div>
                             <div class="text">
                                 <div class="text__title">Ремонт кровли</div>
@@ -191,7 +191,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade feedback" id="feedback" tabindex="-1" aria-labelledby="feedback" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -236,7 +236,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade callback" id="callback" tabindex="-1" aria-labelledby="callback" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -268,31 +268,31 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                     <div class="tab__info roof">
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
@@ -311,31 +311,31 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                     <div class="tab__info roof">
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="../../img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
@@ -547,7 +547,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                 <p>После заполнения с вами свяжется наш специалист для консультации.</p>
                             </div>
                             <div class="box">
-                                <img src="../../img/prize.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/prize.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -557,7 +557,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade confirm" id="confirm" tabindex="-1" aria-labelledby="confirm" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -576,7 +576,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade video-play" id="video-play" tabindex="-1" aria-labelledby="video-play" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
