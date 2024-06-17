@@ -132,5 +132,27 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "USE_SHARE" => "N"
     )
 ); ?>
+<script defer>
+    (function() {
+        var ru = "ru";
+        var myReviewsInit = function() {
+            new window.myReviews.BlockWidget({
+                uuid: "0c1e0f0d-d9ee-42f5-b967-06ba22289cb9",
+                name: "g6281212",
+                additionalFrame: "none",
+                lang: "ru",
+                widgetId: "0"
+            }).init();
+
+        };
+        if (document.readyState === "loading") {
+            document.addEventListener('DOMContentLoaded', function() {
+                myReviewsInit()
+            })
+        } else {
+            myReviewsInit()
+        }
+    })()
+</script>
 </body>
 </html>

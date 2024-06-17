@@ -29,6 +29,9 @@ $asset->addCss(SITE_TEMPLATE_PATH . '/assets/build/css/style.min.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/build/css/libs.min.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/assets/build/js/main.min.js', true);
 $asset->addJs(SITE_TEMPLATE_PATH . '/assets/build/js/libs.min.js', true);
+$asset->addJs('https://myreviews.dev/widget/dist/index.js', true);
+$asset->addJs('https://code.jquery.com/jquery-3.7.1.min.js', true);
+$asset->addJs('https://myreviews.dev/widget/dist/index.js', true);
 $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
 <!DOCTYPE html>
