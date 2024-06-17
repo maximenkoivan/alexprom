@@ -1,12 +1,12 @@
 <?php
 
-namespace classes\Models\Snow\Feedback;
+namespace classes\Models\Roofs\Feedback;
 
 use classes\Base\Iblock;
 
 class FormSettings extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'snow';
+    protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'feedback_settings';
 
