@@ -71,6 +71,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         </a>
     </div>
 </footer>
+<a href="https://wa.me/79255322311" target="_blank" class="wa-call"></a>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "modal",

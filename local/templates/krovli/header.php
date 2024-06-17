@@ -25,10 +25,10 @@ $asset->addString(
 );
 
 $asset->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-$asset->addCss(SITE_TEMPLATE_PATH . '/assets/build/html/css/style.min.css');
-$asset->addCss(SITE_TEMPLATE_PATH . '/assets/build/html/css/libs.min.css');
-$asset->addJs(SITE_TEMPLATE_PATH . '/assets/build/html/js/main.min.js', true);
-$asset->addJs(SITE_TEMPLATE_PATH . '/assets/build/html/js/libs.min.js', true);
+$asset->addCss(SITE_TEMPLATE_PATH . '/assets/build/css/style.min.css');
+$asset->addCss(SITE_TEMPLATE_PATH . '/assets/build/css/libs.min.css');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/build/js/main.min.js', true);
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/build/js/libs.min.js', true);
 $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
 <!DOCTYPE html>
