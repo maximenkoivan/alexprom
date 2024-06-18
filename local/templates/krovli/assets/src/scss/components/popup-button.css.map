@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,aAAc;EACZ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,GAAG,EAAE,IAAI;EAET,iBAAI;IACF,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI",
-"sources": ["popup-button.scss"],
-"names": [],
-"file": "popup-button.css"
-}

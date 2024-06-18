@@ -1,0 +1,18 @@
+.tag-block {
+  position: sticky;
+  top: 15px;
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--base-color-black);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 15px;
+  }
+}

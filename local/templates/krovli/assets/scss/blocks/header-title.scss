@@ -1,0 +1,27 @@
+.header-title {
+  text-align: center;
+  position: relative;
+
+  &__link {
+    margin-top: 20px;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+
+      &.none {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      &.none {
+        display: none;
+      }
+    }
+  }
+}

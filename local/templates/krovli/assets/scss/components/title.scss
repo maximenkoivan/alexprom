@@ -1,0 +1,51 @@
+.title {
+  font-size: 68px;
+  color: var(--base-color-title-font);
+  font-family: 'Kenyan Coffee Rg';
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: normal;
+
+  @media (max-width: 743px) {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  span {
+    font-family: 'Kenyan Coffee Rg';
+    color: var(--base-color-subtitle-font);
+  }
+
+  &.ta-c {
+    text-align: center;
+  }
+
+  &.big {
+    font-size: 84px;
+
+    @media (max-width: 1600px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 743px) {
+      font-size: 40px;
+      letter-spacing: 2px;
+    }
+  }
+
+  &.min {
+    font-size: 45px;
+  }
+
+  &.foot {
+    font-size: 27px;
+    color: var(--base-color-white);
+    margin-right: 10px;
+
+    @media (max-width: 743px) {
+      font-size: 20px;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
