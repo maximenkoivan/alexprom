@@ -28,7 +28,7 @@
   justify-content: center;
   transition: all 0.2s linear;
   overflow: hidden;
-  background: url('../../img/wa-call.png') /cover no-repeat;
+  background: url('/local/templates/krovli/assets/images/wa-call.png') /cover no-repeat;
 
   @media (max-width: 743px) {
     width: 45px;
@@ -69,7 +69,7 @@
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 11px;
     height: 17px;
-    background: url('../../img/icons/swiper-arrow.svg') /cover no-repeat;
+    background: url('/local/templates/krovli/assets/images/icons/swiper-arrow.svg') /cover no-repeat;
   }
 }
 

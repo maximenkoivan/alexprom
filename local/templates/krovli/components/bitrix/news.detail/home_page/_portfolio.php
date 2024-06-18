@@ -21,20 +21,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/video-box.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
                             <div class="play-cover" data-bs-toggle="modal" data-bs-target="#video-play">
                                 <div class="play-cover__icon"></div>
                             </div>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                         </div>
                         <div class="info-box">
@@ -48,20 +48,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                     <div class="swiper-slide">
                         <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/video-box.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
                             <a href="/" class="play-cover" target="_blank">
                                 <div class="play-cover__icon"></div>
                             </a>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                         </div>
                         <div class="info-box">
@@ -75,20 +75,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                     <div class="swiper-slide">
                         <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/video-box.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
                             <a href="/" class="play-cover" target="_blank">
                                 <div class="play-cover__icon"></div>
                             </a>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                         </div>
                         <div class="info-box">
@@ -102,20 +102,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                     <div class="swiper-slide">
                         <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/video-box.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
                             <a href="/" class="play-cover" target="_blank">
                                 <div class="play-cover__icon"></div>
                             </a>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                             <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/pic-box.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
                             </div>
                         </div>
                         <div class="info-box">

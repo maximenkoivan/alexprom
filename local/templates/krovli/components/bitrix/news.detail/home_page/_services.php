@@ -18,7 +18,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="services__list">
             <div class="services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
                 </div>
                 <div class="info__wrap">
                     <div class="info">
@@ -29,7 +29,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
                 </div>
                 <div class="info__wrap">
                     <div class="info">
@@ -40,7 +40,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
                 </div>
                 <div class="info__wrap">
                     <div class="info">
@@ -51,7 +51,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
                 </div>
                 <div class="info__wrap">
                     <div class="info">
@@ -62,7 +62,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
                 </div>
                 <div class="info__wrap">
                     <div class="info">
@@ -73,7 +73,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
                 </div>
                 <div class="info__wrap">
                     <div class="info">
@@ -99,7 +99,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="add-services__list">
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -111,7 +111,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -123,7 +123,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -135,7 +135,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -147,7 +147,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -159,7 +159,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -171,7 +171,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>
@@ -183,7 +183,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="add-services__list--item">
                 <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/add-services-bg.png" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
                 </div>
                 <div class="info">
                     <div class="info__title">Герметизация кровли</div>

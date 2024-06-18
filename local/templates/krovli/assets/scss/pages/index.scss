@@ -2,24 +2,6 @@
   margin-top: -121px;
   padding-top: 121px;
 
-  @media (min-width: 1921px) {
-    background:
-            url("/local/templates/krovli/assets/images/top-image-sky.png") center bottom no-repeat,
-            url("/local/templates/krovli/assets/images/top-image.png") top center no-repeat;
-  }
-
-  @media (max-width: 1399px) {
-    margin-top: -153px;
-    padding-top: 153px;
-    background: radial-gradient(circle, #fff 8%, #fff 5%, transparent 27%) -70% 112% / 92% 139% no-repeat, url(/local/templates/krovli/assets/images/top-image-tablet.png) center 13% / 125%  no-repeat;
-  }
-
-  @media (max-width: 743px) {
-    margin-top: -135px;
-    padding-top: 135px;
-    background: url("/local/templates/krovli/assets/images/top-image-mobile.png") 100% 0 no-repeat #f9fafa;
-  }
-
   .btn-orange {
     display: none;
 
@@ -105,25 +87,7 @@
   &__inform {
     position: relative;
     padding: 20px 30px;
-    //background-color: #e3f6ff;
-
-    @media (max-width: 1399px) {
-      padding: 20px 40px 20px;
-      background: url(../../img/advantage-image-man-tablet.png) center 103%/113% auto no-repeat,
-      url(../../img/advantage-image-sky-tablet.png) center bottom/cover no-repeat
-    }
-
-    @media (max-width: 1100px) {
-      padding: 20px 40px 20px;
-      background: url(../../img/advantage-image-man-tablet.png) center 103%/1300px auto no-repeat,
-      url(../../img/advantage-image-sky-tablet.png) center bottom/cover no-repeat
-    }
-
-    @media (max-width: 743px) {
-      padding: 10px 10px 20px;
-      background: url(../../img/advantage-image-man-tablet.png) center 103%/740px auto no-repeat,
-      url(../../img/advantage-image-sky-tablet.png) center bottom/cover no-repeat
-    }
+    background-color: #e3f6ff;
 
     .title {
       //@media (max-width: 743px) {

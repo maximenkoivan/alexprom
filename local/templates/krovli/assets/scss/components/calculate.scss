@@ -1,5 +1,5 @@
 .calculate-sections {
-  background-image: url("../../img/calculate-bg.png");
+  background-image: url("/local/templates/krovli/assets/images/calculate-bg.png");
   background-repeat: no-repeat;
   background-position: center right;
   background-color: #f9fafa;
@@ -15,7 +15,7 @@
   }
 
   @media (max-width: 743px) {
-    background-image: url("../../img/calculate-bg-mobile.png");
+    background-image: url("/local/templates/krovli/assets/images/calculate-bg-mobile.png");
     padding: 30px 10px;
   }
 

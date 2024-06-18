@@ -97,7 +97,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
         </div>
         <?php if (!empty($header['TEXT_BTN_HEADER']['~VALUE'])): ?>
             <div class="header-block__right">
-                <button class="btn btn-orange d-xl-block" data-bs-toggle="modal" data-bs-target="#callback"
+                <button class="btn btn-orange d-xl-block" data-custom-open="callback"
                         type="submit">
                     <?= $header['TEXT_BTN_HEADER']['~VALUE'] ?>
                 </button>

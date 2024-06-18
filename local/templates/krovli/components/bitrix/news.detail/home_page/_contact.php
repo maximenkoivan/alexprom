@@ -17,13 +17,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     <div class="map-wrap">
         <div class="address-tab">
             <div class="logo">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/logo.svg" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/logo.svg" alt="">
             </div>
             <div class="info">Москва, <span>ул. Бойцовая, д.22</span>, этаж 2, пом.V, комн.9, офис 4 г</div>
             <div class="email">
                 <div class="ellipse-icon">
                     <div class="ellipse-icon__pic">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/email.svg" alt="email-icon">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/email.svg" alt="email-icon">
                     </div>
                 </div>
                 zakaz@alexprom.ru
@@ -31,7 +31,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div class="phone">
                 <div class="ellipse-icon">
                     <div class="ellipse-icon__pic">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/icons/phone.svg" alt="phone-icon">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/phone.svg" alt="phone-icon">
                     </div>
                 </div>
                 <a class="" href="tel:+7 (495) 109-02-42">+7 (495) 109-02-42</a>

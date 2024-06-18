@@ -1,25 +1,25 @@
 .sections-about {
   position: relative;
   padding: 70px 30px 100px 30px;
-  background: url("../../img/about-image.png") no-repeat right #fcfcfc;
+  background: url("/local/templates/krovli/assets/images/about-image.png") no-repeat right #fcfcfc;
   z-index: 1;
 
   @media (min-width: 1921px) {
-    background: url("../../img/about-image.png") no-repeat 56% 0 #fcfcfc;
+    background: url("/local/templates/krovli/assets/images/about-image.png") no-repeat 56% 0 #fcfcfc;
   }
 
   @media (max-width: 1919px) {
-    background: url("../../img/about-image-notebook.png") 100% 0 no-repeat #fbfbfb;
+    background: url("/local/templates/krovli/assets/images/about-image-notebook.png") 100% 0 no-repeat #fbfbfb;
     padding-bottom: 50px;
   }
 
   @media (max-width: 1399px) {
-    background: url("../../img/about-image-tablet.png") 100% 82% no-repeat #fbfbfb;
+    background: url("/local/templates/krovli/assets/images/about-image-tablet.png") 100% 82% no-repeat #fbfbfb;
     padding-bottom: 50px;
   }
 
   @media (max-width: 743px) {
-    background: url("../../img/about-image-mobile.png") center bottom no-repeat #fbfbfb;
+    background: url("/local/templates/krovli/assets/images/about-image-mobile.png") center bottom no-repeat #fbfbfb;
     padding: 30px 10px 300px;
   }
 

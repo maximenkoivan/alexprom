@@ -10,9 +10,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<section style="background:url('/local/templates/krovli/assets/images/top-image-sky.png') center bottom no-repeat,
-url('/local/templates/krovli/assets/images/top-image.png') top right no-repeat;" class="top-index-sections">
+<section class="top-index-sections">
     <div class="top-index-sections__form">
+        <div class="bg bg--promo">
+            <img src="/local/templates/krovli/assets/images/top-image.png" alt=" ">
+            <img class="promo-sky" src="/local/templates/krovli/assets/images/top-image-sky.png" alt=" ">
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col">
@@ -22,19 +25,19 @@ url('/local/templates/krovli/assets/images/top-image.png') top right no-repeat;"
                     <div class="guarantee">
                         *Предоставляется <span>гарантия до<br> 36 мес.</span> на все виды работ
                     </div>
-                    <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#calculator" type="submit">
+                    <button class="btn btn-blue" data-custom-open="calculator" type="submit">
                         Рассчитать стоимость
                     </button>
-                    <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#callback" type="submit">
+                    <button class="btn btn-orange" data-custom-open="calculator" type="submit">
                         Заказать звонок
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="top-index-sections__inform" style="background: #fcfcfc url('/local/templates/krovli/assets/images/advantage-image.png') no-repeat center bottom;">
-        <div class="block-ellipse">
-            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/block-ellipse.png" alt="">
+    <div class="top-index-sections__inform">
+        <div class="bg bg--section-2">
+            <img src="/local/templates/krovli/assets/images/advantage-image.png" alt=" ">
         </div>
         <div class="container">
             <div class="index-inform">

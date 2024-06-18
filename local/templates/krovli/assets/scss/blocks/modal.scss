@@ -100,16 +100,16 @@
 
     .modal-content {
       border-radius: 20px;
-      background: url("../../img/modal-bg-man.png") right bottom no-repeat, url("../../img/modal-bg-sky.png") center center/cover no-repeat;
+      background: url("/local/templates/krovli/assets/images/modal-bg-man.png") right bottom no-repeat, url("../../img/modal-bg-sky.png") center center/cover no-repeat;
       width: 100%;
       height: 100%;
 
       @media (max-width: 1399px) {
-        background: url("../../img/modal-bg-man-tablet.png") center bottom no-repeat, url("../../img/modal-bg-sky.png") center center/cover no-repeat;
+        background: url("/local/templates/krovli/assets/images/modal-bg-man-tablet.png") center bottom no-repeat, url("../../img/modal-bg-sky.png") center center/cover no-repeat;
       }
 
       @media (max-width: 743px) {
-        background: url("../../img/modal-bg-man-mobile.png") center bottom no-repeat, url("../../img/modal-bg-sky.png") center center/cover no-repeat;
+        background: url("/local/templates/krovli/assets/images/modal-bg-man-mobile.png") center bottom no-repeat, url("../../img/modal-bg-sky.png") center center/cover no-repeat;
       }
 
       .modal-body {

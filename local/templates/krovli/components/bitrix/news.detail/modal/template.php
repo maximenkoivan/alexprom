@@ -8,11 +8,21 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 
-<div class="modal fade calculator" id="calculator" tabindex="-1" aria-labelledby="calculator" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
+<div id="calculator"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <div class="modal__container modal__container--callback" role="dialog" aria-modal="true">
             <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <a href="#"
+                   class="modal__close"
+                   aria-label="Close modal"
+                   data-custom-close>
+                    <svg data-custom-close height="30" width="30" class="call__icon">
+                        <use xlink:href="#icon-x"></use>
+                    </svg>
+                </a>
             </div>
             <div class="modal-body">
                 <div class="contact-block container">
@@ -176,7 +186,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </div>
                         <div class="prize ">
                             <div class="box">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/calculator.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/calculator.png" alt="">
                             </div>
                             <div class="text">
                                 <div class="text__title">Ремонт кровли</div>
@@ -191,53 +201,42 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </div>
 
-
-<div class="modal fade feedback" id="feedback" tabindex="-1" aria-labelledby="feedback" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="contact-block container">
-
-                    <div class="questions">
-                        <div class="title big">
-                            остались <span>вопросы?</span>
-                        </div>
-                        <p>Оставьте заявку и мы свяжемся с вами <span>в ближайшее время</span></p>
-                        <div class="questions__form">
-                            <div class="form-index-block">
-                                <form class="form-index col gx-5">
-                                    <div class="form-field">
-                                        <input type="text" class="form-control " id="inputName" placeholder="Имя" required>
-                                    </div>
-                                    <div class="form-field">
-                                        <input type="tel" class="form-control " id="inputPhone" placeholder="Телефон" required>
-                                    </div>
-                                    <button class="btn btn-blue form-field" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                                        заказать услугу
-                                    </button>
-                                    <div class="form-field__text">
-                                        <p>
-                                            Нажимая на данную кнопку, вы даете согласие на обработку<br>
-                                            персональных данных подтверждаете ознакомление с<br>
-                                            политикой конфиденциальности
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+<div id="callback"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <div class="modal__container modal__container--callback" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <div class="title">
+                    остались <span>вопросы?</span>
                 </div>
+            </header>
+            <div class="form-index-block">
+                <form action="/request/test.php" class="form-index col gx-5">
+                    <div data-form-group class="form-group">
+                        <input name="name" type="text" class="form-control" id="inputName" placeholder="Имя" required>
+                    </div>
+                    <div data-form-group class="form-group">
+                        <input data-phone-mask name="phone" type="tel" class="form-control" id="inputPhone" placeholder="Телефон" required>
+                    </div>
+                    <button class="btn btn-blue" data-send-request="callback" type="submit">
+                        заказать услугу
+                    </button>
+                    <div class="form-group__text">
+                        <p>
+                            Нажимая на данную кнопку, вы даете согласие на обработку<br>
+                            персональных данных подтверждаете ознакомление с<br>
+                            политикой конфиденциальности
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
-
-<div class="modal fade callback" id="callback" tabindex="-1" aria-labelledby="callback" aria-hidden="true">
+<div class="modal fade callback" id="callback-old" tabindex="-1" aria-labelledby="callback" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -268,31 +267,31 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                     <div class="tab__info roof">
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Односкатная</div>
                                         </div>
@@ -311,31 +310,31 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                     <div class="tab__info roof">
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
                                         <div class="roof__item">
                                             <div class="pic">
-                                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/roof-1.png" alt="">
+                                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/roof-1.png" alt="">
                                             </div>
                                             <div class="desc">Металлочерепица</div>
                                         </div>
@@ -547,7 +546,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                 <p>После заполнения с вами свяжется наш специалист для консультации.</p>
                             </div>
                             <div class="box">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/build/img/prize.png" alt="">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/prize.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -557,25 +556,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </div>
 
-
-<div class="modal fade confirm" id="confirm" tabindex="-1" aria-labelledby="confirm" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="contact-block container">
-                    <div class="title">
-                        Спасибо за обращение в компанию ООО "Алекспром". <span>Мы свяжемся с вами в ближайшее время</span>
-                    </div>
+<div id="modal-ok"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <div class="modal__container modal__container--callback" role="dialog" aria-modal="true">
+            <div class="contact-block container">
+                <div class="title">
+                    Спасибо за обращение в компанию ООО "Алекспром". <span>Мы свяжемся с вами в ближайшее время</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="modal fade video-play" id="video-play" tabindex="-1" aria-labelledby="video-play" aria-hidden="true">
     <div class="modal-dialog">
