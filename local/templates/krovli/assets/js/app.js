@@ -57,3 +57,20 @@ new Tabs();
 new Video();
 new ScrollTop();
 $.order = new Order();
+
+
+const spoilers = document.querySelectorAll( '.spoiler');
+
+for (let spoiler of spoilers) {
+    spoiler.addEventListener( 'click', () => {
+        spoilerButtonClick(spoiler);
+    })
+}
+
+function spoilerButtonClick(element) {
+    if (element.parentElement.classList.contains('active')) {
+        element.parentElement.classList.remove('active');
+    } else {
+        element.parentElement.classList.add('active')
+    }
+}

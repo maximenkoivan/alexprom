@@ -3,7 +3,7 @@
  * Слайдер с несколькими элементами
  */
 import Swiper from "swiper";
-import {Autoplay, EffectFade} from "swiper/modules";
+import {Autoplay, EffectFade, Pagination, Navigation} from "swiper/modules";
 
 class ListSlider {
     constructor() {
@@ -60,23 +60,28 @@ class ListSlider {
 
                     return false;
 
-                case 'promo':
+                case 'cert':
                     params = {
-                        modules: [Autoplay, EffectFade],
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                        loop: true,
+                        modules: [Navigation],
+                        slidesPerView: 'auto',
+                        spaceBetween: 10,
+                        loop: false,
                         autoHeight: false,
-                        speed: 2000,
-                        allowTouchMove: false,
-                        effect: 'fade',
-                        fadeEffect: {
-                            crossFade: true
+                        navigation: {
+                            nextEl: $next,
+                            prevEl: $prev,
                         },
-                        autoplay: {
-                            delay: 2000,
-                            disableOnInteraction: false
-                        },
+                        breakpoints: {
+                            // when window width is >=
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 15
+                            },
+                            991: {
+                                slidesPerView: 5,
+                                spaceBetween: 20
+                            },
+                        }
                     }
 
                     break;

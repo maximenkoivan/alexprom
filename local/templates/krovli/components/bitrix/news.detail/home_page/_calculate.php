@@ -23,9 +23,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 в наших калькуляторах — <span>это интересно и бесплатно</span>
             </div>
             <div class="calculate__pic">
-                <img class="desktop" src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/tablet.png" alt="">
-                <img class="tablet" src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/tablet-tablet.png" alt="">
-                <img class="mobile" src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/tablet-mobile.png" alt="">
+                <img class="desktop" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/tablet.png" alt="">
+                <img class="tablet" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/tablet-tablet.png" alt="">
+                <img class="mobile" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/tablet-mobile.png" alt="">
             </div>
             <div class="calculate__buttons">
                 <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#" type="submit">

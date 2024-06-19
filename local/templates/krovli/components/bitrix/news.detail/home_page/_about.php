@@ -11,6 +11,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <div class="sections-about">
+    <div class="bg bg--about">
+        <img src="/local/templates/krovli/assets/images/about-image.png" alt=" ">
+    </div>
     <div class="container about-block">
         <div class="title big">
             О компании

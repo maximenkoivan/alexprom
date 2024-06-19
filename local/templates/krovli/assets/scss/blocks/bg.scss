@@ -22,4 +22,12 @@
             object-position: top center;
         }
     }
+
+    &--about {
+
+        img {
+            object-fit: contain;
+            object-position: top right;
+        }
+    }
 }
