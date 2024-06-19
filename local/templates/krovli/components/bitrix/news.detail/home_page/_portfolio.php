@@ -17,8 +17,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             портфолио
         </div>
         <div class="swiper-outside-wrap">
-            <div class="swiper swiperPortfolio">
+            <div class="swiper">
                 <div class="swiper-wrapper">
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div data-list-slider="portfolio" class="portfolio-slider">
+                <div class="swiper-wrapper portfolio-slider__wrapper">
                     <div class="swiper-slide">
                         <div class="video-box">
                             <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
@@ -129,9 +135,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div data-list-slider-prev class="portfolio-slider__btn-prev">
+                    <svg width="80" height="80">
+                        <use xlink:href="#icon-caret-left"></use>
+                    </svg>
+                </div>
+                <div data-list-slider-next class="portfolio-slider__btn-next">
+                    <svg width="80" height="80">
+                        <use xlink:href="#icon-caret-right"></use>
+                    </svg>
+                </div>
             </div>
-            <div class="swiperPortfolio__button-prev button-prev"></div>
-            <div class="swiperPortfolio__button-next button-next"></div>
         </div>
     </div>
 </section>

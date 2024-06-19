@@ -12,14 +12,18 @@
     &--promo {
         top: -250px;
 
-        .promo-sky {
-            position: absolute;
-            bottom: -2px;
-            width: 100%;
-        }
-
         img {
             object-position: top center;
+        }
+
+        .promo-sky {
+            position: absolute;
+            width: 100%;
+            top: calc(28% + 30px);
+
+            img {
+                object-position: bottom;
+            }
         }
     }
 

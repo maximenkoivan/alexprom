@@ -13,8 +13,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 <section class="top-index-sections">
     <div class="top-index-sections__form">
         <div class="bg bg--promo">
-            <img src="/local/templates/krovli/assets/images/top-image.png" alt=" ">
-            <img class="promo-sky" src="/local/templates/krovli/assets/images/top-image-sky.png" alt=" ">
+            <img src="/local/templates/krovli/assets/images/top-image.webp" alt=" ">
         </div>
         <div class="container">
             <div class="row">

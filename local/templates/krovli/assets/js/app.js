@@ -74,3 +74,16 @@ function spoilerButtonClick(element) {
         element.parentElement.classList.add('active')
     }
 }
+
+const videoPlayButtons = document.querySelectorAll( '.video-play');
+
+for (let button of videoPlayButtons) {
+    button.addEventListener( 'click', () => {
+        pauseVideo(button);
+    })
+}
+function pauseVideo(element) {
+    const iframe = element.getElementsByTagName('iframe')[0];
+    let temp = iframe.src;
+    iframe.src = temp;
+}

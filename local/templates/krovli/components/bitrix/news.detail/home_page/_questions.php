@@ -19,13 +19,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <p>Оставьте заявку и мы свяжемся с вами <span>в ближайшее время</span></p>
             <div class="questions__form">
                 <div class="form-index-block">
-                    <form class="form-index col gx-5">
-                        <div class="form-field">
-                            <input type="text" class="form-control " id="inputName" placeholder="Имя" required>
+                    <form action="/request/test.php" class="form-index col gx-5">
+                        <div data-form-group class="form-group">
+                            <input type="text" name="name" class="form-control" id="inputName" placeholder="Имя" required>
                         </div>
-                        <div class="form-field">
+                        <div data-form-group class="form-group">
                             <input
                                 type="tel"
+                                name="phone"
+                                data-phone-mask
                                 class="form-control"
                                 id="inputPhone"
                                 placeholder="Телефон"
@@ -34,7 +36,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                 maxlength="11"
                             >
                         </div>
-                        <button class="btn btn-blue form-field" type="submit">
+                        <button  data-ok-title='Спасибо за обращение в компанию ООО "Алекспром".' data-ok-text="Мы свяжемся с вами в ближайшее время" class="btn btn-blue form-field" data-send-request="question">
                             заказать услугу
                         </button>
                         <div class="form-field__text">

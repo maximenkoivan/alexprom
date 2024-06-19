@@ -42,7 +42,6 @@
   position: fixed;
   bottom: 50px;
   right: 50px;
-  z-index: 999;
   cursor: pointer;
   height: 60px;
   width: 60px;
@@ -50,26 +49,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   overflow: hidden;
   background: #FF8F64;
+  color: white;
+  z-index: 999999999999 !important;
+
+  &:hover {
+    color: white;
+  }
 
   @media (max-width: 743px) {
     width: 45px;
     height: 45px;
     right: 15px;
     bottom: 15px;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 11px;
-    height: 17px;
-    background: url('/local/templates/krovli/assets/images/icons/swiper-arrow.svg') /cover no-repeat;
   }
 }
 

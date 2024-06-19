@@ -71,7 +71,11 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         </a>
     </div>
 </footer>
-<div class="scroll-top" id="scrollTopButton" onclick="topFunction()"></div>
+<a class="scroll-top hidden" data-scrolltop>
+    <svg width="16" height="8">
+        <use xlink:href="#icon-arrow-top"></use>
+    </svg>
+</a>
 <a href="https://wa.me/79255322311" target="_blank" class="wa-call"></a>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",

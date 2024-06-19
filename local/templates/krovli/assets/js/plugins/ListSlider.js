@@ -86,6 +86,21 @@ class ListSlider {
 
                     break;
 
+                case 'portfolio':
+                    params = {
+                        modules: [Navigation],
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        loop: true,
+                        autoHeight: false,
+                        navigation: {
+                            nextEl: $next,
+                            prevEl: $prev,
+                        }
+                    }
+
+                    break;
+
                 case 'common':
                     params = {
                         slidesPerView: 1,
