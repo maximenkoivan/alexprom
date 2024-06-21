@@ -57,3 +57,33 @@ new Tabs();
 new Video();
 new ScrollTop();
 $.order = new Order();
+
+
+const spoilers = document.querySelectorAll( '.spoiler');
+
+for (let spoiler of spoilers) {
+    spoiler.addEventListener( 'click', () => {
+        spoilerButtonClick(spoiler);
+    })
+}
+
+function spoilerButtonClick(element) {
+    if (element.parentElement.classList.contains('active')) {
+        element.parentElement.classList.remove('active');
+    } else {
+        element.parentElement.classList.add('active')
+    }
+}
+
+const videoPlayButtons = document.querySelectorAll( '.video-play');
+
+for (let button of videoPlayButtons) {
+    button.addEventListener( 'click', () => {
+        pauseVideo(button);
+    })
+}
+function pauseVideo(element) {
+    const iframe = element.getElementsByTagName('iframe')[0];
+    let temp = iframe.src;
+    iframe.src = temp;
+}

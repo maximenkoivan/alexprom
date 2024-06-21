@@ -4,6 +4,7 @@
  */
 
 import tingle from 'tingle.js'
+import MicroModal from "micromodal";
 
 class NxRequest{
     constructor(element, options) {
@@ -270,17 +271,8 @@ class NxRequest{
         } else {
             switch (type) {
                 case 'callback':
-                // case 'callbackSnow':
-                // case 'discountSnow':
-                // case 'presentationSnow':
-                // case 'applicationSnow':
-                // case 'orderSnow':
 
-                    $modalCallback = document.querySelector('#modal-callback')
-
-                    $popupCall = $btn.closest('[data-popup]')
-
-                    if ($btn.closest('.call')) $popupBtn = $btn.closest('.call').querySelector('[data-open-popup]')
+                    MicroModal.close('callback')
 
                     $modalOk = new tingle.modal({
                         footer: true,
@@ -289,9 +281,6 @@ class NxRequest{
                         closeLabel: ""
                     });
                     $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
-                    $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
-                        $modalOk.close();
-                    });
                     break;
 
                 default:
@@ -305,9 +294,6 @@ class NxRequest{
                     });
 
                     if($okTitle && $okText) $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
-                    $modalOk.addFooterBtn('Закрыть', 'tingle-btn', function() {
-                        $modalOk.close();
-                    });
             }
 
             if ($modalOk){

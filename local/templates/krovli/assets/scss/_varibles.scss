@@ -261,7 +261,7 @@ $container-gutter: 50px;
 $container-gutter-sm: 30px;
 $container-gutter-xs: 20px;
 $container: (
-    max-width: 1400px,
+    max-width: 1500px,
     width-wo-gutter: 1200 - $container-gutter*2,
     min-width: 320px,
     width: 100%,
@@ -303,3 +303,34 @@ $font: (
     size: $fz-main,
     line-height: 1.4
 );
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1400px
+);
+
+$btn-close-width: 25px;
+$btn-close-color: #08021a;
+$btn-close-opacity: 1;
+
+:root {
+    --base-black-color: #323232;
+    --base-white-color: #ffffff;
+    --base-blue-color: #70C0FF;
+    --base-orange-color: #FF8F64;
+
+
+
+    --base-color-font: #4A4A4A;
+    --base-color-title-font: #323232;
+    --base-color-subtitle-font: #3DA9FE;
+    --base-color-active: #358bda;
+    --base-color-border: #d1d1d1;
+    --base-color-bg: #f1f6f8;
+    --base-color-white: #fffcf8;
+    --base-color-black: #000;
+    --base-color-disabled: #d1d1d1;
+    --base-color-bg-secondary: #e8f1f3;
+}

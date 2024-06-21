@@ -73,21 +73,23 @@ class Order {
             currentStep = step,
             progress = (currentStep * 100) / amt
 
-        this.$orderCounter.innerHTML = `<span>0${currentStep}</span><span> / 0${amt}</span>`
+        this.$orderProgress.style.width = `${progress}%`
+        this.$orderCounter.innerHTML = `${currentStep}/${amt}`
 
         if (currentStep < amt) this.$orderNext.setAttribute(`data-nav`, Number(step) + 1)
+        if (currentStep > 1) this.$orderPrev.setAttribute(`data-nav`, Number(step) - 1)
 
 
         if (currentStep != amt) {
-            this.$order.classList.remove(this.className.send)
-            this.$orderNext.classList.remove(this.className.hidden)
-            this.$sendBtn.classList.add(this.className.hidden)
-            this.$note.classList.add(this.className.hidden)
+            this.$order?.classList.remove(this.className.send)
+            this.$orderNext?.classList.remove(this.className.hidden)
+            this.$sendBtn?.classList.add(this.className.hidden)
+            this.$note?.classList.add(this.className.hidden)
         } else {
-            this.$order.classList.add(this.className.send)
-            this.$orderNext.classList.add(this.className.hidden)
-            this.$sendBtn.classList.remove(this.className.hidden)
-            this.$note.classList.remove(this.className.hidden)
+            this.$order?.classList.add(this.className.send)
+            this.$orderNext?.classList.add(this.className.hidden)
+            this.$sendBtn?.classList.remove(this.className.hidden)
+            this.$note?.classList.remove(this.className.hidden)
         }
     }
 
@@ -108,7 +110,12 @@ class Order {
                     if (input.checked) checked++
                 })
 
-                this.changeStep(step)
+                if (checked === 0) {
+                    formGroup.classList.add(this.className.error)
+                } else {
+                    formGroup.classList.remove(this.className.error)
+                    this.changeStep(step)
+                }
                 break
 
             case 'prev':
@@ -129,7 +136,7 @@ class Order {
         this.$orderNext.setAttribute(`data-${this.dataName.nav}`, '2')
         this.$orderNext.classList.remove(this.className.hidden)
         this.$sendBtn.classList.add(this.className.hidden)
-        his.$note.classList.add(this.className.hidden)
+        this.$note.classList.add(this.className.hidden)
         this.updateProgress(1)
     }
 }

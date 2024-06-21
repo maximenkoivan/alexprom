@@ -2,69 +2,81 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use classes\Helpers\Generic;
-use classes\Models\Snow\Basic\CommonData;
+use classes\Models\Roofs\Basic\CommonData;
 
 /**
  * @global CMain $APPLICATION
  */
 $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
+<footer class="footer">
+    <div class="container footer-block">
+        <?php if (!empty($footer['LOGO_FOOTER']['VALUE'])): ?>
+            <a class="logo" href="<?= $footer['LOGO_FOOTER']['DESCRIPTION'] ?>">
+                <img src="<?= CFile::GetPath($footer['LOGO_FOOTER']['VALUE']) ?>"
+                     alt="<?= $footer['LOGO_FOOTER']['DESCRIPTION'] ?>">
+            </a>
+        <?php endif; ?>
+        <div class="contacts">
+            <div class="contacts__info">
+                <?php if (!empty($footer['CONTACTS_FOOTER']['~VALUE'])): ?>
+                    <div class="title foot">
+                        <?= $footer['CONTACTS_FOOTER']['DESCRIPTION'] ?>
+                    </div>
+                    <?= $footer['CONTACTS_FOOTER']['~VALUE'] ?>
+                <?php endif; ?>
+            </div>
+            <div class="contacts__connect">
+                <?php if (!empty($footer['PHONE_HEADER']['DESCRIPTION'])): ?>
+                    <a class="phone"
+                       href="tel:<?= Generic::getCleanPhoneNumber($footer['PHONE_HEADER']['DESCRIPTION']) ?>">
+                        <?= $footer['PHONE_HEADER']['DESCRIPTION'] ?>
+                    </a>
+                <?php endif; ?>
+                <?php if (!empty($footer['EMAIL_HEADER']['DESCRIPTION'])): ?>
+                    <a href="mailto:<?= $footer['EMAIL_HEADER']['DESCRIPTION'] ?>"
+                       class="email"><?= $footer['EMAIL_HEADER']['DESCRIPTION'] ?></a>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="social">
+            <div class="social__top">
+                <div class="title foot">
+                    соц сети:
+                </div>
+                <div class="social__list">
+                    <?php foreach ($footer['SOCNET_FOOTER']['VALUE'] as $key => $imageId): ?>
+                        <?php if (empty($footer['SOCNET_FOOTER']['DESCRIPTION'][$key]) || empty($imageId)) continue; ?>
+                        <div class="item">
+                            <a href="<?= $footer['SOCNET_FOOTER']['DESCRIPTION'][$key] ?>">
+                                <img src="<?= CFile::GetPath($imageId) ?>"
+                                     alt="<?= $footer['SOCNET_FOOTER']['DESCRIPTION'][$key] ?>">
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="corp"><?= $footer['TEXT_FOOTER']['~VALUE'] ?></div>
+        </div>
+        <div class="rights">
+            <?= str_ireplace('#YEAR#', date('Y'), $footer['COPYRIGHT_FOOTER']['~VALUE']) ?>
+        </div>
+        <?php if (!empty($footer['POLICY_FOOTER']['~VALUE']) && !empty($footer['POLICY_FOOTER']['DESCRIPTION'])): ?>
+            <a href="<?= $footer['POLICY_FOOTER']['~VALUE'] ?>" class="policy" target="_blank">
+                <?= $footer['POLICY_FOOTER']['DESCRIPTION'] ?>
+            </a>
+        <?php endif; ?>
+        <a href="https://d-option.ru" class="dev" target="_blank">
+            Разработка сайта — Digital Option
+        </a>
+    </div>
+</footer>
 <a class="scroll-top hidden" data-scrolltop>
     <svg width="16" height="8">
         <use xlink:href="#icon-arrow-top"></use>
     </svg>
-    <span>Наверх</span>
 </a>
-</div>
-<footer class="footer">
-    <div class="footer__wrap">
-        <div class="container">
-            <div class="footer__container">
-                <?php if (!empty($footer['LOGO_FOOTER']['VALUE'])): ?>
-                    <div class="header__brand">
-                        <a href="<?= $footer['LINK_LOGO_HEADER']['VALUE'] ?>" class="brand">
-                            <img alt="<?= CFile::GetFileArray($footer['LOGO_FOOTER']['VALUE'])['ORIGINAL_NAME'] ?>"
-                                 src="<?= CFile::GetPath($footer['LOGO_FOOTER']['VALUE']) ?>">
-                        </a>
-                    </div>
-                <?php endif; ?>
-                <div class="header__text">
-                    <?= $footer['DESC_HEADER']['~VALUE']['TEXT'] ?? ''?>
-                </div>
-
-                <div class="spacer"></div>
-
-                <div class="header__contacts contacts">
-                    <a href="tel:<?= Generic::getCleanPhoneNumber($footer['PHONE_HEADER']['~VALUE']) ?>"
-                       class="contacts__link contacts__link--phone">
-                        <?= $footer['PHONE_HEADER']['~VALUE'] ?>
-                    </a>
-                    <a class="contacts__link" href="mailto:<?= $footer['EMAIL_HEADER']['~VALUE'] ?>">
-                        <?= $footer['EMAIL_HEADER']['~VALUE'] ?>
-                    </a>
-                </div>
-                <?php if (!empty($footer['TEXT_BTN_HEADER']['~VALUE'])): ?>
-                    <div class="header__btn">
-                        <a data-custom-open="modal-callback"
-                           class="btn btn--primary"><?= $footer['TEXT_BTN_HEADER']['~VALUE'] ?></a>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="footer__bottom">
-                <div class="footer__copy"><?= $footer['COPYRIGHT_FOOTER']['~VALUE'] ?></div>
-                <?php if (!empty($footer['TEXT_LINK_FOOTER']['~VALUE']) || !empty($footer['LINK_FOOTER']['~VALUE'])): ?>
-                    <div class="footer__politics">
-                        <a class="link link--hover-color link--white link--small"
-                           href="<?= $footer['LINK_FOOTER']['~VALUE'] ?>"
-                           target="_blank"><?= $footer['TEXT_LINK_FOOTER']['~VALUE'] ?>
-                        </a>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-</footer>
-</div>
+<a href="https://wa.me/79255322311" target="_blank" class="wa-call"></a>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "modal",
@@ -92,8 +104,8 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
-        "IBLOCK_ID" => "feedback_settings",
-        "IBLOCK_TYPE" => "snow",
+        "IBLOCK_ID" => \classes\Models\Roofs\Feedback\FormSettings::getInstance()->getIblockId(),
+        "IBLOCK_TYPE" => "roofs",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "MESSAGE_404" => "",
@@ -124,14 +136,27 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         "USE_SHARE" => "N"
     )
 ); ?>
-<?php if (!empty($footer['PHONE_WHATSAPP_FOOTER']['VALUE']) && !empty($footer['ICON_WHATSAPP_FOOTER']['VALUE'])): ?>
-    <a href="https://wa.me/<?= ltrim(Generic::getCleanPhoneNumber($footer['PHONE_WHATSAPP_FOOTER']['VALUE']), '+') ?>"
-       target="_blank" class="call">
-        <img src="<?= CFile::GetPath($footer['ICON_WHATSAPP_FOOTER']['VALUE']) ?>" height="60" width="60" alt="">
-    </a>
-<?php endif; ?>
-<?php if ($APPLICATION->GetCurPage() == '/'): ?>
-    <script>(function(a,m,o,c,r,m){a[m]={id:"393457",hash:"313e563912d9d72dc2997a7b3b75a75c80cd602fb1cee3a655c45980c21756ab",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1694165626';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
-<?php endif; ?>
+<script defer>
+    (function() {
+        var ru = "ru";
+        var myReviewsInit = function() {
+            new window.myReviews.BlockWidget({
+                uuid: "0c1e0f0d-d9ee-42f5-b967-06ba22289cb9",
+                name: "g6281212",
+                additionalFrame: "none",
+                lang: "ru",
+                widgetId: "0"
+            }).init();
+
+        };
+        if (document.readyState === "loading") {
+            document.addEventListener('DOMContentLoaded', function() {
+                myReviewsInit()
+            })
+        } else {
+            myReviewsInit()
+        }
+    })()
+</script>
 </body>
 </html>

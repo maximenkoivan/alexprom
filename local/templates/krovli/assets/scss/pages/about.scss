@@ -1,0 +1,119 @@
+.sections-about {
+  position: relative;
+  padding: 70px 30px 100px 30px;
+  background-color: #fcfcfc;
+  z-index: 1;
+
+  @media (max-width: 1919px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 1399px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 743px) {
+    padding: 30px 10px 300px;
+  }
+
+  .about-block {
+
+    &__info {
+      width: 60%;
+      font-size: 23px;
+      font-family: 'HelveticaNeueCyr';
+      color: #283032;
+      margin-bottom: 60px;
+      padding-right: 72px;
+
+      @media (max-width: 1399px) {
+        width: 100%;
+        font-size: 17px;
+        margin-bottom: 30px;
+        padding-right: 0;
+      }
+
+      @media (max-width: 743px) {
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-family: 'HelveticaNeueCyr';
+        margin-top: 15px;
+      }
+    }
+
+    &__pics {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @media (max-width: 743px) {
+
+      }
+
+      @media (max-width: 743px) {
+        width: 100%;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      flex-basis: 50%;
+      margin-bottom: 40px;
+
+      .icon {
+        width: 125px;
+        height: 125px;
+        border-radius: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //@media (max-width: 743px) {
+        //  width: 90px;
+        //  height: 90px;
+        //}
+      }
+
+      .text {
+        font-family: 'HelveticaNeueCyr';
+        font-size: 21px;
+
+        @media (max-width: 1399px) {
+          font-size: 15px;
+        }
+
+        span {
+          font-family: 'HelveticaNeueCyr';
+        }
+      }
+
+      &-blue {
+        .icon {
+          background: var(--base-blue-color);
+        }
+
+        .text span {
+          color: var(--base-blue-color);
+        }
+      }
+
+      &-orange {
+        .icon {
+          background: var(--base-orange-color);
+        }
+
+        .text span {
+          color: var(--base-orange-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.header {
+  position: relative;
+  padding: 11px 30px 0;
+
+  @media (max-width: 743px) {
+    padding: 10px 10px 0;
+  }
+
+  .container {
+
+    @media (max-width: 1399px) {
+      align-items: flex-start;
+    }
+  }
+}
+
+.wa-call {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 999;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s linear;
+  overflow: hidden;
+  background: url('/local/templates/krovli/assets/images/wa-call.png') /cover no-repeat;
+
+  @media (max-width: 743px) {
+    width: 45px;
+    height: 45px;
+    left: 15px;
+    bottom: 15px;
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+  overflow: hidden;
+  background: #FF8F64;
+  color: white;
+  z-index: 999999999999 !important;
+
+  &:hover {
+    color: white;
+  }
+
+  @media (max-width: 743px) {
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+.header-block {
+  position: relative;
+  display: flex;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media (max-width: 1600px) {
+      gap: 40px;
+    }
+
+    @media (max-width: 1399px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    @media (max-width: 743px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  @media (max-width: 1399px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 743px) {
+    padding: 0 3px;
+    flex-direction: column;
+  }
+
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .work {
+      font-family: 'HelveticaNeueCyr';
+      font-size: 20px;
+
+      @media (max-width: 1600px) {
+        gap: 15px;
+        font-size: 15px;
+      }
+
+      span {
+        color: #70C0FF;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__center {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+
+    @media (max-width: 743px) {
+      gap: 20px;
+    }
+
+    .email, .phone {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 47px;
+      font-size: 22px;
+      font-family: 'HelveticaNeueCyr';
+      color:  var(--base-color-font);
+
+      @media (max-width: 1600px) {
+        font-size: 17px;
+      }
+
+      @media (max-width: 743px) {
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: none;
+        color:  var(--base-color-font);
+      }
+    }
+
+    .ellipse-icon {
+      margin-right: 10px;
+      width: 47px;
+      height: 47px;
+      border-radius: 100%;
+      background: linear-gradient(to right, #64B4DB, #ffffff) ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @media (max-width: 1600px) {
+        width: 38px;
+        height: 38px;
+        margin-right: 5px;
+      }
+
+      @media (max-width: 743px) {
+        width: 30px;
+        height: 30px;
+      }
+      
+      &__pic {
+        border: 1px solid transparent;
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        background: #ffffff;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+
+        @media (max-width: 1600px) {
+          width: 36px;
+          height: 36px;
+        }
+
+        @media (max-width: 743px) {
+          width: 28px;
+          height: 28px;
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          @media (max-width: 1600px) {
+            width: 70%;
+          }
+        }
+      }
+
+      img {
+        align-self: center;
+      }
+    }
+  }
+
+  &__right {
+    gap: 30px;
+    margin-left: 15px;
+
+    .btn {
+
+      @media (max-width: 1600px) {
+          min-width: 220px;
+          font-size: 12px;
+          height: 65px;
+      }
+
+      @media (max-width: 1399px) {
+        height: 65px;
+      }
+    }
+
+    @media (max-width: 743px) {
+      display: none;
+    }
+  }
+}

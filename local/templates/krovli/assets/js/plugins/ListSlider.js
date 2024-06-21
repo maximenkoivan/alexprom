@@ -3,7 +3,7 @@
  * Слайдер с несколькими элементами
  */
 import Swiper from "swiper";
-import {Autoplay, EffectFade} from "swiper/modules";
+import {Autoplay, EffectFade, Pagination, Navigation} from "swiper/modules";
 
 class ListSlider {
     constructor() {
@@ -60,23 +60,43 @@ class ListSlider {
 
                     return false;
 
-                case 'promo':
+                case 'cert':
                     params = {
-                        modules: [Autoplay, EffectFade],
+                        modules: [Navigation],
+                        slidesPerView: 'auto',
+                        spaceBetween: 10,
+                        loop: false,
+                        autoHeight: false,
+                        navigation: {
+                            nextEl: $next,
+                            prevEl: $prev,
+                        },
+                        breakpoints: {
+                            // when window width is >=
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 15
+                            },
+                            991: {
+                                slidesPerView: 5,
+                                spaceBetween: 20
+                            },
+                        }
+                    }
+
+                    break;
+
+                case 'portfolio':
+                    params = {
+                        modules: [Navigation],
                         slidesPerView: 1,
-                        spaceBetween: 0,
+                        spaceBetween: 10,
                         loop: true,
                         autoHeight: false,
-                        speed: 2000,
-                        allowTouchMove: false,
-                        effect: 'fade',
-                        fadeEffect: {
-                            crossFade: true
-                        },
-                        autoplay: {
-                            delay: 2000,
-                            disableOnInteraction: false
-                        },
+                        navigation: {
+                            nextEl: $next,
+                            prevEl: $prev,
+                        }
                     }
 
                     break;

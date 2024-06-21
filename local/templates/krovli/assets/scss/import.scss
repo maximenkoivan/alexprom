@@ -3,8 +3,9 @@
 @import "mixins";
 
 // vendors
-@import "_vendor/fonts/BanderaPro.css";
-@import "_vendor/fonts/GothamPro.css";
+@import "_vendor/fonts/Gilroy-Medium.css";
+@import "_vendor/fonts/HelveticaNeueCyr.css";
+@import "_vendor/fonts/KenyanCoffeeRg.css";
 
 @import "_vendor/flex-grid";
 
@@ -13,7 +14,6 @@
 @import "layouts";
 
 // forms & buttons
-@import "forms/btns";
 @import "forms/forms";
 @import "forms/checkbox";
 @import "forms/nx-dynamic-label";
@@ -23,7 +23,6 @@
 @import "main/titles";
 @import "main/links";
 @import "main/content";
-@import "main/header";
 @import "main/menu";
 @import "main/footer";
 
@@ -33,31 +32,59 @@
 @import "nx-blocks/nx-popup";
 
 //blocks
-@import "blocks/contacts";
-@import "blocks/main";
-@import "blocks/adv";
-@import "blocks/bottom";
-@import "blocks/video";
-@import "blocks/call";
-@import "blocks/order";
-@import "blocks/promo";
-@import "blocks/factoids";
-@import "blocks/problems";
-@import "blocks/order-section";
-@import "blocks/team";
-@import "blocks/mistakes";
-@import "blocks/type";
-@import "blocks/permits";
-@import "blocks/cake";
-@import "blocks/map";
-@import "blocks/feedback";
-@import "blocks/hc";
-@import "blocks/scroll-top";
 
-//sliders
-@import "sliders/nx-promo-slider";
+@import
+'blocks/header',
+'blocks/footer',
+'blocks/case',
+'blocks/reviews',
+'blocks/blog',
+'blocks/partners',
+'blocks/header-title',
+'blocks/tag',
+'blocks/contact',
+'blocks/modal',
+'blocks/portfolio',
+'blocks/how-work',
+'blocks/faq',
+'blocks/questions',
+'blocks/bg',
+'blocks/cert-slider',
+'blocks/portfolio-slider',
+'blocks/order',
+'blocks/order-section';
 
 // themes
 //@import "themes/bootstrap-main-styles";
 @import "themes/select2-theme";
 @import "themes/tingle-modal";
+
+//pages
+@import
+'pages/index',
+'pages/blog',
+'pages/article',
+'pages/case',
+'pages/project',
+'pages/services',
+'pages/contacts',
+'pages/product',
+'pages/about',
+'pages/page-404';
+
+
+//components
+@import
+'components/button',
+'components/logo',
+'components/input',
+'components/checkbox',
+'components/radio-button',
+'components/title',
+'components/link',
+'components/navigationHeader',
+'components/navigationFooter',
+'components/breadcrumbs',
+'components/popup-button',
+'components/calculate',
+'components/services';

@@ -27,7 +27,6 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
     max-width: 100%;
     background: map-get($bg, wrapper);
     &_flex {

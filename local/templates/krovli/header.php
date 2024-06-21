@@ -4,11 +4,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 use Bitrix\Main\Page\Asset;
 use Bitrix\Main\Page\AssetLocation;
 use classes\Helpers\Generic;
-use classes\Models\Snow\Basic\CommonData;
+use classes\Models\Roofs\Basic\CommonData;
 
 
 /**
  * @global CMain $APPLICATION
+ * @global $HTTP_X_FORWARDED_PROTO
  * @global CUser $USER
  */
 
@@ -18,12 +19,19 @@ $asset->addString(
     '<link rel="icon" type="image/png" href="' . SITE_TEMPLATE_PATH . '/favicon.png">',
     AssetLocation::BEFORE_CSS
 );
-$asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
+$asset->addString(
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+    AssetLocation::BEFORE_CSS
+);
+
+$asset->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/app.min.css');
+$asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/assets/app.min.js', true);
+$asset->addJs('https://myreviews.dev/widget/dist/index.js', true);
 $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
 <head>
     <meta charset="<?= LANG_CHARSET ?>">
@@ -34,80 +42,66 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
 
     <?php $APPLICATION->ShowHead(); ?>
 
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="<?= $HTTP_X_FORWARDED_PROTO . '://' . SITE_SERVER_NAME ?>"/>
     <meta property="og:title" content="<?php $APPLICATION->ShowTitle(); ?>"/>
     <meta property="og:description" content="<?php $APPLICATION->ShowProperty('description', ''); ?>"/>
-    <meta property="og:image" content="<?= 'http:/' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/favicon.png' ?>">
+    <meta property="og:image"
+          content="<?= $HTTP_X_FORWARDED_PROTO . '://' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/assets/images/favicon.png' ?>"/>
 
     <?php if ($USER->IsAdmin() && $header['ADMIN_PANEL']['VALUE']): ?>
         <?php $APPLICATION->ShowPanel(); ?>
     <?php endif; ?>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) {
-                if (document.scripts[j].src === r) {
-                    return;
-                }
-            }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(94759803, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-            ecommerce: "dataLayer"
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/94759803" style="position:absolute; left:-9999px;" alt=""/></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-
-<header class="header" data-header>
-    <div class="header__wrap">
-        <div class="container header__container">
-            <?php if (!empty($header['LOGO_HEADER']['VALUE'])): ?>
-                <div class="header__brand">
-                    <a href="<?= $header['LINK_LOGO_HEADER']['VALUE'] ?>" class="brand">
-                        <img alt="<?= CFile::GetFileArray($header['LOGO_HEADER']['VALUE'])['ORIGINAL_NAME'] ?>"
-                             src="<?= CFile::GetPath($header['LOGO_HEADER']['VALUE']) ?>">
+<header class="header">
+    <div class="container header-block">
+        <div class="header-block__wrap">
+            <div class="header-block__left">
+                <?php if (!empty($header['LOGO_HEADER']['VALUE'])): ?>
+                    <a class="logo" href="<?= $header['LOGO_HEADER']['DESCRIPTION'] ?>" target="_blank">
+                        <img src="<?= CFile::GetPath($header['LOGO_HEADER']['VALUE']) ?>"
+                             alt="<?= $header['LOGO_HEADER']['DESCRIPTION'] ?>">
                     </a>
+                <?php endif; ?>
+                <div class="work">
+                    <?= $header['DESC_HEADER']['~VALUE']['TEXT'] ?? '' ?>
                 </div>
-            <?php endif; ?>
-
-            <div class="header__text">
-                <?= $header['DESC_HEADER']['~VALUE']['TEXT'] ?? '' ?>
             </div>
-
-            <div class="spacer"></div>
-
-            <div class="header__contacts contacts">
-                <a href="tel:<?= Generic::getCleanPhoneNumber($header['PHONE_HEADER']['~VALUE']) ?>"
-                   class="contacts__link contacts__link--phone">
-                    <?= $header['PHONE_HEADER']['~VALUE'] ?>
-                </a>
-                <a class="contacts__link" href="mailto:<?= $header['EMAIL_HEADER']['~VALUE'] ?>">
-                    <?= $header['EMAIL_HEADER']['~VALUE'] ?>
-                </a>
+            <div class="header-block__center">
+                <?php if (!empty($header['EMAIL_HEADER']['DESCRIPTION'])): ?>
+                    <div class="email">
+                        <div class="ellipse-icon">
+                            <div class="ellipse-icon__pic">
+                                <img src="<?= CFile::GetPath($header['EMAIL_HEADER']['VALUE']) ?>"
+                                     alt="<?= $header['EMAIL_HEADER']['DESCRIPITON'] ?>">
+                            </div>
+                        </div>
+                        <a class=""
+                           href="mailto:<?= $header['EMAIL_HEADER']['DESCRIPTION'] ?>"><?= $header['PHONE_HEADER']['DESCRIPTION'] ?></a>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($header['PHONE_HEADER']['DESCRIPTION'])): ?>
+                    <div class="phone">
+                        <div class="ellipse-icon">
+                            <div class="ellipse-icon__pic">
+                                <img src="<?= CFile::GetPath($header['PHONE_HEADER']['VALUE']) ?>"
+                                     alt="<?= $header['PHONE_HEADER']['DESCRIPTION'] ?>">
+                            </div>
+                        </div>
+                        <a class=""
+                           href="tel:<?= Generic::getCleanPhoneNumber($header['PHONE_HEADER']['DESCRIPTION']) ?>"><?= $header['PHONE_HEADER']['DESCRIPTION'] ?></a>
+                    </div>
+                <?php endif; ?>
             </div>
-            <?php if (!empty($header['TEXT_BTN_HEADER']['~VALUE'])): ?>
-                <div class="header__btn">
-                    <a data-custom-open="modal-callback"
-                       class="btn btn--primary"><?= $header['TEXT_BTN_HEADER']['~VALUE'] ?></a>
-                </div>
-            <?php endif; ?>
         </div>
+        <?php if (!empty($header['TEXT_BTN_HEADER']['~VALUE'])): ?>
+            <div class="header-block__right">
+                <button class="btn btn-orange d-xl-block" data-custom-open="callback"
+                        type="submit">
+                    <?= $header['TEXT_BTN_HEADER']['~VALUE'] ?>
+                </button>
+            </div>
+        <?php endif; ?>
     </div>
 </header>
-
-<div class="wrapper">
-    <div class="wrapper__content">

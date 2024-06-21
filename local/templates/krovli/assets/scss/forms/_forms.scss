@@ -108,6 +108,9 @@ select{
 .form-group {
     position: relative;
     margin-bottom: 20px;
+    &__text {
+        margin-top: 20px;
+    }
     &:last-child{
         margin-bottom: 0;
     }

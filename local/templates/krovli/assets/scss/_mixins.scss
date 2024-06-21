@@ -157,3 +157,91 @@
     display: inline-block;
     text-overflow: ellipsis;
 }
+
+
+@mixin h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (min-width: 992px) {
+        font-size: 80px;
+    }
+}
+
+@mixin h2 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (min-width: 992px) {
+        font-size: 50px;
+    }
+}
+
+@mixin h3 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @media (min-width: 992px) {
+        font-size: 30px;
+    }
+}
+
+@mixin navigation {
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@mixin text16 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-variant: small-caps;
+}
+
+@mixin quotation {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    @media (min-width: 992px) {
+        font-size: 42px;
+    }
+}
+
+@mixin primaryText {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+@mixin hover-mixin {
+    transition: all 0.3s ease-out;
+}
+
+@mixin dots {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--base-color-border);
+    z-index: 2;
+}

@@ -1,4 +1,7 @@
 .modal {
+    position: relative;
+    z-index: 999
+;
     &__overlay {
         position: fixed;
         top: 0;
@@ -15,16 +18,29 @@
     &__container {
         background-color: #fff;
         padding: 30px;
-        max-width: 600px;
+        max-width: 720px;
         max-height: 100vh;
-        border-radius: 4px;
+        border-radius: 20px;
         overflow-y: auto;
         box-sizing: border-box;
         position: relative;
         z-index: 505;
 
         &--callback {
-            padding: 40px 45px;
+            padding: 64px 80px;
+            text-align: center;
+
+            .modal__header {
+                margin-bottom: 40px;
+            }
+
+            .form-control {
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
         }
 
         &--order {
