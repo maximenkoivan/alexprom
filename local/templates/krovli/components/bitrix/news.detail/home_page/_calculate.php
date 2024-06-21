@@ -28,10 +28,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <img class="mobile" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/tablet-mobile.png" alt="">
             </div>
             <div class="calculate__buttons">
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#" type="submit">
+                <button class="btn btn-blue" data-custom-open="callback">
                     Получить бесплатный расчет
                 </button>
-                <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#" type="submit">
+                <button class="btn btn-orange" data-custom-open="modal-order">
                     Самостоятельно<br> рассчитать ремонт кровли
                 </button>
             </div>
