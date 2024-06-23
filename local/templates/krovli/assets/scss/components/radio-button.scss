@@ -1,6 +1,5 @@
 .form-radio {
   margin-bottom: 15px;
-
   display: grid;
   grid-template-columns: 20px auto;
   gap: 10px;
@@ -19,6 +18,9 @@
     transform: translateY(-0.075em);
     display: grid;
     place-content: center;
+    position: absolute;
+    top: 6px;
+    left: 0;
 
     &:before {
       content: "";
@@ -50,5 +52,7 @@
     font-weight: 300;
     font-family: 'HelveticaNeueCyr';
     color: #4A4A4A;
+    position: relative;
+    padding-left: 30px;
   }
 }

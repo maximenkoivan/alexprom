@@ -31,7 +31,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <button class="btn btn-blue" data-custom-open="callback">
                     Получить бесплатный расчет
                 </button>
-                <button class="btn btn-orange" data-custom-open="modal-order">
+                <button class="btn btn-orange" data-custom-open="calculator">
                     Самостоятельно<br> рассчитать ремонт кровли
                 </button>
             </div>

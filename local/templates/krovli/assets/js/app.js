@@ -29,6 +29,7 @@ import ShowModal from './modules/ShowModal';
 import ListSlider from "./plugins/ListSlider";
 import ShowPopup from "./modules/ShowPopup";
 import Order from "./modules/Order";
+import Calculator from "./modules/Calculator";
 
 objectFitImages();
 elementClosest(window);
@@ -57,6 +58,7 @@ new Tabs();
 new Video();
 new ScrollTop();
 new UploadField();
+new Calculator();
 $.order = new Order();
 
 

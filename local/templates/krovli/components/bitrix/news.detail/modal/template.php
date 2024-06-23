@@ -365,8 +365,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                                                     <input type="text"
                                                            class="form-control"
                                                            name="name"
-                                                           placeholder="Имя"
-                                                           data-dynamic-inp>
+                                                           placeholder="Имя">
                                                 </div>
                                             </div>
                                             <div class="flex-col md-12">
@@ -417,6 +416,254 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         <div class="order__gift-img">
                             <img src="/local/templates/krovli/assets/images/prize.png" alt="">
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="calculator"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <a href="#"
+           class="modal__close"
+           aria-label="Close modal"
+           data-custom-close>
+            <svg data-custom-close height="30" width="30" class="call__icon">
+                <use xlink:href="#icon-x"></use>
+            </svg>
+        </a>
+
+        <div class="modal__container modal__container--order" role="dialog" aria-modal="true">
+
+            <div data-order class="order">
+
+                <header class="order__header">
+                    <div class="order__text">Калькулятор по ремонту кровли</div>
+                </header>
+
+                <div class="order__container">
+                    <div class="order__inner order__inner--calculator">
+                        <div class="modal-body">
+                            <div class="contact-block">
+                                <div class="modal-form-wrap">
+                                    <div class="callback__form">
+                                        <form action="/request/test.php" data-calculator class="form-base">
+                                            <div class="tab">
+                                                <div class="tab__title">
+                                                    Площадь кровли (м2)*
+                                                </div>
+                                                <div class="form-field mb-30">
+                                                    <input data-num-only data-value="10" type="text" class="form-control " id="inputName" placeholder="Укажите площадь в м2">
+                                                </div>
+                                                <div class="calculate-block mb-30">
+                                                    <div class="tab__title">
+                                                        Операции монтажа*
+                                                    </div>
+                                                    <div class="flex-row">
+                                                        <div class="flex-col md-8">
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="20" data-calculator-check class="form-check-input" name="operation" value="Стропильная система" type="checkbox">
+                                                                        Стропильная система
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="60" data-calculator-check class="form-check-input" name="operation" value="Пароизоляция" type="checkbox">
+                                                                        Пароизоляция
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="40" data-calculator-check class="form-check-input" name="operation" value="Утепление" type="checkbox">
+                                                                        Утепление
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-col md-8">
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="10" data-calculator-check class="form-check-input" name="operation" value="Гидроизоляция" type="checkbox">
+                                                                        Гидроизоляция
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="20" data-calculator-check class="form-check-input" name="operation" value="Контробрешетка" type="checkbox">
+                                                                        Контробрешетка
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="20" data-calculator-check class="form-check-input" name="operation" value="Шаговая обрешетка" type="checkbox">
+                                                                        Шаговая обрешетка
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-col md-8">
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="20" data-calculator-check class="form-check-input" name="operation" value="Подшивка" type="checkbox">
+                                                                        Подшивка
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="100" data-calculator-check class="form-check-input" name="operation" value="Водосточка" type="checkbox">
+                                                                        Водосточка
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label">
+                                                                        <input data-value="20" data-calculator-check class="form-check-input" name="operation" value="Снегозадержатели" type="checkbox">
+                                                                        Снегозадержатели
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calculate-block mb-30">
+                                                    <div class="tab__title">
+                                                        Материал кровли*
+                                                    </div>
+
+                                                    <div class="flex-row">
+                                                        <div class="flex-col md-8">
+                                                            <div class="form-field">
+                                                                <div class="form-radio">
+                                                                    <label class="form-radio-label">
+                                                                        <input data-value="20" data-calculator-radio class="form-radio-input" name="material" value="Ондулин" type="radio">
+                                                                        Ондулин
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-radio">
+                                                                    <label class="form-radio-label">
+                                                                        <input data-value="200" data-calculator-radio class="form-radio-input" name="material" value="Профнастил" type="radio">
+                                                                        Профнастил
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-col md-8">
+                                                            <div class="form-field">
+                                                                <div class="form-radio">
+                                                                    <label class="form-radio-label">
+                                                                        <input data-value="60" data-calculator-radio class="form-radio-input" name="material" value="Наплавляемая" type="radio">
+                                                                        Наплавляемая
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-radio">
+                                                                    <label class="form-radio-label">
+                                                                        <input data-value="50" data-calculator-radio class="form-radio-input" name="material" value="Металлочерепица" type="radio">
+                                                                        Металлочерепица
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-col md-8">
+                                                            <div class="form-field">
+                                                                <div class="form-radio">
+                                                                    <label class="form-radio-label">
+                                                                        <input data-value="100" data-calculator-radio class="form-radio-input" name="material" value="Битумная черепица" type="radio">
+                                                                        Битумная черепица
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <div class="form-radio">
+                                                                    <label class="form-radio-label">
+                                                                        <input data-value="120" data-calculator-radio class="form-radio-input" name="material" value="Фальцевая" type="radio">
+                                                                        Фальцевая
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row mb-30">
+                                                    <div class="flex-col md-8">
+                                                        <div class="tab__title">
+                                                            Стоимость за работы:
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-col md-8">
+                                                        <div class="tab__title">
+                                                            Телефон*
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-col md-8">
+                                                        <div class="tab__title">
+                                                            E-mail (необязательно)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row">
+                                                    <div class="flex-col md-8">
+                                                        <div class="price">
+                                                            <div data-calculator-total class="price__num">0</div>
+                                                            <div class="price__cur">₽</div>
+                                                            <input data-calculator-total name="price" type="text" class="hidden">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-col md-8">
+                                                        <div class="form-field">
+                                                            <input type="text" data-phone-mask name="phone" class="form-control " id="inputName" placeholder="Телефон">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-col md-8">
+                                                        <div class="form-field">
+                                                            <input type="text" class="form-control"  name="name" placeholder="Mail">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab__buttons">
+                                                <button data-send-request="calculator" class="btn btn-orange">
+                                                    Отправить
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order__gift">
+                        <div class="order__gift-img">
+                            <img src="/local/templates/krovli/assets/images/order/house.png" alt="">
+                        </div>
+                        <b>Ремонт кровли</b>
+                        <b>Рассчитайте стоимость работ самостоятельно или позвоните нашему специалисту
+                            <a href="tel:84951090242">+7 (495) 109-02-42</a>
+                        </b>
+                        <p>* цены в калькуляторе ориентировочные, точная стоимость будет известна после консультации с нашим специалистом</p>
                     </div>
                 </div>
             </div>

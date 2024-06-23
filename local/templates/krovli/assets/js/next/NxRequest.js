@@ -81,7 +81,7 @@ class NxRequest{
         });
 
         this.$numOnly.forEach(($el) => {
-            $el.addEventListener('keydown', this.validateNumOnly.bind(this));
+            $el.addEventListener('input', this.validateNumOnly.bind(this));
         });
 
         this.events.forEach((event) => {
@@ -171,16 +171,9 @@ class NxRequest{
 
     //Ввод только цифр
     validateNumOnly(e){
-        if(e.which !== 8 &&
-            e.which !== 9 &&
-            e.which !== 116 &&
-            e.which !== 46 &&
-            (e.which < 48 || e.which > 57) &&
-            (e.which < 96 || e.which > 105) &&
-            (e.which < 37 || e.which > 40)){
-            e.preventDefault();
-            return false;
-        }
+        let $target = e.currentTarget
+
+        $target.value = $target.value.replace(/\D/g, '')
     }
 
     //Проверка на максимальное число
