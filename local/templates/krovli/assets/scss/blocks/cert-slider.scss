@@ -1,0 +1,18 @@
+.cert-slider {
+    padding: 40px 0;
+    overflow: hidden;
+
+    &__btn-next, &__btn-prev {
+        position: absolute;
+        top: 65%;
+        cursor: pointer;
+    }
+
+    &__btn-next {
+        right: -65px;
+    }
+
+    &__btn-prev {
+        left: -65px;
+    }
+}
