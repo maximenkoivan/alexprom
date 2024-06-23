@@ -30,6 +30,33 @@ class FormSettings extends Iblock
         return $properties;
     }
 
+    /**
+     * Получает свойство по последней части символьного кода
+     * @param string $prefix
+     * @return array
+     */
+    public function getPropertiesByPostfix(string $postfix): array
+    {
+        $result = [];
+        $obElement = \CIBlockElement::GetList(
+            ['SORT' => 'ASC'],
+            [
+                'ACTIVE' => 'Y',
+                'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
+                'IBLOCK_ID' => $this->getIblockId(),
+            ],
+        );
+        if ($obElement) {
+            while ($element = $obElement->GetNextElement()) {
+                $result = $element->GetProperties(
+                    false,
+                    ['CODE' => '%_' . $postfix]
+                );
+            }
+        }
+        return $result;
+    }
+
 
     public static function getInstance()
     {

@@ -76,14 +76,14 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
             <div data-order class="order">
 
                 <header class="order__header">
-                    <div class="order__text"><?= $arResult['PROPERTIES']['TITLE_ORDER']['~VALUE'] ?></div>
+                    <div class="order__text"><?= $arResult['PROPERTIES']['TITLE_QUIZ']['~VALUE'] ?></div>
                 </header>
 
                 <div class="order__container">
                     <div class="order__inner">
 
                         <div class="order__progress">
-                            <p><?= $arResult['PROPERTIES']['STATUS_ORDER']['~VALUE'] ?></p>
+                            <p><?= $arResult['PROPERTIES']['STATUS_QUIZ']['~VALUE'] ?></p>
                             <div data-order-counter></div>
                         </div>
 
@@ -95,40 +95,40 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
 
                             <div data-order-select class="order__select">
                                 <div data-order-step="1" class="order__step">
-                                    <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_STEP_1_ORDER']['~VALUE'] ?></div>
+                                    <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_STEP_1_QUIZ']['~VALUE'] ?></div>
                                     <div data-required data-form-group class="form-group form-group--flex">
-                                        <?php foreach ($arResult['PROPERTIES']['IMAGE_STEP_1_ORDER']['VALUE'] as $key => $imageId): ?>
-                                            <?php if (empty($arResult['PROPERTIES']['IMAGE_STEP_1_ORDER']['~DESCRIPTION'][$key])) continue; ?>
+                                        <?php foreach ($arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['VALUE'] as $key => $imageId): ?>
+                                            <?php if (empty($arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['~DESCRIPTION'][$key])) continue; ?>
                                             <label class="checkbox checkbox--image">
                                                 <input type="radio"
                                                        class="checkbox__input"
-                                                       value="<?= $arResult['PROPERTIES']['IMAGE_STEP_1_ORDER']['~DESCRIPTION'][$key] ?>"
+                                                       value="<?= $arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['~DESCRIPTION'][$key] ?>"
                                                        name="constructive">
                                                 <div class="inner">
                                                     <img src="<?= CFile::GetPath($imageId) ?>"
-                                                         alt="<?= $arResult['PROPERTIES']['IMAGE_STEP_1_ORDER']['~DESCRIPTION'][$key] ?>">
+                                                         alt="<?= $arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['~DESCRIPTION'][$key] ?>">
                                                 </div>
-                                                <span class="checkbox__text"><?= $arResult['PROPERTIES']['IMAGE_STEP_1_ORDER']['~DESCRIPTION'][$key] ?></span>
+                                                <span class="checkbox__text"><?= $arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['~DESCRIPTION'][$key] ?></span>
                                             </label>
                                         <?php endforeach; ?>
                                     </div>
                                     <div class="order__error"><?= $arResult['PROPERTIES']['ERROR_MESSAGE_COMMON']['~VALUE'] ?></div>
                                 </div>
                                 <div data-order-step="2" class="order__step hidden">
-                                    <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_STEP_2_ORDER']['~VALUE'] ?></div>
+                                    <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_STEP_2_QUIZ']['~VALUE'] ?></div>
                                     <div data-form-group data-required class="form-group form-group--flex">
-                                        <?php foreach ($arResult['PROPERTIES']['IMAGE_STEP_2_ORDER']['VALUE'] as $key => $imageId): ?>
-                                            <?php if (empty($arResult['PROPERTIES']['IMAGE_STEP_2_ORDER']['~DESCRIPTION'][$key])) continue; ?>
+                                        <?php foreach ($arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['VALUE'] as $key => $imageId): ?>
+                                            <?php if (empty($arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['~DESCRIPTION'][$key])) continue; ?>
                                             <label class="checkbox checkbox--image">
                                                 <input type="radio"
                                                        class="checkbox__input"
-                                                       value="<?= $arResult['PROPERTIES']['IMAGE_STEP_2_ORDER']['~DESCRIPTION'][$key] ?>"
+                                                       value="<?= $arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['~DESCRIPTION'][$key] ?>"
                                                        name="type">
                                                 <div class="inner">
                                                     <img src="<?= CFile::GetPath($imageId) ?>"
-                                                         alt="<?= $arResult['PROPERTIES']['IMAGE_STEP_2_ORDER']['~DESCRIPTION'][$key] ?>">
+                                                         alt="<?= $arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['~DESCRIPTION'][$key] ?>">
                                                 </div>
-                                                <span class="checkbox__text"><?= $arResult['PROPERTIES']['IMAGE_STEP_2_ORDER']['~DESCRIPTION'][$key] ?></span>
+                                                <span class="checkbox__text"><?= $arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['~DESCRIPTION'][$key] ?></span>
                                             </label>
                                         <?php endforeach; ?>
                                     </div>
@@ -138,9 +138,9 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                     <div class="form-group" data-form-group>
                                         <div class="flex-row mb-20">
                                             <div class="flex-col sm-12">
-                                                <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_1_STEP_3_ORDER']['~VALUE'] ?></div>
+                                                <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_1_STEP_3_QUIZ']['~VALUE'] ?></div>
                                                 <div class="form-group">
-                                                    <?php foreach ($arResult['PROPERTIES']['OPTIONS_1_STEP_3_ORDER']['~VALUE'] as $key => $option): ?>
+                                                    <?php foreach ($arResult['PROPERTIES']['OPTIONS_1_STEP_3_QUIZ']['~VALUE'] as $key => $option): ?>
                                                         <label class="checkbox">
                                                             <input type="checkbox"
                                                                    class="checkbox__input"
@@ -152,9 +152,9 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 </div>
                                             </div>
                                             <div class="flex-col sm-12">
-                                                <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_2_STEP_3_ORDER']['~VALUE'] ?></div>
+                                                <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_2_STEP_3_QUIZ']['~VALUE'] ?></div>
                                                 <div class="form-group">
-                                                    <?php foreach ($arResult['PROPERTIES']['OPTIONS_2_STEP_3_ORDER']['~VALUE'] as $key => $option): ?>
+                                                    <?php foreach ($arResult['PROPERTIES']['OPTIONS_2_STEP_3_QUIZ']['~VALUE'] as $key => $option): ?>
                                                         <label class="checkbox checkbox--radio">
                                                             <input type="radio"
                                                                    class="checkbox__input"
@@ -164,9 +164,9 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                         </label>
                                                     <?php endforeach; ?>
                                                 </div>
-                                                <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_3_STEP_3_ORDER']['~VALUE'] ?></div>
+                                                <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_3_STEP_3_QUIZ']['~VALUE'] ?></div>
                                                 <div class="form-group">
-                                                    <?php foreach ($arResult['PROPERTIES']['OPTIONS_3_STEP_3_ORDER']['~VALUE'] as $key => $option): ?>
+                                                    <?php foreach ($arResult['PROPERTIES']['OPTIONS_3_STEP_3_QUIZ']['~VALUE'] as $key => $option): ?>
                                                         <label class="checkbox checkbox--radio">
                                                             <input type="radio"
                                                                    class="checkbox__input"
@@ -178,9 +178,9 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_4_STEP_3_ORDER']['~VALUE'] ?></div>
+                                        <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_4_STEP_3_QUIZ']['~VALUE'] ?></div>
                                         <div class="form-group d-flex g-20">
-                                            <?php foreach ($arResult['PROPERTIES']['OPTIONS_4_STEP_3_ORDER']['~VALUE'] as $key => $option): ?>
+                                            <?php foreach ($arResult['PROPERTIES']['OPTIONS_4_STEP_3_QUIZ']['~VALUE'] as $key => $option): ?>
                                                 <label class="checkbox checkbox--radio">
                                                     <input type="radio"
                                                            class="checkbox__input"
@@ -194,7 +194,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                     <div class="order__error"><?= $arResult['PROPERTIES']['ERROR_MESSAGE_COMMON']['~VALUE'] ?></div>
                                 </div>
                                 <div data-order-step="4" class="order__step hidden">
-                                    <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_STEP_4_ORDER']['~VALUE'] ?></div>
+                                    <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_STEP_4_QUIZ']['~VALUE'] ?></div>
                                     <div data-form-group class="form-group form-group--flex">
                                         <div class="nx-files nx-files_upload" data-files>
                                             <label class="nx-files__item">
@@ -202,7 +202,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                     <use xlink:href="#icon-upload"></use>
                                                 </svg>
                                                 <span class="nx-files__content">
-                                                    <span class="nx-files__title"><?= $arResult['PROPERTIES']['PLH_STEP_4_ORDER']['~VALUE'] ?></span>
+                                                    <span class="nx-files__title"><?= $arResult['PROPERTIES']['PLH_STEP_4_QUIZ']['~VALUE'] ?></span>
                                                 </span>
                                                 <input type="file"
                                                        class="hidden"
@@ -216,8 +216,8 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                 </div>
                                 <div data-order-step="5" class="order__step hidden">
                                     <div class="order__heading mb-30">
-                                        <b><?= $arResult['PROPERTIES']['TITLE_STEP_5_ORDER']['~VALUE'] ?></b>
-                                        <?= $arResult['PROPERTIES']['SUBTITLE_STEP_5_ORDER']['~VALUE'] ?>
+                                        <b><?= $arResult['PROPERTIES']['TITLE_STEP_5_QUIZ']['~VALUE'] ?></b>
+                                        <?= $arResult['PROPERTIES']['SUBTITLE_STEP_5_QUIZ']['~VALUE'] ?>
                                     </div>
                                     <div data-form-group class="form-group">
                                         <div class="flex-row">
@@ -226,7 +226,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                     <input type="text"
                                                            class="form-control"
                                                            name="name"
-                                                           placeholder="<?= $arResult['PROPERTIES']['PLH_1_STEP_5_ORDER']['~VALUE'] ?>">
+                                                           placeholder="<?= $arResult['PROPERTIES']['PLH_1_STEP_5_QUIZ']['~VALUE'] ?>">
                                                 </div>
                                             </div>
                                             <div class="flex-col md-12">
@@ -234,7 +234,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                     <input type="text"
                                                            class="form-control"
                                                            name="phone"
-                                                           placeholder="<?= $arResult['PROPERTIES']['PLH_2_STEP_5_ORDER']['~VALUE'] ?>"
+                                                           placeholder="<?= $arResult['PROPERTIES']['PLH_2_STEP_5_QUIZ']['~VALUE'] ?>"
                                                            data-phone-mask>
                                                 </div>
                                             </div>
@@ -242,13 +242,13 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                         <div data-form-group class="form-group">
                                             <input type="text"
                                                    class="form-control"
-                                                   placeholder="<?= $arResult['PROPERTIES']['PLH_3_STEP_5_ORDER']['~VALUE'] ?>"
+                                                   placeholder="<?= $arResult['PROPERTIES']['PLH_3_STEP_5_QUIZ']['~VALUE'] ?>"
                                                    name="email">
                                         </div>
                                         <div data-form-group class="form-group">
                                             <textarea type="text"
                                                       class="form-control"
-                                                      placeholder="<?= $arResult['PROPERTIES']['PLH_4_STEP_5_ORDER']['~VALUE'] ?>"
+                                                      placeholder="<?= $arResult['PROPERTIES']['PLH_4_STEP_5_QUIZ']['~VALUE'] ?>"
                                                       name="message"></textarea>
                                         </div>
 
@@ -256,7 +256,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                 </div>
                             </div>
                             <div style="display: none">
-                                <input name="form" value="<?= $arResult['PROPERTIES']['FORM_NAME_ORDER']['~VALUE'] ?>">
+                                <input name="form" value="<?= $arResult['PROPERTIES']['FORM_NAME_QUIZ']['~VALUE'] ?>">
                                 <input name="utm_source" value="<?= $request->get('utm_source') ?>">
                                 <input name="utm_medium" value="<?= $request->get('utm_medium') ?>">
                                 <input name="utm_campaign" value="<?= $request->get('utm_campaign') ?>">
@@ -265,24 +265,24 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                             </div>
                             <div class="order__nav g-20">
                                 <a data-order-nav="prev" data-nav="1" class="btn btn-gray d-xl-block">
-                                    <span><?= $arResult['PROPERTIES']['TEXT_BTN_BACK_ORDER']['~VALUE'] ?></span>
+                                    <span><?= $arResult['PROPERTIES']['TEXT_BTN_BACK_QUIZ']['~VALUE'] ?></span>
                                 </a>
                                 <a data-order-nav="next" data-nav="2" class="btn btn-orange d-xl-block">
-                                    <span><?= $arResult['PROPERTIES']['TEXT_BTN_FORWARD_ORDER']['~VALUE'] ?></span>
+                                    <span><?= $arResult['PROPERTIES']['TEXT_BTN_FORWARD_QUIZ']['~VALUE'] ?></span>
                                 </a>
-                                <a data-send-request="orderRoofs"
-                                   data-ok-title='<?= $arResult['PROPERTIES']['TEXT_SUCCESS_ORDER']['~VALUE'] ?>'
-                                   class="btn btn-orange d-xl-block hidden"><?= $arResult['PROPERTIES']['TEXT_BTN_SEND_ORDER']['~VALUE'] ?></a>
+                                <a data-send-request="quizRoofs"
+                                   data-ok-title='<?= $arResult['PROPERTIES']['TEXT_SUCCESS_QUIZ']['~VALUE'] ?>'
+                                   class="btn btn-orange d-xl-block hidden"><?= $arResult['PROPERTIES']['TEXT_BTN_SEND_QUIZ']['~VALUE'] ?></a>
                             </div>
                         </form>
                     </div>
 
                     <div class="order__gift">
-                        <?= $arResult['PROPERTIES']['TEXT_BANNER_ORDER']['~VALUE']['TEXT'] ?? '' ?>
+                        <?= $arResult['PROPERTIES']['TEXT_BANNER_QUIZ']['~VALUE']['TEXT'] ?? '' ?>
                         <div class="order__gift-img">
-                            <?php if (!empty($arResult['PROPERTIES']['IMAGE_BANNER_ORDER']['~VALUE'])): ?>
-                                <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_BANNER_ORDER']['~VALUE']) ?>"
-                                     alt="<?= $arResult['PROPERTIES']['IMAGE_BANNER_ORDER']['~DESCRIPTION'] ?>">
+                            <?php if (!empty($arResult['PROPERTIES']['IMAGE_BANNER_QUIZ']['~VALUE'])): ?>
+                                <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_BANNER_QUIZ']['~VALUE']) ?>"
+                                     alt="<?= $arResult['PROPERTIES']['IMAGE_BANNER_QUIZ']['~DESCRIPTION'] ?>">
                             <?php endif; ?>
                         </div>
                     </div>
