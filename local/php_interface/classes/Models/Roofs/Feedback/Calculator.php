@@ -1,49 +1,88 @@
 <?php
 
-namespace classes\Models\Snow\Feedback;
+namespace classes\Models\Roofs\Feedback;
 
 use classes\Base\Iblock;
 
-class ApplicationSnow extends Iblock
+class Calculator extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'snow';
+    protected const IBLOCK_TYPE_CODE = 'roofs';
 
-    protected const IBLOCK_CODE = 'feedback';
+    protected const IBLOCK_CODE = 'calculator';
 
-    private const EVENT_NAME = 'SNOW_CALLBACK_FORM';
+    private const EVENT_NAME = 'ROOFS_CALCULATOR_FORM';
 
-    private array $formFields = [
-        'name' => [
-            'ru' => 'Имя',
-            'en' => 'Name',
-            'rules' => 'required|min:3',
-            'value' => '',
-            'property' => false,
-            'store' => 'NAME'
-        ],
-        'phone' => [
-            'ru' => 'Номер телефона',
-            'en' => 'Phone Number',
-            'rules' => 'required|phone',
-            'value' => '',
-            'property' => true,
-            'store' => 'PHONE'
-        ],
-        'form_name' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => 'Оставить заявку',
-            'property' => true,
-            'store' => 'FORM_NAME'
-        ],
+    private array $formFields;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->formFields = [
+            'name' => [
+                'ru' => '',
+                'en' => '',
+                'rules' => '',
+                'value' => 'Расчет услуги от ' .FormatDate('d F Y H:i:s'),
+                'property' => false,
+                'store' => 'NAME'
+            ],
+            'phone' => [
+                'ru' => '"Телефон"',
+                'en' => 'Phone',
+                'rules' => 'required|phone',
+                'value' => '',
+                'property' => true,
+                'store' => 'PHONE'
+            ],
+            'email' => [
+                'ru' => '"E-mail"',
+                'en' => '"E-mail"',
+                'rules' => 'email',
+                'value' => '',
+                'property' => true,
+                'store' => 'EMAIL'
+            ],
+            'square' => [
+                'ru' => '"Площадь"',
+                'en' => '',
+                'rules' => '',
+                'value' => '',
+                'property' => true,
+                'store' => 'SQUARE'
+            ],
+            'operation' => [
+                'ru' => '"Операция монтажа"',
+                'en' => '',
+                'rules' => '',
+                'value' => '',
+                'property' => true,
+                'store' => 'OPERATION'
+            ],
+            'material' => [
+                'ru' => '"Материал кровли"',
+                'en' => '',
+                'rules' => '',
+                'value' => '',
+                'property' => true,
+                'store' => 'MATERIAL'
+            ],
+            'price' => [
+                'ru' => '',
+                'en' => '',
+                'rules' => '',
+                'value' => '',
+                'property' => true,
+                'store' => 'PRICE'
+            ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
 //            'en' => 'recaptcha',
 //            'rules' => 'recaptcha',
 //            'value' => ''
 //        ],
-    ];
+        ];
+    }
 
     /**
      * Возвращает массив полей
@@ -94,7 +133,6 @@ class ApplicationSnow extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'FORM_NAME' => $this->formFields['form_name']['value'],
         ];
     }
 

@@ -1,20 +1,20 @@
 <?php
 
-namespace classes\Models\Snow\Feedback;
+namespace classes\Models\Roofs\Feedback;
 
 use classes\Base\Iblock;
 
-class CallbackSnow extends Iblock
+class Callback extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'snow';
+    protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'feedback';
 
-    private const EVENT_NAME = 'SNOW_CALLBACK_FORM';
+    private const EVENT_NAME = 'ROOFS_CALLBACK_FORM';
 
     private array $formFields = [
         'name' => [
-            'ru' => 'Имя',
+            'ru' => '"Имя"',
             'en' => 'Name',
             'rules' => 'required|min:3',
             'value' => '',
@@ -22,28 +22,12 @@ class CallbackSnow extends Iblock
             'store' => 'NAME'
         ],
         'phone' => [
-            'ru' => 'Номер телефона',
-            'en' => 'Phone Number',
+            'ru' => '"Телефон"',
+            'en' => 'Phone',
             'rules' => 'required|phone',
             'value' => '',
             'property' => true,
             'store' => 'PHONE'
-        ],
-        'form_name' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => 'Заказать звонок',
-            'property' => true,
-            'store' => 'FORM_NAME'
-        ],
-        'type' => [
-            'ru' => '',
-            'en' => '',
-            'rules' => '',
-            'value' => '',
-            'property' => true,
-            'store' => 'TYPE'
         ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
@@ -102,8 +86,6 @@ class CallbackSnow extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'FORM_NAME' => $this->formFields['form_name']['value'],
-            'TYPE' => $this->formFields['type']['value'],
         ];
     }
 

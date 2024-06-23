@@ -1,41 +1,105 @@
 <?php
 
-namespace classes\Models\Snow\Feedback;
+namespace classes\Models\Roofs\Feedback;
 
 use classes\Base\Iblock;
 
-class DiscountSnow extends Iblock
+class Order extends Iblock
 {
-    protected const IBLOCK_TYPE_CODE = 'snow';
+    protected const IBLOCK_TYPE_CODE = 'roofs';
 
-    protected const IBLOCK_CODE = 'feedback';
+    protected const IBLOCK_CODE = 'order';
 
-    private const EVENT_NAME = 'SNOW_CALLBACK_FORM';
+    private const EVENT_NAME = 'ROOFS_ORDER_FORM';
 
     private array $formFields = [
         'name' => [
-            'ru' => 'Имя',
-            'en' => 'Name',
+            'ru' => '"Имя"',
+            'en' => '"Name"',
             'rules' => 'required|min:3',
             'value' => '',
             'property' => false,
             'store' => 'NAME'
         ],
         'phone' => [
-            'ru' => 'Номер телефона',
-            'en' => 'Phone Number',
+            'ru' => '"Телефон"',
+            'en' => '"Phone Number"',
             'rules' => 'required|phone',
             'value' => '',
             'property' => true,
             'store' => 'PHONE'
         ],
-        'form_name' => [
+        'email' => [
+            'ru' => '"E-mail"',
+            'en' => '"E-mail"',
+            'rules' => 'email',
+            'value' => '',
+            'property' => true,
+            'store' => 'EMAIL'
+        ],
+        'message' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
-            'value' => 'Получить скидку',
+            'value' => '',
             'property' => true,
-            'store' => 'FORM_NAME'
+            'store' => 'MESSAGE'
+        ],
+        'constructive' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'CONSTRUCTIVE'
+        ],
+        'type' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'TYPE'
+        ],
+        'problem' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'PROBLEM'
+        ],
+        'thermal_insulation' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'THERMAL_INSULATION'
+        ],
+        'access' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'ACCESS'
+        ],
+        'location' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'LOCATION'
+        ],
+        'files' => [
+            'ru' => '',
+            'en' => '',
+            'rules' => '',
+            'value' => '',
+            'property' => true,
+            'store' => 'FILES'
         ],
 //        'g-recaptcha-response' => [
 //            'ru' => 'recaptcha',
@@ -94,7 +158,12 @@ class DiscountSnow extends Iblock
         return [
             'AUTHOR' => $this->formFields['name']['value'],
             'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'FORM_NAME' => $this->formFields['form_name']['value'],
+            'TYPE' => $this->formFields['type']['value'],
+            'SCOPE' => $this->formFields['SCOPE']['value'],
+            'FENCE' => $this->formFields['fence']['value'],
+            'TYPE_SERVICE' => $this->formFields['type_service']['value'],
+            'AREA' => $this->formFields['area']['value'],
+            'COMMENT' => $this->formFields['comment']['value'],
         ];
     }
 
