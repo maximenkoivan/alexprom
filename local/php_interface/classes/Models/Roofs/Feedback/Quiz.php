@@ -4,13 +4,13 @@ namespace classes\Models\Roofs\Feedback;
 
 use classes\Base\Iblock;
 
-class Order extends Iblock
+class Quiz extends Iblock
 {
     protected const IBLOCK_TYPE_CODE = 'roofs';
 
-    protected const IBLOCK_CODE = 'order';
+    protected const IBLOCK_CODE = 'quiz';
 
-    private const EVENT_NAME = 'ROOFS_ORDER_FORM';
+    private const EVENT_NAME = 'ROOFS_QUIZ_FORM';
 
     private array $formFields = [
         'name' => [
