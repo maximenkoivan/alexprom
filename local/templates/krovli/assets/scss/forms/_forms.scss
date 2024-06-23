@@ -134,6 +134,7 @@ select{
     &--flex {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
 
         .nx-dynamic-label {
             max-width: map_get($input, max-w-short);

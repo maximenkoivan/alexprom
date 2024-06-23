@@ -30,6 +30,7 @@
 @import "nx-blocks/modals";
 @import "nx-blocks/nx-preloader";
 @import "nx-blocks/nx-popup";
+@import "nx-blocks/nx-files";
 
 //blocks
 
@@ -52,7 +53,9 @@
 'blocks/cert-slider',
 'blocks/portfolio-slider',
 'blocks/order',
-'blocks/order-section';
+'blocks/order-section',
+'blocks/tab',
+'blocks/price';
 
 // themes
 //@import "themes/bootstrap-main-styles";

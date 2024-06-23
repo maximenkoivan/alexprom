@@ -23,6 +23,7 @@ class Order {
             formGroup: 'form-group ',
             sendBtn: 'send-request',
             note: 'order-note',
+            required: 'required',
         };
 
         $.extend(true, this, this, options);
@@ -74,7 +75,7 @@ class Order {
             progress = (currentStep * 100) / amt
 
         this.$orderProgress.style.width = `${progress}%`
-        this.$orderCounter.innerHTML = `${currentStep}/${amt}`
+        this.$orderCounter.innerHTML = `${progress}%`
 
         if (currentStep < amt) this.$orderNext.setAttribute(`data-nav`, Number(step) + 1)
         if (currentStep > 1) this.$orderPrev.setAttribute(`data-nav`, Number(step) - 1)
@@ -104,13 +105,14 @@ class Order {
                 currentField = this.$order.querySelector(`[data-${this.dataName.orderStep}='${Number(step) - 1}']`)
                 let formGroup = currentField.querySelector(`[data-${this.dataName.formGroup}]`),
                     inputs = formGroup.querySelectorAll('input'),
+                    isRequired = formGroup.hasAttribute(`data-${this.dataName.required}`),
                     checked = 0
 
                 inputs.forEach(input => {
                     if (input.checked) checked++
                 })
 
-                if (checked === 0) {
+                if (checked === 0 && isRequired) {
                     formGroup.classList.add(this.className.error)
                 } else {
                     formGroup.classList.remove(this.className.error)

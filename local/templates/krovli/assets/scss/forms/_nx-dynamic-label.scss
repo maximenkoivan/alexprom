@@ -16,13 +16,41 @@
     }
 
     .nx-dynamic-label__input{
-        color: black;
-        border: 1px solid #c9c9c9;
-        border-radius: 5px;
-        height: 50px;
-        padding: 18px 20px;
-        font-size: 16px;
-        line-height: 1.33;
+        font-size: 20px;
+        font-family: 'HelveticaNeueCyr';
+        color: #323232;
+        padding: 35px 40px;
+        border-radius: 50px;
+        border: 1px solid #BEBEBE;
+        background: #ffffff;
+        margin-bottom: 20px;
+
+        @include media ('xs') {
+            padding: 30px;
+            font-size: 14px;
+        }
+
+        &:active, &:hover, &:focus {
+            outline: 0;
+            outline-offset: 0;
+            box-shadow: none;
+            background: transparent;
+            border-color: var(--base-color-font);
+        }
+
+        &.white {
+            color: var(--base-color-white);
+            border-bottom: 1px solid var(--base-color-white);
+
+            &::placeholder {
+                color: var(--base-color-white);
+                opacity: 1;
+            }
+
+            &:active, &:hover, &:focus {
+                border-color: var(--base-color-white);
+            }
+        }
 
     }
 
