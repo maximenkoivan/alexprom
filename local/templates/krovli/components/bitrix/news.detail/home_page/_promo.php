@@ -24,10 +24,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <div class="guarantee">
                         *Предоставляется <span>гарантия до<br> 36 мес.</span> на все виды работ
                     </div>
-                    <button class="btn btn-blue" data-custom-open="calculator" type="submit">
+                    <button class="btn btn-blue" data-custom-open="modal-order" type="submit">
                         Рассчитать стоимость
                     </button>
-                    <button class="btn btn-orange" data-custom-open="calculator" type="submit">
+                    <button class="btn btn-orange" data-custom-open="modal-order" type="submit">
                         Заказать звонок
                     </button>
                 </div>

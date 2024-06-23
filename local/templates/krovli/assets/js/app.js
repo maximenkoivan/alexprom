@@ -12,7 +12,6 @@ import Nx from './next/Nx';
 import NxRequest from './next/NxRequest';
 import NxDynamicFormLabel from './next/NxDynamicFormLabel';
 import NxPhoneMask from './next/NxPhoneMask';
-//import './next/NxMenu';
 import './next/NxTabs';
 
 //Next initialize plugins
@@ -23,6 +22,7 @@ import SelectCustom from "./plugins/SelectCustom";
 import Tabs from "./plugins/Tabs";
 import Video from "./modules/Video";
 import ScrollTop from "./modules/ScrollTop";
+import UploadField from "./plugins/UploadField";
 
 //Custom modules
 import ShowModal from './modules/ShowModal';
@@ -56,6 +56,7 @@ new SelectCustom();
 new Tabs();
 new Video();
 new ScrollTop();
+new UploadField();
 $.order = new Order();
 
 

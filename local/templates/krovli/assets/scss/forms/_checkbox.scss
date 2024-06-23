@@ -13,6 +13,11 @@ $checkbox: (
     position: relative;
     display: block;
     user-select: none;
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     &__count {
         font-size: $fz-min;
@@ -29,6 +34,10 @@ $checkbox: (
             cursor: pointer;
             padding: 0 0 0 map_get($checkbox, size) + 10;
             min-height: map_get($checkbox, size);
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 130%;
+            color: #4a4a4a;
 
             &:before, &:after {
                 content: '';
@@ -184,13 +193,13 @@ $checkbox: (
     }
 
     &--image {
-        width: calc(25% - 10px);
-        margin: 5px;
+        width: calc(33% - 20px);
+        margin: 10px;
         cursor: pointer;
 
         .inner {
             height: 0;
-            padding-bottom: 66%;
+            padding-bottom: 60%;
             position: relative;
             transition: all $tr-time $tr-type;
 
@@ -204,7 +213,11 @@ $checkbox: (
         }
 
         .checkbox__text {
-            font-size: 12px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 130%;
+            color: #4a4a4a;
+            text-align: center;
             margin-top: 10px;
             display: block;
         }
