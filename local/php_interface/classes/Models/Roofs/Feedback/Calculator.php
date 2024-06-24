@@ -68,7 +68,7 @@ class Calculator extends Iblock
                 'store' => 'MATERIAL'
             ],
             'price' => [
-                'ru' => '',
+                'ru' => '"Стоимость"',
                 'en' => '',
                 'rules' => '',
                 'value' => '',
@@ -136,7 +136,6 @@ class Calculator extends Iblock
                 $text = '<br>';
                 foreach ($field['value'] as $value) {
                     $text .= $value . ' <br> ';
-
                 }
                 $field['value'] = $text;
             }

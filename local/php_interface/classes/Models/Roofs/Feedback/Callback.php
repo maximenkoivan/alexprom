@@ -89,7 +89,6 @@ class Callback extends Iblock
                 $text = '';
                 foreach ($field['value'] as $value) {
                     $text .= $value . ' <br> ';
-
                 }
                 $field['value'] = $text;
             }

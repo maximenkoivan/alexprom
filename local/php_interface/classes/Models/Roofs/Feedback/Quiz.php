@@ -162,7 +162,6 @@ class Quiz extends Iblock
                 $text = '<br>';
                 foreach ($field['value'] as $value) {
                     $text .= $value . ' <br> ';
-
                 }
                 $field['value'] = $text;
             }
