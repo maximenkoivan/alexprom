@@ -10,16 +10,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 <div class="wrapper">
     <div class="wrapper__content">
         <?php
-        include '_promo.php';
-        include '_about.php';
-        include '_how-work.php';
-        include '_calculate.php';
-        include '_services.php';
-        include '_faq.php';
-        include '_portfolio.php';
-        include '_reviews.php';
-        include '_questions.php';
-        include '_contact.php';
+        $settings = \classes\Models\Roofs\HomePage\Content::getInstance()->getPropertiesByCode('BLOCKS_PAGE');
+        foreach ($settings as $code) {
+            $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_blocks/_' . $code . '.php');
+        }
         ?>
     </div>
 </div>
