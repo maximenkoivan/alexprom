@@ -145,7 +145,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                             <input type="checkbox"
                                                                    class="checkbox__input"
                                                                    value="<?= $option ?>"
-                                                                   name="problem">
+                                                                   name="problem[]">
                                                             <span class="checkbox__text"><?= $option ?></span>
                                                         </label>
                                                     <?php endforeach; ?>
@@ -348,7 +348,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                                                 <input data-value="<?= $arResult['PROPERTIES']['OPTION_2_CALC']['~DESCRIPTION'][$key] ?>"
                                                                                        data-calculator-check
                                                                                        class="form-check-input"
-                                                                                       name="operation"
+                                                                                       name="operation[]"
                                                                                        value="<?= $item ?>"
                                                                                        type="checkbox">
                                                                                 <?= $item ?>

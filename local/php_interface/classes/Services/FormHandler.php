@@ -92,7 +92,7 @@ class FormHandler
                 $this->validate($name);
                 continue;
             }
-            $this->fields[$name]['value'] = $this->request->get($name) ?? $this->fields[$name]['value'];
+            $this->fields[$name]['value'] = $this->request->get($name) ?: $this->fields[$name]['value'];
             $this->validate($name);
         }
     }
@@ -180,7 +180,7 @@ class FormHandler
      * Подчищаем за собой, удаляя файлы
      * @return void
      */
-    private function deleteTempFiles()
+    private function deleteTempFiles(): void
     {
         foreach ($this->filesDelete as $file) {
             unlink($file['tmp_name']);

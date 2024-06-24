@@ -214,11 +214,13 @@ class Validator
 
     private function filesMaxNumber($param)
     {
+        if (empty($this->field['value'])) return true;
         return intval($param) > count($this->field['value']);
     }
 
     private function fileExtension($param)
     {
+        if (empty($this->field['value'])) return true;
         $rule = explode(',', $param);
         if (is_array($this->field['value'])) {
             foreach ($this->field['value'] as $file) {
@@ -238,6 +240,7 @@ class Validator
 
     private function fileSize($param)
     {
+        if (empty($this->field['value'])) return true;
         if (is_array($this->field['value'])) {
             foreach ($this->field['value'] as $file) {
                 if ($file['size'] > $param * 1024 * 1024) {

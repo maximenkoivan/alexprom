@@ -94,7 +94,7 @@ class Calculator extends Iblock
         return $this->formFields;
     }
 
-    public function setFieldValue(string $fieldName = '', $value = '')
+    public function setFieldValue(string $fieldName = '', $value = ''): void
     {
         $this->formFields[$fieldName]['value'] = $value;
     }
