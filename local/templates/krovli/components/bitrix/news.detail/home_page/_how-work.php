@@ -35,7 +35,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                     <div class="permissions__center">
                         <div class="permissions__center-pic">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/permission-pic.png" alt="">
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/permission-pic.png" alt="">
                         </div>
                         <ul class="permissions-list">
                             <li class="item">С физическими лицами</li>
@@ -47,28 +47,44 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <div data-list-slider="cert" class="cert-slider">
                     <div class="swiper-wrapper cert-slider__wrapper">
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>

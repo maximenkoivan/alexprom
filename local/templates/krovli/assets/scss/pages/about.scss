@@ -1,6 +1,6 @@
 .sections-about {
   position: relative;
-  padding: 70px 30px 100px 30px;
+  padding: 35px 30px 45px 30px;
   background-color: #fcfcfc;
   z-index: 1;
 
@@ -18,13 +18,16 @@
 
   .about-block {
 
+    .title {
+      margin-bottom: 40px;
+    }
+
     &__info {
       width: 60%;
       font-size: 23px;
       font-family: 'HelveticaNeueCyr';
       color: #283032;
       margin-bottom: 60px;
-      padding-right: 72px;
 
       @media (max-width: 1399px) {
         width: 100%;

@@ -13,10 +13,23 @@
     }
   }
 
+  &__ellipse {
+    width: 130%;
+    height: 300px;
+    position: absolute;
+    bottom: 85%;
+    z-index: 1;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 100%;
+    background-color: #f9fafa;
+    filter: blur(80px);
+  }
+
   &__form {
     position: relative;
     z-index: 2;
-    padding: 68px 30px 335px;
+    padding: 90px 30px 244px;
     font-family: 'Gilroy-Medium';
 
     @media (max-width: 1399px) {
@@ -87,7 +100,6 @@
 
   &__inform {
     position: relative;
-    padding: 20px 30px;
     background-color: #e3f6ff;
 
     .title {
@@ -267,7 +279,7 @@
     color: var(--base-color-white);
 
     .title {
-      margin-top: -130px;
+      margin-top: -110px;
 
       @media (max-width: 1399px) {
         font-size: 50px;

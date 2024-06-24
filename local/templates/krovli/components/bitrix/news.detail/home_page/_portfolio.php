@@ -11,18 +11,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <section class="portfolio-sections">
-    <div class="portfolio-blur"></div>
     <div class="container portfolio">
         <div class="title big">
             портфолио
         </div>
         <div class="swiper-outside-wrap">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
             <div data-list-slider="portfolio" class="portfolio-slider">
                 <div class="swiper-wrapper portfolio-slider__wrapper">
                     <div class="swiper-slide">

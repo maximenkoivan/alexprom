@@ -86,6 +86,12 @@
       background-image: radial-gradient(circle at 50% -120%, #fff 0, #3FB5EB 125%, #3FB5EB 100%);
     }
 
+    span {
+      &::before, &::after {
+        background-color: white;
+      }
+    }
+
     &:hover {
       color: var(--base-color-white);
       border-bottom: 3px solid #1f6687;

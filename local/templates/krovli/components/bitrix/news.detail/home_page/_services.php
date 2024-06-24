@@ -88,12 +88,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <span>*Бесплатный выезд специалиста</span> для замера и расчетных работ (при условии дальнейшего заказа услуг монтажа/ремонта кровли. В иных случаях, стоимость <span>выезда специалиста 2000 руб.</span>
             </div>
             <div class="services__info--right">
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
+                <button class="btn btn-blue" data-custom-open="callback" type="submit">
                     заказать услугу
                 </button>
             </div>
         </div>
-        <div class="title ta-c">
+        <div class="title big ta-c">
             <span>Дополнительные</span> услуги
         </div>
         <div class="add-services__list">

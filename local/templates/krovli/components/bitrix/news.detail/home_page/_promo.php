@@ -16,8 +16,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <img src="/local/templates/krovli/assets/images/top-image.webp" alt=" ">
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col">
+            <div class="flex-row">
+                <div class="flex-col md-12">
                     <div class="title big">
                         Монтаж и ремонт кровли <span>любой сложности*</span>
                     </div>
@@ -25,7 +25,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         *Предоставляется <span>гарантия до<br> 36 мес.</span> на все виды работ
                     </div>
                     <button class="btn btn-blue" data-custom-open="modal-order" type="submit">
-                        Рассчитать стоимость
+                        <span>Рассчитать стоимость</span>
                     </button>
                     <button class="btn btn-orange" data-custom-open="modal-order" type="submit">
                         Заказать звонок
@@ -35,6 +35,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div>
     </div>
     <div class="top-index-sections__inform">
+        <div class="top-index-sections__ellipse"></div>
         <div class="bg bg--section-2">
             <img src="/local/templates/krovli/assets/images/advantage-image.png" alt=" ">
         </div>
