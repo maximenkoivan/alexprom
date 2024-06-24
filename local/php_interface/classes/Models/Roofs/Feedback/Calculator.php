@@ -9,7 +9,6 @@ class Calculator extends Iblock
     protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'calculator';
-
     private const EVENT_NAME = 'ROOFS_CALCULATOR_FORM';
 
     private array $formFields;

@@ -9,7 +9,6 @@ class Callback extends Iblock
     protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'feedback';
-
     private const EVENT_NAME = 'ROOFS_CALLBACK_FORM';
 
     private array $formFields = [

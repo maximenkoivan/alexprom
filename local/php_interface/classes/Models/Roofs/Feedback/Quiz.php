@@ -9,7 +9,6 @@ class Quiz extends Iblock
     protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'quiz';
-
     private const EVENT_NAME = 'ROOFS_QUIZ_FORM';
 
     private array $formFields = [
