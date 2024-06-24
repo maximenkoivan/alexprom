@@ -207,8 +207,9 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <input type="file"
                                                        class="hidden"
                                                        data-files-inp="file"
-                                                       data-accept="jpg|png|gif|pdf|xlsx|doc|txt"
-                                                       data-name="files[]">
+                                                       data-accept="jpg|jpeg|png|gif|webp|svg"
+                                                       data-name="files[]"
+                                                       multiple="">
                                             </label>
                                         </div>
                                     </div>

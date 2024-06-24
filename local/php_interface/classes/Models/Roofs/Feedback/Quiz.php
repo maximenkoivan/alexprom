@@ -96,7 +96,8 @@ class Quiz extends Iblock
         'files' => [
             'ru' => '',
             'en' => '',
-            'rules' => '',
+            'rules' => 'files_max_number:10|file_ext:jpg,jpeg,png,gif,webp,svg|file_size:20',
+            'type' => 'file',
             'value' => '',
             'property' => true,
             'store' => 'FILES'
