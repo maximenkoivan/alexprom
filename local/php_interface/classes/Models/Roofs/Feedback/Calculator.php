@@ -10,7 +10,6 @@ class Calculator extends Iblock
 
     protected const IBLOCK_CODE = 'calculator';
     private const EVENT_NAME = 'ROOFS_CALCULATOR_FORM';
-
     private array $formFields;
 
     public function __construct()
@@ -22,7 +21,7 @@ class Calculator extends Iblock
                 'ru' => '',
                 'en' => '',
                 'rules' => '',
-                'value' => 'Расчет услуги от ' .FormatDate('d F Y H:i:s'),
+                'value' => 'Расчет услуги от ' . FormatDate('d F Y H:i:s'),
                 'property' => false,
                 'store' => 'NAME'
             ],
@@ -155,12 +154,12 @@ class Calculator extends Iblock
         $result['IBLOCK_ID'] = $this->getIblockId();
 
         foreach ($formFields as $field) {
-            if(!$field['property'] && !empty($field['store'])) {
+            if (!$field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }
 
-        if(!empty($additionalFields) && is_array($additionalFields)) {
+        if (!empty($additionalFields) && is_array($additionalFields)) {
             $result = $result + $additionalFields;
         }
         return $result;
@@ -177,7 +176,7 @@ class Calculator extends Iblock
         $formFields = $this->getFormFields();
 
         foreach ($formFields as $field) {
-            if($field['property'] && !empty($field['store'])) {
+            if ($field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }

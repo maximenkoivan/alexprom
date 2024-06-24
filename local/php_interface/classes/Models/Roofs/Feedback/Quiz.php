@@ -10,7 +10,6 @@ class Quiz extends Iblock
 
     protected const IBLOCK_CODE = 'quiz';
     private const EVENT_NAME = 'ROOFS_QUIZ_FORM';
-
     private array $formFields = [
         'name' => [
             'ru' => '"Имя"',
@@ -181,12 +180,12 @@ class Quiz extends Iblock
         $result['IBLOCK_ID'] = $this->getIblockId();
 
         foreach ($formFields as $field) {
-            if(!$field['property'] && !empty($field['store'])) {
+            if (!$field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }
 
-        if(!empty($additionalFields) && is_array($additionalFields)) {
+        if (!empty($additionalFields) && is_array($additionalFields)) {
             $result = $result + $additionalFields;
         }
         return $result;
@@ -203,7 +202,7 @@ class Quiz extends Iblock
         $formFields = $this->getFormFields();
 
         foreach ($formFields as $field) {
-            if($field['property'] && !empty($field['store'])) {
+            if ($field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }
