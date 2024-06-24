@@ -156,16 +156,19 @@ class Quiz extends Iblock
      */
     public function getFieldsForMail(): array
     {
-        return [
-            'AUTHOR' => $this->formFields['name']['value'],
-            'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'TYPE' => $this->formFields['type']['value'],
-            'SCOPE' => $this->formFields['SCOPE']['value'],
-            'FENCE' => $this->formFields['fence']['value'],
-            'TYPE_SERVICE' => $this->formFields['type_service']['value'],
-            'AREA' => $this->formFields['area']['value'],
-            'COMMENT' => $this->formFields['comment']['value'],
-        ];
+        $result = [];
+        foreach ($this->formFields as $field) {
+            if (is_array($field['value']) && $field['type'] != ['file']) {
+                $text = '<br>';
+                foreach ($field['value'] as $value) {
+                    $text .= $value . ' <br> ';
+
+                }
+                $field['value'] = $text;
+            }
+            $result[$field['store']] = $field['type'] !== 'file' ? $field['value'] : '';
+        }
+        return $result;
     }
 
     /**
