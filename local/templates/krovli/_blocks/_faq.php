@@ -23,7 +23,7 @@ $questions = \classes\Models\Roofs\HomePage\Faq::getInstance()->getAllElements()
                             <div class="icon"></div>
                         </div>
                         <div class="info">
-                            <?= $question['ANSWER']['~VALUE'] ?>
+                            <?= $question['ANSWER']['~VALUE']['TEXT'] ?? '' ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
