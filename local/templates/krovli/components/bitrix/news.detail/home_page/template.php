@@ -12,7 +12,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <?php
         $settings = \classes\Models\Roofs\HomePage\Content::getInstance()->getPropertiesByCode('BLOCKS_PAGE');
         foreach ($settings as $code) {
-            $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_blocks/_' . $code . '.php');
+            $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_blocks/_' . $code . '.php', ['arResult' => $arResult]);
         }
         ?>
     </div>

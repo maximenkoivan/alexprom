@@ -11,35 +11,30 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <div class="sections-about">
-    <div class="bg bg--about">
-        <img src="/local/templates/krovli/assets/images/about-image.png" alt=" ">
-    </div>
+    <?php if (!empty($arResult['PROPERTIES']['IMAGE_ABOUT']['VALUE'])): ?>
+        <div class="bg bg--about">
+            <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_ABOUT']['VALUE']) ?>"
+                 alt="<?= strip_tags($arResult['PROPERTIES']['IMAGE_ABOUT']['~DESCRIPTION']) ?>">
+        </div>
+    <?php endif; ?>
     <div class="container about-block">
         <div class="title big">
-            О компании
+            <?= $arResult['PROPERTIES']['TITLE_ABOUT']['~VALUE'] ?>
         </div>
         <div class="about-block__info">
-            <p>Строительная компания «АлексПром» оказывает услуги по качественному ремонту и монтажу кровли любой сложности в Москве и Московской области. Работаем как с физическими, так и с юридическими лицами по наличному и безналичному расчету, в т.ч. криптовалютой.</p>
-            <p>Мы работаем от простой протечки кровли, до ее капитального ремонта, гарантируя результат и исключая дальнейшие «переделки». Есть услуга «Срочный выезд». Предоставляем фото и видео отчетность.</p>
+            <?= $arResult['PROPERTIES']['DESC_ABOUT']['~VALUE']['TEXT'] ?? '' ?>
         </div>
         <div class="about-block__pics">
-            <div class="about-block__item about-block__item-blue">
-                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/about-1.svg" alt=""></div>
-                <div class="text"><span>500+ выполненных</span><br> работ</div>
-            </div>
-            <div class="about-block__item about-block__item-orange">
-                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/about-2.svg" alt=""></div>
-                <div class="text"><span>Работа по договору</span><br>
-                    с гарантией качества</div>
-            </div>
-            <div class="about-block__item about-block__item-orange">
-                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/about-3.svg" alt=""></div>
-                <div class="text"><span>Выгодная цена</span> на<br> монтаж и материалы</div>
-            </div>
-            <div class="about-block__item about-block__item-blue">
-                <div class="icon"><img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/about-4.svg" alt=""></div>
-                <div class="text"><span>4,83 рейтинг</span> по всем<br> карточкам и отзывам</div>
-            </div>
+            <?php foreach ($arResult['PROPERTIES']['FACTOIDS_ABOUT']['~VALUE'] as $factoid): ?>
+                <?php if (empty($factoid['SUB_VALUES']['ICON_ABOUT']['VALUE']) || empty($factoid['SUB_VALUES']['TEXT_ABOUT']['~VALUE'])) continue ?>
+                <div class="about-block__item about-block__item-blue">
+                    <div class="icon">
+                        <img src="<?= CFile::GetPath($factoid['SUB_VALUES']['ICON_ABOUT']['VALUE']) ?>"
+                             alt="<?= strip_tags($factoid['SUB_VALUES']['TEXT_ABOUT']['~VALUE']) ?>">
+                    </div>
+                    <div class="text"><?= $factoid['SUB_VALUES']['TEXT_ABOUT']['~VALUE'] ?></div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
