@@ -30,15 +30,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             </div>
                         </div>
                         <div class="pic-box">
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
                         </div>
                         <div class="info-box">
                             <div class="info-box__title">
@@ -61,15 +61,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             </div>
                         </div>
                         <div class="pic-box">
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
                         </div>
                         <div class="info-box">
                             <div class="info-box__title">
@@ -92,15 +92,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             </div>
                         </div>
                         <div class="pic-box">
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
                         </div>
                         <div class="info-box">
                             <div class="info-box__title">
@@ -123,15 +123,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                             </div>
                         </div>
                         <div class="pic-box">
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
-                            <div class="pic-box__item">
-                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt="">
-                            </div>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
+                            <a data-fslightbox="portfolio" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" class="pic-box__item">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/pic-box.png" alt=" ">
+                            </a>
                         </div>
                         <div class="info-box">
                             <div class="info-box__title">
