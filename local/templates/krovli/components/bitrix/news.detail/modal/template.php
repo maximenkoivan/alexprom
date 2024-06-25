@@ -482,7 +482,3 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
         </div>
     </div>
 </div>
-
-<div class="logo">
-    <img src="/local/templates/krovli/assets/images/logo.png" alt="">
-</div>
