@@ -9,6 +9,25 @@
     &__closeIcon {
         color: $c-orange;
     }
+
+    &.order {
+
+        .tingle-modal-box {
+            width: 940px !important;
+            height: 460px !important;
+
+            &__content {
+                background-color: white;
+                background-image: none;
+            }
+
+            @include media('sm-max') {
+                width: auto !important;
+                height: auto !important;
+                max-width: 720px;
+            }
+        }
+    }
 }
 
 .tingle-modal-box {
@@ -31,6 +50,13 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        .logo {
+            margin: 0 auto 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         h3, p {
             font-family: "Kenyan Coffee Rg", sans-serif;

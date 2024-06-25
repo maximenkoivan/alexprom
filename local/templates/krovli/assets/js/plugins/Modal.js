@@ -34,7 +34,7 @@ class Modal {
 
         let videoModal = MicroModal.init({
             openTrigger: 'data-video-modal',
-            closeTrigger: 'data-custom-close',
+            closeTrigger: 'data-video-close',
             openClass: 'is-open',
             disableScroll: true,
             disableFocus: false,

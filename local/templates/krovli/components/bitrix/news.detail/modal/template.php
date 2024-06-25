@@ -468,12 +468,12 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
      aria-hidden="true"
      class="modal micromodal-slide"
      tabindex="-1">
-    <div class="modal__overlay" tabindex="-1" data-custom-close>
+    <div class="modal__overlay" tabindex="-1" data-video-close>
         <a href="#"
            class="modal__close"
            aria-label="Close modal"
-           data-custom-close>
-            <svg data-custom-close height="30" width="30" class="call__icon">
+           data-video-close>
+            <svg data-video-close height="30" width="30" class="call__icon">
                 <use xlink:href="#icon-x"></use>
             </svg>
         </a>
