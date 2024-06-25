@@ -1,7 +1,4 @@
 <?php
-
-use classes\Helpers\Generic;
-
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -9,55 +6,29 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
+$questions = \classes\Models\Roofs\HomePage\Faq::getInstance()->getAllElements();
 ?>
-<section class="faq-sections">
-    <div class="container faq">
-        <div class="title big ta-c">
-            <span>часто задаваемые</span> вопросы
-        </div>
-        <div class="faq__list">
-            <div class="faq__list--item">
-                <div class="spoiler">
-                    <div class="text">Ваша компания предоставляет гарантию? И работаете ли Вы по договору?</div>
-                    <div class="icon"></div>
-                </div>
-                <div class="info">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра. Википедия</div>
+<?php if (!empty($questions)): ?>
+    <section class="faq-sections">
+        <div class="container faq">
+            <div class="title big ta-c">
+                <?= $arResult['PROPERTIES']['TITLE_FAQ']['~VALUE'] ?>
             </div>
-            <div class="faq__list--item">
-                <div class="spoiler">
-                    <div class="text">Ваша компания предоставляет гарантию? И работаете ли Вы по договору?</div>
-                    <div class="icon"></div>
-                </div>
-                <div class="info">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра. Википедия</div>
-            </div>
-            <div class="faq__list--item">
-                <div class="spoiler">
-                    <div class="text">Ваша компания предоставляет гарантию? И работаете ли Вы по договору?</div>
-                    <div class="icon"></div>
-                </div>
-                <div class="info">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра. Википедия</div>
-            </div>
-            <div class="faq__list--item">
-                <div class="spoiler">
-                    <div class="text">Ваша компания предоставляет гарантию? И работаете ли Вы по договору?</div>
-                    <div class="icon"></div>
-                </div>
-                <div class="info">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра. Википедия</div>
-            </div>
-            <div class="faq__list--item">
-                <div class="spoiler">
-                    <div class="text">Ваша компания предоставляет гарантию? И работаете ли Вы по договору?</div>
-                    <div class="icon"></div>
-                </div>
-                <div class="info">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра. Википедия</div>
-            </div>
-            <div class="faq__list--item">
-                <div class="spoiler">
-                    <div class="text">Ваша компания предоставляет гарантию? И работаете ли Вы по договору?</div>
-                    <div class="icon"></div>
-                </div>
-                <div class="info">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра. Википедия</div>
+            <div class="faq__list">
+                <?php foreach ($questions as $question): ?>
+                    <?php if (empty($question['QUESTION']['~VALUE']) || empty($question['ANSWER']['~VALUE'])) continue ?>
+                    <div class="faq__list--item">
+                        <div class="spoiler">
+                            <div class="text"><?= $question['QUESTION']['~VALUE'] ?></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="info">
+                            <?= $question['ANSWER']['~VALUE'] ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
+
