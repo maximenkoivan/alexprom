@@ -12,77 +12,50 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="permissions">
             <div class="permissions__left">
                 <div class="title big">
-                    Работаем с Порталом<br><span>поставщиков</span>
+                    <?= $arResult['PROPERTIES']['TITLE_PERMISSIONS']['~VALUE'] ?>
                 </div>
                 <div class="title min">
-                    наши допуски <span>и разрешения:</span>
+                    <?= $arResult['PROPERTIES']['SUBTITLE_PERMISSIONS']['~VALUE'] ?>
                 </div>
             </div>
             <div class="permissions__center">
                 <div class="permissions__center-pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/permission-pic.png" alt="">
+                    <?php if (!empty($arResult['PROPERTIES']['IMAGE_PERMISSIONS']['VALUE'])): ?>
+                        <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_PERMISSIONS']['VALUE']) ?>"
+                             alt="<?= strip_tags($arResult['PROPERTIES']['IMAGE_PERMISSIONS']['~DESCRIPTION']) ?>">
+                    <?php endif; ?>
                 </div>
                 <ul class="permissions-list">
-                    <li class="item">С физическими лицами</li>
-                    <li class="item">С юридическими лицами</li>
-                    <li class="item">С порталом поставщиков</li>
+                    <?php foreach ($arResult['PROPERTIES']['TEXT_PERMISSIONS']['~VALUE'] as $text): ?>
+                        <li class="item"><?= $text ?></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
-        <div data-list-slider="cert" class="cert-slider">
-            <div class="swiper-wrapper cert-slider__wrapper">
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
+        <?php if (!empty($arResult['PROPERTIES']['SLIDER_PERMISSIONS']['VALUE'])): ?>
+            <div data-list-slider="cert" class="cert-slider">
+                <div class="swiper-wrapper cert-slider__wrapper">
+                    <?php foreach ($arResult['PROPERTIES']['SLIDER_PERMISSIONS']['VALUE'] as $key => $imageId): ?>
+                        <div class="swiper-slide">
+                            <a data-fslightbox="cert" href="<?= $path = CFile::GetPath($imageId) ?>">
+                                <img src="<?= $path ?>"
+                                     alt="<?= strip_tags($arResult['PROPERTIES']['SLIDER_PERMISSIONS']['~DESCRIPTION'][$key]) ?>">
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
+                <div class="swiper-pagination"></div>
+                <div data-list-slider-prev class="cert-slider__btn-prev">
+                    <svg width="80" height="80">
+                        <use xlink:href="#icon-caret-left"></use>
+                    </svg>
                 </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a data-fslightbox="cert" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/cert.png" alt="">
-                    </a>
+                <div data-list-slider-next class="cert-slider__btn-next">
+                    <svg width="80" height="80">
+                        <use xlink:href="#icon-caret-right"></use>
+                    </svg>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div data-list-slider-prev class="cert-slider__btn-prev">
-                <svg width="80" height="80">
-                    <use xlink:href="#icon-caret-left"></use>
-                </svg>
-            </div>
-            <div data-list-slider-next class="cert-slider__btn-next">
-                <svg width="80" height="80">
-                    <use xlink:href="#icon-caret-right"></use>
-                </svg>
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </section>
