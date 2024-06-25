@@ -9,190 +9,42 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
+$services = \classes\Models\Roofs\HomePage\Services::getInstance()->getAllElements();
 ?>
-<section class="services-sections">
-    <div class="container services">
-        <div class="title big">
-            Услуги по <span>ремонту и монтажу кровли:</span>
-        </div>
-        <div class="services__list">
-            <div class="services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
-                </div>
-                <div class="info__wrap">
-                    <div class="info">
-                        <div class="info__title">Металлочерепица</div>
-                        <div class="info__subtitle">от 350 р/м2</div>
-                    </div>
-                </div>
+<?php if (!empty($services)): ?>
+    <section class="services-sections">
+        <div class="container services">
+            <div class="title big">
+                <?= $arResult['PROPERTIES']['TITLE_SERVICES']['~VALUE'] ?>
             </div>
-            <div class="services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
-                </div>
-                <div class="info__wrap">
-                    <div class="info">
-                        <div class="info__title">Металлочерепица</div>
-                        <div class="info__subtitle">от 350 р/м2</div>
+            <div class="services__list">
+                <?php foreach ($services as $service): ?>
+                    <?php if (empty($service['IMAGE']['VALUE'])) continue ?>
+                    <div class="services__list--item">
+                        <div class="pic">
+                            <img src="<?= CFile::GetPath($service['IMAGE']['VALUE']) ?>" alt="<?= $service['NAME'] ?>">
+                        </div>
+                        <div class="info__wrap">
+                            <div class="info">
+                                <div class="info__title"><?= $service['NAME'] ?></div>
+                                <div class="info__subtitle"><?= $service['IMAGE']['~DESCRIPTION'] ?></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-            <div class="services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
+            <div class="services__info">
+                <div class="services__info--left">
+                    <?= $arResult['PROPERTIES']['FOOTNOTE_SERVICES']['~VALUE']['TEXT'] ?? '' ?>
                 </div>
-                <div class="info__wrap">
-                    <div class="info">
-                        <div class="info__title">Металлочерепица</div>
-                        <div class="info__subtitle">от 350 р/м2</div>
-                    </div>
-                </div>
-            </div>
-            <div class="services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
-                </div>
-                <div class="info__wrap">
-                    <div class="info">
-                        <div class="info__title">Металлочерепица</div>
-                        <div class="info__subtitle">от 350 р/м2</div>
-                    </div>
-                </div>
-            </div>
-            <div class="services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
-                </div>
-                <div class="info__wrap">
-                    <div class="info">
-                        <div class="info__title">Металлочерепица</div>
-                        <div class="info__subtitle">от 350 р/м2</div>
-                    </div>
-                </div>
-            </div>
-            <div class="services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/services-bg.png" alt="">
-                </div>
-                <div class="info__wrap">
-                    <div class="info">
-                        <div class="info__title">Металлочерепица</div>
-                        <div class="info__subtitle">от 350 р/м2</div>
-                    </div>
+                <div class="services__info--right">
+                    <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_SERVICES']['~VALUE'])): ?>
+                        <button class="btn btn-blue" data-custom-open="callback" type="submit">
+                            <?= $arResult['PROPERTIES']['TEXT_BTN_SERVICES']['~VALUE'] ?>
+                        </button>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-        <div class="services__info">
-            <div class="services__info--left">
-                <span>*Бесплатный выезд специалиста</span> для замера и расчетных работ (при условии дальнейшего заказа услуг монтажа/ремонта кровли. В иных случаях, стоимость <span>выезда специалиста 2000 руб.</span>
-            </div>
-            <div class="services__info--right">
-                <button class="btn btn-blue" data-custom-open="callback" type="submit">
-                    заказать услугу
-                </button>
-            </div>
-        </div>
-        <div class="title big ta-c">
-            <span>Дополнительные</span> услуги
-        </div>
-        <div class="add-services__list">
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#confirm" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-            <div class="add-services__list--item">
-                <div class="pic">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/add-services-bg.png" alt="">
-                </div>
-                <div class="info">
-                    <div class="info__title">Герметизация кровли</div>
-                    <div class="info__price">от 200 р/м2</div>
-                </div>
-                <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#feedback" type="submit">
-                    заказать
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
