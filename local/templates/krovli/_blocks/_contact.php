@@ -10,20 +10,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<div class="sections-contact">
+<section class="sections-contact">
     <div class="title big ta-c">
         контакты
     </div>
     <div class="map-wrap">
         <div class="address-tab">
             <div class="logo">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/logo.svg" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/logo.svg" alt="">
             </div>
             <div class="info">Москва, <span>ул. Бойцовая, д.22</span>, этаж 2, пом.V, комн.9, офис 4 г</div>
             <div class="email">
                 <div class="ellipse-icon">
                     <div class="ellipse-icon__pic">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/email.svg" alt="email-icon">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/email.svg" alt="email-icon">
                     </div>
                 </div>
                 zakaz@alexprom.ru
@@ -31,12 +31,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div class="phone">
                 <div class="ellipse-icon">
                     <div class="ellipse-icon__pic">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/phone.svg" alt="phone-icon">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/phone.svg" alt="phone-icon">
                     </div>
                 </div>
                 <a class="" href="tel:+7 (495) 109-02-42">+7 (495) 109-02-42</a>
             </div>
         </div>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8901be21829c28b4b142deaa0d610ca7d94462ff8fe42ad9a6c6ca8e6e30e74d&amp;width=100%25&amp;height=660&amp;lang=ru_RU&amp;"></script>
+
+        <div class="map-wrap__inner" id="contact-map" style="position:relative;overflow:hidden;">
+            <iframe src="https://yandex.by/map-widget/v1/?ll=37.720023%2C55.808519&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc2NDY5NhI70KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCR0L7QudGG0L7QstCw0Y8g0YPQu9C40YbQsCwgMjIiCg3l5RZCFQtDX0I%2C&source=serp_navig&z=14.26"  frameborder="0" allowfullscreen="true"></iframe>
+            <script>
+                document.addEventListener('click', function (e) {
+                    let map = document.querySelector('#contact-map iframe')
+                    if (e.target.id === 'contact-map') {
+                        map.style.pointerEvents = 'all'
+                    } else {
+                        map.style.pointerEvents = 'none'
+                    }
+                })
+            </script>
     </div>
-</div>
+</section>
