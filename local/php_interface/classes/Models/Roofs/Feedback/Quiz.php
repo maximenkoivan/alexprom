@@ -158,8 +158,9 @@ class Quiz extends Iblock
         foreach ($this->formFields as $field) {
             if (is_array($field['value']) && $field['type'] != ['file']) {
                 $text = '<br>';
-                foreach ($field['value'] as $value) {
-                    $text .= $value . ' <br> ';
+                foreach ($field['value'] as $key => $value) {
+                    $postfix = array_key_last($field['value']) == $key ? '' : ' <br> ';
+                    $text .= $value . $postfix;
                 }
                 $field['value'] = $text;
             }

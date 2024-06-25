@@ -84,13 +84,14 @@ class Callback extends Iblock
         $result = [];
         foreach ($this->formFields as $field) {
             if (is_array($field['value']) && $field['type'] != ['file']) {
-                $text = '';
-                foreach ($field['value'] as $value) {
-                    $text .= $value . ' <br> ';
+                $text = '<br>';
+                foreach ($field['value'] as $key => $value) {
+                    $postfix = array_key_last($field['value']) == $key ? '' : ' <br> ';
+                    $text .= $value . $postfix;
                 }
                 $field['value'] = $text;
             }
-            $result[$field['store']] = $field['type'] != ['file'] ? $field['value'] : '';
+            $result[$field['store']] = $field['type'] !== 'file' ? $field['value'] : '';
         }
         return $result;
     }
