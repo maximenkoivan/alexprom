@@ -191,6 +191,7 @@
     grid-area: policy;
     font-size: 16px;
     margin-top: 40px;
+    color: white;
 
     @media (max-width: 743px) {
       font-size: 12px;
@@ -203,6 +204,7 @@
     grid-area: dev;
     font-size: 16px;
     margin-top: 40px;
+    color: white;
 
     @media (max-width: 743px) {
       display: none;
