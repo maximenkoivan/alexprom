@@ -463,3 +463,22 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
         </div>
     </div>
 </div>
+
+<div id="empty"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <a href="#"
+           class="modal__close"
+           aria-label="Close modal"
+           data-custom-close>
+            <svg data-custom-close height="30" width="30" class="call__icon">
+                <use xlink:href="#icon-x"></use>
+            </svg>
+        </a>
+        <div class="modal__container modal__container--empty" role="dialog" aria-modal="true">
+            <div data-modal-content class="inner"></div>
+        </div>
+    </div>
+</div>

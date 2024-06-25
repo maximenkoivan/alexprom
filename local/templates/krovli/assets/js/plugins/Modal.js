@@ -20,13 +20,34 @@ class Modal {
     init(){
         if(!this.$el.length) return false;
 
-        MicroModal.init({
+        let modal = MicroModal.init({
             openTrigger: 'data-custom-open',
             closeTrigger: 'data-custom-close',
             openClass: 'is-open',
             disableScroll: true,
             disableFocus: false,
             onShow: (modal, btn) => addInputs(modal, btn), // [1]
+            awaitOpenAnimation: false,
+            awaitCloseAnimation: false,
+            debugMode: true
+        });
+
+        let videoModal = MicroModal.init({
+            openTrigger: 'data-video-modal',
+            closeTrigger: 'data-custom-close',
+            openClass: 'is-open',
+            disableScroll: true,
+            disableFocus: false,
+            onShow: (modal, body, btn) => {
+                let content = modal.querySelector('[data-modal-content]'),
+                    videoID = btn.target.closest('[data-video-link]').getAttribute('data-video-link')
+                content.innerHTML = ''
+                content.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoID}?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+            },
+            onClose: (modal, body, btn) => {
+                let content = modal.querySelector('[data-modal-content]')
+                content.innerHTML = ''
+            },
             awaitOpenAnimation: false,
             awaitCloseAnimation: false,
             debugMode: true

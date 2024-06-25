@@ -19,10 +19,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div data-list-slider="portfolio" class="portfolio-slider">
                 <div class="swiper-wrapper portfolio-slider__wrapper">
                     <div class="swiper-slide">
-                        <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
-                            <div class="play-cover" data-bs-toggle="modal" data-bs-target="#video-play">
-                                <div class="play-cover__icon"></div>
+                        <div class="nx-video">
+                            <div class="nx-video__wrapper">
+                                <div class="nx-video__link"
+                                     style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png')"
+                                     data-video-link="XD5w6r-tqXE"
+                                     data-video-modal="empty">
+                                    <div class="nx-video__icon"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="pic-box">
@@ -46,11 +50,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
-                            <a href="/" class="play-cover" target="_blank">
-                                <div class="play-cover__icon"></div>
-                            </a>
+                        <div class="nx-video">
+                            <div class="nx-video__wrapper">
+                                <div class="nx-video__link"
+                                     style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png')"
+                                     data-video-link="yVU64UgVMVw"
+                                     data-video-modal="empty">
+                                    <div class="nx-video__icon"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
@@ -73,11 +81,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
-                            <a href="/" class="play-cover" target="_blank">
-                                <div class="play-cover__icon"></div>
-                            </a>
+                        <div class="nx-video">
+                            <div class="nx-video__wrapper">
+                                <div class="nx-video__link"
+                                     style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png')"
+                                     data-video-link="XD5w6r-tqXE"
+                                     data-video-modal="empty">
+                                    <div class="nx-video__icon"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
@@ -100,11 +112,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="video-box">
-                            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png" alt="">
-                            <a href="/" class="play-cover" target="_blank">
-                                <div class="play-cover__icon"></div>
-                            </a>
+                        <div class="nx-video">
+                            <div class="nx-video__wrapper">
+                                <div class="nx-video__link"
+                                     style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/assets/images/video-box.png')"
+                                     data-video-link="XD5w6r-tqXE"
+                                     data-video-modal="empty">
+                                    <div class="nx-video__icon"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="pic-box">
                             <div class="pic-box__item">
