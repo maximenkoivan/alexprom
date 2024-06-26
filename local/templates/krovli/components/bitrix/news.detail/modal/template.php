@@ -438,7 +438,8 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <input name="utm_content" value="<?= $request->get('utm_content') ?>">
                                             </div>
                                             <div class="tab__buttons">
-                                                <button data-send-request="calculatorRoofs" class="btn btn-orange">
+                                                <button data-ok-title='<?= $arResult['PROPERTIES']['TEXT_SUCCESS_QUIZ']['~VALUE'] ?>'
+                                                        data-send-request="calculatorRoofs" class="btn btn-orange">
                                                     <?= $arResult['PROPERTIES']['TEXT_BTN_CALC']['~VALUE'] ?>
                                                 </button>
                                             </div>
