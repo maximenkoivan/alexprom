@@ -9,7 +9,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 ?>
 <section class="how-work-sections">
     <div class="block-ellipse">
-        <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/block-ellipse.png" alt="">
+        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/block-ellipse.png" alt="">
     </div>
     <div class="how-work">
         <div class="title big ta-c">
@@ -18,7 +18,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="pic"></div>
         <div class="permissions-wrap">
             <div class="big-arrows">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/local/templates/krovli/assets/images/icons/arrows-big.svg" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/arrows-big.svg" alt="">
             </div>
         </div>
     </div>
