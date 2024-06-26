@@ -29,6 +29,17 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                                  data-video-modal="empty">
                                                 <div class="nx-video__icon"></div>
                                             </div>
+
+                                            <!--Если тут картинка-->
+
+<!--                                            <a data-fslightbox="portfolio"-->
+<!--                                               href="--><?php //= CFile::GetPath($imageId) ?><!--"-->
+<!--                                               class="nx-video__link">-->
+<!--                                                <img src="--><?php //= CFile::GetPath($imageId) ?><!--" alt=" ">-->
+<!--                                            </a>-->
+
+                                            <!--Если тут картинка-->
+
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
