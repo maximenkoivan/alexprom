@@ -36,6 +36,33 @@ final class Content extends Iblock
         return $result;
     }
 
+    /**
+     * Получает свойство по его коду
+     * @param string $code
+     * @return array
+     */
+    public function getPropertiesByCode(string $code): array
+    {
+        $result = [];
+        $obElement = \CIBlockElement::GetList(
+            ['SORT' => 'ASC'],
+            [
+                'ACTIVE' => 'Y',
+                'IBLOCK_TYPE' => self::IBLOCK_TYPE_CODE,
+                'IBLOCK_ID' => $this->getIblockId(),
+            ],
+            false,
+            false,
+            ['PROPERTY_' . $code]
+        );
+        if ($obElement) {
+            while ($property = $obElement->GetNext()) {
+                $result[] = $property['PROPERTY_' . $code . '_VALUE'];
+            }
+        }
+        return $result;
+    }
+
     public static function getInstance()
     {
         if (is_null(self::$instance)) {

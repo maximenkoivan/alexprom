@@ -1,5 +1,5 @@
 .cert-slider {
-    padding: 40px 0;
+    padding: 30px 0;
     overflow: hidden;
 
     &__btn-next, &__btn-prev {
@@ -14,5 +14,20 @@
 
     &__btn-prev {
         left: -65px;
+    }
+
+    .swiper-pagination {
+        bottom: -25px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        background-color: #283032;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #283032;
+
     }
 }

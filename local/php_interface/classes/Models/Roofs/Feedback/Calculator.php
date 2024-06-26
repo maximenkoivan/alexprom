@@ -9,9 +9,7 @@ class Calculator extends Iblock
     protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'calculator';
-
     private const EVENT_NAME = 'ROOFS_CALCULATOR_FORM';
-
     private array $formFields;
 
     public function __construct()
@@ -23,7 +21,7 @@ class Calculator extends Iblock
                 'ru' => '',
                 'en' => '',
                 'rules' => '',
-                'value' => 'Расчет услуги от ' .FormatDate('d F Y H:i:s'),
+                'value' => 'Расчет услуги от ' . FormatDate('d F Y H:i:s'),
                 'property' => false,
                 'store' => 'NAME'
             ],
@@ -68,7 +66,7 @@ class Calculator extends Iblock
                 'store' => 'MATERIAL'
             ],
             'price' => [
-                'ru' => '',
+                'ru' => '"Стоимость"',
                 'en' => '',
                 'rules' => '',
                 'value' => '',
@@ -94,7 +92,7 @@ class Calculator extends Iblock
         return $this->formFields;
     }
 
-    public function setFieldValue(string $fieldName = '', $value = '')
+    public function setFieldValue(string $fieldName = '', $value = ''): void
     {
         $this->formFields[$fieldName]['value'] = $value;
     }
@@ -130,10 +128,19 @@ class Calculator extends Iblock
      */
     public function getFieldsForMail(): array
     {
-        return [
-            'AUTHOR' => $this->formFields['name']['value'],
-            'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-        ];
+        $result = [];
+        foreach ($this->formFields as $field) {
+            if (is_array($field['value']) && $field['type'] != ['file']) {
+                $text = '<br>';
+                foreach ($field['value'] as $key => $value) {
+                    $postfix = array_key_last($field['value']) == $key ? '' : ' <br> ';
+                    $text .= $value . $postfix;
+                }
+                $field['value'] = $text;
+            }
+            $result[$field['store']] = $field['type'] !== 'file' ? $field['value'] : '';
+        }
+        return $result;
     }
 
     /**
@@ -148,12 +155,12 @@ class Calculator extends Iblock
         $result['IBLOCK_ID'] = $this->getIblockId();
 
         foreach ($formFields as $field) {
-            if(!$field['property'] && !empty($field['store'])) {
+            if (!$field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }
 
-        if(!empty($additionalFields) && is_array($additionalFields)) {
+        if (!empty($additionalFields) && is_array($additionalFields)) {
             $result = $result + $additionalFields;
         }
         return $result;
@@ -170,7 +177,7 @@ class Calculator extends Iblock
         $formFields = $this->getFormFields();
 
         foreach ($formFields as $field) {
-            if($field['property'] && !empty($field['store'])) {
+            if ($field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }

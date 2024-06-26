@@ -62,7 +62,7 @@ class ListSlider {
 
                 case 'cert':
                     params = {
-                        modules: [Navigation],
+                        modules: [Navigation, Pagination],
                         slidesPerView: 'auto',
                         spaceBetween: 10,
                         loop: false,
@@ -70,6 +70,10 @@ class ListSlider {
                         navigation: {
                             nextEl: $next,
                             prevEl: $prev,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
                         },
                         breakpoints: {
                             // when window width is >=
@@ -88,7 +92,7 @@ class ListSlider {
 
                 case 'portfolio':
                     params = {
-                        modules: [Navigation],
+                        modules: [Navigation, Pagination],
                         slidesPerView: 1,
                         spaceBetween: 10,
                         loop: true,
@@ -96,6 +100,16 @@ class ListSlider {
                         navigation: {
                             nextEl: $next,
                             prevEl: $prev,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            991: {
+                                slidesPerView: 2,
+                                spaceBetween: 50
+                            },
                         }
                     }
 

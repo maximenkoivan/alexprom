@@ -145,7 +145,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                             <input type="checkbox"
                                                                    class="checkbox__input"
                                                                    value="<?= $option ?>"
-                                                                   name="problem">
+                                                                   name="problem[]">
                                                             <span class="checkbox__text"><?= $option ?></span>
                                                         </label>
                                                     <?php endforeach; ?>
@@ -207,8 +207,9 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <input type="file"
                                                        class="hidden"
                                                        data-files-inp="file"
-                                                       data-accept="jpg|png|gif|pdf|xlsx|doc|txt"
-                                                       data-name="files[]">
+                                                       data-accept="jpg|jpeg|png|gif|webp|svg"
+                                                       data-name="files[]"
+                                                       multiple="">
                                             </label>
                                         </div>
                                     </div>
@@ -347,7 +348,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                                                 <input data-value="<?= $arResult['PROPERTIES']['OPTION_2_CALC']['~DESCRIPTION'][$key] ?>"
                                                                                        data-calculator-check
                                                                                        class="form-check-input"
-                                                                                       name="operation"
+                                                                                       name="operation[]"
                                                                                        value="<?= $item ?>"
                                                                                        type="checkbox">
                                                                                 <?= $item ?>
@@ -437,7 +438,8 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <input name="utm_content" value="<?= $request->get('utm_content') ?>">
                                             </div>
                                             <div class="tab__buttons">
-                                                <button data-send-request="calculatorRoofs" class="btn btn-orange">
+                                                <button data-ok-title='<?= $arResult['PROPERTIES']['TEXT_SUCCESS_QUIZ']['~VALUE'] ?>'
+                                                        data-send-request="calculatorRoofs" class="btn btn-orange">
                                                     <?= $arResult['PROPERTIES']['TEXT_BTN_CALC']['~VALUE'] ?>
                                                 </button>
                                             </div>
@@ -459,6 +461,25 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div id="empty"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-video-close>
+        <a href="#"
+           class="modal__close"
+           aria-label="Close modal"
+           data-video-close>
+            <svg data-video-close height="30" width="30" class="call__icon">
+                <use xlink:href="#icon-x"></use>
+            </svg>
+        </a>
+        <div class="modal__container modal__container--empty" role="dialog" aria-modal="true">
+            <div data-modal-content class="inner"></div>
         </div>
     </div>
 </div>

@@ -24,7 +24,6 @@ $asset->addString(
     AssetLocation::BEFORE_CSS
 );
 
-$asset->addCss('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/app.min.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/assets/app.min.js', true);

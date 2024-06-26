@@ -20,7 +20,6 @@ import Modal from './plugins/Modal';
 import NumberAnimate from "./plugins/NumberAnimate";
 import SelectCustom from "./plugins/SelectCustom";
 import Tabs from "./plugins/Tabs";
-import Video from "./modules/Video";
 import ScrollTop from "./modules/ScrollTop";
 import UploadField from "./plugins/UploadField";
 
@@ -55,7 +54,6 @@ new ShowPopup();
 new NumberAnimate();
 new SelectCustom();
 new Tabs();
-new Video();
 new ScrollTop();
 new UploadField();
 new Calculator();

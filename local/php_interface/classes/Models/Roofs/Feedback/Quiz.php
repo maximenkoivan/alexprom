@@ -9,9 +9,7 @@ class Quiz extends Iblock
     protected const IBLOCK_TYPE_CODE = 'roofs';
 
     protected const IBLOCK_CODE = 'quiz';
-
     private const EVENT_NAME = 'ROOFS_QUIZ_FORM';
-
     private array $formFields = [
         'name' => [
             'ru' => '"Имя"',
@@ -96,7 +94,8 @@ class Quiz extends Iblock
         'files' => [
             'ru' => '',
             'en' => '',
-            'rules' => '',
+            'rules' => 'files_max_number:10|file_ext:jpg,jpeg,png,gif,webp,svg|file_size:20',
+            'type' => 'file',
             'value' => '',
             'property' => true,
             'store' => 'FILES'
@@ -119,7 +118,7 @@ class Quiz extends Iblock
         return $this->formFields;
     }
 
-    public function setFieldValue(string $fieldName = '', $value = '')
+    public function setFieldValue(string $fieldName = '', $value = ''): void
     {
         $this->formFields[$fieldName]['value'] = $value;
     }
@@ -155,16 +154,19 @@ class Quiz extends Iblock
      */
     public function getFieldsForMail(): array
     {
-        return [
-            'AUTHOR' => $this->formFields['name']['value'],
-            'AUTHOR_PHONE' => $this->formFields['phone']['value'] ?: 'не указан',
-            'TYPE' => $this->formFields['type']['value'],
-            'SCOPE' => $this->formFields['SCOPE']['value'],
-            'FENCE' => $this->formFields['fence']['value'],
-            'TYPE_SERVICE' => $this->formFields['type_service']['value'],
-            'AREA' => $this->formFields['area']['value'],
-            'COMMENT' => $this->formFields['comment']['value'],
-        ];
+        $result = [];
+        foreach ($this->formFields as $field) {
+            if (is_array($field['value']) && $field['type'] != ['file']) {
+                $text = '<br>';
+                foreach ($field['value'] as $key => $value) {
+                    $postfix = array_key_last($field['value']) == $key ? '' : ' <br> ';
+                    $text .= $value . $postfix;
+                }
+                $field['value'] = $text;
+            }
+            $result[$field['store']] = $field['type'] !== 'file' ? $field['value'] : '';
+        }
+        return $result;
     }
 
     /**
@@ -179,12 +181,12 @@ class Quiz extends Iblock
         $result['IBLOCK_ID'] = $this->getIblockId();
 
         foreach ($formFields as $field) {
-            if(!$field['property'] && !empty($field['store'])) {
+            if (!$field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }
 
-        if(!empty($additionalFields) && is_array($additionalFields)) {
+        if (!empty($additionalFields) && is_array($additionalFields)) {
             $result = $result + $additionalFields;
         }
         return $result;
@@ -201,7 +203,7 @@ class Quiz extends Iblock
         $formFields = $this->getFormFields();
 
         foreach ($formFields as $field) {
-            if($field['property'] && !empty($field['store'])) {
+            if ($field['property'] && !empty($field['store'])) {
                 $result[$field['store']] = $field['value'];
             }
         }

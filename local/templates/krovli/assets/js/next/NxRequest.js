@@ -263,9 +263,9 @@ class NxRequest{
             }
         } else {
             switch (type) {
-                case 'callback':
+                case 'callbackRoofs':
 
-                    MicroModal.close('callback')
+                    document.getElementById('callback').classList.remove('is-open')
 
                     $modalOk = new tingle.modal({
                         footer: true,
@@ -274,6 +274,44 @@ class NxRequest{
                         closeLabel: ""
                     });
                     $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
+                    break;
+
+                case 'quizRoofs':
+
+                    document.getElementById('modal-order').classList.remove('is-open')
+
+                    $modalOk = new tingle.modal({
+                        footer: false,
+                        stickyFooter: false,
+                        closeMethods: ['overlay', 'button', 'escape'],
+                        cssClass: ['order'],
+                        closeLabel: ""
+                    });
+
+                    $modalOk.setContent(`<div class="logo">
+                                            <img src="/local/templates/krovli/assets/images/logo.png" alt="">
+                                        </div>
+                                        <h3>${$okTitle ? $okTitle : ''}</h3>
+                                        <p>${$okText ? $okText : ''}</p>`);
+                    break;
+
+                case 'calculatorRoofs':
+
+                    document.getElementById('calculator').classList.remove('is-open')
+
+                    $modalOk = new tingle.modal({
+                        footer: false,
+                        stickyFooter: false,
+                        closeMethods: ['overlay', 'button', 'escape'],
+                        cssClass: ['order'],
+                        closeLabel: ""
+                    });
+
+                    $modalOk.setContent(`<div class="logo">
+                                            <img src="/local/templates/krovli/assets/images/logo.png" alt="">
+                                        </div>
+                                        <h3>${$okTitle ? $okTitle : ''}</h3>
+                                        <p>${$okText ? $okText : ''}</p>`);
                     break;
 
                 default:

@@ -4,7 +4,7 @@
 
     &__btn-next, &__btn-prev {
         position: absolute;
-        top: 65%;
+        top: 35%;
         cursor: pointer;
     }
 
@@ -113,5 +113,20 @@
                 font-size: 15px;
             }
         }
+    }
+
+    .swiper-pagination {
+        bottom: -25px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        background-color: #283032;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #283032;
+
     }
 }

@@ -201,6 +201,19 @@ class Generic
         ];
     }
 
+    public static function getVideoYoutubeID($link)
+    {
+        if (!empty($link)) {
+            preg_match(
+                '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i',
+                $link,
+                $matches
+            );
+            return $matches[1];
+        } else
+            return null;
+    }
+
     /**
      * Получает API ключ Yandex карт из настроек Битрикса (Управление уструктурой)
      * @return false|string|null

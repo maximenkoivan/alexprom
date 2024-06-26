@@ -1,5 +1,6 @@
 .portfolio-sections {
   position: relative;
+  background: linear-gradient(to top, #f2f5fc, white);
 
   .portfolio-blur {
     position: absolute;
@@ -7,7 +8,8 @@
     height: 1387px;
     top: -500px;
     left: 0;
-    background: url("/local/templates/krovli/assets/images/portfolio-ellipse.png") no-repeat;
+    backdrop-filter: blur(70px);
+    background-color: white;
     z-index: 0;
 
     @media (min-width: 1921px) {
@@ -31,8 +33,8 @@
   }
 
   .title {
-    padding-left: 130px;
-    margin-bottom: 50px;
+    padding-left: 15px;
+    margin-bottom: 15px;
   }
 
   .swiperPortfolio__button-next,
