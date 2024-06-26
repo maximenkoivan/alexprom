@@ -57,7 +57,7 @@
 
     @media (max-width: 743px) {
       width: 100%;
-      margin: 20px 0 50px;
+      margin: 20px 0 0;
       height: 558px;
       background: url("/local/templates/krovli/assets/images/how-work-mobile.png") no-repeat center center;
     }
@@ -156,10 +156,6 @@
         @media (max-width: 1200px) {
           display: none;
         }
-      }
-
-      @media (max-width: 743px) {
-        margin-bottom: 20px;
       }
     }
 
