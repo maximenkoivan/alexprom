@@ -26,7 +26,7 @@ class Modal {
             openClass: 'is-open',
             disableScroll: true,
             disableFocus: false,
-            onShow: (modal, btn) => addInputs(modal, btn), // [1]
+            onShow: (modal, body, btn) => addInputs(modal, btn), // [1]
             awaitOpenAnimation: false,
             awaitCloseAnimation: false,
             debugMode: true
@@ -56,7 +56,9 @@ class Modal {
         function addInputs(modal, btn) {
             let form = modal.querySelector('form'),
                 input = document.createElement('input'),
-                type = btn.getAttribute('data-type')
+                type = btn.target.getAttribute('data-type')
+
+
 
             if (type) {
                 input.setAttribute('name', 'type')

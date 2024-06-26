@@ -1,6 +1,9 @@
 .how-work-sections {
-  background: url("/local/templates/krovli/assets/images/sky.png") no-repeat;
+  background-image: url("/local/templates/krovli/assets/images/sky.png");
+  background-repeat: no-repeat;
   position: relative;
+  background-position: bottom;
+  background-color: #fcfcfc;
 
   @media (min-width: 1921px) {
     background: url("/local/templates/krovli/assets/images/sky.png") /cover no-repeat;
@@ -85,7 +88,7 @@
       width: 237px;
       height: 144px;
       top: 0;
-      right: 50px;
+      right: -160px;
 
       img {
         width: 100%;

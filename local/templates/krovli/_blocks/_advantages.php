@@ -8,7 +8,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <?php if (!empty($arResult['PROPERTIES']['ELEMENTS_ADVANTAGES']['VALUE'])): ?>
-    <section class="top-index-sections">
+    <section class="top-index-sections top-index-sections--2">
         <div class="top-index-sections__inform">
             <div class="top-index-sections__ellipse"></div>
             <?php if (!empty($arResult['PROPERTIES']['IMAGE_ADVANTAGES']['VALUE'])): ?>

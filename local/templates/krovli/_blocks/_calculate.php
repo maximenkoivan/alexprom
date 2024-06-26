@@ -38,13 +38,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <div class="calculate__buttons">
                 <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_1_CALCULATE']['~VALUE'])): ?>
-                    <button class="btn btn-blue" data-custom-open="callback">
+                    <button class="btn btn-blue" data-custom-open="modal-order">
+                        <span>
                         <?= $arResult['PROPERTIES']['TEXT_BTN_1_CALCULATE']['~VALUE'] ?>
+                        </span>
                     </button>
                 <?php endif; ?>
                 <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2_CALCULATE']['~VALUE'])): ?>
                     <button class="btn btn-orange" data-custom-open="calculator">
+                        <span>
                         <?= $arResult['PROPERTIES']['TEXT_BTN_2_CALCULATE']['~VALUE'] ?>
+                        </span>
                     </button>
                 <?php endif; ?>
             </div>

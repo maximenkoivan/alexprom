@@ -266,6 +266,7 @@ class NxRequest{
                 case 'callbackRoofs':
 
                     document.getElementById('callback').classList.remove('is-open')
+                    document.querySelector('body').style.overflow = 'visible'
 
                     $modalOk = new tingle.modal({
                         footer: true,
@@ -279,43 +280,38 @@ class NxRequest{
                 case 'quizRoofs':
 
                     document.getElementById('modal-order').classList.remove('is-open')
+                    document.querySelector('body').style.overflow = 'visible'
 
                     $modalOk = new tingle.modal({
                         footer: false,
                         stickyFooter: false,
                         closeMethods: ['overlay', 'button', 'escape'],
-                        cssClass: ['order'],
                         closeLabel: ""
                     });
 
-                    $modalOk.setContent(`<div class="logo">
-                                            <img src="/local/templates/krovli/assets/images/logo.png" alt="">
-                                        </div>
-                                        <h3>${$okTitle ? $okTitle : ''}</h3>
+                    $modalOk.setContent(`<h3>${$okTitle ? $okTitle : ''}</h3>
                                         <p>${$okText ? $okText : ''}</p>`);
                     break;
 
                 case 'calculatorRoofs':
 
                     document.getElementById('calculator').classList.remove('is-open')
+                    document.querySelector('body').style.overflow = 'visible'
 
                     $modalOk = new tingle.modal({
                         footer: false,
                         stickyFooter: false,
                         closeMethods: ['overlay', 'button', 'escape'],
-                        cssClass: ['order'],
                         closeLabel: ""
                     });
 
-                    $modalOk.setContent(`<div class="logo">
-                                            <img src="/local/templates/krovli/assets/images/logo.png" alt="">
-                                        </div>
-                                        <h3>${$okTitle ? $okTitle : ''}</h3>
+                    $modalOk.setContent(`<h3>${$okTitle ? $okTitle : ''}</h3>
                                         <p>${$okText ? $okText : ''}</p>`);
                     break;
 
                 default:
                     $modalCallback = document.querySelector('#modal-callback')
+                    document.querySelector('body').style.overflow = 'visible'
 
                     $modalOk = new tingle.modal({
                         footer: true,

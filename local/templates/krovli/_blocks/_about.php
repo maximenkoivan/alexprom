@@ -7,7 +7,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<div class="sections-about">
+<section class="sections-about">
     <?php if (!empty($arResult['PROPERTIES']['IMAGE_ABOUT']['VALUE'])): ?>
         <div class="bg bg--about">
             <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_ABOUT']['VALUE']) ?>"
@@ -24,6 +24,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="about-block__pics">
             <?php foreach ($arResult['PROPERTIES']['FACTOIDS_ABOUT']['~VALUE'] as $factoid): ?>
                 <?php if (empty($factoid['SUB_VALUES']['ICON_ABOUT']['VALUE']) || empty($factoid['SUB_VALUES']['TEXT_ABOUT']['~VALUE'])) continue ?>
+            <!--нужно применять 2 класса .about-block__item-blue и about-block__item-orange для разных цветов см. пункт 13 в доработках-->
                 <div class="about-block__item about-block__item-blue">
                     <div class="icon">
                         <img src="<?= CFile::GetPath($factoid['SUB_VALUES']['ICON_ABOUT']['VALUE']) ?>"
@@ -34,4 +35,4 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <?php endforeach; ?>
         </div>
     </div>
-</div>
+</section>

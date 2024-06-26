@@ -8,13 +8,16 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <section class="top-index-sections">
+    <?php if (!empty($arResult['PROPERTIES']['IMAGE_PROMO']['VALUE'])): ?>
+        <div class="bg bg--promo">
+            <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_PROMO']['VALUE']) ?>"
+                 alt="<?= strip_tags($arResult['PROPERTIES']['IMAGE_PROMO']['~DESCRIPTION']) ?>">
+        </div>
+    <?php endif; ?>
+    <div class="promo-sky">
+        <img src="/local/templates/krovli/assets/images/sky.png" alt="">
+    </div>
     <div class="top-index-sections__form">
-        <?php if (!empty($arResult['PROPERTIES']['IMAGE_PROMO']['VALUE'])): ?>
-            <div class="bg bg--promo">
-                <img src="<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_PROMO']['VALUE']) ?>"
-                     alt="<?= strip_tags($arResult['PROPERTIES']['IMAGE_PROMO']['~DESCRIPTION']) ?>">
-            </div>
-        <?php endif; ?>
         <div class="container">
             <div class="flex-row">
                 <div class="flex-col md-12">

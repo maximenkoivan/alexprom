@@ -31,6 +31,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     <?php endforeach; ?>
                 </ul>
             </div>
+            <div class="permissions-wrap">
+                <div class="big-arrows">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/arrows-big.svg" alt="">
+                </div>
+            </div>
         </div>
         <?php if (!empty($arResult['PROPERTIES']['SLIDER_PERMISSIONS']['VALUE'])): ?>
             <div data-list-slider="cert" class="cert-slider">

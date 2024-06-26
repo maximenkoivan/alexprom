@@ -20,6 +20,14 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                 <div class="title">
                     <?= $arResult['PROPERTIES']['TITLE_FEEDBACK']['~VALUE'] ?>
                 </div>
+                <a href="#"
+                   class="modal__close"
+                   aria-label="Close modal"
+                   data-custom-close>
+                    <svg data-custom-close height="30" width="30" class="call__icon">
+                        <use xlink:href="#icon-x"></use>
+                    </svg>
+                </a>
             </header>
             <div class="form-index-block">
                 <form action="/request/roofs/feedback.php" class="form-index col gx-5">
@@ -57,21 +65,77 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
     </div>
 </div>
 
+<div id="order"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <div class="modal__container modal__container--callback" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <div class="title">
+                    Сделать заказ
+                </div>
+                <a href="#"
+                   class="modal__close"
+                   aria-label="Close modal"
+                   data-custom-close>
+                    <svg data-custom-close height="30" width="30" class="call__icon">
+                        <use xlink:href="#icon-x"></use>
+                    </svg>
+                </a>
+            </header>
+            <div class="form-index-block">
+                <form action="/request/roofs/feedback.php" class="form-index col gx-5">
+                    <div data-form-group class="form-group">
+                        <input name="name" type="text" class="form-control" id="name"
+                               placeholder="<?= $arResult['PROPERTIES']['PLH_1_FEEDBACK']['~VALUE'] ?>">
+                    </div>
+                    <div data-form-group class="form-group">
+                        <input data-phone-mask name="phone" type="tel" class="form-control" id="phone"
+                               placeholder="<?= $arResult['PROPERTIES']['PLH_2_FEEDBACK']['~VALUE'] ?>">
+                    </div>
+                    <div style="display: none">
+                        <input name="form" value="<?= $arResult['PROPERTIES']['FORM_NAME_FEEDBACK']['~VALUE'] ?>">
+                        <input name="utm_source" value="<?= $request->get('utm_source') ?>">
+                        <input name="utm_medium" value="<?= $request->get('utm_medium') ?>">
+                        <input name="utm_campaign" value="<?= $request->get('utm_campaign') ?>">
+                        <input name="utm_term" value="<?= $request->get('utm_term') ?>">
+                        <input name="utm_content" value="<?= $request->get('utm_content') ?>">
+                        <input name="service-name" value="">
+                    </div>
+                    <button data-ok-title='<?= $arResult['PROPERTIES']['TITLE_SUCCESS_FEEDBACK']['~VALUE'] ?>'
+                            data-ok-text="<?= $arResult['PROPERTIES']['TEXT_SUCCESS_FEEDBACK']['~VALUE'] ?>"
+                            class="btn btn-blue" data-send-request="callbackRoofs" type="submit">
+                        <?= $arResult['PROPERTIES']['TEXT_BTN_FEEDBACK']['~VALUE'] ?>
+                    </button>
+                    <div class="form-group__text">
+                        <p>
+                            <?= $arResult['PROPERTIES']['TEXT_COMMON']['~VALUE'] ?>
+                            <a href="<?= $arResult['PROPERTIES']['LINK_COMMON']['~VALUE'] ?>"
+                               target="_blank"><?= $arResult['PROPERTIES']['TEXT_LINK_COMMON']['~VALUE'] ?></a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="modal-order"
      aria-hidden="true"
      class="modal micromodal-slide"
      tabindex="-1">
     <div class="modal__overlay" tabindex="-1" data-custom-close>
-        <a href="#"
-           class="modal__close"
-           aria-label="Close modal"
-           data-custom-close>
-            <svg data-custom-close height="30" width="30" class="call__icon">
-                <use xlink:href="#icon-x"></use>
-            </svg>
-        </a>
 
         <div class="modal__container modal__container--order" role="dialog" aria-modal="true">
+            <a href="#"
+               class="modal__close"
+               aria-label="Close modal"
+               data-custom-close>
+                <svg data-custom-close height="30" width="30" class="call__icon">
+                    <use xlink:href="#icon-x"></use>
+                </svg>
+            </a>
 
             <div data-order class="order">
 
@@ -135,7 +199,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                     <div class="order__error"><?= $arResult['PROPERTIES']['ERROR_MESSAGE_COMMON']['~VALUE'] ?></div>
                                 </div>
                                 <div data-order-step="3" class="order__step hidden">
-                                    <div class="form-group" data-form-group>
+                                    <div class="form-group" data-required data-form-group>
                                         <div class="flex-row mb-20">
                                             <div class="flex-col sm-12">
                                                 <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_1_STEP_3_QUIZ']['~VALUE'] ?></div>
@@ -298,16 +362,16 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
      class="modal micromodal-slide"
      tabindex="-1">
     <div class="modal__overlay" tabindex="-1" data-custom-close>
-        <a href="#"
-           class="modal__close"
-           aria-label="Close modal"
-           data-custom-close>
-            <svg data-custom-close height="30" width="30" class="call__icon">
-                <use xlink:href="#icon-x"></use>
-            </svg>
-        </a>
 
         <div class="modal__container modal__container--order" role="dialog" aria-modal="true">
+            <a href="#"
+               class="modal__close"
+               aria-label="Close modal"
+               data-custom-close>
+                <svg data-custom-close height="30" width="30" class="call__icon">
+                    <use xlink:href="#icon-x"></use>
+                </svg>
+            </a>
 
             <div data-order class="order">
 

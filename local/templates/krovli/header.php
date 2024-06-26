@@ -99,7 +99,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
                 <div class="header-block__right">
                     <button class="btn btn-orange d-xl-block" data-custom-open="callback"
                             type="submit">
-                        <?= $header['TEXT_BTN_HEADER']['~VALUE'] ?>
+                        <span><?= $header['TEXT_BTN_HEADER']['~VALUE'] ?></span>
                     </button>
                 </div>
             <?php endif; ?>

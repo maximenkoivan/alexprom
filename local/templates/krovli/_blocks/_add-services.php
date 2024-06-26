@@ -26,7 +26,7 @@ $addServices = \classes\Models\Roofs\HomePage\AddServices::getInstance()->getAll
                             <div class="info__price"><?= $service['IMAGE']['~DESCRIPTION'] ?></div>
                         </div>
                         <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_ADD_SERVICES']['~VALUE'])): ?>
-                            <button class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#confirm" type="submit">
+                            <button class="btn btn-blue" data-type="<?= $service['NAME'] ?>" data-custom-open="order" type="submit">
                                 <?= $arResult['PROPERTIES']['TEXT_BTN_ADD_SERVICES']['~VALUE'] ?>
                             </button>
                         <?php endif; ?>
