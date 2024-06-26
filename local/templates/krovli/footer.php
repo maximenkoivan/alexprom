@@ -76,7 +76,11 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         <use xlink:href="#icon-arrow-top"></use>
     </svg>
 </a>
-<a href="https://wa.me/79255322311" target="_blank" class="wa-call"></a>
+
+<a href="https://wa.me/79255322311"
+   target="_blank" class="call">
+    <img src="/local/templates/krovli/assets/images/whatsapp.png" height="60" width="60" alt="">
+</a>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "modal",

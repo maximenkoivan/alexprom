@@ -1,7 +1,28 @@
 .top-index-sections {
   margin-top: -121px;
   padding-top: 121px;
+  padding-bottom: 0;
   background-color: #fcfcfc;
+
+  .promo-sky {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &--2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
 
   .btn-orange {
     display: none;
@@ -22,14 +43,14 @@
     right: 50%;
     transform: translateX(50%);
     border-radius: 100%;
-    background-color: #f9fafa;
+    background-color: white;
     filter: blur(80px);
   }
 
   &__form {
     position: relative;
     z-index: 2;
-    padding: 90px 30px 244px;
+    padding: 90px 30px 130px;
     font-family: 'Gilroy-Medium';
 
     @media (max-width: 1399px) {
@@ -100,7 +121,6 @@
 
   &__inform {
     position: relative;
-    background-color: #e3f6ff;
 
     .title {
       //@media (max-width: 743px) {
@@ -279,7 +299,6 @@
     color: var(--base-color-white);
 
     .title {
-      margin-top: -110px;
 
       @media (max-width: 1399px) {
         font-size: 50px;

@@ -16,10 +16,5 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <?= $arResult['PROPERTIES']['TITLE_WORK']['~VALUE'] ?>
         </div>
         <div class="pic"></div>
-        <div class="permissions-wrap">
-            <div class="big-arrows">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/icons/arrows-big.svg" alt="">
-            </div>
-        </div>
     </div>
 </section>
