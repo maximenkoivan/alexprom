@@ -77,7 +77,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
                             </div>
                         </div>
                         <a class=""
-                           href="mailto:<?= $header['EMAIL_HEADER']['DESCRIPTION'] ?>"><?= $header['PHONE_HEADER']['DESCRIPTION'] ?></a>
+                           href="mailto:<?= $header['EMAIL_HEADER']['DESCRIPTION'] ?>"><?= $header['EMAIL_HEADER']['DESCRIPTION'] ?></a>
                     </div>
                 <?php endif; ?>
                 <?php if (!empty($header['PHONE_HEADER']['DESCRIPTION'])): ?>
