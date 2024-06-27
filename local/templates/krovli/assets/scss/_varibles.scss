@@ -80,7 +80,7 @@ $footer-bg: white;
 // Content
 //////////////////
 $text: (
-    color-main: #003b72,
+    color-main: $c-dark,
     color-dark: $c-dark,
     color-dark-fade: rgba($c-dark, .8),
     color-light: $white,

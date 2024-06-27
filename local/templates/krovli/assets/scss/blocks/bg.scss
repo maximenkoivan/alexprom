@@ -50,4 +50,15 @@
             }
         }
     }
+
+    &--about {
+
+        @include media('xs') {
+            bottom: -60px;
+
+            img {
+                height: 33%;
+            }
+        }
+    }
 }
