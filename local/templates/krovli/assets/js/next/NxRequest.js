@@ -277,6 +277,20 @@ class NxRequest{
                     $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
                     break;
 
+                case 'orderRoofs':
+
+                    document.getElementById('order').classList.remove('is-open')
+                    document.querySelector('body').style.overflow = 'visible'
+
+                    $modalOk = new tingle.modal({
+                        footer: true,
+                        stickyFooter: false,
+                        closeMethods: ['overlay', 'button', 'escape'],
+                        closeLabel: ""
+                    });
+                    $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
+                    break;
+
                 case 'quizRoofs':
 
                     document.getElementById('modal-order').classList.remove('is-open')

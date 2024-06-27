@@ -262,10 +262,7 @@
 
         &__info {
           text-align: center;
-
-          @media (max-width: 1399px) {
-            background: radial-gradient(#fff 50%, transparent 73%);
-          }
+          background: radial-gradient(#fff 50%, transparent 73%);
         }
 
         span {

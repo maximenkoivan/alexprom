@@ -37,7 +37,7 @@ $services = \classes\Models\Roofs\HomePage\Services::getInstance()->getAllElemen
                 <div class="services__info--right">
                     <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_SERVICES']['~VALUE'])): ?>
                         <button class="btn btn-blue" data-custom-open="callback" type="submit">
-                            <?= $arResult['PROPERTIES']['TEXT_BTN_SERVICES']['~VALUE'] ?>
+                            <span><?= $arResult['PROPERTIES']['TEXT_BTN_SERVICES']['~VALUE'] ?></span>
                         </button>
                     <?php endif; ?>
                 </div>
