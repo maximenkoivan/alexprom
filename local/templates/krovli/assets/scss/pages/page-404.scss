@@ -1,5 +1,7 @@
 .page-404 {
-  background: url("/local/templates/krovli/assets/images/404-man.png") no-repeat left bottom, url("/local/templates/krovli/assets/images/404.png") no-repeat center center/cover;
+  background-image: url("/local/templates/krovli/assets/images/404-man.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -7,10 +9,18 @@
   justify-content: space-between;
   align-items: center;
 
+  @include media('sm-max') {
+    background-size: contain;
+  }
+
   .btn {
     width: 355px;
     margin-bottom: 75px;
     line-height: 90px;
+
+    @include media('sm-max') {
+      width: 100%;
+    }
   }
 
   .info {
@@ -26,6 +36,10 @@
     color: #323232;
     font-size: 251px;
     font-family: 'Kenyan Coffee Rg';
+
+    @include media('sm-max') {
+      font-size: 150px;
+    }
   }
 
   .text {
@@ -35,6 +49,10 @@
     
     span {
       color: #FF2B2B;
+    }
+
+    @include media('sm-max') {
+      font-size: 40px;
     }
   }
 }
