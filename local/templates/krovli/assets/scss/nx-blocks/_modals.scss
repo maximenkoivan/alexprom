@@ -50,6 +50,19 @@
             .btn {
                 width: 100%;
             }
+
+            @include media('xs') {
+                padding: 48px 12px 24px;
+
+                .modal__header {
+                    margin-bottom: 20px;
+                }
+
+                .form-control {
+                    padding: 20px;
+                    margin-bottom: 0;
+                }
+            }
         }
 
         &--order {

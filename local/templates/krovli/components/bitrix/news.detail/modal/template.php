@@ -242,7 +242,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                             </div>
                                         </div>
                                         <div class="order__heading"><?= $arResult['PROPERTIES']['TITLE_4_STEP_3_QUIZ']['~VALUE'] ?></div>
-                                        <div class="form-group d-flex g-20">
+                                        <div class="form-group d-flex g-20 order__radio">
                                             <?php foreach ($arResult['PROPERTIES']['OPTIONS_4_STEP_3_QUIZ']['~VALUE'] as $key => $option): ?>
                                                 <label class="checkbox checkbox--radio">
                                                     <input type="radio"
@@ -456,12 +456,12 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                             <?= $arResult['PROPERTIES']['TITLE_4_CALC']['~VALUE'] ?>
                                                         </div>
                                                     </div>
-                                                    <div class="flex-col md-8">
+                                                    <div class="flex-col md-8 xs-hidden">
                                                         <div class="tab__title">
                                                             <?= $arResult['PROPERTIES']['TITLE_5_CALC']['~VALUE'] ?>
                                                         </div>
                                                     </div>
-                                                    <div class="flex-col md-8">
+                                                    <div class="flex-col md-8 xs-hidden">
                                                         <div class="tab__title">
                                                             <?= $arResult['PROPERTIES']['TITLE_6_CALC']['~VALUE'] ?>
                                                         </div>

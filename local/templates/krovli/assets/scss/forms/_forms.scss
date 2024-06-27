@@ -152,6 +152,13 @@ select{
             }
         }
     }
+
+    @include media('xs') {
+
+        &__text {
+            font-size: 14px;
+        }
+    }
 }
 
 .form-error, .form-info{

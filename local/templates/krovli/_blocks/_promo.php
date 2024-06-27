@@ -33,7 +33,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         </button>
                     <?php endif; ?>
                     <?php if (!empty($arResult['PROPERTIES']['TEXT_BTN_2_PROMO']['~VALUE'])): ?>
-                        <button class="btn btn-orange" data-custom-open="modal-order" type="submit">
+                        <button class="btn btn-orange" data-custom-open="callback" type="submit">
                             <?= $arResult['PROPERTIES']['TEXT_BTN_2_PROMO']['~VALUE'] ?>
                         </button>
                     <?php endif; ?>

@@ -53,6 +53,13 @@
     display: none !important;
 }
 
+.xs-hidden {
+
+    @include media('xs') {
+        display: none !important;
+    }
+}
+
 .unvisible{
     visibility: hidden;
     opacity: 0;
