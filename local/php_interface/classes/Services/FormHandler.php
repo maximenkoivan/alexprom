@@ -26,6 +26,7 @@ class FormHandler
         'applicationSnow' => 'classes\Models\Snow\Feedback\ApplicationSnow',
         'callbackRoofs' => 'classes\Models\Roofs\Feedback\Callback',
         'quizRoofs' => 'classes\Models\Roofs\Feedback\Quiz',
+        'orderRoofs' => 'classes\Models\Roofs\Feedback\Order',
         'calculatorRoofs' => 'classes\Models\Roofs\Feedback\Calculator',
     ];
 

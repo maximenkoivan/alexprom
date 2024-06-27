@@ -101,11 +101,10 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                         <input name="utm_campaign" value="<?= $request->get('utm_campaign') ?>">
                         <input name="utm_term" value="<?= $request->get('utm_term') ?>">
                         <input name="utm_content" value="<?= $request->get('utm_content') ?>">
-                        <input name="service-name" value="">
                     </div>
                     <button data-ok-title='<?= $arResult['PROPERTIES']['TITLE_SUCCESS_FEEDBACK']['~VALUE'] ?>'
                             data-ok-text="<?= $arResult['PROPERTIES']['TEXT_SUCCESS_FEEDBACK']['~VALUE'] ?>"
-                            class="btn btn-blue" data-send-request="callbackRoofs" type="submit">
+                            class="btn btn-blue" data-send-request="orderRoofs" type="submit">
                         <?= $arResult['PROPERTIES']['TEXT_BTN_FEEDBACK']['~VALUE'] ?>
                     </button>
                     <div class="form-group__text">
