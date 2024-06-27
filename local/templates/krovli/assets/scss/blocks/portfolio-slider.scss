@@ -2,18 +2,34 @@
     padding: 40px 0;
     overflow: hidden;
 
+    @include media('sm-max'){
+        padding: 0 0 20px;
+    }
+
     &__btn-next, &__btn-prev {
         position: absolute;
         top: 35%;
         cursor: pointer;
+
+        @include media('sm-max'){
+            display: none;
+        }
     }
 
     &__btn-next {
         right: -65px;
+
+        @include media('xl-max'){
+            right: -30px;
+        }
     }
 
     &__btn-prev {
         left: -65px;
+
+        @include media('xl-max'){
+            left: -30px;
+        }
     }
 
     .video-box {
@@ -113,20 +129,32 @@
                 font-size: 15px;
             }
         }
+
+        @include media('sm-max'){
+            max-width: 100%;
+        }
     }
 
     .swiper-pagination {
         bottom: -25px !important;
+
+        @include media('sm-max'){
+            bottom: -15px !important;
+        }
     }
 
     .swiper-pagination-bullet {
         width: 14px;
         height: 14px;
         background-color: #283032;
+
+        @include media('sm-max'){
+            width: 10px;
+            height: 10px;
+        }
     }
 
     .swiper-pagination-bullet-active {
         background-color: #283032;
-
     }
 }

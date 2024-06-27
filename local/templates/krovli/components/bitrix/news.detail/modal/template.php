@@ -50,7 +50,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                     <button data-ok-title='<?= $arResult['PROPERTIES']['TITLE_SUCCESS_FEEDBACK']['~VALUE'] ?>'
                             data-ok-text="<?= $arResult['PROPERTIES']['TEXT_SUCCESS_FEEDBACK']['~VALUE'] ?>"
                             class="btn btn-blue" data-send-request="callbackRoofs" type="submit">
-                        <?= $arResult['PROPERTIES']['TEXT_BTN_FEEDBACK']['~VALUE'] ?>
+                        <span><?= $arResult['PROPERTIES']['TEXT_BTN_FEEDBACK']['~VALUE'] ?></span>
                     </button>
                     <div class="form-group__text">
                         <p>
@@ -106,7 +106,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                     <button data-ok-title='<?= $arResult['PROPERTIES']['TITLE_SUCCESS_FEEDBACK']['~VALUE'] ?>'
                             data-ok-text="<?= $arResult['PROPERTIES']['TEXT_SUCCESS_FEEDBACK']['~VALUE'] ?>"
                             class="btn btn-blue" data-send-request="callbackRoofs" type="submit">
-                        <?= $arResult['PROPERTIES']['TEXT_BTN_FEEDBACK']['~VALUE'] ?>
+                        <span><?= $arResult['PROPERTIES']['TEXT_BTN_FEEDBACK']['~VALUE'] ?></span>
                     </button>
                     <div class="form-group__text">
                         <p>

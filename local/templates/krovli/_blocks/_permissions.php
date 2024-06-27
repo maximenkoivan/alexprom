@@ -42,7 +42,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <div class="swiper-wrapper cert-slider__wrapper">
                     <?php foreach ($arResult['PROPERTIES']['SLIDER_PERMISSIONS']['VALUE'] as $key => $imageId): ?>
                         <div class="swiper-slide">
-                            <a data-fslightbox="cert" href="<?= $path = CFile::GetPath($imageId) ?>">
+                            <a class="cert-slider__link" data-fslightbox="cert" href="<?= $path = CFile::GetPath($imageId) ?>">
                                 <img src="<?= $path ?>"
                                      alt="<?= strip_tags($arResult['PROPERTIES']['SLIDER_PERMISSIONS']['~DESCRIPTION'][$key]) ?>">
                             </a>

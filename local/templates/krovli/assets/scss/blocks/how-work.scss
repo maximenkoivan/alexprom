@@ -219,6 +219,10 @@
         position: relative;
         line-height: 27px;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+
         @media (max-width: 1399px) {
           font-size: 15px;
           margin-bottom: 10px;
