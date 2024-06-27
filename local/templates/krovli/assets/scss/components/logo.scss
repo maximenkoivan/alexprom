@@ -15,4 +15,20 @@
       width: 130px;
     }
   }
+
+  @media (max-width: 743px) {
+    width: 130px;
+  }
+
+  .footer & {
+
+    @media (max-width: 743px) {
+      width: 180px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

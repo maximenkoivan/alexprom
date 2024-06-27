@@ -63,7 +63,7 @@ class ListSlider {
                 case 'cert':
                     params = {
                         modules: [Navigation, Pagination],
-                        slidesPerView: 'auto',
+                        slidesPerView: 1,
                         spaceBetween: 10,
                         loop: false,
                         autoHeight: false,
