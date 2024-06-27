@@ -20,7 +20,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     <div class="top-index-sections__form">
         <div class="container">
             <div class="flex-row">
-                <div class="flex-col md-12">
+                <div class="flex-col md-12 xs-20">
                     <div class="title big">
                         <?= $arResult['PROPERTIES']['TITLE_PROMO']['~VALUE'] ?>
                     </div>

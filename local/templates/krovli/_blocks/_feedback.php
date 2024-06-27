@@ -49,7 +49,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                         <button data-ok-title='<?= $formData['TITLE_SUCCESS_FEEDBACK']['~VALUE'] ?>".'
                                 data-ok-text="<?= $formData['TEXT_SUCCESS_FEEDBACK']['~VALUE'] ?>"
                                 class="btn btn-blue form-field" data-send-request="callbackRoofs">
-                            <?= $formData['TEXT_BTN_FEEDBACK']['~VALUE'] ?>
+                            <span><?= $formData['TEXT_BTN_FEEDBACK']['~VALUE'] ?></span>
                         </button>
                         <div class="form-field__text">
                             <p>

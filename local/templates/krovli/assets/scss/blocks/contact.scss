@@ -24,9 +24,11 @@
         pointer-events: none;
 
       }
+
+      @include media('sm-max') {
+        height: 480px;
+      }
     }
-
-
   }
 
   .address-tab {

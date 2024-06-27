@@ -6,7 +6,7 @@
   font-family: 'HelveticaNeueCyr';
 
   @media (max-width: 743px) {
-    padding: 20px 10px;
+    padding: 20px 0;
   }
 
   .footer-block {
@@ -142,11 +142,12 @@
 
       @media (max-width: 743px) {
         flex-wrap: wrap;
-        width: 62%;
+        width: 75%;
       }
 
       .item {
         display: flex;
+        flex-shrink: 0;
 
         @media (max-width: 743px) {
           width: calc((100% - 20px) / 2);
@@ -156,6 +157,7 @@
         img {
           width: 40px;
           height: 40px;
+          flex-shrink: 0;
 
           @media (max-width: 743px) {
             width: 30px;
@@ -205,10 +207,6 @@
     font-size: 16px;
     margin-top: 40px;
     color: white;
-
-    @media (max-width: 743px) {
-      display: none;
-    }
 
     @media (max-width: 743px) {
       font-size: 12px;
