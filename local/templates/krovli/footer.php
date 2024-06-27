@@ -76,11 +76,13 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
         <use xlink:href="#icon-arrow-top"></use>
     </svg>
 </a>
-
-<a href="https://wa.me/79255322311"
-   target="_blank" class="call">
-    <img src="/local/templates/krovli/assets/images/whatsapp.png" height="60" width="60" alt="">
-</a>
+<?php if (!empty($footer['ICON_WHATSAPP_FOOTER']['VALUE'] && $footer['PHONE_WHATSAPP_FOOTER']['VALUE'])): ?>
+    <a href="https://wa.me/<?= $footer['PHONE_WHATSAPP_FOOTER']['VALUE'] ?>"
+       target="_blank" class="call">
+        <img src="<?= CFile::GetPath($footer['ICON_WHATSAPP_FOOTER']['VALUE']) ?>" height="60" width="60"
+             alt="<?= $footer['PHONE_WHATSAPP_FOOTER']['VALUE'] ?>">
+    </a>
+<?php endif; ?>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "modal",
@@ -141,9 +143,9 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
     )
 ); ?>
 <script defer>
-    (function() {
+    (function () {
         var ru = "ru";
-        var myReviewsInit = function() {
+        var myReviewsInit = function () {
             new window.myReviews.BlockWidget({
                 uuid: "0c1e0f0d-d9ee-42f5-b967-06ba22289cb9",
                 name: "g6281212",
@@ -154,7 +156,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 
         };
         if (document.readyState === "loading") {
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 myReviewsInit()
             })
         } else {
