@@ -10,9 +10,18 @@
         justify-content: center;
         flex-direction: column;
         padding: 40px;
+
+        @include media('xs') {
+            padding: 12px;
+        }
     }
 
     &__icon {
         margin-bottom: 30px;
+
+        @include media('xs') {
+            margin-bottom: 20px;
+            width: 100px;
+        }
     }
 }
