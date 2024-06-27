@@ -29,7 +29,7 @@ class Modal {
             onShow: (modal, body, btn) => addInputs(modal, btn), // [1]
             onClose: (modal, body, btn) => {
                 let input = modal.querySelector('[name="type"]')
-                input.remove()
+                if (input) input.remove()
             },
             awaitOpenAnimation: false,
             awaitCloseAnimation: false,
