@@ -469,7 +469,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 </div>
                                                 <div class="flex-row">
                                                     <div class="flex-col md-8">
-                                                        <div class="price">
+                                                        <div data-form-group class="price">
                                                             <div data-calculator-total class="price__num">0</div>
                                                             <div class="price__cur"><?= $arResult['PROPERTIES']['PLH_4_CALC']['~VALUE'] ?></div>
                                                             <input data-calculator-total name="price" type="text"

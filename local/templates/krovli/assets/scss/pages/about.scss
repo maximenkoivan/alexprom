@@ -79,10 +79,15 @@
         justify-content: center;
         align-items: center;
 
-        //@media (max-width: 743px) {
-        //  width: 90px;
-        //  height: 90px;
-        //}
+        @media (max-width: 743px) {
+          width: 90px;
+          height: 90px;
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 743px) {
+        margin-bottom: 20px;
       }
 
       .text {
