@@ -61,4 +61,15 @@
             }
         }
     }
+
+    &--calculate {
+
+        @include media('sm-max') {
+            height: 150%;
+
+            img {
+                object-position: top right;
+            }
+        }
+    }
 }
