@@ -403,7 +403,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                     <div class="flex-row">
                                                         <?php $options = array_chunk($arResult['PROPERTIES']['OPTION_2_CALC']['~VALUE'], 3, true); ?>
                                                         <?php foreach ($options as $option): ?>
-                                                            <div class="flex-col md-8">
+                                                            <div class="flex-col md-12">
                                                                 <?php foreach ($option as $key => $item): ?>
                                                                     <div class="form-field">
                                                                         <div class="form-check">
@@ -430,7 +430,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                     <div class="flex-row">
                                                         <?php $options = array_chunk($arResult['PROPERTIES']['OPTION_3_CALC']['~VALUE'], 2, true); ?>
                                                         <?php foreach ($options as $option): ?>
-                                                            <div class="flex-col md-8">
+                                                            <div class="flex-col md-12">
                                                                 <?php foreach ($option as $key => $item): ?>
                                                                     <div class="form-field">
                                                                         <div class="form-radio">

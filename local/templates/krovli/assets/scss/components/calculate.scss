@@ -171,4 +171,11 @@
       }
     }
   }
+
+  &-block {
+
+    .form-radio {
+      display: flex;
+    }
+  }
 }
