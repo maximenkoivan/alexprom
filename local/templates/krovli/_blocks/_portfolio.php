@@ -46,7 +46,9 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                         <a data-fslightbox="portfolio"
                                            href="<?= CFile::GetPath($imageId) ?>"
                                            class="pic-box__item">
-                                            <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
+                                            <div class="inner">
+                                                <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
+                                            </div>
                                         </a>
                                     <?php endforeach; ?>
                                 </div>
