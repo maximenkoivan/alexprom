@@ -23,29 +23,26 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                     <?php if ($key > 0) continue ?>
                                     <div class="nx-video">
                                         <div class="nx-video__wrapper">
-                                            <div class="nx-video__link"
-                                                 style="background-image: url('<?= CFile::GetPath($imageId) ?>')"
-                                                 data-video-link="<?= \classes\Helpers\Generic::getVideoYoutubeID($items['IMAGES']['DESCRIPTION'][$key]) ?>"
-                                                 data-video-modal="empty">
-                                                <div class="nx-video__icon"></div>
-                                            </div>
-
-                                            <!--Если тут картинка-->
-
-<!--                                            <a data-fslightbox="portfolio"-->
-<!--                                               href="--><?php //= CFile::GetPath($imageId) ?><!--"-->
-<!--                                               class="nx-video__link">-->
-<!--                                                <img src="--><?php //= CFile::GetPath($imageId) ?><!--" alt=" ">-->
-<!--                                            </a>-->
-
-                                            <!--Если тут картинка-->
-
+                                            <?php if (!empty($items['IMAGES']['DESCRIPTION'][$key])): ?>
+                                                <div class="nx-video__link"
+                                                     style="background-image: url('<?= CFile::GetPath($imageId) ?>')"
+                                                     data-video-link="<?= \classes\Helpers\Generic::getVideoYoutubeID($items['IMAGES']['DESCRIPTION'][$key]) ?>"
+                                                     data-video-modal="empty">
+                                                    <div class="nx-video__icon"></div>
+                                                </div>
+                                            <?php else: ?>
+                                                <a data-fslightbox="portfolio"
+                                                   href="<?= CFile::GetPath($imageId) ?>"
+                                                   class="nx-video__link">
+                                                    <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
+                                                </a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
                                 <div class="pic-box">
                                     <?php foreach ($items['IMAGES']['VALUE'] as $key => $imageId): ?>
-                                        <?php if ($key === 0) continue ?>
+                                        <?php if ($key === 0 || $key > 3) continue ?>
                                         <a data-fslightbox="portfolio"
                                            href="<?= CFile::GetPath($imageId) ?>"
                                            class="pic-box__item">
