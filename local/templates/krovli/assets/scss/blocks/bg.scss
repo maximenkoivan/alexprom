@@ -51,13 +51,41 @@
         }
     }
 
+    &--section-2 {
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    &--404 {
+        z-index: -1;
+    }
+
     &--about {
+        height: 85%;
+        margin-left: auto;
+
+        @include media('xl-max') {
+
+            img {
+                object-position: 190% 0;
+            }
+        }
+
+        @include media('xl-max') {
+
+            img {
+                object-position: bottom center;
+            }
+        }
 
         @include media('xs') {
             bottom: -60px;
 
             img {
-                height: 33%;
+                height: 345px;
+                object-fit: contain;
             }
         }
     }

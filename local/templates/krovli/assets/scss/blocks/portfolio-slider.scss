@@ -12,7 +12,16 @@
         cursor: pointer;
 
         @include media('sm-max'){
-            display: none;
+            width: 40px;
+            height: 40px;
+            top: auto;
+            bottom: -28px;
+            z-index: 11;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
@@ -22,6 +31,10 @@
         @include media('xl-max'){
             right: -30px;
         }
+
+        @include media('sm-max'){
+            right: 20%;
+        }
     }
 
     &__btn-prev {
@@ -29,6 +42,10 @@
 
         @include media('xl-max'){
             left: -30px;
+        }
+
+        @include media('sm-max'){
+            left: 20%;
         }
     }
 

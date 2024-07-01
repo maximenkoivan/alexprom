@@ -8,6 +8,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <section class="page-404">
+    <div class="bg bg--404">
+        <img src="/local/templates/krovli/assets/images/404.png" alt="">
+    </div>
     <div class="info page-404__info">
         <div class="title page-404__title"><?= $arResult['PROPERTIES']['TITLE_404']['~VALUE'] ?></div>
         <div class="text page-404__text"><?= $arResult['PROPERTIES']['SUBTITLE_404']['~VALUE'] ?></span></div>
