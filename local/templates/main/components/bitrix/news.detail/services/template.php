@@ -10,6 +10,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  */
 $this->setFrameMode(true);
 include '_promo.php';
+
+$menuHide = $arResult['PROPERTIES']['MENUHIDE']['~VALUE'];
+$GLOBALS['MENUHIDE'] = $menuHide === '' || $menuHide == 'Нет' ? true : false;
 ?>
 <div class="section-flip section-flip--light">
 
@@ -106,6 +109,8 @@ include '_promo.php';
     // Подтягиваем детальные Вопросы-ответы end
     $settings = Settings::getInstance()->getPropertiesByCode('BLOCKS_DETAIL_PAGE');
     foreach ($settings as $code) {
+        if($code === 'services' && $GLOBALS['MENUHIDE']) continue;
+
         $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/' . $code . '.php');
     }
     ?>

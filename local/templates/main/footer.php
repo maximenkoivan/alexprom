@@ -11,6 +11,12 @@ use classes\Models\Alpinism\Services\Services;
 $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
 $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER']['VALUE']);
 ?>
+
+<?php if(CSite::InDir('/services/') && $GLOBALS['MENUHIDE']): ?>
+    <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/_includes/services.php'); ?>
+<?php endif; ?>
+
+
 <footer class="footer">
     <div class="container">
 
