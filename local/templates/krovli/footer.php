@@ -72,7 +72,7 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
     </div>
 </footer>
 <a class="scroll-top hidden" data-scrolltop>
-    <svg width="16" height="8">
+    <svg width="24" height="24">
         <use xlink:href="#icon-arrow-top"></use>
     </svg>
 </a>

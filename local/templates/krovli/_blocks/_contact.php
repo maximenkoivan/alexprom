@@ -52,9 +52,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div>
 
         <div class="map-wrap__inner" id="contact-map" style="position:relative;overflow:hidden;">
-            <iframe src="https://yandex.by/map-widget/v1/?ll=37.720023%2C55.808519&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc2NDY5NhI70KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCR0L7QudGG0L7QstCw0Y8g0YPQu9C40YbQsCwgMjIiCg3l5RZCFQtDX0I%2C&source=serp_navig&z=14.26"
-                    frameborder="0" allowfullscreen="true"></iframe>
-            <script>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Affc7b74a7965a6c86509735bc14294dca6ae1a7e10aaae933eff2e8657aab4db&amp;source=constructor" width="100%" height="700" frameborder="0"></iframe>
                 document.addEventListener('click', function (e) {
                     let map = document.querySelector('#contact-map iframe')
                     if (e.target.id === 'contact-map') {

@@ -8,6 +8,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <section class="calculate-sections">
+    <div class="bg bg--calculate">
+        <img src="/local/templates/krovli/assets/images/calculate-bg.png" alt=" ">
+    </div>
     <div class="block-ellipse">
         <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/block-ellipse.png" alt=" ">
     </div>

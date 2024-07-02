@@ -158,14 +158,14 @@
 
     .advantages {
       padding-top: 50px;
-      padding-bottom: 360px;
+      padding-bottom: 280px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       width: 100%;
 
       @media (max-width: 1399px) {
-        padding-bottom: 280px;
+        padding-bottom: 240px;
         gap: 50px;
       }
 
