@@ -61,6 +61,5 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         map.style.pointerEvents = 'none'
                     }
                 })
-            </script>
         </div>
 </section>
