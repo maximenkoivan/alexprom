@@ -8,9 +8,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <section class="calculate-sections">
-    <div class="bg bg--calculate">
-        <img src="/local/templates/krovli/assets/images/calculate-bg.png" alt=" ">
-    </div>
+    <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE_CALCULATE']['VALUE'])): ?>
+        <div class="bg bg--calculate">
+            <img src="<?= CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE_CALCULATE']['VALUE']) ?>"
+                 alt="<?= $arResult['PROPERTIES']['BG_IMAGE_CALCULATE']['VALUE'] ?>">
+        </div>
+    <?php endif; ?>
     <div class="block-ellipse">
         <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/block-ellipse.png" alt=" ">
     </div>
