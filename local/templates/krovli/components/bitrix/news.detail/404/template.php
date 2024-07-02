@@ -7,9 +7,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<section style="background-image: url('/local/templates/krovli/assets/images/404-man.png');" class="page-404">
+<section style="background-image: url('<?= CFile::GetPath($arResult['PROPERTIES']['IMAGE_404']['VALUE']) ?>');"
+         class="page-404">
     <div class="bg bg--404">
-        <img src="/local/templates/krovli/assets/images/404.png" alt="">
+        <?php if (!empty($arResult['PROPERTIES']['BG_IMAGE_404']['VALUE'])): ?>
+            <img src="<?= CFile::GetPath($arResult['PROPERTIES']['BG_IMAGE_404']['VALUE']) ?>" alt="">
+        <?php endif; ?>
     </div>
     <div class="info page-404__info">
         <div class="title page-404__title"><?= $arResult['PROPERTIES']['TITLE_404']['~VALUE'] ?></div>
