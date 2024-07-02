@@ -43,28 +43,25 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                 <div class="pic-box">
                                     <?php foreach ($items['IMAGES']['VALUE'] as $key => $imageId): ?>
                                         <?php if ($key === 0 || $key > 2) continue ?>
-                                        <a data-fslightbox="portfolio"
-                                           href="<?= CFile::GetPath($imageId) ?>"
-                                           class="pic-box__item">
-                                            <div class="inner">
-                                                <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
-                                            </div>
-                                        </a>
+                                        <?php if (!empty($items['IMAGES']['DESCRIPTION'][$key])): ?>
+                                            <a data-video-link="<?= \classes\Helpers\Generic::getVideoYoutubeID($items['IMAGES']['DESCRIPTION'][$key]) ?>"
+                                               data-video-modal="empty"
+                                               class="pic-box__item">
+                                                <div class="inner">
+                                                    <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
+                                                </div>
+                                                <div class="nx-video__icon nx-video__icon--sm"></div>
+                                            </a>
+                                        <?php else: ?>
+                                            <a data-fslightbox="portfolio"
+                                               href="<?= CFile::GetPath($imageId) ?>"
+                                               class="pic-box__item">
+                                                <div class="inner">
+                                                    <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
+                                                </div>
+                                            </a>
+                                        <?php endif ?>
                                     <?php endforeach; ?>
-
-
-                                    <!--Если видео-->
-                                    <a data-video-link="a6DBNy-6ako"
-                                       data-video-modal="empty"
-                                       class="pic-box__item">
-                                        <div class="inner">
-                                            <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
-                                        </div>
-                                        <div class="nx-video__icon nx-video__icon--sm"></div>
-                                    </a>
-
-                                    <!--Если видео-->
-
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box__title">
