@@ -20,7 +20,7 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                         <?php foreach ($portfolio as $items): ?>
                             <div class="swiper-slide">
                                 <?php foreach ($items['IMAGES']['VALUE'] as $key => $imageId): ?>
-                                    <?php if ($key > 0) continue ?>
+                                    <?php if ($key > 0 && $key < 4) continue ?>
                                     <div class="nx-video">
                                         <div class="nx-video__wrapper">
                                             <?php if (!empty($items['IMAGES']['DESCRIPTION'][$key])): ?>
@@ -42,7 +42,7 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                 <?php endforeach; ?>
                                 <div class="pic-box">
                                     <?php foreach ($items['IMAGES']['VALUE'] as $key => $imageId): ?>
-                                        <?php if ($key === 0 || $key > 2) continue ?>
+                                        <?php if ($key === 0 || $key > 3) continue ?>
                                         <?php if (!empty($items['IMAGES']['DESCRIPTION'][$key])): ?>
                                             <a data-video-link="<?= \classes\Helpers\Generic::getVideoYoutubeID($items['IMAGES']['DESCRIPTION'][$key]) ?>"
                                                data-video-modal="empty"
