@@ -42,7 +42,7 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                 <?php endforeach; ?>
                                 <div class="pic-box">
                                     <?php foreach ($items['IMAGES']['VALUE'] as $key => $imageId): ?>
-                                        <?php if ($key === 0 || $key > 3) continue ?>
+                                        <?php if ($key === 0 || $key > 2) continue ?>
                                         <a data-fslightbox="portfolio"
                                            href="<?= CFile::GetPath($imageId) ?>"
                                            class="pic-box__item">
@@ -51,6 +51,20 @@ $portfolio = \classes\Models\Roofs\HomePage\Portfolio::getInstance()->getAllElem
                                             </div>
                                         </a>
                                     <?php endforeach; ?>
+
+
+                                    <!--Если видео-->
+                                    <a data-video-link="a6DBNy-6ako"
+                                       data-video-modal="empty"
+                                       class="pic-box__item">
+                                        <div class="inner">
+                                            <img src="<?= CFile::GetPath($imageId) ?>" alt=" ">
+                                        </div>
+                                        <div class="nx-video__icon nx-video__icon--sm"></div>
+                                    </a>
+
+                                    <!--Если видео-->
+
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box__title">

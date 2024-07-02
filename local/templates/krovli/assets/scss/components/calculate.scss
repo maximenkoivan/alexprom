@@ -13,6 +13,10 @@
     padding-top: 50px;
   }
 
+  @media (max-width: 743px) {
+    padding: 50px 30px 50px;
+  }
+
   .block-ellipse {
     position: absolute;
     top: -330px;
@@ -102,9 +106,9 @@
         position: absolute;
         z-index: 0;
         display: block;
-        width: 243px;
-        left: -10px;
-        top: 220px;
+        width: 240px;
+        left: -40px;
+        top: 260px;
       }
     }
   }
