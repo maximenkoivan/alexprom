@@ -68,6 +68,10 @@
         &--order {
             padding: 0;
             max-width: 1440px;
+
+            @include media('xs') {
+                height: 65vh;
+            }
         }
 
         &--empty {
