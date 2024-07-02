@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     @extend %centered-absolute;
+    max-width: 2600px;
 
     img {
         width: 100%;
@@ -27,6 +28,12 @@
 
         @include media('xs') {
             top: 280px;
+
+            img {
+                width: 100%;
+                height: 65%;
+                object-position: 50% 10px;
+            }
         }
     }
 
@@ -39,6 +46,7 @@
 
         @include media('xs') {
             display: flex;
+            align-items: flex-end;
 
             img {
                 width: 100%;
@@ -76,16 +84,24 @@
         @include media('xl-max') {
 
             img {
-                object-position: bottom center;
+                object-position: 120% 0;
+            }
+        }
+
+        @include media('md-max') {
+
+            img {
+                object-position: 190% 0;
             }
         }
 
         @include media('xs') {
-            bottom: -60px;
+            bottom: -180px;
 
             img {
                 height: 345px;
                 object-fit: contain;
+                object-position: bottom center;
             }
         }
     }
@@ -93,10 +109,10 @@
     &--calculate {
 
         @include media('sm-max') {
-            height: 150%;
+            height: 100%;
 
             img {
-                object-position: top right;
+                object-position: 100% -40px;
             }
         }
     }

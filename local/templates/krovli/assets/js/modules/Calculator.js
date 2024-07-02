@@ -42,11 +42,12 @@ class Calculator {
         let total = 0;
 
         this.$calculatorValue.forEach(el => {
-            let value
+            let value,
+                mainValue = document.querySelector('[data-value-main]').value
             if (el.type === 'text') value = el.value * Number(el.getAttribute('data-value'))
             else if (el.type !== 'text' && el.checked) value = Number(el.getAttribute('data-value'))
 
-            if(value) total = value + total
+            if(value && mainValue > 0) total = value + total
         })
 
         this.$calculatorTotal.forEach(el => {

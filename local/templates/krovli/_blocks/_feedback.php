@@ -14,7 +14,7 @@ $formData = $formSettings->getPropertiesByPostfix('FEEDBACK');
 $commonFormData = $formSettings->getPropertiesByPostfix('COMMON');
 $request = \Bitrix\Main\Context::getCurrent()->getRequest();
 ?>
-<section class="questions-sections">
+<section style="background-image: url('/local/templates/krovli/assets/images/questions-bg.png');" class="questions-sections">
     <div class="container">
         <div class="questions">
             <div class="title big">

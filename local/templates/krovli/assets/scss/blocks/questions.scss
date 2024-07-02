@@ -11,7 +11,7 @@
   }
 
   @media (max-width: 1399px) {
-    background-image: url("/local/templates/krovli/assets/images/questions-bg-notebook.png");
+    background-image: url("/local/templates/krovli/assets/images/questions-bg-notebook.png") !important;
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +19,7 @@
   }
 
   @media (max-width: 743px) {
-    background-image: url("/local/templates/krovli/assets/images/questions-bg-tablet.png");
+    background-image: url("/local/templates/krovli/assets/images/questions-bg-tablet.png") !important;
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,7 +28,7 @@
 
   @media (max-width: 743px) {
     padding: 10px 10px 450px;
-    background: url("/local/templates/krovli/assets/images/questions-bg-man-mobile.png") center bottom no-repeat, url("/local/templates/krovli/assets/images/questions-bg-sky-mobile.png") center center/cover no-repeat;
+    background: url("/local/templates/krovli/assets/images/questions-bg-man-mobile.png") center bottom no-repeat, url("/local/templates/krovli/assets/images/questions-bg-sky-mobile.png") center center/cover no-repeat !important;
   }
 }
 

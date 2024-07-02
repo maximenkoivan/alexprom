@@ -392,6 +392,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <div class="form-field mb-30">
                                                     <input data-num-only
                                                            data-value="<?= $arResult['PROPERTIES']['PLH_1_CALC']['DESCRIPTION'] ?>"
+                                                           data-value-main
                                                            type="text"
                                                            class="form-control" name="square" id="inputName"
                                                            placeholder="<?= $arResult['PROPERTIES']['PLH_1_CALC']['~VALUE'] ?>">
