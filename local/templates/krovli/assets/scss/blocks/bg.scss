@@ -64,6 +64,13 @@
         img {
             margin: 0 auto;
         }
+
+        @include media('xs') {
+
+            img {
+                height: 47%;
+            }
+        }
     }
 
     &--404 {

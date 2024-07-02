@@ -191,7 +191,18 @@
         &:first-of-type {
 
           .advantage {
-            margin-left: 65px;
+            margin-left: 10px;
+
+            @media (max-width: 1399px) {
+              margin-left: 0;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+
+          .advantage {
+            margin-left: -80px;
 
             @media (max-width: 1399px) {
               margin-left: 0;
