@@ -70,7 +70,145 @@
     @media (max-width: 743px) {
       padding-top: 20px;
     }
+
+    &__wrapper {
+      padding: 50px 50px 100px;
+      max-width: 1780px;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    &__count {
+      grid-column: 1 / 2;
+      font-family: "Kenyan Coffee Rg", Arial;
+      font-weight: 400;
+      font-size: 54px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #323232;
+    }
+
+    &__bottom {
+      font-family: "HelveticaNeueCyr", Arial;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 130%;
+      color: #283032;
+      grid-column: 2 / 3;
+    }
+
+    &__img {
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__item {
+      display: grid;
+      position: relative;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      align-items: end;
+      align-content: space-around;
+      column-gap: 5px;
+
+      &:before {
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 55%;
+        height: 66px;
+        position: absolute;
+      }
+
+      &:nth-child(1) {
+
+        & .how-work__img {
+          width: 124px;
+          height: 107px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          bottom: -80px;
+          left: 75px;
+        }
+      }
+
+      &:nth-child(2) {
+        bottom: -100px;
+
+        .how-work__img {
+          width: 160px;
+          height: 130px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/krovli/assets/images/how-work-arc-top.png");
+          top: -91px;
+          left: 86px;
+        }
+      }
+
+      &:nth-child(3) {
+        min-width: 320px;
+
+        &:before {
+          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          bottom: -80px;
+          left: 75px;
+        }
+      }
+
+      &:nth-child(4) {
+        bottom: -100px;
+
+        .how-work__img {
+          width: 110px;
+          height: 76px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/krovli/assets/images/how-work-arc-top.png");
+          top: -91px;
+          left: 86px;
+        }
+      }
+
+      &:nth-child(5) {
+
+        .how-work__img {
+          width: 188px;
+          height: 124px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          bottom: -80px;
+          left: 75px;
+        }
+      }
+
+      &:nth-child(6) {
+        bottom: -100px;
+
+        .how-work__img {
+          width: 129px;
+          height: 123px;
+        }
+      }
+    }
   }
+
+
+
+
+
+
 
   .permissions-wrap {
     position: relative;
