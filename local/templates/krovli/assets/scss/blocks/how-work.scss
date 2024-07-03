@@ -81,6 +81,7 @@
       @include media('xs') {
         padding: 10px 10px 10px;
         display: grid;
+        max-width: 420px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         row-gap: 100px;
