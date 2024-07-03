@@ -52,7 +52,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <div class="how-work__item">
                 <div class="how-work__count">06</div>
                 <div class="how-work__img">
-                    <img src="/local/templates/krovli/assets/images/how-work-6.png" alt="">
+                    <img class="hidden xs-visible" src="/local/templates/krovli/assets/images/how-work-4.png" alt="">
+                    <img class="xs-hidden" src="/local/templates/krovli/assets/images/how-work-6.png" alt="">
                 </div>
                 <div class="how-work__bottom">Гарантия и обслуживание кровли</div>
             </div>

@@ -60,6 +60,13 @@
     }
 }
 
+.xs-visible {
+
+    @include media('xs') {
+        display: block !important;
+    }
+}
+
 .unvisible{
     visibility: hidden;
     opacity: 0;

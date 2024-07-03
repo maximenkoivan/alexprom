@@ -386,6 +386,14 @@
           & .how-work__img {
             width: 67px;
             height: 46px;
+
+            img {
+              top: -47px;
+              position: absolute;
+              right: 109px;
+              width: 67px;
+              height: 46px;
+            }
           }
         }
       }
