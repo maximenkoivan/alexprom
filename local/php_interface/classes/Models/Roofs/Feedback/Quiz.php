@@ -2,6 +2,7 @@
 
 namespace classes\Models\Roofs\Feedback;
 
+use CIBlockElement;
 use classes\Base\Iblock;
 
 class Quiz extends Iblock
@@ -137,14 +138,17 @@ class Quiz extends Iblock
      * массив для создания почтового события
      * @return array
      */
-    public function getMailFields(): array
+    public function getMailFields($elementId): array
     {
         $fields = $this->getFieldsForMail();
+
+        $files = $this->getPropertiesByElementId($elementId, ['PROPERTY_TYPE' => 'F']);
 
         return [
             "EVENT_NAME" => self::EVENT_NAME,
             "LID" => SITE_ID,
             "C_FIELDS" => $fields,
+            "FILE" => array_column($files, 'VALUE')
         ];
     }
 
