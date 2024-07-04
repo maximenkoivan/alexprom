@@ -46,7 +46,7 @@ $header = CommonData::getInstance()->getElementByCode('basic_settings', true);
         <meta property="og:title" content="<?php $APPLICATION->ShowTitle(); ?>"/>
         <meta property="og:description" content="<?php $APPLICATION->ShowProperty('description', ''); ?>"/>
         <meta property="og:image"
-              content="<?= $HTTP_X_FORWARDED_PROTO . '://' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/assets/images/favicon.png' ?>"/>
+              content="<?= $HTTP_X_FORWARDED_PROTO . '://' . SITE_SERVER_NAME . SITE_TEMPLATE_PATH . '/favicon.png' ?>"/>
 
         <?php if ($USER->IsAdmin() && $header['ADMIN_PANEL']['VALUE']): ?>
             <?php $APPLICATION->ShowPanel(); ?>
