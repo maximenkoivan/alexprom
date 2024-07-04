@@ -7,56 +7,38 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<section class="how-work-sections">
-    <div class="block-ellipse">
-        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/block-ellipse.png" alt="">
-    </div>
-    <div class="how-work">
-        <div class="title big ta-c">
-            <?= $arResult['PROPERTIES']['TITLE_WORK']['~VALUE'] ?>
+<?php if (!empty($arResult['PROPERTIES']['STAGES_WORK']['VALUE'])): ?>
+    <section class="how-work-sections">
+        <div class="block-ellipse">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/block-ellipse.png" alt="">
         </div>
-        <div class="how-work__wrapper">
-            <div class="how-work__item">
-                <div class="how-work__count">01</div>
-                <div class="how-work__img">
-                    <img src="/local/templates/krovli/assets/images/how-work-1.png" alt="">
-                </div>
-                <div class="how-work__bottom">Заявка, замер и расчет сметы</div>
+        <div class="how-work">
+            <div class="title big ta-c">
+                <?= $arResult['PROPERTIES']['TITLE_WORK']['~VALUE'] ?>
             </div>
-            <div class="how-work__item">
-                <div class="how-work__count">02</div>
-                <div class="how-work__img">
-                    <img src="/local/templates/krovli/assets/images/how-work-2.png" alt="">
-                </div>
-                <div class="how-work__bottom">Согласование и подписание договора</div>
-            </div>
-            <div class="how-work__item">
-                <div class="how-work__count">03</div>
-                <div class="how-work__img"></div>
-                <div class="how-work__bottom">Закупка и доставка материалов</div>
-            </div>
-            <div class="how-work__item">
-                <div class="how-work__count">04</div>
-                <div class="how-work__img">
-                    <img src="/local/templates/krovli/assets/images/how-work-4.png" alt="">
-                </div>
-                <div class="how-work__bottom">Монтажные/ремонтные работы</div>
-            </div>
-            <div class="how-work__item">
-                <div class="how-work__count">05</div>
-                <div class="how-work__img">
-                    <img src="/local/templates/krovli/assets/images/how-work-5.png" alt="">
-                </div>
-                <div class="how-work__bottom">Сдача объекта/проверка на наличии повреждений</div>
-            </div>
-            <div class="how-work__item">
-                <div class="how-work__count">06</div>
-                <div class="how-work__img">
-                    <img class="hidden xs-visible" src="/local/templates/krovli/assets/images/how-work-4.png" alt="">
-                    <img class="xs-hidden" src="/local/templates/krovli/assets/images/how-work-6.png" alt="">
-                </div>
-                <div class="how-work__bottom">Гарантия и обслуживание кровли</div>
+            <div class="how-work__wrapper">
+                <?php foreach ($arResult['PROPERTIES']['STAGES_WORK']['VALUE'] as $key => $stage): ?>
+                    <div class="how-work__item">
+                        <div class="how-work__count">0<?= $key + 1 ?></div>
+                        <div class="how-work__img">
+                            <?php if (!empty($stage['SUB_VALUES']['IMAGE_WORK']['VALUE'])): ?>
+                                <?php if ($key != array_key_last($arResult['PROPERTIES']['STAGES_WORK']['VALUE'])): ?>
+                                    <img src="<?= CFile::GetPath($stage['SUB_VALUES']['IMAGE_WORK']['VALUE']) ?>"
+                                         alt="<?= $stage['SUB_VALUES']['DESC_WORK']['~VALUE'] ?>">
+                                <?php else: ?>
+                                    <img class="hidden xs-visible"
+                                         src="<?= CFile::GetPath($arResult['PROPERTIES']['STAGES_WORK']['VALUE'][$key - 2]['SUB_VALUES']['IMAGE_WORK']['VALUE']) ?>"
+                                         alt="<?= $arResult['PROPERTIES']['STAGES_WORK']['VALUE'][$key - 2]['SUB_VALUES']['DESC_WORK']['VALUE'] ?>">
+                                    <img class="xs-hidden"
+                                         src="<?= CFile::GetPath($stage['SUB_VALUES']['IMAGE_WORK']['VALUE']) ?>"
+                                         alt="<?= $stage['SUB_VALUES']['DESC_WORK']['~VALUE'] ?>">
+                                <?php endif ?>
+                            <?php endif; ?>
+                        </div>
+                        <div class="how-work__bottom"><?= $stage['SUB_VALUES']['DESC_WORK']['~VALUE'] ?></div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
