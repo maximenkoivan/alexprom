@@ -213,17 +213,17 @@ class FormHandler
         $storeFields = $this->model->getMainFieldsForSave();
         $storeFields['PROPERTY_VALUES'] = $this->model->getPropertiesForSave();
         $elementId = $this->element->Add($storeFields, false, false, false);
-        if (!empty($elementId)) $this->sendMail();
+        if (!empty($elementId)) $this->sendMail($elementId);
     }
 
     /**
      * Отправляет Email
      * @return void
      */
-    private function sendMail(): void
+    private function sendMail($elementId): void
     {
         if (!$this->model->getEventName()) return;
-        $fields = $this->model->getMailFields();
+        $fields = $this->model->getMailFields($elementId);
         if (empty($fields)) return;
         Event::send($fields);
     }
