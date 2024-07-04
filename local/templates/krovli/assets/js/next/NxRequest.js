@@ -248,6 +248,9 @@ class NxRequest{
                 if (response.hasOwnProperty(inpName)) {
                     let $target = $form.querySelectorAll('input[name="' + inpName + '"], textarea[name="' + inpName + '"], select[name="' + inpName + '"]');
 
+
+                    console.log(inpName)
+
                     if (!$target.length) return false;
 
                     $target.forEach(el => {

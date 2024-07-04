@@ -478,15 +478,15 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                         </div>
                                                     </div>
                                                     <div class="flex-col md-8">
-                                                        <div class="form-field">
+                                                        <div data-form-group class="form-group form-group--calc">
                                                             <input type="text" data-phone-mask name="phone"
-                                                                   class="form-control " id="inputName"
+                                                                   class="form-control form-control--calc" id="inputName"
                                                                    placeholder="<?= $arResult['PROPERTIES']['PLH_5_CALC']['~VALUE'] ?>">
                                                         </div>
                                                     </div>
                                                     <div class="flex-col md-8">
-                                                        <div class="form-field">
-                                                            <input type="text" class="form-control" name="email"
+                                                        <div data-form-group class="form-group form-group--calc">
+                                                            <input type="text" class="form-control form-control--calc" name="email"
                                                                    placeholder="<?= $arResult['PROPERTIES']['PLH_6_CALC']['~VALUE'] ?>">
                                                         </div>
                                                     </div>
