@@ -75,6 +75,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        text-align: center;
       }
 
       .info {
@@ -83,6 +84,7 @@
         align-items: center;
         color: var(--base-white-color);
         margin-bottom: 20px;
+        text-align: center;
 
         @media (max-width: 743px) {
           bottom: 15px;
@@ -93,6 +95,7 @@
           text-transform: uppercase;
           font-size: 53px;
           line-height: 1;
+          text-align: center;
 
           @media (max-width: 743px) {
             font-size: 38px;
@@ -102,6 +105,7 @@
         &__subtitle {
           font-family: 'Kenyan Coffee Rg';
           font-size: 30px;
+          text-align: center;
 
           @media (max-width: 743px) {
             font-size: 22px;
