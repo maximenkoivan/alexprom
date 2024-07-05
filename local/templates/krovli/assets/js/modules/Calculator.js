@@ -15,7 +15,10 @@ class Calculator {
         this.dataName = {
             calculator: 'calculator',
             calculatorTotal: 'calculator-total',
-            calculatorValue: 'value'
+            calculatorValue: 'value',
+            valueB: 'value-b',
+            valueC: 'value-c',
+            mainValue: 'value-main'
         };
 
         this.$calculator = document.querySelector(`[data-${this.dataName.calculator}]`)
@@ -39,16 +42,22 @@ class Calculator {
     }
 
     calculatePrice() {
-        let total = 0;
+        let total = 0,
+            value = 0,
+            valB = 0,
+            valC = 0,
+            mainValue = document.querySelector('[data-value-main]').value
 
         this.$calculatorValue.forEach(el => {
-            let value,
-                mainValue = document.querySelector('[data-value-main]').value
-            if (el.type === 'text') value = el.value * Number(el.getAttribute('data-value'))
-            else if (el.type !== 'text' && el.checked) value = Number(el.getAttribute('data-value'))
 
-            if(value && mainValue > 0) total = value + total
+            if (el.type === 'text') value = el.value * Number(el.getAttribute('data-value'))
+
+            else if (el.type === 'checkbox' && el.checked) valB = Number(el.getAttribute('data-value-b')) + valB
+
+            else if (el.type === 'radio' && el.checked) valC = Number(el.getAttribute('data-value-c'))
         })
+
+        if(mainValue > 0) total = (value * valB) + (value * valC)
 
         this.$calculatorTotal.forEach(el => {
             if(el.tagName === 'INPUT') el.value = total

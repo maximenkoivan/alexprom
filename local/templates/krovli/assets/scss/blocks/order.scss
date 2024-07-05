@@ -225,6 +225,18 @@
         @include media('xs') {
             margin-bottom: 0;
         }
+
+        &--calc {
+            margin-bottom: 0;
+        }
+    }
+
+    .form-group--calc {
+        margin-bottom: 20px;
+
+        @include media('xs') {
+            margin-bottom: 0;
+        }
     }
 
     .flex-row, .flex-col {

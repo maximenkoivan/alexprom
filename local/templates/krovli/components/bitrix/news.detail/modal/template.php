@@ -409,7 +409,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                                     <div class="form-field">
                                                                         <div class="form-check">
                                                                             <label class="form-check-label">
-                                                                                <input data-value="<?= $arResult['PROPERTIES']['OPTION_2_CALC']['~DESCRIPTION'][$key] ?>"
+                                                                                <input data-value data-value-b="<?= $arResult['PROPERTIES']['OPTION_2_CALC']['~DESCRIPTION'][$key] ?>"
                                                                                        data-calculator-check
                                                                                        class="form-check-input"
                                                                                        name="operation[]"
@@ -436,7 +436,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                                     <div class="form-field">
                                                                         <div class="form-radio">
                                                                             <label class="form-radio-label">
-                                                                                <input data-value="<?= $arResult['PROPERTIES']['OPTION_3_CALC']['~DESCRIPTION'][$key] ?>"
+                                                                                <input data-value data-value-c="<?= $arResult['PROPERTIES']['OPTION_3_CALC']['~DESCRIPTION'][$key] ?>"
                                                                                        data-calculator-radio
                                                                                        class="form-radio-input"
                                                                                        name="material"
@@ -478,15 +478,15 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                         </div>
                                                     </div>
                                                     <div class="flex-col md-8">
-                                                        <div class="form-field">
+                                                        <div data-form-group class="form-group form-group--calc">
                                                             <input type="text" data-phone-mask name="phone"
-                                                                   class="form-control " id="inputName"
+                                                                   class="form-control form-control--calc" id="inputName"
                                                                    placeholder="<?= $arResult['PROPERTIES']['PLH_5_CALC']['~VALUE'] ?>">
                                                         </div>
                                                     </div>
                                                     <div class="flex-col md-8">
-                                                        <div class="form-field">
-                                                            <input type="text" class="form-control" name="email"
+                                                        <div data-form-group class="form-group form-group--calc">
+                                                            <input type="text" class="form-control form-control--calc" name="email"
                                                                    placeholder="<?= $arResult['PROPERTIES']['PLH_6_CALC']['~VALUE'] ?>">
                                                         </div>
                                                     </div>

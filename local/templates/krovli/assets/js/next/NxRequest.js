@@ -248,6 +248,9 @@ class NxRequest{
                 if (response.hasOwnProperty(inpName)) {
                     let $target = $form.querySelectorAll('input[name="' + inpName + '"], textarea[name="' + inpName + '"], select[name="' + inpName + '"]');
 
+
+                    console.log(inpName)
+
                     if (!$target.length) return false;
 
                     $target.forEach(el => {
@@ -289,6 +292,7 @@ class NxRequest{
                         closeLabel: ""
                     });
                     $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
+
                     break;
 
                 case 'quizRoofs':
@@ -305,6 +309,25 @@ class NxRequest{
 
                     $modalOk.setContent(`<h3>${$okTitle ? $okTitle : ''}</h3>
                                         <p>${$okText ? $okText : ''}</p>`);
+
+
+                    let $orderStep = $form.querySelectorAll(`[data-order-step]`),
+                        $firstStep = $form.querySelector(`[data-order-step="1"]`),
+                        $sendBtn = $btn,
+                        $progress = document.querySelector(`[data-order-progress]`),
+                        $orderNext = $form.querySelector(`[data-order-nav="next"]`)
+
+                    console.log($progress)
+
+                    $orderStep.forEach(el => {
+                        el.classList.add('hidden')
+                    })
+
+                    $sendBtn.classList.add('hidden')
+                    $firstStep.classList.remove('hidden')
+                    $orderNext.classList.remove('hidden')
+                    $orderNext.setAttribute(`data-nav`, '2')
+                    $progress.style.width = '0'
                     break;
 
                 case 'calculatorRoofs':
