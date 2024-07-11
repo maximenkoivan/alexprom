@@ -164,7 +164,7 @@ class Nx {
 
     // load async svg sprite
     loadSvgSprite() {
-        const svgUrl = `/local/templates/krovli/assets/svg.min.html`,
+        const svgUrl = `/local/templates/germet/assets/svg.min.html`,
             xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function (data) {
             if (xhr.readyState !== 4) return;
