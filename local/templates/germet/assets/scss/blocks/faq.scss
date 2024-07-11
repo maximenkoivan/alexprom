@@ -1,11 +1,11 @@
 .faq-sections {
-  background: url("/local/templates/krovli/assets/images/faq-sky.png") 0 0%/cover no-repeat;
+  background: url("/local/templates/germet/assets/images/faq-sky.png") 0 0%/cover no-repeat;
   box-shadow: inset 0em 4em 46px 8px #fff, inset 0em -18em 20px 12px #fff;
   padding: 0 30px 1px;
 
   @media (max-width: 743px) {
     padding: 0;
-    background: url("/local/templates/krovli/assets/images/how-work-sky-mobile.png") 0 0%/cover no-repeat;
+    background: url("/local/templates/germet/assets/images/how-work-sky-mobile.png") 0 0%/cover no-repeat;
   }
 }
 
@@ -125,7 +125,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background: url("/local/templates/krovli/assets/images/icons/plus.svg") no-repeat;
+          background: url("/local/templates/germet/assets/images/icons/plus.svg") no-repeat;
           background-size: cover;
 
           @media (max-width: 743px) {

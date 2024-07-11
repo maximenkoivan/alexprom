@@ -65,7 +65,7 @@
 
     &:before {
       left: 15px;
-      mask-image: url("/local/templates/krovli/assets/images/icons/arrow.svg");
+      mask-image: url("/local/templates/germet/assets/images/icons/arrow.svg");
       mask-position: center;
       mask-repeat: no-repeat;
     }
@@ -73,7 +73,7 @@
     &:after {
       transform: translateY(calc(-50% - 2px)) rotate(180deg);
       right: 15px;
-      mask-image: url("/local/templates/krovli/assets/images/icons/arrow.svg");
+      mask-image: url("/local/templates/germet/assets/images/icons/arrow.svg");
       mask-position: center;
       mask-repeat: no-repeat;
     }

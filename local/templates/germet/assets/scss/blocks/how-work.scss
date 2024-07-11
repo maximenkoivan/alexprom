@@ -1,12 +1,12 @@
 .how-work-sections {
-  background-image: url("/local/templates/krovli/assets/images/sky.png");
+  background-image: url("/local/templates/germet/assets/images/sky.png");
   background-repeat: no-repeat;
   position: relative;
   background-position: bottom;
   background-color: #fcfcfc;
 
   @media (min-width: 1921px) {
-    background: url("/local/templates/krovli/assets/images/sky.png") /cover no-repeat;
+    background: url("/local/templates/germet/assets/images/sky.png") /cover no-repeat;
   }
 
   .block-ellipse {
@@ -40,18 +40,18 @@
     width: 100%;
     margin: 40px auto 16px auto;
     text-align: center;
-    background: url("/local/templates/krovli/assets/images/how-work.png") no-repeat center center;
+    background: url("/local/templates/germet/assets/images/how-work.png") no-repeat center center;
     height: 306px;
 
     @media (max-width: 1919px) {
-      background: url("/local/templates/krovli/assets/images/how-work-notebook.png") no-repeat center center;
+      background: url("/local/templates/germet/assets/images/how-work-notebook.png") no-repeat center center;
     }
 
     @media (max-width: 1399px) {
       margin-left: 10px;
       margin-right: 10px;
       height: 382px;
-      background: url("/local/templates/krovli/assets/images/how-work-tablet.png") no-repeat center center;
+      background: url("/local/templates/germet/assets/images/how-work-tablet.png") no-repeat center center;
       margin-bottom: 50px;
     }
 
@@ -59,7 +59,7 @@
       width: 100%;
       margin: 20px 0 0;
       height: 558px;
-      background: url("/local/templates/krovli/assets/images/how-work-mobile.png") no-repeat center center;
+      background: url("/local/templates/germet/assets/images/how-work-mobile.png") no-repeat center center;
     }
   }
 
@@ -178,7 +178,7 @@
         }
 
         &:before {
-          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-down.png");
           bottom: -80px;
           left: 75px;
         }
@@ -214,7 +214,7 @@
         }
 
         &:before {
-          background-image: url("/local/templates/krovli/assets/images/how-work-arc-top.png");
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-top.png");
           top: -91px;
           left: 86px;
         }
@@ -247,7 +247,7 @@
         min-width: 320px;
 
         &:before {
-          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-down.png");
           bottom: -80px;
           left: 75px;
         }
@@ -281,7 +281,7 @@
         }
 
         &:before {
-          background-image: url("/local/templates/krovli/assets/images/how-work-arc-top.png");
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-top.png");
           top: -91px;
           left: 86px;
         }
@@ -329,7 +329,7 @@
         }
 
         &:before {
-          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-down.png");
           bottom: -80px;
           left: 75px;
         }
@@ -575,7 +575,7 @@
           left: 0;
           width: 22px;
           height: 20px;
-          background: url('/local/templates/krovli/assets/images/icons/check.svg') no-repeat;
+          background: url('/local/templates/germet/assets/images/icons/check.svg') no-repeat;
         }
       }
     }
