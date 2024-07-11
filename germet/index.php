@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Монтаж и ремонт кровли любой с�
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
-        "IBLOCK_ID" => \classes\Models\Roofs\HomePage\Content::getInstance()->getIblockId(),
+        "IBLOCK_ID" => \classes\Models\Germet\HomePage\Content::getInstance()->getIblockId(),
         "IBLOCK_TYPE" => "germet",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",

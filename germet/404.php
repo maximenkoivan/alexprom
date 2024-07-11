@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Ошибка 404");
         "ELEMENT_ID" => "",
         "FIELD_CODE" => array("ID"),
         "GROUP_PERMISSIONS" => array("1"),
-        "IBLOCK_ID" => \classes\Models\Roofs\Basic\CommonData::getInstance()->getIblockId(),
+        "IBLOCK_ID" => \classes\Models\Germet\Basic\CommonData::getInstance()->getIblockId(),
         "IBLOCK_TYPE" => "roofs",
         "IBLOCK_URL" => "",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",

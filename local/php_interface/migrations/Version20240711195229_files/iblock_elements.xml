@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="germet:services" exchangeVersion="2">
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>1</value>
+        </field>
+        <field name="NAME">
+            <value>Металлочерепица</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>metallocherepitsa</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1319</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="services-bg.webp" description="&#x43E;&#x442; 350 &#x440;/&#x43C;2">
+                iblock/1ff/psdf49sc0vf4obcpxe39i0zwq5iikvla/services-bg.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>520</value>
+        </field>
+        <field name="NAME">
+            <value>Металлочерепица 2</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>metallocherepitsa-2</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1320</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="services-bg.webp" description="&#x43E;&#x442; 350 &#x440;/&#x43C;2">
+                iblock/e68/qehtjx3s0sz3s99rdwtpiyho4zk6f0r4/services-bg.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>530</value>
+        </field>
+        <field name="NAME">
+            <value>Металлочерепица 3</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>metallocherepitsa-3</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1321</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="services-bg.webp" description="&#x43E;&#x442; 350 &#x440;/&#x43C;2">
+                iblock/1c8/palseh8001u004fgneg4gx9xjmc02qtp/services-bg.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>2</value>
+        </field>
+        <field name="NAME">
+            <value>Гибкая черепица</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>gipkaya-cherepitsa</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1320</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="katepal-classic-kl-seryj-bitumnaya-cherepicza.webp"
+                   description="&#x43E;&#x442; 450 &#x440;/&#x43C;2">
+                iblock/15a/hig6n8sjkuh360sbzcx1nl5e9mhuztof/katepal-classic-kl-seryj-bitumnaya-cherepicza.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>3</value>
+        </field>
+        <field name="NAME">
+            <value>Профнастил</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>profnastil</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1321</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="proflist-1.webp" description="&#x43E;&#x442; 500 &#x440;/&#x43B;&#x438;&#x441;&#x442;">
+                iblock/ea9/xmhhnbu5b2buohe60e2q25qch80j5ltt/proflist-1.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>4</value>
+        </field>
+        <field name="NAME">
+            <value>Фальцевая кровля</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>faltsevaya-krovlya</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1360</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="dv.stoj-4.webp" description="&#x43E;&#x442; 450 &#x440;/&#x43F;&#x43E;&#x433;.&#x43C;">
+                iblock/ab3/0su7ev9eti4r4buwkccefxgr83wqfi1x/dv.stoj-4.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>5</value>
+        </field>
+        <field name="NAME">
+            <value>Наплавляемая кровля</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>naplavlyaemaya-krovlya</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1361</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="328_original.webp" description="&#x43E;&#x442; 300 &#x440;/&#x43C;2">
+                iblock/dfe/6tqem8spenl8vu5cfrvxwgqkl5sjtwg1/328_original.webp
+            </value>
+        </property>
+    </item>
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>6</value>
+        </field>
+        <field name="NAME">
+            <value>Натуральная черепица</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>naturalnaya-cherepitsa-</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1362</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="IMAGE">
+            <value name="255167.webp" description="&#x43E;&#x442; 650 &#x440;/&#x43C;2">
+                iblock/bac/yb7wvzwe2wc4i1voz5q22is728a360rx/255167.webp
+            </value>
+        </property>
+    </item>
+</items>

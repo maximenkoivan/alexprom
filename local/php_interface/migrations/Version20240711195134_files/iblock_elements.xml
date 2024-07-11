@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="germet:content" exchangeVersion="2">
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>500</value>
+        </field>
+        <field name="NAME">
+            <value>Контент</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>content</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1315</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="BLOCKS_PAGE">
+            <value>promo</value>
+            <value>advantages</value>
+            <value>about</value>
+            <value>how-work</value>
+            <value>permissions</value>
+            <value>calculate</value>
+            <value>services</value>
+            <value>add-services</value>
+            <value>faq</value>
+            <value>portfolio</value>
+            <value>reviews</value>
+            <value>feedback</value>
+            <value>contact</value>
+        </property>
+        <property name="TITLE_PROMO">
+            <value>Монтаж и ремонт кровли &amp;lt;span&amp;gt;любой сложности*&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="SUBTITLE_PROMO">
+            <value>*Предоставляется &amp;lt;span&amp;gt;гарантия до&amp;lt;br&amp;gt; 36 мес.&amp;lt;/span&amp;gt; на
+                все виды работ
+            </value>
+        </property>
+        <property name="TEXT_BTN_1_PROMO">
+            <value>Рассчитать стоимость</value>
+        </property>
+        <property name="TEXT_BTN_2_PROMO">
+            <value>Заказать звонок</value>
+        </property>
+        <property name="IMAGE_PROMO">
+            <value name="group-663-1.webp">iblock/381/yq6o11n4zaicjjgte5o2w26h6alm0gq7/group-663-1.webp</value>
+        </property>
+        <property name="TITLE_ADVANTAGES">
+            <value>наши&amp;lt;br&amp;gt;&amp;lt;span&amp;gt;преимущества&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="IMAGE_ADVANTAGES">
+            <value name="group-664-1.webp">iblock/73c/9d0ftap1z32bboonelwj53c8y43wn6fx/group-664-1.webp</value>
+        </property>
+        <property name="ELEMENTS_ADVANTAGES">
+            <value name="advantage-1.webp"
+                   description="&#x41C;&#x43E;&#x43D;&#x442;&#x430;&#x436; &#x438; &#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442;&lt;br&gt;&lt;span&gt;&#x432; &#x43B;&#x44E;&#x431;&#x443;&#x44E; &#x43F;&#x43E;&#x433;&#x43E;&#x434;&#x443;&lt;/span&gt;">
+                iblock/636/ws6lbd4s4t4jo6dp6vysqey7csd7wnah/advantage-1.webp
+            </value>
+            <value name="advantage-2.webp"
+                   description="&lt;span&gt;&#x42D;&#x43A;&#x43E;&#x43D;&#x43E;&#x43C;&#x438;&#x44F; &#x434;&#x43E; 25%&lt;/span&gt;&lt;br&gt;&#x43D;&#x430; &#x43C;&#x430;&#x442;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x435; &#x438; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x445;">
+                iblock/e84/o6eqhao6tgpposlux4fa8ncvnaewrsh2/advantage-2.webp
+            </value>
+            <value name="advantage-3.webp"
+                   description="&lt;span&gt;&#x411;&#x435;&#x441;&#x43F;&#x43B;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x432;&#x44B;&#x435;&#x437;&#x434;&lt;/span&gt;&lt;br&gt; &#x437;&#x430;&#x43C;&#x435;&#x440;&#x449;&#x438;&#x43A;&#x430; &#x432; &#x41C;&#x43E;&#x441;&#x43A;&#x432;&#x435; &#x438; &#x41C;&#x41E;">
+                iblock/05d/r2vjcmn390pjal5ao7mclxanvyhm5437/advantage-3.webp
+            </value>
+            <value name="advantage-4.webp"
+                   description="&#x428;&#x442;&#x430;&#x442;&#x43D;&#x44B;&#x435; &#x43A;&#x440;&#x43E;&#x432;&#x435;&#x43B;&#x44C;&#x449;&#x438;&#x43A;&#x438;&lt;br&gt;&lt;span&gt; &#x441;&#x43E; &#x441;&#x442;&#x430;&#x436;&#x435;&#x43C; &#x43E;&#x442; 5 &#x43B;&#x435;&#x442;&lt;/span&gt;">
+                iblock/055/ytdn938hsqq2vogofwgl4vlwug8jhg9g/advantage-4.webp
+            </value>
+        </property>
+        <property name="TITLE_ABOUT">
+            <value>О компании</value>
+        </property>
+        <property name="DESC_ABOUT">
+            <value type="json">{&quot;TEXT&quot;:&quot;&lt;p&gt;\r\n\tСтроительная компания «АлексПром» оказывает услуги
+                по качественному ремонту и монтажу кровли любой сложности в Москве и Московской области. Работаем как с
+                физическими, так и с юридическими лицами по наличному и безналичному расчету, в т.ч. криптовалютой.\r\n&lt;\/p&gt;\r\n&lt;p&gt;\r\n\tМы
+                работаем от простой протечки кровли, до ее капитального ремонта, гарантируя результат и исключая
+                дальнейшие «переделки». Есть услуга «Срочный выезд». Предоставляем фото и видео отчетность.\r\n&lt;\/p&gt;&quot;,&quot;TYPE&quot;:&quot;HTML&quot;}
+            </value>
+        </property>
+        <property name="IMAGE_ABOUT">
+            <value name="Rectangle.png">iblock/3ed/20c8y37va2o3dnyspk1jv5nd0q98l1zr/Rectangle.png</value>
+        </property>
+        <property name="ICON_ABOUT">
+            <value name="about-1.svg" description="scp_8580">iblock/84a/vznjpt2m6bau7ybnyph0anb3od9blpfw/about-1.svg
+            </value>
+            <value name="about-2.svg" description="scp_8581">iblock/d6a/q4gslczcf6soi6q2gs7ojg9buj5bleqf/about-2.svg
+            </value>
+            <value name="about-3.svg" description="scp_8582">iblock/229/tsezdl1hjt0vvio8ktp0c35pw5dck794/about-3.svg
+            </value>
+            <value name="about-4.svg" description="scp_8583">iblock/949/jtu2pm6xee65zkv0o0c8ldv6gu4zenfx/about-4.svg
+            </value>
+        </property>
+        <property name="TEXT_ABOUT">
+            <value description="scp_8580">&amp;lt;span&amp;gt;500+ выполненных&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+                работ
+            </value>
+            <value description="scp_8581">&amp;lt;span&amp;gt;Работа по договору&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+                с гарантией качества
+            </value>
+            <value description="scp_8582">&amp;lt;span&amp;gt;Выгодная цена&amp;lt;/span&amp;gt; на&amp;lt;br&amp;gt;
+                монтаж и материалы
+            </value>
+            <value description="scp_8583">&amp;lt;span&amp;gt;4,83 рейтинг&amp;lt;/span&amp;gt; по всем&amp;lt;br&amp;gt;
+                карточкам и отзывам
+            </value>
+        </property>
+        <property name="FACTOIDS_ABOUT">
+            <value description="scp_8580" type="json">{&quot;ELEMENT&quot;:&quot;SUB_VALUES&quot;}</value>
+            <value description="scp_8581" type="json">{&quot;ELEMENT&quot;:&quot;SUB_VALUES&quot;}</value>
+            <value description="scp_8582" type="json">{&quot;ELEMENT&quot;:&quot;SUB_VALUES&quot;}</value>
+            <value description="scp_8583" type="json">{&quot;ELEMENT&quot;:&quot;SUB_VALUES&quot;}</value>
+        </property>
+        <property name="TITLE_WORK">
+            <value>Как мы &amp;lt;span&amp;gt;работаем&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="IMAGE_WORK">
+            <value name="how-work-1.png" description="scp_8456">
+                iblock/142/ekc1u359fvr2i7tlkhf5xk6kelikhshq/how-work-1.png
+            </value>
+            <value name="how-work-2.png" description="scp_8457">
+                iblock/e10/mc7yzos6dd0rtvppk26ehgqul51o66qo/how-work-2.png
+            </value>
+            <value name="how-work-4.png" description="scp_8459">
+                iblock/8e4/0zzeovs9nrg70315ko4j5u71xvkzi3im/how-work-4.png
+            </value>
+            <value name="how-work-5.png" description="scp_8460">
+                iblock/e25/oidzgsvj8uhtxns4avxj9f1jjc7m30pz/how-work-5.png
+            </value>
+            <value name="how-work-6.png" description="scp_788n0">
+                iblock/c71/mpfw8u0rwj5hu4bzohhxxwj3o8rfblbf/how-work-6.png
+            </value>
+        </property>
+        <property name="DESC_WORK">
+            <value description="scp_8456">Заявка, замер и расчет сметы</value>
+            <value description="scp_8457">Согласование и подписание договора</value>
+            <value description="scp_8458">Закупка и доставка материалов</value>
+            <value description="scp_8459">Монтажные/ремонтные работы</value>
+            <value description="scp_8460">Сдача объекта/проверка на наличии повреждений</value>
+            <value description="scp_788n0">Гарантия и обслуживание кровли</value>
+        </property>
+        <property name="STAGES_WORK">
+            <value description="scp_8456" type="json">{&quot;ELEMENT&quot;:&quot;1315&quot;,&quot;SUB_VAL_IDS&quot;:{&quot;661&quot;:&quot;8438&quot;,&quot;787&quot;:&quot;8442&quot;},&quot;FLEG&quot;:{&quot;661&quot;:&quot;1214&quot;},&quot;SUB_VALUES&quot;:{&quot;IMAGE_WORK&quot;:{&quot;ID&quot;:&quot;661&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Изображение&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;580&quot;,&quot;CODE&quot;:&quot;IMAGE_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;F&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;30&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;jpg,
+                gif, bmp, png, jpeg, webp, svg&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;Y&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8438&quot;,&quot;VALUE&quot;:&quot;1214&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8456&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;1214&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8456&quot;,&quot;~NAME&quot;:&quot;Изображение&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;},&quot;DESC_WORK&quot;:{&quot;ID&quot;:&quot;787&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Описание&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;581&quot;,&quot;CODE&quot;:&quot;DESC_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;S&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;70&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;N&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8442&quot;,&quot;VALUE&quot;:&quot;Заявка,
+                замер и расчет сметы&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8456&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;Заявка,
+                замер и расчет сметы&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8456&quot;,&quot;~NAME&quot;:&quot;Описание&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;}}}
+            </value>
+            <value description="scp_8457" type="json">{&quot;ELEMENT&quot;:&quot;1315&quot;,&quot;SUB_VAL_IDS&quot;:{&quot;661&quot;:&quot;8439&quot;,&quot;787&quot;:&quot;8443&quot;},&quot;FLEG&quot;:{&quot;661&quot;:&quot;1215&quot;},&quot;SUB_VALUES&quot;:{&quot;IMAGE_WORK&quot;:{&quot;ID&quot;:&quot;661&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Изображение&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;580&quot;,&quot;CODE&quot;:&quot;IMAGE_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;F&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;30&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;jpg,
+                gif, bmp, png, jpeg, webp, svg&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;Y&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8439&quot;,&quot;VALUE&quot;:&quot;1215&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8457&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;1215&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8457&quot;,&quot;~NAME&quot;:&quot;Изображение&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;},&quot;DESC_WORK&quot;:{&quot;ID&quot;:&quot;787&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Описание&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;581&quot;,&quot;CODE&quot;:&quot;DESC_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;S&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;70&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;N&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8443&quot;,&quot;VALUE&quot;:&quot;Согласование
+                и подписание договора&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8457&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;Согласование
+                и подписание договора&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8457&quot;,&quot;~NAME&quot;:&quot;Описание&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;}}}
+            </value>
+            <value description="scp_8458" type="json">{&quot;ELEMENT&quot;:&quot;1315&quot;,&quot;SUB_VAL_IDS&quot;:{&quot;787&quot;:&quot;8444&quot;},&quot;SUB_VALUES&quot;:{&quot;DESC_WORK&quot;:{&quot;ID&quot;:&quot;787&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Описание&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;581&quot;,&quot;CODE&quot;:&quot;DESC_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;S&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;70&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;N&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8444&quot;,&quot;VALUE&quot;:&quot;Закупка
+                и доставка материалов&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8458&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;Закупка
+                и доставка материалов&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8458&quot;,&quot;~NAME&quot;:&quot;Описание&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;}}}
+            </value>
+            <value description="scp_8459" type="json">{&quot;ELEMENT&quot;:&quot;1315&quot;,&quot;SUB_VAL_IDS&quot;:{&quot;661&quot;:&quot;8440&quot;,&quot;787&quot;:&quot;8445&quot;},&quot;FLEG&quot;:{&quot;661&quot;:&quot;1216&quot;},&quot;SUB_VALUES&quot;:{&quot;IMAGE_WORK&quot;:{&quot;ID&quot;:&quot;661&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Изображение&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;580&quot;,&quot;CODE&quot;:&quot;IMAGE_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;F&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;30&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;jpg,
+                gif, bmp, png, jpeg, webp, svg&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;Y&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8440&quot;,&quot;VALUE&quot;:&quot;1216&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8459&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;1216&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8459&quot;,&quot;~NAME&quot;:&quot;Изображение&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;},&quot;DESC_WORK&quot;:{&quot;ID&quot;:&quot;787&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Описание&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;581&quot;,&quot;CODE&quot;:&quot;DESC_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;S&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;70&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;N&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8445&quot;,&quot;VALUE&quot;:&quot;Монтажные\/ремонтные
+                работы&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8459&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;Монтажные\/ремонтные
+                работы&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8459&quot;,&quot;~NAME&quot;:&quot;Описание&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;}}}
+            </value>
+            <value description="scp_8460" type="json">{&quot;ELEMENT&quot;:&quot;1315&quot;,&quot;SUB_VAL_IDS&quot;:{&quot;661&quot;:&quot;8441&quot;,&quot;787&quot;:&quot;8446&quot;},&quot;FLEG&quot;:{&quot;661&quot;:&quot;1217&quot;},&quot;SUB_VALUES&quot;:{&quot;IMAGE_WORK&quot;:{&quot;ID&quot;:&quot;661&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Изображение&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;580&quot;,&quot;CODE&quot;:&quot;IMAGE_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;F&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;30&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;jpg,
+                gif, bmp, png, jpeg, webp, svg&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;Y&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8441&quot;,&quot;VALUE&quot;:&quot;1217&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8460&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;1217&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8460&quot;,&quot;~NAME&quot;:&quot;Изображение&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;},&quot;DESC_WORK&quot;:{&quot;ID&quot;:&quot;787&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Описание&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;581&quot;,&quot;CODE&quot;:&quot;DESC_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;S&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;70&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;N&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8446&quot;,&quot;VALUE&quot;:&quot;Сдача
+                объекта\/проверка на наличии повреждений&quot;,&quot;DESCRIPTION&quot;:&quot;scp_8460&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;Сдача
+                объекта\/проверка на наличии повреждений&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_8460&quot;,&quot;~NAME&quot;:&quot;Описание&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;}}}
+            </value>
+            <value description="scp_788n0" type="json">{&quot;ELEMENT&quot;:&quot;1315&quot;,&quot;SUB_VAL_IDS&quot;:{&quot;661&quot;:&quot;8461&quot;,&quot;787&quot;:&quot;8462&quot;},&quot;FLEG&quot;:{&quot;661&quot;:&quot;1218&quot;},&quot;SUB_VALUES&quot;:{&quot;IMAGE_WORK&quot;:{&quot;ID&quot;:&quot;661&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Изображение&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;580&quot;,&quot;CODE&quot;:&quot;IMAGE_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;F&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;30&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;jpg,
+                gif, bmp, png, jpeg, webp, svg&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;Y&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8461&quot;,&quot;VALUE&quot;:&quot;1218&quot;,&quot;DESCRIPTION&quot;:&quot;scp_788n0&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;1218&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_788n0&quot;,&quot;~NAME&quot;:&quot;Изображение&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;},&quot;DESC_WORK&quot;:{&quot;ID&quot;:&quot;787&quot;,&quot;TIMESTAMP_X&quot;:&quot;2024-07-11
+                19:42:53&quot;,&quot;IBLOCK_ID&quot;:&quot;53&quot;,&quot;NAME&quot;:&quot;Описание&quot;,&quot;ACTIVE&quot;:&quot;Y&quot;,&quot;SORT&quot;:&quot;581&quot;,&quot;CODE&quot;:&quot;DESC_WORK&quot;,&quot;DEFAULT_VALUE&quot;:&quot;&quot;,&quot;PROPERTY_TYPE&quot;:&quot;S&quot;,&quot;ROW_COUNT&quot;:&quot;1&quot;,&quot;COL_COUNT&quot;:&quot;70&quot;,&quot;LIST_TYPE&quot;:&quot;L&quot;,&quot;MULTIPLE&quot;:&quot;Y&quot;,&quot;XML_ID&quot;:&quot;&quot;,&quot;FILE_TYPE&quot;:&quot;&quot;,&quot;MULTIPLE_CNT&quot;:&quot;5&quot;,&quot;TMP_ID&quot;:&quot;&quot;,&quot;LINK_IBLOCK_ID&quot;:&quot;0&quot;,&quot;WITH_DESCRIPTION&quot;:&quot;N&quot;,&quot;SEARCHABLE&quot;:&quot;N&quot;,&quot;FILTRABLE&quot;:&quot;N&quot;,&quot;IS_REQUIRED&quot;:&quot;N&quot;,&quot;VERSION&quot;:&quot;1&quot;,&quot;USER_TYPE&quot;:&quot;&quot;,&quot;USER_TYPE_SETTINGS&quot;:&quot;a:0:{}&quot;,&quot;HINT&quot;:&quot;&quot;,&quot;PROPERTY_VALUE_ID&quot;:&quot;8462&quot;,&quot;VALUE&quot;:&quot;Гарантия
+                и обслуживание кровли&quot;,&quot;DESCRIPTION&quot;:&quot;scp_788n0&quot;,&quot;VALUE_ENUM&quot;:&quot;&quot;,&quot;VALUE_XML_ID&quot;:&quot;&quot;,&quot;VALUE_SORT&quot;:&quot;&quot;,&quot;~VALUE&quot;:&quot;Гарантия
+                и обслуживание кровли&quot;,&quot;~DESCRIPTION&quot;:&quot;scp_788n0&quot;,&quot;~NAME&quot;:&quot;Описание&quot;,&quot;~DEFAULT_VALUE&quot;:&quot;&quot;,&quot;VALUE_ENUM_ID&quot;:&quot;&quot;}}}
+            </value>
+        </property>
+        <property name="TITLE_PERMISSIONS">
+            <value>Работаем с Порталом&amp;lt;br&amp;gt;&amp;lt;span&amp;gt;поставщиков&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="SUBTITLE_PERMISSIONS">
+            <value>наши допуски &amp;lt;span&amp;gt;и разрешения:&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="IMAGE_PERMISSIONS">
+            <value name="&#x426;&#x435;&#x43B;&#x435;&#x432;&#x43E;&#x435;.webp">
+                iblock/bc5/gyczqsx8ki8a3dds5fjy7ig9cfwc2jij/Целевое.webp
+            </value>
+        </property>
+        <property name="TEXT_PERMISSIONS">
+            <value>С физическими лицами</value>
+            <value>С юридическими лицами</value>
+            <value>С порталом поставщиков</value>
+        </property>
+        <property name="SLIDER_PERMISSIONS">
+            <value name="&#x41B;&#x438;&#x446;&#x435;&#x43D;&#x437;&#x438;&#x44F;_&#x43D;&#x430;_&#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B;_&#x43F;&#x430;&#x43C;&#x44F;&#x442;&#x43D;&#x438;&#x43A;&#x430;_&#x430;&#x440;&#x445;&#x438;&#x442;&#x435;&#x43A;&#x442;&#x443;&#x440;&#x44B;_&#x444;&#x430;&#x441;&#x430;&#x434;&#x44B;_.webp">
+                iblock/7e1/in2rn3hs6tezman3am1zx0zsueyf58kd/Лицензия_на_работы_памятника_архитектуры_фасады_.webp
+            </value>
+            <value name="&#x414;&#x438;&#x43F;&#x43B;&#x43E;&#x43C;_&#x438;&#x43B;&#x438;_&#x441;&#x435;&#x440;&#x442;&#x438;&#x444;&#x438;&#x43A;&#x430;&#x442;_&#x438;&#x43D;&#x436;&#x435;&#x43D;&#x435;&#x440;&#x430;_&#x43E;&#x431;&#x449;&#x435;&#x441;&#x442;&#x440;&#x43E;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x445;_&#x440;&#x430;&#x431;&#x43E;&#x442;_.webp">
+                iblock/080/jx8gaptw2sbixditoj1wx8oghgh8ziwm/Диплом_или_сертификат_инженера_общестроительных_работ_.webp
+            </value>
+            <value name="oqjadhij6enwack7u0i5j2njs1brcxnh.webp">
+                iblock/160/er113nw5y6ut7cmkj1hnebahp4ntwqp5/oqjadhij6enwack7u0i5j2njs1brcxnh.webp
+            </value>
+            <value name="eb9tacqkpccvbvvxj7uw8pfij38uf60j.webp">
+                iblock/25c/k6o9jm1maj5hmq275ym2fwmhytt612fp/eb9tacqkpccvbvvxj7uw8pfij38uf60j.webp
+            </value>
+            <value name="si6ua44hy34j4378tea4by8gv0x9hlh4.webp">
+                iblock/7e6/ws5zoavhmt7mqo1d18kg29qbqplz2ogb/si6ua44hy34j4378tea4by8gv0x9hlh4.webp
+            </value>
+        </property>
+        <property name="TITLE_CALCULATE">
+            <value>Рассчитайте самостоятельно&amp;lt;br&amp;gt;&amp;lt;span&amp;gt;ремонт кровли&amp;lt;/span&amp;gt;
+                крыши
+            </value>
+        </property>
+        <property name="SUBTITLE_CALCULATE">
+            <value>в наших калькуляторах — &amp;lt;span&amp;gt;это интересно и бесплатно&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="TEXT_BTN_1_CALCULATE">
+            <value>Получить бесплатный расчет</value>
+        </property>
+        <property name="TEXT_BTN_2_CALCULATE">
+            <value>Самостоятельно&amp;lt;br&amp;gt; рассчитать ремонт кровли</value>
+        </property>
+        <property name="BG_IMAGE_CALCULATE">
+            <value name="calculate-bg.webp">iblock/5a4/343t0v1rrzqy9bl8bjdevwopi46bcy5x/calculate-bg.webp</value>
+        </property>
+        <property name="IMAGE_DESKTOP_CALCULATE">
+            <value name="tablet.webp">iblock/4aa/n3e72w0m1s27pxaujhjiff7g5zh1gdts/tablet.webp</value>
+        </property>
+        <property name="IMAGE_TABLET_CALCULATE">
+            <value name="tablet-tablet.webp">iblock/7ad/9yjyvepy29z778u9v2xtyy7p4j6qg07j/tablet-tablet.webp</value>
+        </property>
+        <property name="IMAGE_MOBILE_CALCULATE">
+            <value name="tablet-mobile.webp">iblock/39d/8kh9h5uhkhpz9o2xs7w1a6mqkh3qket0/tablet-mobile.webp</value>
+        </property>
+        <property name="TITLE_SERVICES">
+            <value>Услуги по &amp;lt;span&amp;gt;ремонту и монтажу кровли&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="FOOTNOTE_SERVICES">
+            <value type="json">{&quot;TEXT&quot;:&quot;&lt;span&gt;*Бесплатный выезд специалиста&lt;\/span&gt; для
+                замера и расчетных работ (при условии дальнейшего заказа услуг монтажа\/ремонта кровли. В иных случаях,
+                стоимость &lt;span&gt;выезда специалиста 2000 руб.&lt;\/span&gt;&quot;,&quot;TYPE&quot;:&quot;HTML&quot;}
+            </value>
+        </property>
+        <property name="TEXT_BTN_SERVICES">
+            <value>заказать услугу</value>
+        </property>
+        <property name="TITLE_ADD_SERVICES">
+            <value>&amp;lt;span&amp;gt;Дополнительные&amp;lt;/span&amp;gt; услуги</value>
+        </property>
+        <property name="TEXT_BTN_ADD_SERVICES">
+            <value>заказать</value>
+        </property>
+        <property name="TITLE_FAQ">
+            <value>&amp;lt;span&amp;gt;часто задаваемые&amp;lt;/span&amp;gt; вопросы</value>
+        </property>
+        <property name="TITLE_PORTFOLIO">
+            <value>портфолио</value>
+        </property>
+        <property name="TITLE_REVIEWS">
+            <value>отзывы</value>
+        </property>
+        <property name="TITLE_CONTACT">
+            <value>контакты</value>
+        </property>
+        <property name="LOGO_CONTACT">
+            <value name="logo.svg">iblock/bda/my7wv0cimx80a4kbp4v7bql6o3h7b0na/logo.svg</value>
+        </property>
+        <property name="ADDRESS_CONTACT">
+            <value>Москва, &amp;lt;span&amp;gt;ул. Бойцовая, д.22&amp;lt;/span&amp;gt;, этаж 2, пом.V, комн.9, офис 4
+                г
+            </value>
+        </property>
+        <property name="EMAIL_CONTACT">
+            <value name="email.svg" description="zakaz@alexprom.ru">
+                iblock/d81/i16n9nz2gqbz8u13d6tmwukwntcvhg40/email.svg
+            </value>
+        </property>
+        <property name="PHONE_CONTACT">
+            <value name="phone.svg" description="+7 (495) 109-02-42">
+                iblock/c14/w2h2i2ad4eselo1z30s3s8uiy6bbvhzr/phone.svg
+            </value>
+        </property>
+    </item>
+</items>

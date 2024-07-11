@@ -6,7 +6,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @var $arResult
  * @global CMain $APPLICATION
  */
-$factoids = array_chunk($arResult['PROPERTIES']['FACTOIDS_ABOUT']['~VALUE'], 2, true);
+$factoids = array_chunk($arResult['PROPERTIES']['FACTOIDS_ABOUT']['~VALUE'] ?: [], 2, true);
 ?>
 <section class="sections-about">
     <?php if (!empty($arResult['PROPERTIES']['IMAGE_ABOUT']['VALUE'])): ?>
