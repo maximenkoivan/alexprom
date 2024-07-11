@@ -1,0 +1,44 @@
+.navigation-footer {
+  display:flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+
+  height: max-content;
+
+  @media (min-width: 768px) {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 0;
+  }
+
+  .nav-link {
+    @include hover-mixin;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+    color: var(--base-color-font);
+
+    &:hover,
+    &.show,
+    &.active {
+      color: var(--base-color-active);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: 992px) {
+
+    .nav-link {
+      font-size: 17px;
+    }
+  }
+}
