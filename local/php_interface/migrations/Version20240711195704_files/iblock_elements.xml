@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="germet:feedback_settings" exchangeVersion="2">
+    <item>
+        <field name="ACTIVE">
+            <value>Y</value>
+        </field>
+        <field name="ACTIVE_FROM"/>
+        <field name="ACTIVE_TO"/>
+        <field name="SORT">
+            <value>500</value>
+        </field>
+        <field name="NAME">
+            <value>Настройки</value>
+        </field>
+        <field name="PREVIEW_PICTURE"/>
+        <field name="PREVIEW_TEXT"/>
+        <field name="PREVIEW_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="DETAIL_PICTURE"/>
+        <field name="DETAIL_TEXT"/>
+        <field name="DETAIL_TEXT_TYPE">
+            <value>text</value>
+        </field>
+        <field name="CODE">
+            <value>settings</value>
+        </field>
+        <field name="TAGS"/>
+        <field name="XML_ID">
+            <value>1318</value>
+        </field>
+        <field name="IBLOCK_SECTION"/>
+        <property name="FORM_NAME_FEEDBACK">
+            <value>Заказать звонок</value>
+        </property>
+        <property name="IMAGE_FEEDBACK">
+            <value name="questions-bg.webp">iblock/b04/eiss7a7jxhswor6lfgsaugbicsd0xb0s/questions-bg.webp</value>
+        </property>
+        <property name="TITLE_FEEDBACK">
+            <value>остались &amp;lt;span&amp;gt;вопросы?&amp;lt;/span&amp;gt;</value>
+        </property>
+        <property name="SUBTITLE_FEEDBACK">
+            <value>Оставьте заявку и мы свяжемся с вами &amp;lt;span&amp;gt;в ближайшее время&amp;lt;/span&amp;gt;
+            </value>
+        </property>
+        <property name="PLH_1_FEEDBACK">
+            <value>Имя</value>
+        </property>
+        <property name="PLH_2_FEEDBACK">
+            <value>Телефон</value>
+        </property>
+        <property name="TEXT_BTN_FEEDBACK">
+            <value>Отправить</value>
+        </property>
+        <property name="TITLE_SUCCESS_FEEDBACK">
+            <value>Спасибо за обращение в компанию ООО &amp;quot;Алекспром&amp;quot;</value>
+        </property>
+        <property name="TEXT_SUCCESS_FEEDBACK">
+            <value>Мы свяжемся с вами в ближайшее время</value>
+        </property>
+        <property name="IMAGE_SUCCESS_FEEDBACK">
+            <value name="modal-bg-man.webp">iblock/41d/afi5i21artai5ignswg4afjxnke7tq7d/modal-bg-man.webp</value>
+        </property>
+        <property name="FORM_NAME_QUIZ">
+            <value>Расчет стоимости</value>
+        </property>
+        <property name="TITLE_QUIZ">
+            <value>Узнайте стоимость ремонта ответив на несколько вопросов</value>
+        </property>
+        <property name="STATUS_QUIZ">
+            <value>Выполнено</value>
+        </property>
+        <property name="TEXT_BANNER_QUIZ">
+            <value type="json">{&quot;TEXT&quot;:&quot;&lt;p&gt;\r\n\t Пройдите тест и получите расчет стоимости ремонта
+                кровли на электронную почту.\r\n&lt;\/p&gt;\r\n &lt;b&gt;\r\nПосле заполнения с вами свяжется наш
+                специалист для консультации. &lt;\/b&gt;&quot;,&quot;TYPE&quot;:&quot;HTML&quot;}
+            </value>
+        </property>
+        <property name="IMAGE_BANNER_QUIZ">
+            <value name="prize.webp">iblock/6c9/29j2898pm0nsd6qanp37n24af99k1pid/prize.webp</value>
+        </property>
+        <property name="TEXT_BTN_BACK_QUIZ">
+            <value>Назад</value>
+        </property>
+        <property name="TEXT_BTN_FORWARD_QUIZ">
+            <value>Следующий вопрос</value>
+        </property>
+        <property name="TEXT_BTN_SEND_QUIZ">
+            <value>Отправить</value>
+        </property>
+        <property name="TITLE_STEP_1_QUIZ">
+            <value>Конструктив кровли*</value>
+        </property>
+        <property name="IMAGE_STEP_1_QUIZ">
+            <value name="constr-1.png"
+                   description="&#x41E;&#x434;&#x43D;&#x43E;&#x441;&#x43A;&#x430;&#x442;&#x43D;&#x430;&#x44F;">
+                iblock/749/9iktwe6wo3302s6l3x3eat4ehwne4pgk/constr-1.png
+            </value>
+            <value name="constr-2.png"
+                   description="&#x414;&#x432;&#x443;&#x445;&#x441;&#x43A;&#x430;&#x442;&#x43D;&#x430;&#x44F;">
+                iblock/00c/kmggiko3ia3hnl9bby20s8cctw7q9ml9/constr-2.png
+            </value>
+            <value name="constr-3.png"
+                   description="&#x41C;&#x430;&#x43D;&#x441;&#x430;&#x440;&#x434;&#x43D;&#x430;&#x44F;">
+                iblock/7e8/hb58tslh01lpczsl9mro32rck4x9vby3/constr-3.png
+            </value>
+            <value name="constr-4.png" description="&#x412;&#x430;&#x43B;&#x44C;&#x43C;&#x43E;&#x432;&#x430;&#x44F;">
+                iblock/02f/sv1me14k09v0n3f5dn85bvof06sciszk/constr-4.png
+            </value>
+            <value name="constr-5.png" description="&#x428;&#x430;&#x442;&#x440;&#x43E;&#x432;&#x430;&#x44F;">
+                iblock/db2/hb0qa3vrwamp9y4wzkoz00siqcp6y9fq/constr-5.png
+            </value>
+            <value name="constr-6.png"
+                   description="&#x421;&#x43B;&#x43E;&#x436;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x438;&#x432;">
+                iblock/d30/hj94tbiwci79udxvyf6jy8d05p8d4vb7/constr-6.png
+            </value>
+        </property>
+        <property name="TITLE_STEP_2_QUIZ">
+            <value>Тип кровли*</value>
+        </property>
+        <property name="IMAGE_STEP_2_QUIZ">
+            <value name="type-1.png"
+                   description="&#x41C;&#x435;&#x442;&#x430;&#x43B;&#x43B;&#x43E;&#x447;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x446;&#x430;">
+                iblock/9f8/jfon8w4z5y0itl69zflvqd9d9b3aln0k/type-1.png
+            </value>
+            <value name="type-2.png"
+                   description="&#x413;&#x438;&#x431;&#x43A;&#x430;&#x44F; &#x447;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x446;&#x430;">
+                iblock/590/r6eb3hj8ndjx92sk2mocdmxkuax24afu/type-2.png
+            </value>
+            <value name="type-3.png"
+                   description="&#x41F;&#x440;&#x43E;&#x444;&#x43D;&#x430;&#x441;&#x442;&#x438;&#x43B;">
+                iblock/bc4/2jnrc7pu4cn1kun2gvdhxqdayxvrs2mr/type-3.png
+            </value>
+            <value name="type-4.png"
+                   description="&#x424;&#x430;&#x43B;&#x44C;&#x446;&#x435;&#x432;&#x430;&#x44F; &#x43A;&#x440;&#x43E;&#x432;&#x43B;&#x44F;">
+                iblock/6cf/met436f63sie4jbive5qwszqzu9l48zk/type-4.png
+            </value>
+            <value name="type-5.png"
+                   description="&#x41D;&#x430;&#x43F;&#x43B;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C;&#x430;&#x44F; &#x43A;&#x440;&#x43E;&#x432;&#x43B;&#x44F;">
+                iblock/3eb/u4zhbmyw5jy7sc88szgn2jtcr8om2xyc/type-5.png
+            </value>
+            <value name="type-6.png"
+                   description="&#x41D;&#x430;&#x442;&#x443;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x447;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x446;&#x430;">
+                iblock/779/yktdwxfkio37l5j04q3te4ijfm4rge8h/type-6.png
+            </value>
+        </property>
+        <property name="TITLE_1_STEP_3_QUIZ">
+            <value>Что произошло?*</value>
+        </property>
+        <property name="OPTIONS_1_STEP_3_QUIZ">
+            <value>Протекает дымоход</value>
+            <value>Протекает ендова</value>
+            <value>Протекает мансардное окно</value>
+            <value>Сломан водосток</value>
+            <value>Сломан снегозадержатель</value>
+            <value>Другое</value>
+        </property>
+        <property name="TITLE_2_STEP_3_QUIZ">
+            <value>Кровельный пирог*</value>
+        </property>
+        <property name="OPTIONS_2_STEP_3_QUIZ">
+            <value>холодная кровля (без утеплителя)</value>
+            <value>теплая кровля (кровля утеплена)</value>
+        </property>
+        <property name="TITLE_3_STEP_3_QUIZ">
+            <value>Выход на кровлю*</value>
+        </property>
+        <property name="OPTIONS_3_STEP_3_QUIZ">
+            <value>есть лестница</value>
+            <value>привезти свою лестницу</value>
+        </property>
+        <property name="TITLE_4_STEP_3_QUIZ">
+            <value>Расстояние до объекта (от МКАД)</value>
+        </property>
+        <property name="OPTIONS_4_STEP_3_QUIZ">
+            <value>до 10 км</value>
+            <value>до 20 км</value>
+            <value>до 30 км</value>
+            <value>более 30 км</value>
+        </property>
+        <property name="TITLE_STEP_4_QUIZ">
+            <value>Можете загрузить фото крыши дома</value>
+        </property>
+        <property name="PLH_STEP_4_QUIZ">
+            <value>Можно добавить не более 10 файлов (jpg, jpeg, png, gif, webp, svg)</value>
+        </property>
+        <property name="TITLE_STEP_5_QUIZ">
+            <value>Спасибо за ответы!</value>
+        </property>
+        <property name="SUBTITLE_STEP_5_QUIZ">
+            <value>Оставьте свои контактные данные и мы вышлем Вам результат.</value>
+        </property>
+        <property name="PLH_1_STEP_5_QUIZ">
+            <value>Имя</value>
+        </property>
+        <property name="PLH_2_STEP_5_QUIZ">
+            <value>Телефон</value>
+        </property>
+        <property name="PLH_3_STEP_5_QUIZ">
+            <value>E-mail</value>
+        </property>
+        <property name="PLH_4_STEP_5_QUIZ">
+            <value>Можете написать нам сообщение</value>
+        </property>
+        <property name="IMAGE_SUCCESS_QUIZ">
+            <value name="logo.png">iblock/9e8/h4q9j2hg55c96txeac78j0lluaixpdq6/logo.png</value>
+        </property>
+        <property name="TEXT_SUCCESS_QUIZ">
+            <value>Спасибо за обращение в компанию ООО &amp;quot;Алекспром&amp;quot;! Мы свяжемся с вами в ближайшее
+                время.
+            </value>
+        </property>
+        <property name="TITLE_CALC">
+            <value>Калькулятор по ремонту кровли</value>
+        </property>
+        <property name="TITLE_1_CALC">
+            <value>Площадь кровли (м2/пог.м)*</value>
+        </property>
+        <property name="PLH_1_CALC">
+            <value>Укажите площадь в м2/пог.м</value>
+        </property>
+        <property name="TITLE_2_CALC">
+            <value>Выберете вид необходимых услуг монтажа*</value>
+        </property>
+        <property name="OPTION_2_CALC">
+            <value description="350">Металлочерепица, м2</value>
+            <value description="450">Гибкая черепица, м2</value>
+            <value description="300">Профнастил, м2</value>
+            <value description="450">Фальцевая кровля, пог.м</value>
+            <value description="300">Наплавляемая кровля, м2</value>
+            <value description="650">Натуральная черепица, м2</value>
+        </property>
+        <property name="TITLE_3_CALC">
+            <value>Выберете дополнительные услуги*</value>
+        </property>
+        <property name="OPTION_3_CALC">
+            <value description="200">Герметизация кровли, м2</value>
+            <value description="1500">Локальный ремонт кровли, м2</value>
+            <value description="350">Покраска кровли, м2</value>
+            <value description="400">Установка снегодержателей, пог.м.</value>
+            <value description="400">Установка водосточной системы, пог.м</value>
+            <value description="200">Установка обогрева кровли, пог. м</value>
+            <value description="550">Утепление кровли, м2</value>
+            <value>Не требуется</value>
+        </property>
+        <property name="TITLE_4_CALC">
+            <value>Стоимость работ:</value>
+        </property>
+        <property name="PLH_4_CALC">
+            <value>₽</value>
+        </property>
+        <property name="FORM_NAME_CALC">
+            <value>Калькулятор</value>
+        </property>
+        <property name="TITLE_5_CALC">
+            <value>Телефон*</value>
+        </property>
+        <property name="PLH_5_CALC">
+            <value>Телефон</value>
+        </property>
+        <property name="TITLE_6_CALC">
+            <value>E-mail (необязятельно)</value>
+        </property>
+        <property name="PLH_6_CALC">
+            <value>E-mail</value>
+        </property>
+        <property name="TEXT_BTN_CALC">
+            <value>Отправить</value>
+        </property>
+        <property name="IMAGE_BANNER_CALC">
+            <value name="calculator.webp">iblock/eb0/gb9u0a703d7jblejuagaxs41i9lz8h1e/calculator.webp</value>
+        </property>
+        <property name="TEXT_BANNER_CALC">
+            <value type="json">{&quot;TEXT&quot;:&quot;&lt;b&gt;Ремонт кровли&lt;\/b&gt; &lt;b&gt;Рассчитайте стоимость
+                работ самостоятельно или позвоните нашему специалисту &lt;a href=\&quot;tel:84951090242\&quot;&gt;+7
+                (495) 109-02-42&lt;\/a&gt; &lt;\/b&gt;\r\n&lt;p&gt;\r\n\t * цены в калькуляторе ориентировочные, точная
+                стоимость будет известна после консультации с&lt;br&gt;\r\n\t нашим специалистом\r\n&lt;\/p&gt;&quot;,&quot;TYPE&quot;:&quot;HTML&quot;}
+            </value>
+        </property>
+        <property name="TEXT_COMMON">
+            <value>Нажимая на данную кнопку, вы даете согласие на обработку персональных данных подтверждаете
+                ознакомление с
+            </value>
+        </property>
+        <property name="TEXT_LINK_COMMON">
+            <value>политикой конфиденциальности</value>
+        </property>
+        <property name="LINK_COMMON">
+            <value>https://alexprom.ru/privacy-notice/</value>
+        </property>
+        <property name="ERROR_MESSAGE_COMMON">
+            <value>Пожалуйста, заполните все обязательные поля</value>
+        </property>
+    </item>
+</items>
