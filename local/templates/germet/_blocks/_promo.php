@@ -15,7 +15,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div>
     <?php endif; ?>
     <div class="promo-sky">
-        <img src="/local/templates/krovli/assets/images/sky.png" alt="">
+        <img src="/local/templates/germet/assets/images/sky.png" alt="">
     </div>
     <div class="top-index-sections__form">
         <div class="container">
