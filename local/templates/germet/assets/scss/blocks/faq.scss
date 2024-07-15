@@ -2,6 +2,8 @@
   background: url("/local/templates/germet/assets/images/faq-sky.png") 0 0%/cover no-repeat;
   box-shadow: inset 0em 4em 46px 8px #fff, inset 0em -18em 20px 12px #fff;
   padding: 0 30px 1px;
+  z-index: 6;
+  overflow: visible;
 
   @media (max-width: 743px) {
     padding: 0;
@@ -33,6 +35,7 @@
 
     &--item {
       width: calc((100% - 30px) / 2);
+      position: relative;
       //display: flex;
       //justify-content: space-between;
       //flex-direction: column;
@@ -49,6 +52,9 @@
 
         .info {
           display: block;
+          position: absolute;
+          top: calc(100% - 5px);
+          z-index: 999;
         }
       }
 
