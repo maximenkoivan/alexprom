@@ -28,6 +28,10 @@ class FormHandler
         'quizRoofs' => 'classes\Models\Roofs\Feedback\Quiz',
         'orderRoofs' => 'classes\Models\Roofs\Feedback\Order',
         'calculatorRoofs' => 'classes\Models\Roofs\Feedback\Calculator',
+        'callbackGermet' => 'classes\Models\Germet\Feedback\Callback',
+        'quizGermet' => 'classes\Models\Germet\Feedback\Quiz',
+        'orderGermet' => 'classes\Models\Germet\Feedback\Order',
+        'calculatorGermet' => 'classes\Models\Germet\Feedback\Calculator',
     ];
 
     private mixed $model;

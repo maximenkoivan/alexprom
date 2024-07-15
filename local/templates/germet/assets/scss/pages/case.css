@@ -1,0 +1,8 @@
+.top-case-sections {
+  padding: 40px 30px 60px 30px;
+  border-bottom: 1px solid var(--base-color-border); }
+  @media (min-width: 768px) {
+    .top-case-sections {
+      padding: 60px 30px 120px 30px; } }
+
+/*# sourceMappingURL=case.css.map */

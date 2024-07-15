@@ -1,0 +1,16 @@
+.top-case-sections {
+  padding: 40px 30px 60px 30px;
+  border-bottom: 1px solid var(--base-color-border);
+
+  @media (min-width: 768px) {
+    padding: 60px 30px 120px 30px;
+  }
+
+  .case-container {
+
+
+    &__footer {
+      padding-top: 70px;
+    }
+  }
+}
