@@ -72,13 +72,20 @@
     }
 
     .email {
-      padding-left: 30px;
-      //background: url("/local/templates/germet/assets/images/icons/email-footer.svg") no-repeat center left;
+
+      svg {
+        vertical-align: middle;
+        margin-right: 4px;
+      }
     }
 
     .phone {
-      padding-left: 30px;
-      //background: url("/local/templates/germet/assets/images/icons/phone-footer.svg") no-repeat center left;
+
+      svg {
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+
       margin-bottom: 30px;
 
       @media (max-width: 743px) {
