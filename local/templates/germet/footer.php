@@ -30,12 +30,19 @@ $footer = CommonData::getInstance()->getElementByCode('basic_settings', true);
                 <?php if (!empty($footer['PHONE_HEADER']['DESCRIPTION'])): ?>
                     <a class="phone"
                        href="tel:<?= Generic::getCleanPhoneNumber($footer['PHONE_HEADER']['DESCRIPTION']) ?>">
+                        <svg height="20" width="20" class="call__icon call__icon--close">
+                            <use xlink:href="#icon-phone-footer"></use>
+                        </svg>
                         <?= $footer['PHONE_HEADER']['DESCRIPTION'] ?>
                     </a>
                 <?php endif; ?>
                 <?php if (!empty($footer['EMAIL_HEADER']['DESCRIPTION'])): ?>
                     <a href="mailto:<?= $footer['EMAIL_HEADER']['DESCRIPTION'] ?>"
-                       class="email"><?= $footer['EMAIL_HEADER']['DESCRIPTION'] ?></a>
+                       class="email">
+                        <svg height="20" width="20" class="call__icon call__icon--close">
+                            <use xlink:href="#icon-email-footer"></use>
+                        </svg>
+                        <?= $footer['EMAIL_HEADER']['DESCRIPTION'] ?></a>
                 <?php endif; ?>
             </div>
         </div>
