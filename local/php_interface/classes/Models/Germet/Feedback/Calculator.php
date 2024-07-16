@@ -49,21 +49,21 @@ class Calculator extends Iblock
                 'property' => true,
                 'store' => 'SQUARE'
             ],
-            'operation' => [
+            'services' => [
                 'ru' => '"Операция монтажа"',
                 'en' => '',
                 'rules' => '',
                 'value' => '',
                 'property' => true,
-                'store' => 'OPERATION'
+                'store' => 'SERVICES'
             ],
-            'material' => [
+            'add_services' => [
                 'ru' => '"Материал кровли"',
                 'en' => '',
                 'rules' => '',
                 'value' => '',
                 'property' => true,
-                'store' => 'MATERIAL'
+                'store' => 'ADD_SERVICES'
             ],
             'price' => [
                 'ru' => '"Стоимость"',
