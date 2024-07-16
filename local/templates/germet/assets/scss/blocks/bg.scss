@@ -82,6 +82,10 @@
     &--about {
         height: 85%;
 
+        img {
+            object-position: 95% top;
+        }
+
         @include media('xl-max') {
 
             img {

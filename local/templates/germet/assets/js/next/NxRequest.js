@@ -266,7 +266,7 @@ class NxRequest{
             }
         } else {
             switch (type) {
-                case 'callbackRoofs':
+                case 'callbackGermet':
 
                     document.getElementById('callback').classList.remove('is-open')
                     document.querySelector('body').style.overflow = 'visible'
@@ -280,7 +280,7 @@ class NxRequest{
                     $modalOk.setContent(`<h3>${$okTitle}</h3><p>${$okText}</p>`);
                     break;
 
-                case 'orderRoofs':
+                case 'orderGermet':
 
                     document.getElementById('order').classList.remove('is-open')
                     document.querySelector('body').style.overflow = 'visible'
@@ -295,7 +295,7 @@ class NxRequest{
 
                     break;
 
-                case 'quizRoofs':
+                case 'quizGermet':
 
                     document.getElementById('modal-order').classList.remove('is-open')
                     document.querySelector('body').style.overflow = 'visible'
@@ -330,7 +330,7 @@ class NxRequest{
                     $progress.style.width = '0'
                     break;
 
-                case 'calculatorRoofs':
+                case 'calculatorGermet':
 
                     document.getElementById('calculator').classList.remove('is-open')
                     document.querySelector('body').style.overflow = 'visible'
