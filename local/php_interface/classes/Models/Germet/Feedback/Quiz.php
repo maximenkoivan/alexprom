@@ -44,21 +44,21 @@ class Quiz extends Iblock
             'property' => true,
             'store' => 'MESSAGE'
         ],
-        'constructive' => [
+        'service' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
             'value' => '',
             'property' => true,
-            'store' => 'CONSTRUCTIVE'
+            'store' => 'SERVICE'
         ],
-        'type' => [
+        'add_service' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
             'value' => '',
             'property' => true,
-            'store' => 'TYPE'
+            'store' => 'ADD_SERVICE'
         ],
         'problem' => [
             'ru' => '',
@@ -68,21 +68,21 @@ class Quiz extends Iblock
             'property' => true,
             'store' => 'PROBLEM'
         ],
-        'thermal_insulation' => [
+        'type' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
             'value' => '',
             'property' => true,
-            'store' => 'THERMAL_INSULATION'
+            'store' => 'TYPE'
         ],
-        'access' => [
+        'age' => [
             'ru' => '',
             'en' => '',
             'rules' => '',
             'value' => '',
             'property' => true,
-            'store' => 'ACCESS'
+            'store' => 'AGE'
         ],
         'location' => [
             'ru' => '',

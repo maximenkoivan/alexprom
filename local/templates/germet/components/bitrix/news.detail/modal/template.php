@@ -166,7 +166,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <input type="radio"
                                                        class="checkbox__input"
                                                        value="<?= $arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['~DESCRIPTION'][$key] ?>"
-                                                       name="constructive">
+                                                       name="service">
                                                 <div class="inner">
                                                     <img src="<?= CFile::GetPath($imageId) ?>"
                                                          alt="<?= $arResult['PROPERTIES']['IMAGE_STEP_1_QUIZ']['~DESCRIPTION'][$key] ?>">
@@ -186,7 +186,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                 <input type="radio"
                                                        class="checkbox__input"
                                                        value="<?= $arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['~DESCRIPTION'][$key] ?>"
-                                                       name="type">
+                                                       name="add_service">
                                                 <div class="inner">
                                                     <img src="<?= CFile::GetPath($imageId) ?>"
                                                          alt="<?= $arResult['PROPERTIES']['IMAGE_STEP_2_QUIZ']['~DESCRIPTION'][$key] ?>">
@@ -222,7 +222,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                             <input type="radio"
                                                                    class="checkbox__input"
                                                                    value="<?= $option ?>"
-                                                                   name="thermal_insulation">
+                                                                   name="type">
                                                             <span class="checkbox__text"><?= $option ?></span>
                                                         </label>
                                                     <?php endforeach; ?>
@@ -234,7 +234,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                             <input type="radio"
                                                                    class="checkbox__input"
                                                                    value="<?= $option ?>"
-                                                                   name="access">
+                                                                   name="age">
                                                             <span class="checkbox__text"><?= $option ?></span>
                                                         </label>
                                                     <?php endforeach; ?>
@@ -412,7 +412,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                                                 <input data-value data-value-b="<?= $arResult['PROPERTIES']['OPTION_2_CALC']['~DESCRIPTION'][$key] ?>"
                                                                                        data-calculator-check
                                                                                        class="form-check-input"
-                                                                                       name="operation[]"
+                                                                                       name="services[]"
                                                                                        value="<?= $item ?>"
                                                                                        type="checkbox">
                                                                                 <?= $item ?>
@@ -439,7 +439,7 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
                                                                                 <input data-value data-value-c="<?= $arResult['PROPERTIES']['OPTION_3_CALC']['~DESCRIPTION'][$key] ?>"
                                                                                        data-calculator-radio
                                                                                        class="form-radio-input"
-                                                                                       name="material"
+                                                                                       name="add_services"
                                                                                        value="<?= $item ?>"
                                                                                        type="radio">
                                                                                 <?= $item ?>
