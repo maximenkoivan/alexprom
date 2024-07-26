@@ -87,6 +87,7 @@
         }
 
         @include media('xl-max') {
+            height: 78%;
 
             img {
                 object-position: 100% 0;
@@ -94,7 +95,7 @@
         }
 
         @include media('md-max') {
-            height: 75%;
+            height: 65%;
         }
 
         @include media('sm-max') {
