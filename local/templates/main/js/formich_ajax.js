@@ -162,71 +162,83 @@ function getFormData(serealizedForm) {
 
 const formsList = document.querySelectorAll(".js_form");
 formsList.forEach((form) => {
-  const button = form.querySelector('button[type="submit"]')
-  if (button) {
-    button.addEventListener('click', () => {
-      const submit =  new Event('submit', { bubbles: true, cancelable: false });
-      form.dispatchEvent(submit);
-    })
+
+  // Проверяем, есть ли уже атрибут data-event-attached
+  if (!form.dataset.eventAttached) {
+
+
+    const button = form.querySelector('button[type="submit"]')
+    if (button) {
+
+      button.addEventListener('click', () => {
+        const submit = new Event('submit', {bubbles: true, cancelable: false});
+        form.dispatchEvent(submit);
+      })
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const inputsToValidate = [
+        ...form.querySelectorAll('.form-control')
+      ];
+
+      inputsToValidate.forEach((input) => {
+        validateInput(input);
+      });
+
+      if (form.querySelector('.is-invalid')) return;
+
+
+      extractUTM(form);
+
+      const serealizedForm = serealizeForm(form);
+      const formData = getFormData(serealizedForm);
+
+      let response = await fetch(form.dataset.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.classList.add('button--wait');
+
+      try {
+        // let result = await response.json();
+
+        // if (result.status) {
+        //   console.error(result.status);
+        // }
+
+        let buttonText;
+        let buttonTextElement
+        const submitButtonText = submitButton.querySelector('.button__text')
+
+        if (submitButtonText) {
+          buttonTextElement = submitButtonText;
+        } else {
+          buttonTextElement = submitButton;
+        }
+        buttonText = buttonTextElement.innerText;
+        buttonTextElement.innerText = '✓ Ваша заявка принята';
+
+        resetForm(form);
+
+        setTimeout(() => {
+          submitButton.classList.remove('button--wait');
+          buttonTextElement.innerText = buttonText;
+        }, 5000)
+      } catch (error) {
+        console.log(error)
+      }
+
+    });
+
+
+    // Устанавливаем атрибут data-event-attached после привязки событий
+    form.dataset.eventAttached = "true";
   }
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const inputsToValidate = [
-      ...form.querySelectorAll('.form-control')
-    ];
-
-    inputsToValidate.forEach((input) => {
-      validateInput(input);
-    });
-
-    if (form.querySelector('.is-invalid')) return;
-
-
-    extractUTM(form);
-
-    const serealizedForm = serealizeForm(form);
-    const formData = getFormData(serealizedForm);
-
-    let response = await fetch(form.dataset.action, {
-      method: "POST",
-      body: formData,
-    });
-
-    const submitButton = form.querySelector('button[type="submit"]');
-    submitButton.classList.add('button--wait');
-
-    try {
-      // let result = await response.json();
-      
-      // if (result.status) {
-      //   console.error(result.status);
-      // }
-
-      let buttonText;
-      let buttonTextElement
-      const submitButtonText = submitButton.querySelector('.button__text')
-
-      if (submitButtonText) {
-        buttonTextElement = submitButtonText;
-      } else {
-        buttonTextElement = submitButton;
-      }
-      buttonText = buttonTextElement.innerText;
-      buttonTextElement.innerText = '✓ Ваша заявка принята';
-
-      resetForm(form);
-
-      setTimeout(() => {
-        submitButton.classList.remove('button--wait');
-        buttonTextElement.innerText = buttonText;
-      }, 5000)
-    } catch (error) {
-      console.log(error)
-    }
-    
-  });
 });
 
 function resetForm(form) {

@@ -36,6 +36,19 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
 
+    \classes\Helpers\Utm::cookieToForm($postData); // запишем куки которые пишутся на каждой странице классом
+
+// найдём в формах имя-телефон и запишем в соотв. ключ
+    $phone = $name = '';
+
+    if( $postData['user_tel'] ) $phone = $postData['user_tel'];
+
+    if( $postData['user_name'] ) $name = $postData['user_name'];
+
+    if($phone && !$postData['phone'] )  $postData['phone'] = $phone;
+    if($name && !$postData['name'] )  $postData['name'] = $name;
+
+
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
 
 // Установливаем правильный заголовок Content-Type для urlencoded

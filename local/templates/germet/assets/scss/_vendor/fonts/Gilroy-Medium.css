@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('/local/templates/germet/assets/fonts/gilroy/gilroy-medium.eot'); /* IE 9 Compatibility Mode */
+    src: url('/local/templates/germet/assets/fonts/gilroy/gilroy-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('/local/templates/germet/assets/fonts/gilroy/gilroy-medium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/local/templates/germet/assets/fonts/gilroy/gilroy-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('/local/templates/germet/assets/fonts/gilroy/gilroy-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/local/templates/germet/assets/fonts/gilroy/gilroy-medium.svg#gilroy-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}

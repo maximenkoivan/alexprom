@@ -25,6 +25,18 @@ class Validator
             'ru' => 'Неверный формат поля #FIELD#',
             'en' => 'Wrong format of #FIELD#',
         ],
+        'file_ext' => [
+            'ru' => 'Недопустимый тип файла, разрешены: #PARAM#',
+            'en' => 'Invalid file type, allowed: #PARAM#',
+        ],
+        'file_size' => [
+            'ru' => 'Загружаемый файл может быть не больше #PARAM#Мб',
+            'en' => 'The uploaded file can be no more than #PARAM#Mb',
+        ],
+        'files_max_number' => [
+            'ru' => 'Количество файлов не может быть больше #PARAM#',
+            'en' => 'The number of files cannot be more #PARAM#',
+        ],
         'empty' => [
             'ru' => 'Поле #FIELD# не может быть пустым.',
             'en' => 'The field #FIELD# cannot be empty.',
@@ -74,7 +86,7 @@ class Validator
                             }
                             break;
                         case 'required':
-                            if (!$a = $this->is_required()) {
+                            if (!$this->is_required()) {
                                 throw new ValidationException($this->getErrors('required'));
                             }
                             break;
@@ -84,8 +96,23 @@ class Validator
                             }
                             break;
                         case 'phone':
-                            if (!$b = $this->is_phone()) {
+                            if (!$this->is_phone()) {
                                 throw new ValidationException($this->getErrors('format'));
+                            }
+                            break;
+                        case 'file_ext':
+                            if (!$this->fileExtension($param)) {
+                                throw new ValidationException($this->getErrors('file_ext', $param));
+                            }
+                            break;
+                        case 'file_size':
+                            if (!$this->fileSize($param)) {
+                                throw new ValidationException($this->getErrors('file_size', $param));
+                            }
+                            break;
+                        case 'files_max_number':
+                            if (!$this->filesMaxNumber($param)) {
+                                throw new ValidationException($this->getErrors('files_max_number', $param));
                             }
                             break;
                         case 'min':
@@ -185,6 +212,49 @@ class Validator
         return v::stringType()->length(null, $param)->validate($this->field['value']);
     }
 
+    private function filesMaxNumber($param)
+    {
+        if (empty($this->field['value'])) return true;
+        return intval($param) > count($this->field['value']);
+    }
+
+    private function fileExtension($param)
+    {
+        if (empty($this->field['value'])) return true;
+        $rule = explode(',', $param);
+        if (is_array($this->field['value'])) {
+            foreach ($this->field['value'] as $file) {
+                $ext = explode('/', $file['type']);
+                if (!in_array($ext[1] ?: $ext[0], $rule)) {
+                    return false;
+                }
+            }
+        } else {
+            $ext = explode('/', $this->field['type']);
+            if (!in_array($ext[1] ?: $ext[0], $rule)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private function fileSize($param)
+    {
+        if (empty($this->field['value'])) return true;
+        if (is_array($this->field['value'])) {
+            foreach ($this->field['value'] as $file) {
+                if ($file['size'] > $param * 1024 * 1024) {
+                    return false;
+                }
+            }
+        } else {
+            if ($this->field['size'] > $param * 1024 * 1024) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     /**
      * Возвращает текст соответствующей ошибки
      * @param string $code
@@ -202,6 +272,15 @@ class Validator
                 break;
             case 'format':
                 $message = $this->errorMessages['format'][LANGUAGE_ID];
+                break;
+            case 'file_ext':
+                $message = $this->errorMessages['file_ext'][LANGUAGE_ID];
+                break;
+            case 'file_size':
+                $message = $this->errorMessages['file_size'][LANGUAGE_ID];
+                break;
+            case 'files_max_number':
+                $message = $this->errorMessages['files_max_number'][LANGUAGE_ID];
                 break;
             case 'min':
                 $message = $this->errorMessages['min'][LANGUAGE_ID];

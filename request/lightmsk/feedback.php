@@ -23,6 +23,23 @@ $postData = $_POST;
 // Добавление UTM-меток к данным формы
 $postData = array_merge($postData, $utmData);
 
+
+
+        \classes\Helpers\Utm::cookieToForm($postData); // запишем куки которые пишутся на каждой странице классом
+
+// найдём в формах имя-телефон и запишем в соотв. ключ
+        $phone = $name = '';
+
+        if( $postData['user_tel'] ) $phone = $postData['user_tel'];
+
+        if( $postData['user_name'] ) $name = $postData['user_name'];
+
+        if($phone && !$postData['phone'] )  $postData['phone'] = $phone;
+        if($name && !$postData['name'] )  $postData['name'] = $name;
+
+
+
+
     // Подготовка данных для отправки
     $postData = http_build_query($postData);
 

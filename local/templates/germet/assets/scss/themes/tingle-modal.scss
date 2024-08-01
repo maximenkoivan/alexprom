@@ -1,0 +1,91 @@
+.tingle-modal {
+    background: rgba(0, 0, 0, 0.6) !important;
+
+    &:before {
+        -webkit-backdrop-filter: blur(2px) !important;
+        backdrop-filter: blur(2px) !important;
+    }
+
+    &__closeIcon {
+        color: $c-blue;
+    }
+
+    &.order {
+
+        .tingle-modal-box {
+            width: 940px !important;
+            height: 460px !important;
+
+            &__content {
+                background-color: white;
+                background-image: none;
+            }
+
+            @include media('sm-max') {
+                width: auto !important;
+                height: auto !important;
+                max-width: 720px;
+            }
+        }
+    }
+}
+
+.tingle-modal-box {
+    width: 720px !important;
+    height: 760px !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+
+    @include media('sm-max') {
+        width: auto !important;
+        height: auto !important;
+        max-width: 720px;
+    }
+
+    &__content {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background-image: url("/local/templates/germet/assets/images/ok.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .logo {
+            margin: 0 auto 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3, p {
+            font-family: "Kenyan Coffee Rg", sans-serif;
+            font-weight: 400;
+            font-size: 54px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-align: center;
+            color: #323232;
+
+            @include media('sm-max') {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            color: #3da9fe;
+        }
+
+        @include media('sm-max') {
+            padding: 20px 20px 200px !important;
+        }
+    }
+
+    &__footer {
+        display: none;
+    }
+}
+
+.tingle-btn {
+    background-color: $c-orange;
+}

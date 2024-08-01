@@ -7,7 +7,13 @@ $APPLICATION->SetPageProperty("description", "Узнайте, как «Алек�
 $APPLICATION->SetTitle("Условия оплаты «АлексПром»: расчет стоимости кровли и выезда бригады");
 ?><main class="hero hero--has-breadcrumbs hero--no-bullets topBlockOplata">
 <div class="hero__thumb">
- <span class="hero__pic hero__pic-desc"> <source srcset="/local/templates/main/images/oplata/oplata_BG_02.jpg" media="(max-width: 768px)"> <img src="/local/templates/main/images/oplata/oplata_BG_01.jpg" class="hero__img"> </span>
+ <?/*<span class="hero__pic hero__pic-desc"> <source srcset="/local/templates/main/images/oplata/oplata_BG_02.jpg" media="(max-width: 768px)"> <img src="/local/templates/main/images/oplata/oplata_BG_01.jpg" class="hero__img"> </span>*/?>
+ <span class="hero__pic hero__pic-desc hero__pic-oplata">
+	<picture class="hero__img">
+		<source srcset="/local/templates/main/images/oplata/oplata_BG_01-new02.webp" media="(max-width: 768px)" />
+		<img src="/local/templates/main/images/oplata/oplata_BG_01-new01.webp" class="hero__img"/>
+	</picture>
+</span>
 	<div class="container hero__container">
 		<div class="breadcrumbs">
 			<ul class="breadcrumbs__list">
@@ -42,7 +48,7 @@ $APPLICATION->SetTitle("Условия оплаты «АлексПром»: ра
             echo '<script type="application/ld+json">' . $data . '</script>';
             ?>
 		<h1 class="title-h1 hero__title">Оплата</h1>
-		<p>
+		<p class="hero__title-descOplata">
 			 Расчет цены производится исходя из индивидуальных особенностей объекта, конфигурации кровли, высоты здания, дальности объекта, срочности выезда бригады и других аспектов
 		</p>
 	</div>
