@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 /**
  * @global $APPLICATION
  */
-$APPLICATION->SetTitle("Герметизация швов");
+$APPLICATION->SetTitle("Высотные работы");
 ?>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
