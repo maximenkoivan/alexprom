@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Kenyan Coffee Rg';
+    src: url('/local/templates/alpservice/assets/fonts/kenyan-coffee/KenyanCoffeeRg-Regular.eot');
+    src: local('KenyanCoffeeRg-Regular'),
+    url('/local/templates/alpservice/assets/fonts/kenyan-coffee/KenyanCoffeeRg-Regular.woff2') format('woff2'),
+    url('/local/templates/alpservice/assets/fonts/kenyan-coffee/KenyanCoffeeRg-Regular.woff') format('woff'),
+    url('/local/templates/alpservice/assets/fonts/kenyan-coffee/KenyanCoffeeRg-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

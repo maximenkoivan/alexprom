@@ -32,6 +32,10 @@ class FormHandler
         'quizGermet' => 'classes\Models\Germet\Feedback\Quiz',
         'orderGermet' => 'classes\Models\Germet\Feedback\Order',
         'calculatorGermet' => 'classes\Models\Germet\Feedback\Calculator',
+        'callbackAlpservice' => 'classes\Models\Alpservice\Feedback\Callback',
+        'quizAlpservice' => 'classes\Models\Alpservice\Feedback\Quiz',
+        'orderAlpservice' => 'classes\Models\Alpservice\Feedback\Order',
+        'calculatorAlpservice' => 'classes\Models\Alpservice\Feedback\Calculator',
     ];
 
     private mixed $model;
