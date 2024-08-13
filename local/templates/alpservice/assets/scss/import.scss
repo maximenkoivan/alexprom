@@ -1,0 +1,95 @@
+//fist
+@import "varibles";
+@import "mixins";
+
+// vendors
+@import "_vendor/fonts/Gilroy-Medium.css";
+@import "_vendor/fonts/HelveticaNeueCyr.css";
+@import "_vendor/fonts/KenyanCoffeeRg.css";
+
+@import "_vendor/flex-grid";
+
+// default
+@import "starting";
+@import "layouts";
+
+// forms & buttons
+@import "forms/forms";
+@import "forms/checkbox";
+@import "forms/nx-dynamic-label";
+@import "forms/range-slider-box";
+
+// main
+@import "main/titles";
+@import "main/links";
+@import "main/content";
+@import "main/menu";
+@import "main/footer";
+
+// blocks
+@import "nx-blocks/modals";
+@import "nx-blocks/nx-preloader";
+@import "nx-blocks/nx-popup";
+@import "nx-blocks/nx-files";
+@import "nx-blocks/nx-video";
+
+//blocks
+
+@import
+'blocks/header',
+'blocks/footer',
+'blocks/case',
+'blocks/reviews',
+'blocks/blog',
+'blocks/partners',
+'blocks/header-title',
+'blocks/tag',
+'blocks/contact',
+'blocks/modal',
+'blocks/portfolio',
+'blocks/how-work',
+'blocks/faq',
+'blocks/questions',
+'blocks/bg',
+'blocks/cert-slider',
+'blocks/portfolio-slider',
+'blocks/order',
+'blocks/order-section',
+'blocks/tab',
+'blocks/call',
+'blocks/price';
+
+// themes
+//@import "themes/bootstrap-main-styles";
+@import "themes/select2-theme";
+@import "themes/tingle-modal";
+
+//pages
+@import
+'pages/index',
+'pages/blog',
+'pages/article',
+'pages/case',
+'pages/project',
+'pages/services',
+'pages/contacts',
+'pages/product',
+'pages/about',
+'pages/page-404';
+
+
+//components
+@import
+'components/button',
+'components/logo',
+'components/input',
+'components/checkbox',
+'components/radio-button',
+'components/title',
+'components/link',
+'components/navigationHeader',
+'components/navigationFooter',
+'components/breadcrumbs',
+'components/popup-button',
+'components/calculate',
+'components/services';
