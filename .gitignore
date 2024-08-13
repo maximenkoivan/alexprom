@@ -209,3 +209,5 @@ robots.txt
 /.config
 google*.html
 yandex_*.html
+*.tar
+*.gz

@@ -220,4 +220,17 @@ class Generic
         preg_match("/([^0-9])+/u", $string, $matches);
         return $matches[0];
     }
+
+    public static function getVideoYoutubeID($link)
+    {
+        if (!empty($link)) {
+            preg_match(
+                '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i',
+                $link,
+                $matches
+            );
+            return $matches[1];
+        } else
+            return null;
+    }
 }

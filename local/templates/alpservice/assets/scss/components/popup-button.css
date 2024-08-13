@@ -1,0 +1,9 @@
+.popup-button {
+  display: flex;
+  font-size: 25px;
+  gap: 10px; }
+  .popup-button svg {
+    width: 20px;
+    height: 10px; }
+
+/*# sourceMappingURL=popup-button.css.map */

@@ -44,7 +44,7 @@ function serealizeForm(formNode) {
     formData[textarea.name] = textarea.value;
   }
 
-  return formData; 
+  return formData;
 
 }
 
@@ -88,6 +88,8 @@ formsList.forEach((form) => {
     const serealizedForm = serealizeForm(form);
     const formData = getFormData(serealizedForm);
 
+    console.log('form.dataset.action f', form.dataset.action);
+
     let response = await fetch(form.dataset.action, {
       method: "POST",
       body: formData,
@@ -98,7 +100,7 @@ formsList.forEach((form) => {
 
     try {
       // let result = await response.json();
-      
+
       // if (result.status) {
       //   console.error(result.status);
       // }
@@ -124,7 +126,7 @@ formsList.forEach((form) => {
     } catch (error) {
       console.log(error)
     }
-    
+
   });
 });
 

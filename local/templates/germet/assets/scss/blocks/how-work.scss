@@ -1,0 +1,610 @@
+.how-work-sections {
+  background-image: url("/local/templates/germet/assets/images/sky.png");
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: bottom;
+  background-color: #fcfcfc;
+
+  @media (min-width: 1921px) {
+    background: url("/local/templates/germet/assets/images/sky.png") /cover no-repeat;
+  }
+
+  .block-ellipse {
+    position: absolute;
+    top: -330px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 1919px) {
+      top: -275px;
+    }
+
+    @media (max-width: 1399px) {
+      top: -125px;
+    }
+
+    @media (max-width: 743px) {
+      top: -115px;
+    }
+  }
+
+  .pic {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    margin: 40px auto 16px auto;
+    text-align: center;
+    background: url("/local/templates/germet/assets/images/how-work.png") no-repeat center center;
+    height: 306px;
+
+    @media (max-width: 1919px) {
+      background: url("/local/templates/germet/assets/images/how-work-notebook.png") no-repeat center center;
+    }
+
+    @media (max-width: 1399px) {
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 382px;
+      background: url("/local/templates/germet/assets/images/how-work-tablet.png") no-repeat center center;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 743px) {
+      width: 100%;
+      margin: 20px 0 0;
+      height: 558px;
+      background: url("/local/templates/germet/assets/images/how-work-mobile.png") no-repeat center center;
+    }
+  }
+
+  .how-work {
+    position: relative;
+    z-index: 5;
+
+    @media (max-width: 743px) {
+      padding-top: 20px;
+    }
+
+    &__wrapper {
+      padding: 50px 50px 100px;
+      max-width: 1780px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+
+      @include media('xs') {
+        padding: 10px 10px 10px;
+        display: grid;
+        max-width: 420px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 100px;
+      }
+    }
+
+    &__count {
+      grid-column: 1 / 2;
+      font-family: "Kenyan Coffee Rg", Arial;
+      font-weight: 400;
+      font-size: 54px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #323232;
+
+      @include media('lg-max') {
+        font-size: 39px;
+      }
+
+      @include media('xs') {
+        font-size: 33px;
+      }
+    }
+
+    &__bottom {
+      font-family: "HelveticaNeueCyr", Arial;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 130%;
+      color: #283032;
+      grid-column: 2 / 3;
+
+      @include media('lg-max') {
+        font-size: 16px;
+      }
+
+      @include media('xs') {
+        font-size: 14px;
+      }
+    }
+
+    &__img {
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__item {
+      display: grid;
+      position: relative;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      align-items: end;
+      align-content: space-around;
+      column-gap: 5px;
+
+      @include media('lg-max') {
+        flex-shrink: 0;
+        max-width: 15%;
+      }
+
+      @include media('xs') {
+        max-width: 100%;
+        align-content: center;
+      }
+
+      &:before {
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 55%;
+        height: 66px;
+        position: absolute;
+
+        @include media('lg-max') {
+          height: 48px;
+        }
+
+        @include media('xs') {
+          width: 100%;
+          height: 40px;
+        }
+      }
+
+      &:nth-child(1) {
+
+        & .how-work__img {
+          width: 124px;
+          height: 107px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-down.png");
+          bottom: -80px;
+          left: 75px;
+        }
+
+        @include media('lg-max') {
+
+          & .how-work__img {
+            width: 90px;
+            height: 78px;
+          }
+        }
+
+        @include media('xs') {
+
+          & .how-work__img {
+            width: 76px;
+            height: 65px;
+          }
+
+          &:before {
+            bottom: -48px;
+            left: 5px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        bottom: -100px;
+
+        .how-work__img {
+          width: 160px;
+          height: 130px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-top.png");
+          top: -91px;
+          left: 86px;
+        }
+
+        @include media('lg-max') {
+
+          & .how-work__img {
+            width: 116px;
+            height: 94px;
+          }
+        }
+
+        @include media('xs') {
+          bottom: -66px;
+          left: -28px;
+
+          & .how-work__img {
+            width: 98px;
+            height: 80px;
+          }
+
+          &:before {
+            top: -40px;
+            left: -7px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        min-width: 320px;
+
+        .how-work__img {
+          width: 188px;
+          height: 124px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/krovli/assets/images/how-work-arc-down.png");
+          bottom: -80px;
+          left: 75px;
+        }
+
+        @include media('lg-max') {
+          min-width: 0;
+
+          & .how-work__img {
+            height: 110px;
+            width: 120px;
+          }
+        }
+
+        @include media('xs') {
+          bottom: 40px;
+
+          &:before {
+            bottom: -91px;
+            left: -24px;
+            transform: rotate(160deg);
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        bottom: -100px;
+
+        .how-work__img {
+          width: 110px;
+          height: 76px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-top.png");
+          top: -91px;
+          left: 86px;
+        }
+
+        @include media('lg-max') {
+
+          & .how-work__img {
+            width: 80px;
+            height: 55px;
+          }
+        }
+
+        @include media('sm-max') {
+
+          & .how-work__img {
+
+            img {
+              display: none;
+            }
+          }
+        }
+
+        @include media('xs') {
+          bottom: -20px;
+
+          & .how-work__img {
+            img {
+              display: none;
+            }
+          }
+
+          &:before {
+            top: -40px;
+            left: -40px;
+            transform: rotate(37deg);
+          }
+        }
+      }
+
+      &:nth-child(5) {
+
+        .how-work__img {
+          width: 188px;
+          height: 124px;
+        }
+
+        &:before {
+          background-image: url("/local/templates/germet/assets/images/how-work-arc-down.png");
+          bottom: -80px;
+          left: 75px;
+        }
+
+        @include media('lg-max') {
+
+          & .how-work__img {
+            width: 137px;
+            height: 90px;
+          }
+        }
+
+        @include media('sm-max') {
+
+          & .how-work__img {
+            img {
+              display: none;
+            }
+          }
+        }
+
+        @include media('xs') {
+          order: 1;
+          top: -110px;
+          left: -38px;
+
+          &:before {
+            bottom: -51px;
+            left: 4px;
+            transform: rotate(-30deg);
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        bottom: -100px;
+
+        .how-work__img {
+          width: 129px;
+          height: 123px;
+        }
+
+        @include media('lg-max') {
+
+          & .how-work__img {
+            width: 94px;
+            height: 89px;
+          }
+        }
+
+        @include media('xs') {
+          bottom: -27px;
+          left: 10px;
+
+          & .how-work__img {
+            width: 67px;
+            height: 46px;
+
+            img {
+              top: -47px;
+              position: absolute;
+              right: 80px;
+              width: 67px;
+              height: 46px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+  .permissions-wrap {
+    position: relative;
+    padding: 0 30px;
+
+    @media (max-width: 743px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .big-arrows {
+      position: absolute;
+      width: 237px;
+      height: 144px;
+      top: 0;
+      right: -160px;
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: 1399px) {
+        width: 150px;
+        height: auto;
+      }
+
+      @media (max-width: 743px) {
+        top: 75px;
+        right: 50px;
+        width: 171px;
+      }
+
+      @media (max-width: 743px) {
+        display: none;
+      }
+    }
+  }
+
+  .permissions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .title.big {
+        font-size: 67px;
+        margin-bottom: 67px;
+
+        @media (max-width: 1600px) {
+          font-size: 50px;
+          margin-bottom: 70px;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 50px;
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 743px) {
+          font-size: 40px;
+        }
+      }
+
+      .title.min {
+        font-size: 45px;
+
+        @media (max-width: 1600px) {
+          font-size: 32px;
+          margin-bottom: 70px;
+        }
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+
+    &__center {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px;
+
+      @media (max-width: 1399px) {
+        justify-content: flex-start;
+        gap: 0;
+      }
+
+      &-pic {
+        width: 285px;
+        display: flex;
+
+        @media (max-width: 743px) {
+          align-self: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        img {
+          //width: 100%;
+
+          @media (max-width: 1399px) {
+            width: 200px;
+            align-self: center;
+          }
+        }
+      }
+
+      @media (max-width: 743px) {
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 0;
+        justify-content: center;
+
+        img {
+          width: 85%;
+        }
+      }
+    }
+
+    &__right {
+
+    }
+
+    &-list {
+      list-style-type: none;
+      padding-left: 0;
+
+      .item {
+        font-size: 21px;
+        font-family: 'HelveticaNeueCyr';
+        color: #283032;
+        padding-left: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        line-height: 27px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 1399px) {
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 743px) {
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 22px;
+          height: 20px;
+          background: url('/local/templates/germet/assets/images/icons/check.svg') no-repeat;
+        }
+      }
+    }
+  }
+
+  .swiperCertificates {
+    max-width: 1400px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

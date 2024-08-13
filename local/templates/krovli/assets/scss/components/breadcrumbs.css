@@ -1,0 +1,18 @@
+.breadcrumbs {
+  margin-bottom: 30px;
+  display: flex; }
+  .breadcrumbs__link {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--base-color-font);
+    text-decoration: none;
+    padding: 0 15px; }
+    .breadcrumbs__link + .breadcrumbs__link:after {
+      width: 1px;
+      height: 100%;
+      background: var(--base-color-font); }
+    .breadcrumbs__link:hover {
+      color: var(--base-color-active); }
+
+/*# sourceMappingURL=breadcrumbs.css.map */

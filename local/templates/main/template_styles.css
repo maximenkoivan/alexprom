@@ -145,3 +145,9 @@
 .section.price.priceTop {
     padding-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {    
+    .hero__title-descOplata {
+        max-width: 60% !important;
+    }
+}
