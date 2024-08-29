@@ -21,7 +21,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
     <div class="container">
 
         <div class="footer__wrap">
-            <div class="footer__row">
+            <div class="footer__row footer-row_middle-screen">
 
                 <div class="footer__col">
                     <div class="footer__logo">
@@ -61,7 +61,7 @@ $services = Services::getInstance()->getElementByIds($footer['SERVICES_FOOTER'][
                     </div>
                 </div>
 
-                <div class="footer__col-6">
+                <div class="footer__col-6 footer__col-4_middle-screen">
                     <div class="footer__row">
                     
                         <div class="footer__col-12">

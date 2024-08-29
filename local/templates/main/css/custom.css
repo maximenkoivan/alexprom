@@ -331,5 +331,21 @@
         display: none;
     }
 }
+@media (max-width: 1550px) and (min-width: 769px) {
+    .footer__col-4_middle-screen {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+@media (max-width: 991px) and (min-width: 769px) {
+    .footer-row_middle-screen {
+        flex-wrap: unset;
+    }
+
+    .soc-block {
+        max-width: 30%;
+    }
+}
+
 
 /* footer end */
