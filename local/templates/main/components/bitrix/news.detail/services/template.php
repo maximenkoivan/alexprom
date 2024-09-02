@@ -12,7 +12,7 @@ $this->setFrameMode(true);
 include '_promo.php';
 
 $menuHide = $arResult['PROPERTIES']['MENUHIDE']['~VALUE'];
-$GLOBALS['MENUHIDE'] = $menuHide === '' || $menuHide == 'Нет' ? false : true;
+$GLOBALS['MENUHIDE'] = $menuHide === '' || $menuHide == 'Нет' ? true : false;
 ?>
 <div class="section-flip section-flip--light">
 
